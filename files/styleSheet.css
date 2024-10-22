@@ -1,0 +1,7 @@
+* {  box-sizing: border-box; } html { scroll-behavior: smooth; }
+
+body{ 
+    font-size:15px; line-height:1.6;
+    font-family:verdana; 
+    margin:0;
+    } /* --End of Body -- */
