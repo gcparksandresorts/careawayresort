@@ -4,10 +4,12 @@ const footer = document.getElementById("footer");
 const pgHead = document.getElementById("pgHead");
 const loader = document.getElementById("loader");
 
-header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'></div></div>";
+header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/"),"_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'></div></div>";
 
+
+
+// FOOTER SETUP
 footer.innerHTML = "<img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'>";
-
 
 // PAGE SETUP
 loader.innerHTML = "<img src='https://gcparksandresorts.github.io/careawayresort/files/header/webfavicon.ico'><h2>Loading Page</h2>";
