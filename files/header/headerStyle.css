@@ -1,6 +1,9 @@
-#header{}
+#header{animation:headerFade 0.5s;}
 /* <div id='header'> <div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'></div></div> </div> */
-
+@keyframes headerFade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
 	#header #headerBkg{
   		width:100%; margin:0; height:100px; background:black; margin-top:-100px;
   	}
