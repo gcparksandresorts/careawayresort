@@ -12,12 +12,14 @@ body{
 
 .container, .leftContainer {margin:auto; margin-top:40px; margin-bottom:40px; padding:10px; width:full; display:block; max-width:1200px; text-align:center;}
 
-	.container.filled {
+	.leftContainer{text-align:left;}
+
+	.container.filled, .leftContainer.filled {
 		background:midnightblue; border-radius:20px;
 		color:white;
 	}
 	@screen and (max-width:1200px){
-		.container.filled {margin:40px 10px 40px 10px;}
+		.container.filled, .leftContainer.filled {margin:40px 10px 40px 10px;}
 	}
 
 
