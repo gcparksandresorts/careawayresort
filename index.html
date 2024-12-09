@@ -46,19 +46,21 @@ The findings confirm that the locking joint meets its intended functional and st
         <div id='footer'></div>
     </body>
 
-    <script>
-        // Get references to both headers
-        const headerObj = document.getElementById('header');
+	    <script>
+	        // Get references to both headers
+	        const headerObj = document.getElementById('header');
+	
+	        // Add an event listener for the scroll event
+	        window.addEventListener('scroll', () => {
+	          if (window.scrollY > 100) {
+	            // Show the scroll header and hide the default header
+	            headerObj.style.display='block';
+	          } else {
+	            // Show the default header and hide the scroll header
+	            headerObj.style.display='none';
+	          }
+	        });
+	    </script>
 
-        // Add an event listener for the scroll event
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) {
-            // Show the scroll header and hide the default header
-            headerObj.style.display='block';
-          } else {
-            // Show the default header and hide the scroll header
-            headerObj.style.display='none';
-          }
-        });
-    </script>
+	    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 </html>
