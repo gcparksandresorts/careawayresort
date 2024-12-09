@@ -25,3 +25,16 @@ body{
 
 /* --- Titles and stuff ----- */
 .titleBar{width:100%; padding:20px 10px 20px 10px; color:white; background:midnightblue; color:white;}
+
+/* -- UI Elements -- */
+
+a.btn{
+	padding:10px; margin:10px; border:solid 2px midnightblue; border-radius:10px;
+	transition:0.5s; cursor:pointer; color:midnightBlue;
+}
+	a.btn:hover{background:midnightblue; color:white;}
+
+	a.btn.filled{
+		border:solid 2px white; color:white;
+	}
+	a.btn.filled:hover{background:white; color:midnightBlue;}
