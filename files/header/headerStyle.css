@@ -36,3 +36,18 @@
     	height:60px; width:auto;
         margin: 20px auto 20px auto;
     }
+
+#loader{
+	position:absolute; top:0; left:0; right:0; bottom:0;
+	background:linear-gradient(45deg, gray, silver, gray);
+	display:flex; align-items:center; justify-content:center; flex-flow:column;
+}
+    	#loader img{
+        	width:200px; height:auto;
+           	animation:ldAnim 1s ease-in-out infinite alternate;
+        }
+        #loader h2 {color:midnightblue;}
+        @keyframes ldAnim{
+        	from{scale:1;}
+            	to{scale:1.1;}
+        }
