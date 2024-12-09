@@ -28,6 +28,8 @@ body{
 
 /* -- UI Elements -- */
 
+a{color:inherit;}
+
 a.btn{
 	padding:10px; margin:10px; border:solid 2px midnightblue; border-radius:10px;
 	transition:0.5s; cursor:pointer; color:midnightBlue;
