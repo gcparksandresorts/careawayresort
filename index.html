@@ -1,1 +1,64 @@
-This site is currently under construction
+    <!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dynamic Header</title>
+        <link rel="stylesheet" href="https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css">
+        <link rel="stylesheet" href="https://gcparksandresorts.github.io/careawayresort/files/styleSheet.css">
+    </head>
+    <style>
+        #specialHeader{
+            width:100%; height:200px; background:linear-gradient(90deg,midnightblue,darkblue,midnightblue);
+            margin-top:-100px;
+            text-align:center;
+        }
+            #specialHeader #headerLogo{
+				display:block; height:100px; width:auto; margin:5px auto 10px auto;
+            }
+		 	#specialHeader a{
+				color:white; font-size:20px; text-decoration:underline;
+				transition:0.5s; display:inline-block; margin:0 10px 0 10px;
+			}
+			#specialHeader a:hover{scale:1.02;}
+    </style>
+
+    <body onload=''>
+        <div id='loader'></div><div id='header' style='display:none'></div>
+
+        <div id='specialHeader'>
+            <img src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png' id='headerLogo'>
+            <p>
+				<a>Things to Do</a>
+				<a>Places to Stay</a>
+				<a>Tickets and Passes</a>
+			</p>
+        </div>
+        
+        <p>
+            **Conclusion**  
+
+This Individual Component Analysis (ICA) has provided a detailed evaluation of the locking joints within the Kangamove system, focusing on their functional requirements, structural components, and force-loading characteristics. The locking joint plays a vital role in ensuring the system's stability and functionality by enabling controlled movement and secure locking under various operational conditions. By analyzing key elements such as the magnetic solenoid, locking pin, rotational gear, and support column, this report has highlighted their integration and performance under "worst-case" loading scenarios.  
+<br><br>
+The findings confirm that the locking joint meets its intended functional and structural requirements, offering reliability and durability for repeated use over time. This analysis ensures confidence in the locking joint's ability to support the Kangamove system's mission of facilitating safe and efficient care for pre-term infants.
+        </p>
+        
+        
+        <div id='footer'></div>
+    </body>
+
+    <script>
+        // Get references to both headers
+        const headerObj = document.getElementById('header');
+
+        // Add an event listener for the scroll event
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+            // Show the scroll header and hide the default header
+            headerObj.style.display='block';
+          } else {
+            // Show the default header and hide the scroll header
+            headerObj.style.display='none';
+          }
+        });
+    </script>
+</html>
