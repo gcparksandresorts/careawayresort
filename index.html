@@ -2,52 +2,70 @@
     <head id='pgHead'>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dynamic Header</title>
         <link rel="stylesheet" href="https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css">
         <link rel="stylesheet" href="https://gcparksandresorts.github.io/careawayresort/files/styleSheet.css">
+	<link rel="icon" type="image/x-icon" href="https://gcparksandresorts.github.io/careawayresort/files/header/webfavicon.ico">
+
+	<title>Globe-City's Careaway Resort</title>
     </head>
     <style>
-        #specialHeader{
-            width:100%; height:200px; background:linear-gradient(90deg,midnightblue,darkblue,midnightblue);
-            margin-top:-100px;
-            text-align:center;
+	#header #headerBkg {display:none;}
+       #specialHeader{
+            	width:100%; height:100vh;
+            	margin-top:-100px;
+            	text-align:center;
+	       	position:relative;
+	       	overflow: hidden;
         }
-            #specialHeader #headerLogo{
-				display:block; height:150px; width:auto; margin:5px auto 10px auto;
-            }
-		 	#specialHeader a{
-				color:white; font-size:20px; text-decoration:underline;
-				transition:0.5s; display:inline-block; margin:0 10px 0 10px;
+		#specialHeader #headerMask{
+			position:absolute;
+			top:0; left:0; bottom:0; height:100%; width:auto;
+		}
+	    	#specialHeader #bottomBar{
+			position:absolute;
+			bottom:0;left:0;right:0;
+			height:100px;
+			background:midnightblue;
+		}
+	    	#specialHeader #bannerContent{
+			position:fixed; top:0; right:0; bottom:0; left:0; 
+			background:darkseagreen;
+            		z-index:-1;
+		}
+	    		#specialHeader #bannerContent img{
+				width:100%; height:100%; object-fit:cover;
 			}
-			#specialHeader a:hover{scale:1.02;}
+	    	#specialHeader #spLogo{
+			position:absolute; top:20px; right:20px; width:30%; height:auto;
+			max-width:500px; min-width:300px;
+		}
     </style>
 
     <body onload=''>
-        <div id='loader'></div><div id='header' style='display:none'></div>
+        <div id='loader'></div>
 
-        <div id='specialHeader'>
-            <img src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png' id='headerLogo'>
-            <p>
-				<a>Things to Do</a>
-				<a>Places to Stay</a>
-				<a>Tickets and Passes</a>
-			</p>
+         <div id='specialHeader'>
+		<div id='bannerContent'>
+			<img src='https://th.bing.com/th/id/R.a8df034f506fe0197f1e84a7cb4bb409?rik=NL5nEY4mQlFUrA&riu=http%3a%2f%2fwww.universal-bookings.co.uk%2fsites%2fdefault%2ffiles%2faa%2fioa_overview_0.jpg&ehk=BTCZ98bY%2biGjIyWm%2fGs%2bjOMdX%2bccDKvSz62iORtM0Sc%3d&risl=&pid=ImgRaw&r=0'>
+		</div>
+		<div id='bottomBar'><div style='width:100%;height:10px; background:darkblue;'></div></div>
+		<img id='headerMask' src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/careawayIndexMask.png'>
+		<img id='spLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'>
         </div>
 
-	    <div class='banner'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'></div>
+	<div id='header' style='display:none'></div> <!-- moved here for z-index errors -->
 
-		<div class='titleBar'><h1>Your Adventure Begins Here</h1></div>
-        
-        <p>
-            **Conclusion**  
-
-This Individual Component Analysis (ICA) has provided a detailed evaluation of the locking joints within the Kangamove system, focusing on their functional requirements, structural components, and force-loading characteristics. The locking joint plays a vital role in ensuring the system's stability and functionality by enabling controlled movement and secure locking under various operational conditions. By analyzing key elements such as the magnetic solenoid, locking pin, rotational gear, and support column, this report has highlighted their integration and performance under "worst-case" loading scenarios.  
-<br><br>
-The findings confirm that the locking joint meets its intended functional and structural requirements, offering reliability and durability for repeated use over time. This analysis ensures confidence in the locking joint's ability to support the Kangamove system's mission of facilitating safe and efficient care for pre-term infants.
-        </p>
-        
-        
-        <div id='footer'></div>
+	<!-- end of page intro -->
+	<div style='background:white;'>		
+			<div class='titleBar' style='text-align:center;'><div style='max-width:1200px; margin:auto; text-align:left;'><h3>Your Adventure Begins Here</h3> <h1>Globe-City's Careaway Resort</h1>
+				<p>Experience the Magic, Wonder, and Beyond when you visit a resort full of everything. Featuring three parks, 5 resorts, and a mile-long shopping & dining district, there's always something to discover.</p>
+			</div></div>
+		        <div class='banner'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'></div>
+			<div class='container'>
+				:0
+			</div>
+	<div id='footer'></div>
+	</div>
     </body>
 
 	    <script>
