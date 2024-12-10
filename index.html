@@ -80,17 +80,21 @@
     </body>
 
 	    <script>
-	        // Get references to both headers
+	    	// Get references to both headers
 	        const headerObj = document.getElementById('header');
 	
 	        // Add an event listener for the scroll event
 	        window.addEventListener('scroll', () => {
 	          if (window.scrollY > 100) {
-	            // Show the scroll header and hide the default header
-	            headerObj.style.display='block';
+	            // Show the scroll header and hide the default header.
+	            	headerObj.style.display='block';
 	          } else {
 	            // Show the default header and hide the scroll header
-	            headerObj.style.display='none';
+			/*
+   			var setopac = 1;
+			const myint = setInterval(function(){setopac -= 0.05; headerObj.style.opacity = setopac; if(setopac <= 0){clearInterval(myint); headerObj.style.display='none'; headerObj.style.opacity = 1;}},10); 
+  			 */
+	            	headerObj.style.display='none';
 	          }
 	        });
 	    </script>
