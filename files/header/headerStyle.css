@@ -25,6 +25,31 @@
 	    height:90px; margin-top:5px;
 	    cursor:pointer;
 	  }
+
+		#hbLinks{
+        	margin:auto 10px auto auto;
+            color:white;
+            display:flex;
+        }
+	        #hbLinks a{
+	        	font-size:18px;
+	            display:flex;
+	            margin:0 5px 0 5px;
+	            font-weight:bold;
+	            transition:0.5s;
+	            align-self:stretch;
+	            align-items: center;
+	            padding:10px;
+	        }
+	        #hbLinks a:hover{
+	        	background:white; color:midnightblue;
+	            border-radius:10px;
+	        }
+	        @media screen and (max-width:1100px){
+	        	 #hbLinks a{
+	             	font-size:30px; cursor:pointer;
+	             }
+	        }
   
   #footer{
   	margin:30px 0 0 0; width:100%;
