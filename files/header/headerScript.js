@@ -5,7 +5,8 @@ const pgHead = document.getElementById("pgHead");
 const loader = document.getElementById("loader");
 
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'> \
-			 <div id='hbLinks'> <a>Home</a> <a>Things to Do</a> <a>Places to Stay</a> <a>Information</a> <a class='btn filled'>Tickets & Passes</a> </div> </div></div>";
+			 <div id='hbLinks'> <a class='bigMen'>Home</a> <a class='bigMen'>Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Information</a> <a class='btn filled bigMen'>Tickets & Passes</a> \
+				<a class='miniMen'></a> </div> </div></div>";
 
 			// FOR SMALLER SCREENS: <a>☰</a>
 
