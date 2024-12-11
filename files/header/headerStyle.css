@@ -28,8 +28,8 @@
 
 		#hbLinks{
         	margin:auto 10px auto auto;
-            color:white;
-            display:flex;
+            	color:white;
+            	display:flex;
         }
 	        #hbLinks a{
 	        	font-size:18px;
@@ -91,6 +91,7 @@
         }
 
 
+
 /* MINI MENU FOR MOBILE SCREENS */
 #hbSideMenu{
         position:fixed;
@@ -102,7 +103,8 @@
         color:midnightblue;
         overflow-y:auto;
 	width:350px;
-        }
+	z-index:997;
+}
         @keyframes openMenu{
         	from{right:-350px; overflow-x:hidden;}
            	to{right:0px;}
@@ -124,3 +126,11 @@
             	font-size:15px; color:dimgray;
             	display:none;
         }
+/*
+	#hbSideMenu #smCloser{
+		position:fixed; top:100; left:0; right:0; bottom:0;
+		background:black; opacity:0.6;
+		animation:headerFade 1s;
+		z-index:996;
+	}
+*/
