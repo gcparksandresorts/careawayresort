@@ -4,17 +4,20 @@ const footer = document.getElementById("footer");
 const pgHead = document.getElementById("pgHead");
 const loader = document.getElementById("loader");
 
+const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
+
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'> \
 			 <div id='hbLinks'> <a class='bigMen'>&#11206; Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Events</a> <a class='bigMen'>&#11206; Information</a> <a class='btn filled bigMen'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openMinMen(0)'>☰</a> </div> </div></div> \
-				<div id='hbSideMenu'> <a onclick='openMinMen(1)'>&#11206; Things to Do</a> <div id='hbIntd1'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
+				<div id='hbSideMenu'><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
+				<a onclick='openMinMen(1)'>&#11206; Things to Do</a> <div id='hbIntd1'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
 				<a><span style='opacity:0'>&#11206;</span> Places to Stay</a> <a><span style='opacity:0'>&#11206;</span> Special Events</a> \
-				<a onclick='openMinMen(2)'>&#11206; Information</a> <div id='hbIntd2'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> \
-				<a class='btn'>Tickets and Passes</a> </div>";
+				<a onclick='openMinMen(2)'>&#11206; Information</a> <div id='hbIntd2'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> </div>";
 
 
 // FOOTER SETUP
-footer.innerHTML = "<img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'>";
+footer.innerHTML = "<img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'> \
+			<div class='spacer light'></div> <div id='footerLinks'></div>";
 
 // PAGE SETUP
 loader.innerHTML = "<img src='https://gcparksandresorts.github.io/careawayresort/files/header/webfavicon.ico'><h2>Loading Page</h2>";
