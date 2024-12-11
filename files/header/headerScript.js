@@ -6,7 +6,7 @@ const loader = document.getElementById("loader");
 
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'> \
 			 <div id='hbLinks'> <a class='bigMen'>Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Information</a> <a class='btn filled bigMen'>Tickets & Passes</a> \
-				<a class='miniMen' onclick='"+'document.getElementById("hbSideMenu").style.display="block";'+"'>☰</a> </div> </div></div> \
+				<a class='miniMen' onclick='openMinMen(0)'>☰</a> </div> </div></div> \
 				<div id='hbSideMenu'> <a onclick='openMinMen(1)'>&#11167; Things to Do</a> <div id='hbIntd1'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
 				<a><span style='opacity:0'>&#11167;</span> Places to Stay</a> <a><span style='opacity:0'>&#11167;</span> Special Events</a> \
 				<a onclick='openMinMen(2)'>&#11167; Information</a> <div id='hbIntd2'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> \
@@ -34,11 +34,14 @@ function finishLoad(){
 function openMinMen(num){
         var tempDoc = 'Nan';
         switch(num){
-            case 1:
-        	tempDoc = document.getElementById("hbIntd1");  
+		case 0:
+			tempDoc = document.getElementById("hbSideMenu");  
+		break;
+            	case 1:
+        		tempDoc = document.getElementById("hbIntd1");  
                	break;
-            case 2:
-                tempDoc = document.getElementById("hbIntd2");
+            	case 2:
+                	tempDoc = document.getElementById("hbIntd2");
                 break;
             }// end of switch
 	
