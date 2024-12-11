@@ -40,15 +40,27 @@
 	            align-self:stretch;
 	            align-items: center;
 	            padding:10px;
+			animation:headerFade 0.4s;
 	        }
 	        #hbLinks a:hover{
 	        	background:white; color:midnightblue;
 	            border-radius:10px;
 	        }
-	        @media screen and (max-width:1100px){
-	        	 #hbLinks a{
-	             	font-size:30px; cursor:pointer;
-	             }
+	        @media screen and (max-width:1000px){
+	        	 #hbLinks a.miniMen{
+	             		font-size:30px; cursor:pointer;
+	             	}
+			#hbLinks a.bigMen{
+				display:none;
+			}
+	        }
+		@media screen and (min-width:1001px){
+	        	 #hbLinks a.bigMen{
+	             	 	display:flex;
+	             	}
+			 #hbLinks a.miniMen{
+	             		display:none;
+	             	}
 	        }
   
   #footer{
