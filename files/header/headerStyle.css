@@ -89,3 +89,38 @@
         	from{scale:1;}
             	to{scale:1.1;}
         }
+
+
+/* MINI MENU FOR MOBILE SCREENS */
+#hbSideMenu{
+        position:fixed;
+        top:100px; right:0; bottom:0;
+        animation:openMenu 1s;
+        background:lightGray; border-left:5px solid gray;
+        padding:10px;
+        display:none;
+        color:midnightblue;
+        overflow-y:auto;
+	width:350px;
+        }
+        @keyframes openMenu{
+        	from{right:-350px; overflow-x:hidden;}
+           	to{right:0px;}
+        }
+        #hbSideMenu a{
+        	display:block; margin:15px 10px 15px 10px;
+            	font-size:18px;
+            	color:inherit; font-weight:bold;
+            	transition:0.5s; cursor:pointer;
+        }
+        #hbSideMenu a:hover{
+        	scale:1.05;
+        }
+        #hbSideMenu a.btn:hover{
+        	color:white;
+        }
+        #hbSideMenu #hbIntd1, #hbSideMenu #hbIntd2, #hbSideMenu #hbIntd3{
+        	margin-left:20px; animation:headerFade 0.6s;
+            	font-size:15px; color:dimgray;
+            	display:none;
+        }
