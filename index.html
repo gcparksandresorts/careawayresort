@@ -40,6 +40,7 @@
 			max-width:600px; min-width:300px;
 		}
 
+	    
 	   
     </style>
 
@@ -62,7 +63,12 @@
 			<div class='titleBar' style='text-align:center;'><div style='max-width:1200px; margin:auto; text-align:left;'><h3>Your Adventure Begins Here</h3> <h1>Globe-City's Careaway Resort</h1>
 				<p>Experience the Magic, Wonder, and Beyond when you visit a resort full of everything. Featuring three parks, 5 resorts, and a mile-long shopping & dining district, there's always something to discover.</p>
 			</div></div>
-		        <div class='banner' style='border-bottom:10px solid midnightblue;'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'></div>
+		        <div class='banner' style='border-bottom:10px solid midnightblue; position:relative;'>
+				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'>
+				<img class='slideShowElement' src='https://blooloop.com/wp-content/uploads/2016/11/Ghostbusters-triotech.jpg'>
+				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/cosmicCenter01.png'>
+				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'>
+			</div>
 			
 			<div class='container'>
 				<h2>The Fun Goes Beyond the Parks</h2>
@@ -100,6 +106,22 @@
 	            	headerObj.style.display='none';
 	          }
 	        });
+
+		// Controls the slideshow
+		    	let slideIndex = 0;
+			showSlides();
+			
+			function showSlides() {
+			  	let i;
+			  	let slides = document.getElementsByClassName("slideShowElement");
+					for (i = 0; i < slides.length; i++) {
+				   		 slides[i].classList.remove("show");
+				  	}
+			  	slideIndex++;
+			  	if (slideIndex > slides.length) {slideIndex = 1}
+			  	slides[slideIndex-1].classList.add("show");
+			  	setTimeout(showSlides, 3000); // Change image every 2 seconds
+			}
 	    </script>
 
 	    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
