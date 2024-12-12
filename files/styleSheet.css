@@ -44,3 +44,35 @@ a.btn{
 		border:solid 2px white; color:white;
 	}
 	a.btn.filled:hover{background:white; color:midnightBlue;}
+
+
+/* --- SPECIAL ELEMENTS --- */
+
+/* Image Slideshow with cross-disolve animation */
+.slideShowElement{
+	position:absolute; top:0; left:0;
+	opacity:0; transition:1s;
+}
+	.slideShowElement.show{
+		opacity:1;
+	}
+
+	/* CODE FOR SLIDESHOW ELEMENT (paste into a script section at the bottom of the page) :
+
+		let slideIndex = 0;
+		showSlides();
+			
+		function showSlides() {
+			  let i;
+			  let slides = document.getElementsByClassName("slideShowElement");
+				for (i = 0; i < slides.length; i++) {
+		   		 slides[i].classList.remove("show");
+				}
+			  slideIndex++;
+			  if (slideIndex > slides.length) {slideIndex = 1}
+			  slides[slideIndex-1].classList.add("show");
+			  setTimeout(showSlides, 3000); // Change image every 2 seconds
+		} // End of slideshow controller
+
+	*/
+	
