@@ -96,7 +96,6 @@
 #hbSideMenu{
         position:fixed;
         top:100px; right:0; bottom:0;
-        animation:openMenu 1s;
         background:lightGray; border-left:5px solid gray;
         padding:10px;
         display:none;
@@ -104,11 +103,11 @@
         overflow-y:auto;
 	width:350px;
 	z-index:997;
+	transition:1s;
 }
-        @keyframes openMenu{
-        	from{right:-350px; overflow-x:hidden;}
-           	to{right:0px;}
-        }
+	#hbSideMenu.open{ right:0px;}
+	#hbSideMenu.closed{ right:-350px; }
+
         #hbSideMenu a{
         	display:block; margin:15px 10px 15px 10px;
             	font-size:18px;
