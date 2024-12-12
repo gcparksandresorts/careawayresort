@@ -103,10 +103,10 @@
         overflow-y:auto;
 	width:350px;
 	z-index:997;
-	transition:1s;
+	/* properties to hide or show menu and animate its movement */
+	right:-350px; transition:1s;
 }
 	#hbSideMenu.open{ right:0px;}
-	#hbSideMenu.closed{ right:-350px; }
 
         #hbSideMenu a{
         	display:block; margin:15px 10px 15px 10px;
