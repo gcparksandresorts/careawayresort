@@ -1,0 +1,79 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+		<title>PAGE_TITLE</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+    	.destContainer{
+        	width:100%; max-width:1200px;
+        	margin:0px auto 0px auto;
+        	display:flex;
+            align-items:stretch;
+        }
+        .destContainer .dest{
+        	width:100%; margin:10px; padding:10px;
+            
+            border-radius:15px; border:2px solid black;
+            display:flex; justify-content:center;
+            
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts-entrance.jpg');
+  			background-position: center; background-size:100%;
+            transition:0.8s;
+  
+        }
+        	.destContainer .dest:hover{
+            	scale:1.05;
+            	background-size:150%;
+            }
+        .destContainer .dest .content{
+        	display:flex; align-items:center;
+            max-width:500px;
+        }
+        .destContainer .dest .content img{
+        	width:100%; height:auto;
+        }
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class='container' style='margin-bottom:0;'>
+        	<h2>Four Places to Party</h2>
+        </div>
+			<div class='destContainer'>
+            
+            	<div class='dest'>
+                	<div class='content'>
+                    	<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/gcapLogo.png'>
+                    </div>
+                </div>
+                
+                <div class='dest'>
+                	<div class='content'>
+                    	<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/cityshopLogo.png'>
+                    </div>
+                </div>
+                
+                <div class='dest'>
+                	<div class='content'>
+                    	<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/cityshopLogo.png'>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class='destContainer'>
+            	<div class='dest'>
+                	<div class='content'>
+                    	<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/cityshopLogo.png'>
+                    </div>
+                </div>
+            </div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
