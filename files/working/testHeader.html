@@ -1,0 +1,43 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+		<title>PAGE_TITLE</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+    	.barMenu{
+        	position:fixed; z-index:997;
+            top:100px; right: 50%;
+            width:100%; max-width:1200px; margin:auto;
+            background:silver; border:2px solid midnightblue; border-top:none; border-radius:0px 0px 15px 15px;
+            
+            display:flex; padding:10px 10px 10px 10px;
+            
+            /* Animated element */
+        	transition:0.5s; transform: translate(50%, -100%); opacity:0;
+        }
+        .barMenu.open{
+        	transform: translate(50%, 0); opacity:1;
+        }
+        
+        #hbLinks a.isSelected{background:white; color:midnightblue; border-radius:10px; text-decoration:underline;}
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+
+			<div class='barMenu' id='ttdMenu'>
+            	<div class='destinationHolder'></div>
+            </div>
+            
+            <br><br><br>
+            <div class='container'>
+            	<button onclick='document.getElementById("ttdMenu").classList.toggle("open");'>Toggle Menu</button>
+            </div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
