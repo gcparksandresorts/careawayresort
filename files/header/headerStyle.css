@@ -119,12 +119,12 @@
         #hbSideMenu a.btn:hover{
         	color:white;
         }
-        #hbSideMenu.hbSMsubMen{
+        #hbSideMenu .hbSMsubMen{
         	margin-left:20px; 
             	font-size:15px; color:dimgray;
 		transition:0.5s; display:none; opacity:0;
         }
-		#hbSideMenu.hbSMsubMen.open{display:block; opacity:1;}
+		#hbSideMenu .hbSMsubMen.open{display:block; opacity:1;}
 
 	/* div used to close the side menu */
 	#hbSideMenuCloser{
