@@ -33,19 +33,20 @@
         }
 	        #hbLinks a{
 	        	font-size:18px;
-	            display:flex;
-	            margin:0 5px 0 5px;
-	            font-weight:bold;
-	            transition:0.5s;
-	            align-self:stretch;
-	            align-items: center;
-	            padding:10px;
+	            	display:flex;
+	            	margin:0 5px 0 5px;
+			font-weight:bold;
+			transition:0.5s;
+			align-self:stretch;
+			align-items: center;
+			padding:10px;
 			animation:headerFade 0.4s;
 	        }
 	        #hbLinks a:hover{
 	        	background:white; color:midnightblue;
-	            border-radius:10px;
+	            	border-radius:10px; cursor:pointer;
 	        }
+		#hbLinks a.isSelected{background:white; color:midnightblue; border-radius:10px; text-decoration:underline;}
 	        @media screen and (max-width:1100px){
 	        	 #hbLinks a.miniMen{
 	             		font-size:30px; cursor:pointer;
