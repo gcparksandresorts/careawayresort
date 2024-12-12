@@ -120,11 +120,12 @@
         #hbSideMenu a.btn:hover{
         	color:white;
         }
-        #hbSideMenu #hbIntd1, #hbSideMenu #hbIntd2, #hbSideMenu #hbIntd3{
-        	margin-left:20px; animation:headerFade 0.6s;
+        #hbSideMenu.hbSMsubMen{
+        	margin-left:20px; 
             	font-size:15px; color:dimgray;
-            	display:none;
+		transition:0.5s; display:none; opacity:0;
         }
+		#hbSideMenu.hbSMsubMen.open{display:block; opacity:1;}
 
 	/* div used to close the side menu */
 	#hbSideMenuCloser{
@@ -132,5 +133,5 @@
 		background:black; opacity:0.3; cursor:pointer;
 		z-index:996; display:none;
 	}
-	#hbSideMenuCloser.open{display:block;}
+		#hbSideMenuCloser.open{display:block;}
 
