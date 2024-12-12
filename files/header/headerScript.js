@@ -10,9 +10,9 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 			 <div id='hbLinks'> <a class='bigMen'>&#11206; Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Events</a> <a class='bigMen'>&#11206; Information</a> <a class='btn filled bigMen'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openSideMenu()'>☰</a> </div> </div></div> \
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
-				<a onclick='openMinMen(1)'>&#11206; Things to Do</a> <div id='hbIntd1'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
+				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
 				<a><span style='opacity:0'>&#11206;</span> Places to Stay</a> <a><span style='opacity:0'>&#11206;</span> Special Events</a> \
-				<a onclick='openMinMen(2)'>&#11206; Information</a> <div id='hbIntd2'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> </div> \
+				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> ";
 
 
@@ -33,28 +33,6 @@ function finishLoad(){
 	var opacVal = 1;
 	let hdLd = setInterval(function(){opacVal -= 0.05; loader.style.opacity = opacVal; if(opacVal <= 0){clearInterval(hdLd); loader.style.display='none';}},10);
 }
-
-// Function for controlling the sub menues of the minimized screen side menu
-function openMinMen(num){
-        var tempDoc = 'Nan';
-        switch(num){
-		case 0:
-			// holding
-		break;
-            	case 1:
-        		tempDoc = document.getElementById("hbIntd1");  
-               	break;
-            	case 2:
-                	tempDoc = document.getElementById("hbIntd2");
-                break;
-            }// end of switch
-	
-        if(tempDoc.style.display == 'block'){
-                  	tempDoc.style.display = 'none';
-        }else{
-               	tempDoc.style.display = 'block';
-        }
-}// end of function openMinMen
 
 // Open or close the side menu by adding or removing the class that moves it to the right of the screen
 function openSideMenu(){document.getElementById("hbSideMenu").classList.toggle("open"); document.getElementById("hbSideMenuCloser").classList.toggle("open");}
