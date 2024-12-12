@@ -125,11 +125,12 @@
             	font-size:15px; color:dimgray;
             	display:none;
         }
-/*
-	#hbSideMenu #smCloser{
-		position:fixed; top:100; left:0; right:0; bottom:0;
-		background:black; opacity:0.6;
-		animation:headerFade 1s;
-		z-index:996;
+
+	/* div used to close the side menu */
+	#hbSideMenuCloser{
+		position:fixed; top:100px; left:0; right:0; bottom:0;
+		background:black; opacity:0.3; cursor:pointer;
+		z-index:996; display:none;
 	}
-*/
+	#hbSideMenuCloser.open{display:block;}
+
