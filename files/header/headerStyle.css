@@ -113,7 +113,7 @@
         	display:block; margin:15px 10px 15px 10px;
             	font-size:18px;
             	color:inherit; font-weight:bold;
-            	transition:0.5s; cursor:pointer;
+            	transition:all 0.5s; cursor:pointer;
         }
         #hbSideMenu a:hover{
         	scale:1.05;
