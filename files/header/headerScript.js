@@ -14,7 +14,8 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 				<a><span style='opacity:0'>&#11206;</span> Places to Stay</a> <a><span style='opacity:0'>&#11206;</span> Special Events</a> \
 				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
-			<div id='ttdbarMenu' class='barMenu'> <a class='btn'>Attractions & Entertainment</a> <a class='btn'>Restaurants & Dining</a> <a class='btn'>Shopping</a> </div>";
+			<div id='ttdbarMenu' class='barMenu'> <a class='btn'>Attractions & Entertainment</a> <a class='btn'>Restaurants & Dining</a> <a class='btn'>Shopping</a> </div> \
+			<div id='infobarMenu' class='barMenu'> <a class='btn'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
 
 
 // FOOTER SETUP
@@ -44,19 +45,23 @@ function toggleBarMenu(num){
 	moreInfoButton = document.getElementById("moreInfoBtn");
 
 	ttdbarMenu = document.getElementById("ttdbarMenu");
+	infobarMenu = document.getElementById("infobarMenu");
 	
 	
 	if(num==1){
 		ttdButton.classList.toggle("isSelected");
 		moreInfoButton.classList.remove("isSelected");
 		ttdbarMenu.classList.toggle("open");
+		infobarMenu.classList.remove("open");
 	}else if(num==2){
 		ttdButton.classList.remove("isSelected");
-		moreInfoButton.classList.add("isSelected");
+		moreInfoButton.classList.toggle("isSelected");
 		ttdbarMenu.classList.remove("open");
+		infobarMenu.classList.toggle("open");
 	}else{
 		ttdButton.classList.remove("isSelected");
 		moreInfoButton.classList.remove("isSelected");
 		ttdbarMenu.classList.remove("open");
+		infobarMenu.classList.remove("open");
 	}
 }
