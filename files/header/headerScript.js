@@ -7,7 +7,7 @@ const loader = document.getElementById("loader");
 const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
 
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo.png'> \
-			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen'>&#11206; Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Events</a> <a class='bigMen' id='moreInfoBtn'>&#11206; Information</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
+			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen' onclick='openTTDbarMenu()'>&#11206; Things to Do</a> <a class='bigMen'>Places to Stay</a> <a class='bigMen'>Events</a> <a class='bigMen' id='moreInfoBtn'>&#11206; Information</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openSideMenu()'>☰</a> </div> </div></div> \
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
 				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> </div> \
@@ -39,7 +39,7 @@ function openSideMenu(){document.getElementById("hbSideMenu").classList.toggle("
 
 function openTTDbarMenu(){
 	ttdButton = document.getElementById("ttdOpen");
-	ttdButton.classList.add("isSelected");
+	ttdButton.classList.toggle("isSelected");
 	
 	moreInfoButton = document.getElementById("moreInfoBtn");
 	moreInfoButton.classList.remove("isSelected");
