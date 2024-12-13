@@ -101,10 +101,10 @@
         padding:10px;
         color:midnightblue;
         overflow-y:auto;
-	width:350px;
+	width:300px;
 	z-index:997;
 	/* properties to hide or show menu and animate its movement */
-	right:-350px; transition:1s;
+	right:-300px; transition:1s;
 }
 	#hbSideMenu.open{ right:0px;}
 
