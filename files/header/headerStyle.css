@@ -135,3 +135,18 @@
 	}
 		#hbSideMenuCloser.open{display:block;}
 
+/* -- HEADER BAR MENU (DESKTOP SCREEN) -- */
+#header .barMenu{
+	position:fixed; z-index:997;
+	top:100px; right: 50%;
+	width:100%; max-width:1200px; margin:auto;
+	background:silver; border:2px solid midnightblue; border-top:none; border-radius:0px 0px 15px 15px;
+	            
+	display:flex; padding:10px 10px 10px 10px;
+	            
+	/* Animated element */
+	transition:0.5s; transform: translate(50%, -100%); opacity:0;
+}
+        #header .barMenu.open{
+        	transform: translate(50%, 0); opacity:1;
+        }
