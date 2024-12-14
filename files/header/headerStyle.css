@@ -80,12 +80,14 @@
 	}
 	#footer #footerLinks div{
 		color:white; text-align:left;
-		width:25%; padding:10px;
+		width:25%; padding:10px; min-width:200px;
 	}
-
-	@media screen and (max-width:999px){
-		
-	}
+		#footer #footerLinks div a{
+			text-decoration:none; display:block; margin:0px 0px 5px 0px;
+		}
+		#footer #footerLinks div a:hover{
+			color:white; text-decoration:underline;
+		}
 
 #loader{
 	position:absolute; top:0; left:0; right:0; bottom:0;
