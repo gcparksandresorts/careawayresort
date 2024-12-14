@@ -83,7 +83,8 @@
 		width:25%; padding:10px; min-width:200px;
 	}
 		#footer #footerLinks div a{
-			text-decoration:none; display:block; margin:0px 0px 5px 0px;
+			text-decoration:none; display:block; margin:0px 0px 16px 0px;
+			line-height:1.2;
 		}
 		#footer #footerLinks div a:hover{
 			color:white; text-decoration:underline;
