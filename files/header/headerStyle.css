@@ -78,7 +78,7 @@
 		width:100%; margin:0px auto 0px auto; max-width:1200px; padding:10px;
 		display:flex; flex-flow:row; align-items:stretch; justify-content:center; flex-wrap:wrap;
 	}
-	#footer #footerLinks .fCol{
+	#footer #footerLinks div{
 		color:white; text-align:left;
 		width:25%; padding:10px;
 	}
