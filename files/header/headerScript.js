@@ -25,7 +25,7 @@ footer.innerHTML = "<div id='footerLinks'> \
 				<div><h4>Tickets & Passes</h4> <a>Park Tickets</a><a>Annual Passports</a> <a>GC VIP Tickets</a> <a>Vacation Packages</a> <a>Group Admission</a> <a>Promotions & Discounts</a></div> \
 				<div><h4>Events & Experiences</h4> <a>Seasonal Events</a> <a>Meetings & Events</a> <a>Youth Programs</a> <a>Travel Planning</a></div> \
 				<div><h4>Information</h4> <a>Safety Guidelines</a> <a>Frequently Asked Questions</a> <a>Accessibility</a> <a>Resort Services & Rentals</a> <a>Corporate Partners</a> <a>Contact Us</a></div> \
-			</div> <div class='container' style='color:white;margin-top:0px;'> <div class='spacer light'></div>  <p><b>Get in Touch</b><br>(311) 868 9000 | guestservices.gccr@gcpr.net</p> <p>300 Adventure Blvd.<br>Oceanfields PN, 53000</p> \
+			</div> <div class='container' style='color:white;margin-top:0px;margin-bottom:0px;'> <div class='spacer light'></div>  <p><b>Get in Touch</b><br>(311) 868 9000 | guestservices.gccr@gcpr.net</p> <p>300 Adventure Blvd.<br>Oceanfields PN, 53000</p> \
 				<div class='spacer light'></div> <p><span style='font-size:12px'>(C) 2025 Globe-City Entertainment LLC | Parks & Resorts</span><br><a>Privacy Policy</a> | <a>Legal Information</a> | <a>MCBPO</a> | <a>Careers</a></p>";
 
 // PAGE SETUP
