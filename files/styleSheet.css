@@ -20,7 +20,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	.leftContainer{text-align:left;}
 
 	.container.filled, .leftContainer.filled {
-		background:gray; border-radius:20px;
+		background:silver; border-radius:20px;
 	}
 	@media screen and (max-width:1200px){
 		.container.filled, .leftContainer.filled {margin:40px 10px 40px 10px;}
@@ -28,10 +28,11 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 
 
 /* --- Titles and stuff ----- */
-.titleBar{width:100%; padding:10px; color:white; background:midnightblue; color:white;}
+.titleBar{width:100%; padding:10px; color:white; background:midnightblue; color:white; text-align:center;}
+	.titleBar.left{text-align:left;}
 	.titleBar p, .titleBar h1, .titleBar h2, .titleBar h3{width:100%; max-width:1200px; margin-left:auto; margin-right:auto;}
 
-.spacer{width:100%; height:5px; background:gray; border-radius:2.5px; max-width:1200px; margin:10px auto 10px auto;}
+.spacer{width:100%; height:2px; background:gray; border-radius:1px; max-width:1200px; margin:10px auto 10px auto;}
 	.spacer.light{background:silver;}
 	.spacer.dark{background:dimgray;}
 
@@ -41,12 +42,12 @@ a{color:inherit; }
 
 a.btn{
 	padding:10px; margin:10px; border:solid 2px midnightblue; border-radius:10px;
-	transition:0.5s; cursor:pointer; color:midnightBlue; text-decoration:none;
+	transition:0.5s; cursor:pointer; color:midnightBlue; text-decoration:none; display:inline-block;
 }
 	a.btn:hover{background:midnightblue; color:white;}
 
 	a.btn.filled{
-		border:solid 2px white; color:white;
+		border:solid 2px white; color:white; background:midnightBlue;
 	}
 	a.btn.filled:hover{background:white; color:midnightBlue;}
 
