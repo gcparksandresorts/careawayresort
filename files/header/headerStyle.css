@@ -5,7 +5,7 @@
 	to{opacity:1;}
 }
 	#header #headerBkg{
-  		width:100%; margin:0; height:100px; background:black; margin-top:-100px;
+  		width:100%; margin:0; height:80px; background:black; margin-top:-80px;
   	}
 
 	#headerBar{
@@ -13,7 +13,7 @@
 		top:0; left:0; right:0;
 	   	z-index:999;
 	   	background:linear-gradient(90deg,rgba(25, 25, 112,0.95),rgba(0, 0, 139,0.95),rgba(25, 25, 112,0.95));
-	   	height:100px;
+	   	height:80px;
 	   	text-align:center;
 	}
 	  #headerBar #hbContent{
@@ -22,7 +22,7 @@
 	  }
   
 	  #headerBar #hbContent #headerLogo{
-	    height:90px; margin-top:5px;
+	    height:70px; margin-top:5px;
 	    cursor:pointer;
 	  }
 
