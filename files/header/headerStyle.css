@@ -71,16 +71,16 @@
   }
 /* <div id='footer'><img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'></div> */
   	#footer #footerLogo{
-	    	height:60px; width:auto;
-	        margin: 20px auto 20px auto;
+	    	width:100%; height:auto;
+	        margin:0px auto 0px auto;
     	}
 	#footer #footerLinks{
 		width:100%; margin:0px auto 0px auto; max-width:1200px; padding:10px;
-		display:flex; flex-flow:row; align-items:stretch; justify-content:center; flex-wrap:wrap;
+		display:flex; flex-flow:row; align-items:stretch; justify-content:flex-start; flex-wrap:wrap;
 	}
 	#footer #footerLinks div{
 		color:white; text-align:left;
-		width:25%; padding:10px; min-width:200px;
+		width:20%; padding:10px; min-width:200px;
 	}
 		#footer #footerLinks div a{
 			text-decoration:none; display:block; margin:0px 0px 16px 0px;
