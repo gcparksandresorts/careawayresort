@@ -76,7 +76,7 @@
     	}
 	#footer #footerLinks{
 		width:100%; margin:0px auto 0px auto; max-width:1200px; padding:10px;
-		display:flex; flex-flow:row; align-items:stretch; justify-content:flex-start; flex-wrap:wrap;
+		display:flex; flex-flow:row; align-items:stretch; justify-content:left; flex-wrap:wrap;
 	}
 	#footer #footerLinks div{
 		color:white; text-align:left;
@@ -89,6 +89,11 @@
 		#footer #footerLinks div a:hover{
 			color:white; text-decoration:underline;
 		}
+
+	@media screen and (max-width:500px){
+		#footer #footerLinks{flex-flow:column;}
+		#footer #footerLinks div {width:100%; text-align:center;}
+	}
 
 #loader{
 	position:absolute; top:0; left:0; right:0; bottom:0;
