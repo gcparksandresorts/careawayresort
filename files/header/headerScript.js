@@ -19,8 +19,14 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 
 
 // FOOTER SETUP
-footer.innerHTML = "<img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'> \
-			<div class='spacer light'></div> <div id='footerLinks'></div>";
+footer.innerHTML = "<div id='footerLinks'> \
+				<div><img id='footerLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/careawayresort-logo-white.png'></div> \
+				<div><h4>Resorts & Destinations</h4><a>Globe-City's Careaway Park</a><a>Globe-City Port of Adventure</a><a>Globe-City Splashport Bay</a><a>Globe-City's Enchanted Lodge Resort</a><a>Globe-City World of Wonder</a><a>The RW Hotel</a><a>MCR Port of Palms Resort</a><a>MCR Splashport Hotel</a></div> \
+				<div><h4>Tickets & Passes</h4> <a>Park Tickets</a><a>Annual Passports</a> <a>GC VIP Tickets</a> <a>Vacation Packages</a> <a>Group Admission</a> <a>Promotions & Discounts</a></div> \
+				<div><h4>Events & Experiences</h4> <a>Seasonal Events</a> <a>Meetings & Events</a> <a>Youth Programs</a> <a>Travel Planning</a></div> \
+				<div><h4>Information</h4> <a>Safety Guidelines</a> <a>Frequently Asked Questions</a> <a>Accessibility</a> <a>Resort Services & Rentals</a> <a>Corporate Partners</a> <a>Contact Us</a></div> \
+			</div> <div class='container' style='color:white;margin-top:0px;'> <div class='spacer light'></div>  <p><b>Get in Touch</b><br>(311) 868 9000 | guestservices.gccr@gcpr.net</p> <p>300 Adventure Blvd.<br>Oceanfields PN, 53000</p> \
+				<div class='spacer light'></div> <p><span style='font-size:12px'>(C) 2025 Globe-City Entertainment LLC | Parks & Resorts</span><br><a>Privacy Policy</a> | <a>Legal Information</a> | <a>MCBPO</a> | <a>Careers</a></p>";
 
 // PAGE SETUP
 loader.innerHTML = "<img src='https://gcparksandresorts.github.io/careawayresort/files/header/webfavicon.ico'><h2>Loading Page</h2>";
