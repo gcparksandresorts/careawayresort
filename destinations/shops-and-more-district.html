@@ -3,20 +3,61 @@
 		<title>Shops & More District | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 	
-    <style></style>
+    <style>
+	    .columnContainer{
+		width:100%; display:flex;
+		flex-flow:row; padding:0px;
+	    }
+	    	.columnContainer img{
+			width:30%; align-self:flex-start;
+			border-radius:15px; 
+		}
+	    	.columnContainer div{
+			text-align:left; padding:0px 10px 0 10px;
+			align-self:flex-start;
+		}
+	    @media screen and (max-width:500px){
+			.columnContainer{ flex-flow:column; }
+		    	.columnContainer img { width:100%; margin:10px; }
+		    	.columnContainer div { width:100%; margin:10px 0px 10px 0px;}
+	    }
+
+	    .fullContainer{
+		background:midnightBlue; color:white;
+		width:100%; position:relative; padding:20px 0px 20px 0px;
+	    }
+    </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
 
 		<div class='banner'> <div class='backgroundContainer' style='background-image: url("https://dynamicmedia.irvinecompany.com/is/image/content/dam/office/3-readytopublish/portfolio/orangecounty/irvinespectrum/submarketamenities/irvinespectrumcenter/Lion%20Fountain%20Summer.jpg?&wid=1920&iccEmbed=1&icc=AdobeRGB&resMode=sharp2&fmt=pjpeg&pscan=auto");'></div> </div>
-		<div class='titleBar' style='position:relative'>
+		<!--<div class='titleBar' style='position:relative'>
             		<div class='topBoundExtend'></div>
 			<img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/shops-and-more-logo.png'>
            	</div>
 		<div class='titleBar silver'>
 			<h2>Shop & Play, All Day, Everyday</h2>
 			<p>Spanning nearly a mile, the Shops&More District is the vibrant heart of the Careaway Resort—a place where shopping, dining, and entertainment come together in perfect harmony. Explore unique styles, flavors, and experiences unlike anywhere else. Stroll down gorgeous plazas and breezeways connecting all three parks, five resort hotels, and commuter parking areas.</p>
+		</div>-->
+
+		<div class='fullContainer'>
+			<div class='topBoundExtend'></div>
+			<div class='leftContainer' style='margin-top:0px'>
+				<div class='columnContainer'>
+					<img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/shops-and-more-logo.png'>
+					<div>
+						<h2 style='margin-top:0px; margin-bottom:5px;'>Shop & Play, All Day, Everyday</h2>
+						<p>Spanning nearly a mile, the Shops&More District is the vibrant heart of the Careaway Resort—a place where shopping, dining, and entertainment come together in perfect harmony. Explore unique styles, flavors, and experiences unlike anywhere else. Stroll down gorgeous plazas and breezeways connecting all three parks, five resort hotels, and commuter parking areas.</p>
+						<p><a>View Operating Hours and Events</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='container'>
+			hello
 		</div>
 		
 		
