@@ -25,7 +25,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		height:100%; width:100%;
 	}
 
-.container, .leftContainer {margin:auto; padding:25px 10px 25px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
+.container, .leftContainer {margin:auto; padding:40px 10px 40px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
 
 	.leftContainer{text-align:left;}
 
