@@ -25,7 +25,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		height:100%; width:100%;
 	}
 
-.container, .leftContainer {margin:auto; margin-top:40px; margin-bottom:40px; padding:10px; width:full; display:block; max-width:1200px; text-align:center;}
+.container, .leftContainer {margin:auto; padding:25px 10px 25px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
 
 	.leftContainer{text-align:left;}
 
@@ -35,6 +35,31 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	@media screen and (max-width:1200px){
 		.container.filled, .leftContainer.filled {margin:40px 10px 40px 10px;}
 	}
+
+.fullContainer{
+	background:midnightBlue; color:white; 
+	width:100%; margin:0; position:relative; padding:20px 0px 20px 0px;
+ }
+
+.columnContainer{
+	width:100%; display:flex;
+	flex-flow:row; padding:0px;
+}
+    	.columnContainer img{
+		width:40%; align-self:flex-start;
+		border-radius:15px; 
+	}
+    	.columnContainer div{
+		text-align:left; padding:0px 10px 0 10px;
+		align-self:flex-start;
+	}
+	@media screen and (max-width:500px){
+		.columnContainer{ flex-flow:column; }
+		.columnContainer img { width:100%; margin:10px; }
+		.columnContainer div { width:100%; margin:10px 0px 10px 0px;}
+	}
+
+
 
 
 /* --- Titles and stuff ----- */
