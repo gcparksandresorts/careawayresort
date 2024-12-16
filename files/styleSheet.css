@@ -47,7 +47,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 }
     	.columnContainer img{
 		width:40%; align-self:flex-start;
-		border-radius:15px; 
+		border-radius:15px;
+		max-height:400px; object-fit:cover;
 	}
     	.columnContainer div{
 		text-align:left; padding:0px 10px 0 10px;
