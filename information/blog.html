@@ -1,0 +1,47 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+		<title>Resort Blog | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+		#resultsBin > div {
+			width:100%; background:lightgray; border-radius:10px; padding:10px; text-align:left;
+			transition:0.5s; position:relative; margin-bottom:10px; display:flex; flex-flow:row;
+		}
+			#resultsBin > div > div {width:100%; padding-left:15px;} #resultsBin > div:hover {border:2px solid black;}
+				#resultsBin > div > div > h4 {margin:0px; font-size:16px;}
+				#resultsBin > div > div > p {margin-top:5px; margin-bottom:0px; color:dimgray;}
+				#resultsBin > div > div > a {opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
+		
+			#resultsBin > div > img {width:50px; align-self:center;}
+			
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+            <div class='titleBar'><h1>Resort Blog & Operations Updates</h1></div>
+           	<div class='titleBar silver'><p>Explore new happenings and events around Globe-City's Careaway Resort</p></div>
+
+			<div class='container'>
+				<h3>Sort & Filter</h3>
+				<p>Category: <select>
+					<option>View All</option>
+					</select>
+				</p>
+				<p>Showing <b>NUM</b> results</p>
+			</div>
+            
+            <div class='container' id='resultsBin'>
+				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
+				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
+				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
+			</div>
+            
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
