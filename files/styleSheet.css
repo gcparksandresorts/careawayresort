@@ -40,6 +40,10 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	background:midnightBlue; color:white; 
 	width:100%; margin:0; position:relative; padding:20px 0px 20px 0px;
  }
+	.fullContainer.silver{
+		background:silver;
+		color:black;
+        }
 
 .columnContainer{
 	width:100%; display:flex;
@@ -56,8 +60,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	}
 	@media screen and (max-width:500px){
 		.columnContainer{ flex-flow:column; }
-		.columnContainer img { width:100%; margin:10px; }
-		.columnContainer div { width:100%; margin:10px 0px 10px 0px;}
+		.columnContainer img { width:100%; margin:10px auto 10px auto; }
+		.columnContainer div { width:100%; margin:10px auto 10px auto; }
 	}
 
 
