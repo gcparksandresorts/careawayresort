@@ -69,27 +69,53 @@
 				<p>Leave your worries behind and step into a world of Magic, Wonder, and Adventure. Whether you're looking for thrills and gravity-defying rides, or a family-friendly experience for the young and young-at-heart, you'll find your adventure here at Globe-City's Careaway Resort. Explore two award-winning themeparks, five themed resort hotels, and a splash-tastic waterpark with waves of fun.</p>
 				<p><a>Explore the Careaway Resort</a></p>
 			</div></div>
-		        <div class='banner' style='border-bottom:10px solid midnightblue; position:relative;'>
+		        <div class='banner' style='border-bottom:10px solid midnightblue; position:relative; height:400px;'>
 				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'>
 				<img class='slideShowElement' src='https://blooloop.com/wp-content/uploads/2016/11/Ghostbusters-triotech.jpg'>
 				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/cosmicCenter01.png'>
 				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'>
 			</div>
-			
-			<div class='container'>
-				<h2>The Fun Goes Beyond the Parks</h2>
-				<p>When you book a resort hotel you get exclusive benefits including discounted admission and dining throughout the entire resort. Plus, a resort hotel brings the adventure from the rides to your bed and provides you comfort and luxury unmatched. Enjoy themed rooms and gorgeous ammenities that will satisfy everyone in your family from the young to the young at heart.</p>
-				<a class='btn'>View Hotels & Resorts</a>
+
+			<div class='container' id='spotlightContainer'>
+				<h2 style='margin-bottom:5px;'>Resort Spotlight</h2>
+				<p style='margin-top:none'>December 2024</p>
+				<div class='tileContainer' style='text-align:left'>
+					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight One</h3>Some text describing the first spotlight <a href='click-link'>link</a></div>
+					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Two</h3>An additional spotlight with some other stuff <a href='click-link'>link</a></div>
+					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Three</h3>Third times the charm, yet another spotlight with more text and more words. <a href='click-link'>link</a></div>
+				</div>
+				<p><a class='btn' href='information/blog'>View Resort Blog</a></p>
 			</div>
 
 			<div class='spacer'></div>
 
-			<div class='container filled'>
-				<h2>Three Parks - Three Unique Adventures</h2>
-				<div class='spacer light'></div>
-				<p>Explore enchanted snowscapes, vibrant cartoon kingdoms, and trecherous jungles at <a>Globe-City's Careaway Park</a> or visit dark and mysterious kingdoms and famous movie studios at <a>Globe-City's Port of Adventure</a>. Enjoy the hot sun with a splash at <a>Globe-City's Splashport Bay</a>. The fun never ends!</p>
-				<a class='btn filled'>Explore Destinations</a>
+			<style>
+				#destExplore{position:relative; width:100%; aspect-ratio : 1 / 1; transition:0.5s; background-image:url("https://i.pinimg.com/736x/cc/77/4e/cc774e6fc8f7b21f9a81200b429c1e91.jpg"); background-size:cover;}
+					#destExplore .leftItem > img, #destExplore .rightItem > img {height:100%; width:auto;}
+					#destExplore .rightItem, #destExplore .leftItem{height:25%; left:0; background:silver; border:2px solid black;}
+				@media screen and (max-width:600px){#destExplore{display:none;opacity:0;}}
+			</style>
+
+			<div class='container'>
+				<h2>Explore Four Unforgettable Destinations</h2>
+				<div id='destExplore'>
+					<div class='leftItem' style='top:0;left:0;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'></div>
+				</div>
 			</div>
+			
+			<div class='container filled'>
+				<div class='columnContainer dImg'>
+					<img src='https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/dlr/places-to-stay/grand-californian/recreation/grand-californian-pool-family-16x9.jpg?1706116994236'>
+					<div>
+						<h2>The fun goes beyond the parks</h2>
+						Don't let your Adventure end at the park exit; Stay in a deluxe resort hotel and bring the fun & memories to be made right to your bed. Enjoy unique themed rooms and luxurious accomodations.
+						<p><a href='hotels'>Explore Resort Hotels</a></p>
+					</div>
+				</div>
+			</div>
+
+			
+		
 	<div id='footer'></div>
 	</div>
     </body>
