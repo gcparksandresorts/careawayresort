@@ -90,10 +90,11 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	.tileContainer > div {padding:10px 20px 10px 20px; width:33%; margin:10px 0 10px 0; min-width:250px;}
         	@media screen and (max-width:700px){.tileContainer > div {width:50%; padding:10px 15px 10px 15px; min-width:200px;}}
         	@media screen and (max-width:450px){.tileContainer > div {width:100%; padding:10px;}}
-        	.tileContainer > div > img {width:100%; border-radius:15px; height:200px; object-fit:cover; margin-bottom:5px;}
+        	.tileContainer > div > img {width:100%; border-radius:15px; height:200px; object-fit:cover; margin-bottom:5px; transition:0.5s;}
         	.tileContainer > div > h3,  .tileContainer > div > h4 {margin-top:0px; margin-bottom:5px;}
 
-
+		.tileContainer > div.linked:hover {cursor:pointer;}
+		.tileContainer > div.linked:hover > img {scale:1.05;}
 
 /* --- Titles and stuff ----- */
 .titleBar{width:100%; padding:10px; color:white; background:midnightblue; color:white; text-align:center;}
