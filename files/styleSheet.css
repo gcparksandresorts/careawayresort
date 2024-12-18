@@ -12,7 +12,8 @@ h1,h2,h3 {
 h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 
 /* ------ PAGE CONTENT ELEMENTS ----------------- */
-.banner{position:relative; width:100%; margin:0; height:400px;}
+.banner{position:relative; width:100%; margin:0; height:33vh;}
+	.banner.full {height:calc(100vh - 100px);}
 	.banner img{width:100%; height:100%; object-fit:cover;}
 	.backgroundContainer{ 
 		/* Creates a fixed image in the banner that won't move with page scroll. Insert this into the banner: 
@@ -30,38 +31,54 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	.leftContainer{text-align:left;}
 
 	.container.filled, .leftContainer.filled {
-		background:silver; border-radius:20px; padding:10px 10px 10px 10px; margin:30px 0px 30px 0px;
+		background:silver; border-radius:20px; padding:10px 10px 10px 10px; margin:30px auto 30px auto;
 	}
+		.container.filled.blue, .leftContainer.filled.blue {background:midnightblue; color:white;}
+
 	@media screen and (max-width:1200px){
-		.container.filled, .leftContainer.filled {padding:10px;}
+		.container.filled, .leftContainer.filled {border-radius:0px;}
 	}
 
 .fullContainer{
-	background:midnightBlue; color:white; 
+	background:silver; color:black; 
 	width:100%; margin:0; position:relative; padding:20px 0px 20px 0px;
  }
-	.fullContainer.silver{
-		background:silver;
-		color:black;
+	.fullContainer.blue{
+		background:midnightblue;
+		color:white;
         }
+		.fullContainer.blue a.btn{
+			border:solid 2px white; color:white;
+		}
+		.fullContainer.blue a.btn:hover{background:white; color:midnightblue;}
 
 .columnContainer{
 	width:100%; display:flex;
 	flex-flow:row; padding:0px;
 }
-    	.columnContainer img{
+    	.columnContainer > img{
 		width:40%; align-self:flex-start;
 		border-radius:15px;
 		max-height:400px; object-fit:cover;
 	}
-    	.columnContainer div{
+    	.columnContainer > div{
 		text-align:left; padding:0px 10px 0 10px;
 		align-self:flex-start;
 	}
+	@media screen and (min-width:501px){
+		.columnContainer:has(img:first-child) > div {
+		    padding-left: 20px; /* Add padding-left when img is the first child */
+		}
+		
+		.columnContainer:has(div:first-child) > div {
+		    padding-right: 20px; /* Add padding-right when img is not the first child */
+		}
+	}
+	
 	@media screen and (max-width:500px){
 		.columnContainer{ flex-flow:column; }
-		.columnContainer img { width:100%; margin:10px auto 10px auto; }
-		.columnContainer div { width:100%; margin:10px auto 10px auto; }
+		.columnContainer > img { width:100%; margin:10px auto 10px auto; }
+		.columnContainer > div { width:100%; margin:10px auto 10px auto; }
 	}
 
 
