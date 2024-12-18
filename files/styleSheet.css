@@ -61,6 +61,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		border-radius:15px;
 		max-height:400px; object-fit:cover;
 	}
+		.columnContainer.dImg > img{align-self:stretch;}
     	.columnContainer > div{
 		text-align:left; padding:0px 10px 0 10px;
 		align-self:flex-start;
