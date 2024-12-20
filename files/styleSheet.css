@@ -26,12 +26,12 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		height:100%; width:100%;
 	}
 
-.container, .leftContainer {margin:auto; padding:40px 10px 40px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
+.container, .leftContainer {margin:auto; padding:55px 10px 55px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
 
 	.leftContainer{text-align:left;}
 
 	.container.filled, .leftContainer.filled {
-		background:silver; border-radius:20px; padding:10px 10px 10px 10px; margin:30px auto 30px auto;
+		background:silver; border-radius:20px; padding:10px 10px 10px 10px; margin:55px auto 55px auto;
 	}
 		.container.filled.blue, .leftContainer.filled.blue {background:midnightblue; color:white;}
 
