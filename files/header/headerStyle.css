@@ -32,7 +32,7 @@
             	display:flex;
         }
 	        #hbLinks a{
-	        	font-size:18px;
+	        	font-size:18px; text-decoration:none;
 	            	display:flex;
 	            	margin:0 5px 0 5px;
 			font-weight:bold;
