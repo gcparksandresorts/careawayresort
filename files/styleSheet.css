@@ -61,7 +61,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		border-radius:15px;
 		max-height:400px; object-fit:cover;
 	}
-		.columnContainer.banner > img {width:50%; align-self:stretch;}
+		.columnContainer.cBanner > img {width:50%; align-self:stretch;}
 		.columnContainer.dImg > img{align-self:stretch;}
     	.columnContainer > div{
 		text-align:left; padding:0px 10px 0 10px;
@@ -79,7 +79,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	
 	@media screen and (max-width:500px){
 		.columnContainer{ flex-flow:column; }
-		.columnContainer > img, .columnContainer.banner > img { width:100%; margin:10px auto 10px auto; }
+		.columnContainer > img, .columnContainer.cBanner > img { width:100%; margin:10px auto 10px auto; }
 		.columnContainer > div { width:100%; margin:10px auto 10px auto; }
 	}
 
