@@ -40,7 +40,7 @@ pgHead.innerHTML += "<meta charset='UTF-8'><meta name='viewport' content='width=
 // Function to close the loader after the page is fully loaded
 function finishLoad(){
 	var opacVal = 1;
-	let hdLd = setInterval(function(){opacVal -= 0.05; loader.style.opacity = opacVal; if(opacVal <= 0){clearInterval(hdLd); loader.style.display='none';}},10);
+	let hdLd = setInterval(function(){opacVal -= 0.025; loader.style.opacity = opacVal; if(opacVal <= 0){clearInterval(hdLd); loader.style.display='none';}},10);
 }
 
 // Open or close the side menu by adding or removing the class that moves it to the right of the screen
