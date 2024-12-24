@@ -7,9 +7,11 @@ const indLength = galleryIndex.length-1;
 for (let i = 0; i < galleryIndex.length; i++) {
 			let tempVal = galleryIndex[i].split(" | ");
 			if(tempVal[1] != 'none'){
-  				gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div>"+tempVal[1]+"</div></div>";
+				let iT = i + 1;
+  				gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div><span style='color:silver'>"+iT+" of "+galleryIndex.length+": </span> "+tempVal[1]+"</div></div>";
 			}else{
-				gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'></div>";
+				let iT = i + 1;
+				gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div><span style='color:silver'>"+iT+" of "+galleryIndex.length+"</span></div></div>";
 			}
 			if(i == 0){
 				document.getElementById("gallery-0").classList.add("isOn");
