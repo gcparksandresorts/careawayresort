@@ -168,9 +168,11 @@ a.btn{
 .slideShowElement{
 	position:absolute; top:0; left:0;
 	opacity:0; transition:1s;
+	pointer-events: none;
 }
 	.slideShowElement.show{
 		opacity:1;
+		pointer-events: auto;
 	}
 
 	/* CODE FOR SLIDESHOW ELEMENT (paste into a script section at the bottom of the page) :
@@ -194,8 +196,8 @@ a.btn{
 
 /* -- An image gallery that the user can click through -- */
 #galleryContainer {position:relative; width:100%; aspect-ratio:3/2; margin:0; padding:0;}
-	#galleryContainer > div {transition:0.5s; opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
-		#galleryContainer > div.isOn {opacity:1;}
+	#galleryContainer > div {transition:0.5s; opacity:0; position:absolute; top:0; right:0; left:0; bottom:0; pointer-events: none;}
+		#galleryContainer > div.isOn {opacity:1; pointer-events: auto;}
 		#galleryContainer > div > img {width:100%; height:100%; object-fit:cover; border-radius:15px;}
 		#galleryContainer > div > div {position:absolute; left:0; right:0; bottom:0; padding:10px; color:white; background:rgba(0,0,0,0.5); border-radius:0px 0px 15px 15px;}
 	#galleryContainer #gBack, #galleryContainer #gForward {position:absolute; top:calc(50% - 30px); height:60px; width:60px; border:2px solid white; border-radius:10px; background:rgba(0,0,0,0.5); color:white; cursor:pointer; font-size:20px}
