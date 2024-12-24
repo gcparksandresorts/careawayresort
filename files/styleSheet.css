@@ -204,8 +204,11 @@ a.btn{
 
 		(2) Insert the following: (replace caption_text with none if there's no caption)
 			<script> galleryIndex = [];
-				galleryIndex[0] = "image_link | caption_text";
-				galleryIndex[1] = "image_link | caption_text";
+				iVald = 0;
+				galleryIndex[iVald] = "image_link | caption_text";
+				iVald += 1; galleryIndex[iVald] = "image_link | caption_text";
+				iVald += 1; galleryIndex[iVald] = "image_link | caption_text";
+				iVald += 1; galleryIndex[iVald] = "image_link | caption_text";
 			</script>
 			<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/galleryScript.js"></script>
 
