@@ -5,6 +5,7 @@
     </head>
 	
     <style>
+	    h1, h2, h3 {font-family: "Times New Roman", Times, serif !important;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -16,7 +17,7 @@
 				<div class='columnContainer cBanner'>
 					<img src='https://thevendry.com/cdn-cgi/image/width=3840,quality=75,fit=contain,metadata=none,format=auto/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fuploads.thevendry.co%2F23050%2F1682081013274_13217331_994694210584708_3351861925683987999_o.jpg'>
 					<div>
-						<h1 style='font-family:georgia'>Globe-City's Sprucewood Lodge</h1>
+						<h1 style=''>Globe-City's Sprucewood Lodge</h1>
 						Inspired by the wonder and grandeur of nature, the Sprucewood Lodge combines the sophistication and comfort of a world-class resort with the beauty and serenity of the outdoors. Enjoy deluxe suites designed to look and feel like a luxurious cabin nestled in a dense sprucewood forest.
 					</div>
 				</div>
@@ -53,9 +54,8 @@
 		<div class='spacer'></div>
 
 		<div class='container'>
-			<h2>See what the Sprucewood Lodge has to offer</h2>
-			<div class='container'><div id='galleryContainer'></div></div>
-			<p><a href='https://imgur.com/a/globe-citys-sprucewood-lodge-tm-images-DsU2h4R'>View on Imgur</a></p>
+			<h2>Explore the Sprucewood Lodge cabins and cottages</h2>
+			<div class='container'><div id='galleryContainer'></div> <p><a href='https://imgur.com/a/globe-citys-sprucewood-lodge-tm-images-DsU2h4R'>View on Imgur</a></p></div>
 		</div>
 
 		<div class='spacer'></div>
@@ -63,14 +63,137 @@
             	<div class='container' style='max-width:900px'>
 			<h2>Cottage Rooms and Cabin Suites</h2>
 			At the sprucewood lodge, rooms and suites are named Cottages and Cabins respectively to support the theme of a luxurious wilderness retreat!
-
+			<p>For your enjoyment, all rooms include high-speed Wifi, Nespresso<sup>TM</sup> Coffee Machines, premium 4K PictureFrame<sup>TM</sup> smart TVs, mini-fridges, pin-code secured safes, and telephones. <a href='#inclusions'>View all inclusions and ammenaties</a></p>
 			
+			<br>
+		<style>#roomTypes{transition:0.8s; opacity:1; height:auto;} #roomTypes.shrunk{opacity:0; height:0.1px; overflow:hidden;}</style>
+		<section id='roomTypes'>
+			<div class='rowDiv'>
+				<img src='https://i.imgur.com/QY3OeRS.png'>
+				<div>
+					<h3>Standard Cottage Room - Faces North Resort Drive</h3>
+					<div class='rdPrice'>$ 579+ / night</div>
+					<div class='rdOffering'>
+						<div>
+							<ul><li>Two queen beds</li><li>Shower + Tub combo</li></ul>
+						</div>
+						<div>
+							<ul><li>Writing desk</li><li>Free-standing wardrobe / cabinet</li></ul>
+						</div>
+					</div>
+					<div class='rdSubtext'></div>
+				</div>
+				<a onclick='beginBook("Standard Cottage Room")'></a>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://i.imgur.com/W1ZZkbD.png'>
+				<div>
+					<h3>Deluxe Cottage Room - Faces Theme Park and Pool Deck</h3>
+					<div class='rdPrice'>$ 769+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>2 Queen beds</li><li>Twin sleeper sofa</li><li>Walk-in shower</li></ul> </div>
+						<div> <ul><li>Electric fireplace</li><li>Jazuzzi tub</li><li>Writing Desk</li></ul> </div>
+					</div>
+					<div class='rdSubtext'></div>
+				</div>
+				<a onclick='beginBook("Deluxe Cottage Room")'></a>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://i.imgur.com/bYLs9jC.png'>
+				<div>
+					<h3>Standard Cabin Suite - Faces North Resort Drive</h3>
+					<div class='rdPrice'>$ 999+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>King bed in seperate bedroom</li> <li>Queen bed in main room</li> <li>Sitting room with sleeper sofa</li></ul> </div>
+						<div> <ul><li>Shower + tub combo</li> <li>Electric fireplace</li> <li>Writing desk</li></ul> </div>
+					</div>
+					<div class='rdSubtext'></div>
+				</div>
+				<a onclick='beginBook("Standard Cabinq Suite")'></a>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://i.imgur.com/QY3OeRS.png'>
+				<div>
+					<h3>Deluxe Cabin Room - Faces Theme Park and Pool Deck</h3>
+					<div class='rdPrice'>$ 1200+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>King bed in seperate bedroom</li> <li>Queen bed in main room</li> <li>Sitting room with sleeper sofa</li> <li>Jazuzzi tub</li></ul> </div>
+						<div> <ul><li>Walk-in shower</li> <li>Electric fireplace</li> <li>Writing desk</li></ul> </div>
+					</div>
+					<div class='rdSubtext'></div>
+				</div>
+				<a onclick='beginBook("Deluxe Cabin Suite")'></a>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://i.imgur.com/hiNPtoP.png'>
+				<div>
+					<h3>Couple's Cottage</h3>
+					<div class='rdPrice'>$ 745 / night | Preffered View: $ 769+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>Single king bed</li> <li>Electric fireplace</li> <li>Jacuzzi tub</li></ul> </div>
+						<div> <ul><li>Walk-in shower</li><li>Sitting room with sleeper sofa</li></ul> </div>
+					</div>
+					<div class='rdSubtext'>Limited availability - book soon</div>
+				</div>
+				<a onclick='beginBook("Couples Cottage")'></a>
+			</div>
+		</section>
+			<div class='container silver'>
+				<h2>Begin your booking</h2>
+				<p id='bookingArea'>Select a room-type to continue.</p>
+			</div>
+		</div>
+
+		<a id='inclusions'></a>
+		<div class='leftContainer filled' style='background-color:darkslategray; color:white;'>
+			<h2>Inclusions and Complimentary Services</h2>
+			<p>As a Globe-City Signature Selection resort, the Sprucewood Lodge is equipped to ensure your comfort and enjoyment throughout your stay. No matter your adventure, enjoy the following complimentary inclusions with every booking:</p>
+			<div style='display:flex'>
+				<div>
+					<h4>Toiletries and Self-Care</h4>
+					<ul>
+						<li>Spruce Forest scented candle exclusively for the Sprucewood Lodge</li>
+						<li>Spruce shampoo, conditioner, and bodywash by <em>Shampee'</em></li>
+						<li>Coconut and Pine body lotion by <em>Shampee'</em></li>
+						<li>Coconut and Pine face-masks by <em>Shampee'</em></li>
+						<li>Fresh face and body towels, unisex robes, and slippers</li>
+					</ul>
+				</div>
+				<div style='padding-left:10px;'>
+					<h4>Hotel Services</h4>
+					<ul>
+						<li>Daily housekeeping<sup>1</sup> - vacuuming and replacement of bedsheets, towels, and robes</li>
+						<li>24 hour room service</li>
+						<li>Delivery service for Steakhouse and poolside cafe*</li>
+					</ul>
+				</div>
+			</div>
+			<p>
+				1 - Housekeeping will not enter rooms with the "Do-not-disturb" plackard showing or if the room is occupied<br>
+				* - Cost of food will be charged to the room, delivery service is complimentary<br>
+			</p>
 		</div>
 		
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
 </body>
+
+	<!-- booking manager -->
+	<script>
+		const roomTypes = document.getElementById("roomTypes");
+		
+		function beginBook(type){
+			if(type == 'reset'){
+				document.getElementById("bookingArea").innerHTML = "Select a room-type to continue";
+				roomTypes.classList.remove('shrunk');
+			}else{
+				roomTypes.classList.add('shrunk');
+				document.getElementById("bookingArea").innerHTML = "<a class='btn filled' target='_blank' rel='noopener noreferrer' href='booking-manager?hotel=sprucewood-lodge&roomtype=null'>View availability for your "+type+"</a> <p>or <a onclick='beginBook("+'"reset"'+")' style='cursor:pointer; color:blue;'>change room-type</a></p>";
+			}
+		}// end of function beginBook(type)
+	</script>
+	
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 
 	<script> galleryIndex = [];
