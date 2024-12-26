@@ -64,6 +64,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		.columnContainer.cBanner > img {width:50%; align-self:stretch;}
 		.columnContainer.dImg > img{align-self:stretch;}
     	.columnContainer > div{
+		width:60%;
 		text-align:left; padding:0px 10px 0 10px;
 		align-self:flex-start;
 	}
