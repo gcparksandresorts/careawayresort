@@ -11,8 +11,9 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 				<a class='miniMen' onclick='openSideMenu()'>☰</a> </div> </div></div> \
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
 				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> <a>Recreation</a></div> \
-				<a href='"+siteLink+"hotels/view'><span style='opacity:0'>&#11206;</span> Places to Stay</a> <a><span style='opacity:0'>&#11206;</span> Special Events</a> \
-				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> </div> </div> \
+				<a href='"+siteLink+"hotels/view'><span style='opacity:0'>&#11206;</span> Places to Stay</a> \
+				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
+				<a><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
 			<div id='ttdbarMenu' class='barMenu'> <a class='btn'>Attractions & Entertainment</a> <a class='btn'>Restaurants & Dining</a> <a class='btn'>Shopping</a> <a class='btn'>Recreation</a> <a class='btn'>Seasonal Events</a></div> \
 			<div id='infobarMenu' class='barMenu'> <a class='btn'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
