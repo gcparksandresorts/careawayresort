@@ -7,13 +7,13 @@ const loader = document.getElementById("loader");
 const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
 
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'> \
-			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen' onclick='toggleBarMenu(1)'>&#11206; Things to Do</a> <a class='bigMen' href='"+siteLink+"hotels/home'>Places to Stay</a> <a class='bigMen' id='moreInfoBtn' onclick='toggleBarMenu(2)'>&#11206; Information</a> <a class='bigMen' href='"+siteLink+"store/home'>Shop</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
+			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen' onclick='toggleBarMenu(1)'>&#11206; Things to Do</a> <a class='bigMen' href='"+siteLink+"hotels/home'>Places to Stay</a> <a class='bigMen' id='moreInfoBtn' onclick='toggleBarMenu(2)'>&#11206; Information</a> <a class='bigMen' href='"+siteLink+"store/home'>Online Shop</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openSideMenu()'>☰</a> </div> </div></div> \
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
 				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> <a>Recreation</a></div> \
 				<a href='"+siteLink+"hotels/home'><span style='opacity:0'>&#11206;</span> Places to Stay</a> \
 				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
-				<a href='"+siteLink+"store/home'><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> </div> \
+				</div> <a href='"+siteLink+"store/home'><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
 			<div id='ttdbarMenu' class='barMenu'> <a class='btn'>Attractions & Entertainment</a> <a class='btn'>Restaurants & Dining</a> <a class='btn'>Shopping</a> <a class='btn'>Recreation</a> <a class='btn'>Seasonal Events</a></div> \
 			<div id='infobarMenu' class='barMenu'> <a class='btn'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
