@@ -179,7 +179,7 @@
 		#header .barMenu > #leftSection a {
 			display:block; margin-bottom:10px;
 			cursor:pointer; transition:0.5s;
-			font-size:18px;
+			font-size:18px; text-decoration:none;
 		}
         	#header .barMenu > #leftSection a:hover {color:midnightblue; scale:1.025;}
         	#header .barMenu > #leftSection h4 {margin:0 0 10px 0;}
