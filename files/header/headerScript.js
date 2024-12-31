@@ -15,7 +15,16 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
 				</div> <a href='"+siteLink+"store/home'><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
-			<div id='ttdbarMenu' class='barMenu'> <a class='btn'>Attractions & Entertainment</a> <a class='btn'>Restaurants & Dining</a> <a class='btn'>Shopping</a> <a class='btn'>Recreation</a> <a class='btn'>Seasonal Events</a></div> \
+			<div id='ttdbarMenu' class='barMenu'> \
+				<div id='leftSection'> \
+                			<h4>Destinations</h4> <a>Globe-City's Careaway Park</a> <a>Globe-City Port of Adventure</a> <a>Globe-City's Splashport Bay</a> <a>Shops & More District</a> \
+                		</div> <div id='rightSection'> \
+					<div> <img class='rsBackground' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon.png'> <h4>Attractions & Entertainment</h4> <a></a> </div> \
+					<div> <img class='rsBackground' src='https://www.militarydisneytips.com/wp-content/uploads/2019/12/Flame-Tree-Barbeque-Salad.jpg'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(1).png'> <h4>Restaurants & Dining</h4> <a></a> </div> \
+					<div> <img class='rsBackground' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/vipBanner1.jpg'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(8).png'> <h4>Shopping</h4> <a></a> </div> \
+					<div> <img class='rsBackground' src='https://wdwmagic.twic.pics/ElementGalleryItems/recreation/Fullsize/Fantasia-Gardens-Mini-Golf_Full_47008.jpg?twic=v1/cover=3:2&twic=v1/resize=760'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(10).png'> <h4>Recreation</h4> <a></a> </div> \
+					<div> <img class='rsBackground' src='https://www.azcentral.com/gcdn/presto/2019/04/17/PPHX/2d57cc62-07ed-4659-8bc6-7f18cebc7a1b-Oogie_Boogie_Bash_Hero_Image.jpg?crop=2699,1518,x1,y207&width=1600&height=800&format=pjpg&auto=webp'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(3).png'> <h4>Seasonal Events</h4> <a></a> </div> \
+				</div> </div> \
 			<div id='infobarMenu' class='barMenu'> <a class='btn'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
 
 
