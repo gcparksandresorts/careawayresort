@@ -17,7 +17,7 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
 			<div id='ttdbarMenu' class='barMenu'> \
 				<div id='leftSection'> \
-                			<h4>Destinations</h4> <a>Globe-City's Careaway Park</a> <a>Globe-City Port of Adventure</a> <a>Globe-City's Splashport Bay</a> <a>Shops & More District</a> \
+                			<h4>Destinations</h4> <a href='"+siteLink+"destinations/careaway-park'>Globe-City's Careaway Park</a><a href='"+siteLink+"destinations/port-of-adventure'>Globe-City Port of Adventure</a><a href='"+siteLink+"destinations/splashport-bay'>Globe-City Splashport Bay</a> <a href='"+siteLink+"destinations/shops-and-more-district'>Shops & More District</a> <a href='"+siteLink+"hotels/home'>Hotels & Resorts</a> \
                 		</div> <div id='rightSection'> \
 					<div> <img class='rsBackground' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon.png'> <h4>Attractions & Entertainment</h4> <a></a> </div> \
 					<div> <img class='rsBackground' src='https://www.militarydisneytips.com/wp-content/uploads/2019/12/Flame-Tree-Barbeque-Salad.jpg'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(1).png'> <h4>Restaurants & Dining</h4> <a></a> </div> \
