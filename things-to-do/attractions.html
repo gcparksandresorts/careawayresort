@@ -1,0 +1,51 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title>Attractions and Entertainment | Things to Do | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+
+            	<div class='titleBar'><h1>Attractions and Entertainment</h1></div>
+           	<div class='titleBar silver'><p>Subtitle_bar</p></div>
+            
+            	<div class='container'>
+	            	<div class='tileContainer' id='attractionContainer'>
+				Error loading, please refresh page or navigate to the previous webpage.
+			</div>
+            	</div>
+            
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/attractions.js"></script>
+	
+	<script>
+		const container = document.getElementById("attractionContainer");
+
+		container.innerHTML = "";
+
+		for (i = 0; i < attractionList.length; i++) {
+
+			// Gather information from attraction array
+			let temp = attractionList[i].split(" | ");
+
+			// Get attraction name and subtitle 
+			let tNm = temp[0].split(" - ");
+				let aName = tNm[0];
+				if(tNm[1] != 'none'){let aSubtitle = tNm[1]; }else{let aSubtitle = '';}
+
+			// Populate the div 
+			container.innerHTML += "<div class='linked'><img src='"+temp[5]+"'><h3>"+aName+"</h3><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+		}
+	</script>
+</html>
