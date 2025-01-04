@@ -1,5 +1,5 @@
 attractionList = []; attractionCategories = []; attractionLocations = []; attractionAge = [];
-val iter = 0;
+var iter = 0;
 
 // Tabs 2 No wrap
 
