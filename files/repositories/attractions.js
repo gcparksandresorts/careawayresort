@@ -3,7 +3,7 @@ val iter = 0;
 
 // Tabs 2 No wrap
 
-clickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
+attractionClickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
 
 attractionCategories = ["none", "Thrilling Rollercoasters", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences", "Live Entertainment", "Nighttime Spectaculars", "Other"];
 											// 0							1													2															3														4													5											6`										7
