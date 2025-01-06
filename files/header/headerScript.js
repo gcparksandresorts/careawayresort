@@ -12,7 +12,7 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
 				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a href='"+siteLink+"things-to-do/attractions'>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> <a>Recreation</a></div> \
 				<a href='"+siteLink+"hotels/home'><span style='opacity:0'>&#11206;</span> Places to Stay</a> \
-				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
+				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen' href='"+siteLink+"information/resort-schedule'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
 				</div> <a href='"+siteLink+"store/home'><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
 			<div id='ttdbarMenu' class='barMenu'> \
@@ -25,7 +25,7 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 					<div> <img class='rsBackground' src='https://wdwmagic.twic.pics/ElementGalleryItems/recreation/Fullsize/Fantasia-Gardens-Mini-Golf_Full_47008.jpg?twic=v1/cover=3:2&twic=v1/resize=760'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(10).png'> <h4>Recreation</h4> <a></a> </div> \
 					<div> <img class='rsBackground' src='https://www.azcentral.com/gcdn/presto/2019/04/17/PPHX/2d57cc62-07ed-4659-8bc6-7f18cebc7a1b-Oogie_Boogie_Bash_Hero_Image.jpg?crop=2699,1518,x1,y207&width=1600&height=800&format=pjpg&auto=webp'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(3).png'> <h4>Seasonal Events</h4> <a></a> </div> \
 				</div> </div> \
-			<div id='infobarMenu' class='barMenu'> <a class='btn'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
+			<div id='infobarMenu' class='barMenu'> <a class='btn' href='"+siteLink+"information/resort-schedule'>Operating Schedule</a> <a class='btn'>Park & Resort Maps</a> <a class='btn filled'>Plan Your Visit</a></div>";
 
 
 // FOOTER SETUP
