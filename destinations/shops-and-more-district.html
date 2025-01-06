@@ -5,6 +5,9 @@
     </head>
 	
     <style>
+	    .miniTileContainer{
+		    display:flex; flex-flow:row;
+	    }
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -12,14 +15,6 @@
 		<!-- BODY CONTENT HERE -->
 
 		<div class='banner full'> <div class='backgroundContainer' style='background-image: url("https://dynamicmedia.irvinecompany.com/is/image/content/dam/office/3-readytopublish/portfolio/orangecounty/irvinespectrum/submarketamenities/irvinespectrumcenter/Lion%20Fountain%20Summer.jpg?&wid=1920&iccEmbed=1&icc=AdobeRGB&resMode=sharp2&fmt=pjpeg&pscan=auto");'></div> </div>
-		<!--<div class='titleBar' style='position:relative'>
-            		<div class='topBoundExtend'></div>
-			<img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/shops-and-more-logo.png'>
-           	</div>
-		<div class='titleBar silver'>
-			<h2>Shop & Play, All Day, Everyday</h2>
-			<p>Spanning nearly a mile, the Shops&More District is the vibrant heart of the Careaway Resort—a place where shopping, dining, and entertainment come together in perfect harmony. Explore unique styles, flavors, and experiences unlike anywhere else. Stroll down gorgeous plazas and breezeways connecting all three parks, five resort hotels, and commuter parking areas.</p>
-		</div>-->
 
 		<div class='fullContainer blue'>
 			<div class='topBoundExtend'></div>
@@ -29,17 +24,48 @@
 					<div>
 						<h2 style='margin-top:0px; margin-bottom:5px;'>Shop & Play, All Day, Everyday</h2>
 						<p>Spanning nearly a mile, the Shops&More District is the vibrant heart of the Careaway Resort—a place where shopping, dining, and entertainment come together in perfect harmony. Explore unique styles, flavors, and experiences unlike anywhere else. Stroll down gorgeous plazas and breezeways connecting all three parks, five resort hotels, and commuter parking areas.</p>
-						<p><a>View Operating Hours and Events</a></p>
+						<p><a href='../information/resort-schedule'>View Operating Hours and Events</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class='container'>
-			hello
+		<div class='leftContainer'>
+			<div class='tileContainer'>
+				<div> <img src='https://www.universalstudioshollywood.com/tridiondata/ush/en/us/files/images/universal-citywalk-shopping-802x535.jpg'>
+					<h3>Stories of Shopping Fun</h3>
+					All your favorite stores in one place - from exclusive merchandise to designer products and new looks
+				</div>
+				<div> <img src='https://tb-static.uber.com/prod/image-proc/processed_images/5c8aae90f2377d9f891b11d863943e76/719c6bd2757b08684c0faae44d43159d.jpeg'>
+					<h3>Diverse Dining and Renowned Restaurants</h3>
+					Explore a diverse selection of cuisine. Grab a quick bite at snack stands and dessert shops or fill up with a hearty meal at a full-service restaurant
+				</div>
+				<div> <img src='https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg'>
+					<h3>Fun & Exciting Experiences</h3>
+					Delight in rounds of mini-golf or compete with friends at our 8-lane bowling alley, there's fun for everyone!
+				</div>
+			</div>
 		</div>
+
+		<div class='spacer'></div>
 		
-		
+		<div class='container'>
+			<h2>Explore Restaurants and Dining Locations</h2>
+			<div class='miniTileContainer'>
+				<div><img src=''></div>
+			</div>
+			<p><a class='btn' href='../things-to-do/dining?location=1&category=0'>View Restaurants</a></p>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container'>
+			<h2>Explore Shopping</h2>
+			<div class='miniTileContainer'>
+				<div><img src=''></div>
+			</div>
+			<p><a class='btn' href='../things-to-do/shopping'>View Full List</a></p>
+		</div>
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
