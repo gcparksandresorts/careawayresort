@@ -100,12 +100,12 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		.tileContainer > div.linked > a {opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
 
 .miniTileContainer {display:flex; flex-flow:row;}
-		.miniTileContainer > div {position:relative; width:100%; padding:10px; align-self:stretch;  text-align: justify;}
+		.miniTileContainer > div {position:relative; width:100%; padding:10px; align-self:stretch;  text-align: left;}
 		.miniTileContainer > div > img {display:block; width:100%; height:auto; border-radius:15px; margin-bottom:10px; transition:0.5s;}
 		.miniTileContainer > div > a {position:absolute; opacity:0; top:0; left:0; right:0; bottom:0;}
 		.miniTileContainer > div:hover > img {scale:1.05;}
 
-		@media screen and (max-width:800px){.miniTileContainer{flex-flow:column;}}
+		@media screen and (max-width:800px){.miniTileContainer{flex-wrap:wrap;} .miniTileContainer > div {max-width:300px; margin:auto; padding-bottom:20px;}}
 
 
 /* --- Titles and stuff ----- */
