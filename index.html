@@ -82,7 +82,7 @@
 
 			<div class='container' id='spotlightContainer'>
 				<h2 style='margin-bottom:5px;'>Resort Spotlight</h2>
-				<p style='margin-top:none' id='spotlightDate'>December 2024</p>
+				<p style='margin-top:none' id='spotlightDate' onclick='runSpotlight(na);'>Month Year</p>
 				<div class='tileContainer' style='text-align:left' id='spotlightContent'>
 					Error. Could not contact network. LAB<em>NET</em>  code A1200
 				</div>
@@ -163,25 +163,31 @@
 		    // Sets up the resort spotlight
 		    const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 		    
-		    function runSpotlight(){
-			    
+		    function runSpotlight(mode){
+			
 			const date = new Date();
+			    if(mode == 'month'){
+			    	const month = date.getMonth();
+			    }else{
+				const month = window.prompt("Enter the month you want to test (January, February, ...","January");
+			    }
+			    
 			const spotlightDate = document.getElementById("spotlightDate");
 			const spotlightContent = document.getElementById("spotlightContent");
 
-			spotlightDate.innerHTML = monthName[date.getMonth()] + " " + date.getFullYear();
+			spotlightDate.innerHTML = monthName[month] + " " + date.getFullYear();
 			spotlightContent.innerHTML = "";
 
 			// populate the spotlight content
 			for (i = 0; i < indexSpotlight.length; i++) {
 				let temp = indexSpotlight[i].split(" | ");
-				if(temp[0] == monthName[date.getMonth()]){
+				if(temp[0] == monthName[month]){
 					spotlightContent.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
 				}
 			}// end of for loop
 		    }
 
-		    runSpotlight();
+		    runSpotlight('month');
 	    </script>
 
 	    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
