@@ -84,9 +84,7 @@
 				<h2 style='margin-bottom:5px;'>Resort Spotlight</h2>
 				<p style='margin-top:none' id='spotlightDate'>December 2024</p>
 				<div class='tileContainer' style='text-align:left' id='spotlightContent'>
-					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight One</h3>Some text describing the first spotlight <a href='click-link'>link</a></div>
-					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Two</h3>An additional spotlight with some other stuff <a href='click-link'>link</a></div>
-					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Three</h3>Third times the charm, yet another spotlight with more text and more words. <a href='click-link'>link</a></div>
+					Error. Could not contact network. LAB<em>NET</em>  code A1200
 				</div>
 				<p><a class='btn' href='information/blog'>View Resort Blog</a></p>
 			</div>
@@ -123,6 +121,9 @@
 	<div id='footer'></div>
 	</div>
     </body>
+
+	    <!-- grab the spotlight repositior for the resort spotlight section -->
+		<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/indexSpotlight.js"></script>
 
 	    <script>
 	    	// Get references to both headers
@@ -169,7 +170,15 @@
 			const spotlightContent = document.getElementById("spotlightContent");
 
 			spotlightDate.innerHTML = monthName[date.getMonth()] + " " + date.getFullYear();
-			spotlightContent.innerHTML = "Error. Could not contact network. LAB<em>NET</em>  code A1200";
+			spotlightContent.innerHTML = "";
+
+			// populate the spotlight content
+			for (i = 0; i < indexSpotlight.length; i++) {
+				let temp = indexSpotlight[i].split(" | ");
+				if(temp[0] == monthName[date.getMonth()]){
+					spotlightContent.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
+				}
+			}// end of for loop
 		    }
 
 		    runSpotlight();
