@@ -164,12 +164,14 @@
 		    const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 		    
 		    function runSpotlight(mode){
+
+			var month = 0;
 			
 			const date = new Date();
 			    if(mode == 'month'){
-			    	const month = date.getMonth();
+			    	month = date.getMonth();
 			    }else{
-				const month = window.prompt("Enter the month you want to test (January, February, ...","January");
+				month = window.prompt("Enter the month you want to test (January, February, ...","January");
 			    }
 			    
 			const spotlightDate = document.getElementById("spotlightDate");
