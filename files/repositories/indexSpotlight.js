@@ -15,5 +15,5 @@ ind += 1; indexSpotlight[ind] = "February | Closed for refurbishment | Know befo
 
 // March
 ind += 1; indexSpotlight[ind] = "March | Puertas Nuevas residents: save up to $200 on tickets | Residents with valid PNID can access exclusive offers on tickets to resort theme parks including 3-day, 1 park per day tickets as low as $53 per day | tickets/resident-admission | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg";
-ind += 1; indexSpotlight[ind] = "March | heading | text_content | click_link | image_link";
+ind += 1; indexSpotlight[ind] = "March | Spring Break fun for everyone | As spring comes around, enjoy the sunshine with a day of fun. Explore special ticket pricing and more for an affordable vacation that's fun for everyone | tickets | https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/careaway-park/mission-14";
 ind += 1; indexSpotlight[ind] = "March | heading | text_content | click_link | image_link";
