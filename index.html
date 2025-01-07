@@ -71,7 +71,7 @@
 	<div style='background:white;'>		
 			<div class='titleBar' style='text-align:center;'><div style='max-width:1200px; margin:auto; text-align:left;'><h3>Your Adventure Begins Here</h3> <h1>Globe-City's Careaway Resort</h1>
 				<p>Leave your worries behind and step into a world of Magic, Wonder, and Adventure. Whether you're looking for thrills and gravity-defying rides, or a family-friendly experience for the young and young-at-heart, you'll find your adventure here at Globe-City's Careaway Resort. Explore two award-winning themeparks, five themed resort hotels, and a splash-tastic waterpark with waves of fun.</p>
-				<p><a>Explore the Careaway Resort</a></p>
+				<p><a href='information/about-us'>Learn Our Story</a></p>
 			</div></div>
 		        <div class='banner' style='border-bottom:10px solid midnightblue; position:relative; height:400px;'>
 				<img class='slideShowElement' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'>
@@ -82,8 +82,8 @@
 
 			<div class='container' id='spotlightContainer'>
 				<h2 style='margin-bottom:5px;'>Resort Spotlight</h2>
-				<p style='margin-top:none'>December 2024</p>
-				<div class='tileContainer' style='text-align:left'>
+				<p style='margin-top:none' id='spotlightDate'>December 2024</p>
+				<div class='tileContainer' style='text-align:left' id='spotlightContent'>
 					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight One</h3>Some text describing the first spotlight <a href='click-link'>link</a></div>
 					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Two</h3>An additional spotlight with some other stuff <a href='click-link'>link</a></div>
 					<div class='linked'><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'><h3>Spotlight Three</h3>Third times the charm, yet another spotlight with more text and more words. <a href='click-link'>link</a></div>
@@ -158,6 +158,21 @@
 			  	slides[slideIndex-1].classList.add("show");
 			  	setTimeout(showSlides, 3000); // Change image every 2 seconds
 			}
+
+		    // Sets up the resort spotlight
+		    const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+		    
+		    function runSpotlight(){
+			    
+			const date = new Date();
+			const spotlightDate = document.getElementById("spotlightDate");
+			const spotlightContent = document.getElementById("spotlightContent");
+
+			spotlightDate.innerHTML = monthName[date.getMonth()] + date.getFullYear();
+			spotlightContent.innerHTML = "Error. Could not contact network. LAB<em>NET</em> code A1200";
+		    }
+
+		    runSpotlight();
 	    </script>
 
 	    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
