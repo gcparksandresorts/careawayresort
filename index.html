@@ -169,7 +169,7 @@
 			
 			const date = new Date();
 			    if(mode == 'month'){
-			    	month = date.getMonth();
+			    	month = monthName[date.getMonth()];
 			    }else{
 				month = window.prompt("Enter the month you want to test (January, February, ...","January");
 			    }
@@ -177,13 +177,13 @@
 			const spotlightDate = document.getElementById("spotlightDate");
 			const spotlightContent = document.getElementById("spotlightContent");
 
-			spotlightDate.innerHTML = monthName[month] + " " + date.getFullYear();
+			spotlightDate.innerHTML = month + " " + date.getFullYear();
 			spotlightContent.innerHTML = "";
 
 			// populate the spotlight content
 			for (i = 0; i < indexSpotlight.length; i++) {
 				let temp = indexSpotlight[i].split(" | ");
-				if(temp[0] == monthName[month]){
+				if(temp[0] == month){
 					spotlightContent.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
 				}
 			}// end of for loop
