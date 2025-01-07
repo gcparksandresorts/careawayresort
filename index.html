@@ -94,16 +94,16 @@
 			<div class='spacer'></div>
 
 			<style>
-				#destExplore{position:relative; width:100%; aspect-ratio : 1 / 1; transition:0.5s; background-image:url("https://i.pinimg.com/736x/cc/77/4e/cc774e6fc8f7b21f9a81200b429c1e91.jpg"); background-size:cover;}
-					#destExplore .leftItem > img, #destExplore .rightItem > img {height:100%; width:auto;}
-					#destExplore .rightItem, #destExplore .leftItem{height:25%; left:0; background:silver; border:2px solid black;}
-				@media screen and (max-width:600px){#destExplore{display:none;opacity:0;}}
+				
 			</style>
 
 			<div class='container'>
 				<h2>Explore Four Unforgettable Destinations</h2>
-				<div id='destExplore'>
-					<div class='leftItem' style='top:0;left:0;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'></div>
+				<div class='miniTileContainer'>
+					<div><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'>A flagship theme-park featuring five unique lands and dozens of jaw-dropping attractions <a href='destinations/careaway-park'></a></div>
+					<div><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'>A breakthrough and fully-immersive park like never before with extrodinary attractions and entertainment <a href='destinations/port-of-adventure'></a></div>
+					<div><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'>A family friendly waterpark with thrilling flumes and relaxing pools and ponds <a href='destinations/splashport-bay'></a></div>
+					<div><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg'>Over a mile of shopping, dining, and entertainment that's fun for everyone <a href='destinations/shops-and-more-district'></a></div>
 				</div>
 			</div>
 			
@@ -168,8 +168,8 @@
 			const spotlightDate = document.getElementById("spotlightDate");
 			const spotlightContent = document.getElementById("spotlightContent");
 
-			spotlightDate.innerHTML = monthName[date.getMonth()] + date.getFullYear();
-			spotlightContent.innerHTML = "Error. Could not contact network. LAB<em>NET</em> code A1200";
+			spotlightDate.innerHTML = monthName[date.getMonth()] + " " + date.getFullYear();
+			spotlightContent.innerHTML = "Error. Could not contact network. LAB<em>NET</em>  code A1200";
 		    }
 
 		    runSpotlight();
