@@ -101,7 +101,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 
 .miniTileContainer {display:flex; flex-flow:row;}
 		.miniTileContainer > div {position:relative; width:100%; padding:10px; align-self:stretch;  text-align: left;}
-		.miniTileContainer > div > img {display:block; width:100%; height:auto; border-radius:15px; margin-bottom:10px; transition:0.5s;}
+		.miniTileContainer > div > img {display:block; width:100%; height:200px; object-fit:cover; border-radius:15px; margin-bottom:10px; transition:0.5s;}
+			.miniTileContainer.dImg > div > img {height:auto;}
 		.miniTileContainer > div > a {position:absolute; opacity:0; top:0; left:0; right:0; bottom:0;}
 		.miniTileContainer > div:hover > img {scale:1.05;}
 
