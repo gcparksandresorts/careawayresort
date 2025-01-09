@@ -175,6 +175,39 @@ a.btn{
 
 /* --- SPECIAL ELEMENTS --- */
 
+/* ATTRACTION / RESTAURANT ITEM CONTAINER */
+
+.placeContainer {display:flex; flex-flow:row; flex-wrap:wrap;}
+	.placeContainer > div {position:relative; width:31%; align-self:stretch; 
+		       margin-right:auto; margin-bottom:30px; padding:0;
+		       border:2px solid black; border-radius:15px; 
+		       transition:0.5s; }
+		.placeContainer > div > a {position:absolute; opacity:0; top:0; right:0; left:0; bottom:0;}
+		.placeContainer > div > img {width:100%; height:25vh; object-fit:cover; border-radius:13px 13px 0px 0px;}
+		.placeContainer > div > div {padding:10px; padding-top:0;}
+	  
+		.placeContainer > div:hover {background:#efefef; scale:1.05;}
+
+		/* Special Elements */
+		.placeContainer > div > .tab {position:absolute; top:0; left:0; padding:5px; border-radius:13px 0px 5px 0px; background:silver; color:black; font-size:12px;}
+		.placeContainer > div > .subText {position:absolute; bottom:0; left:0; padding:10px; color:gray;}
+
+	    	@media screen and (max-width:700px){.placeContainer > div {width:48%;}}
+	    	@media screen and (max-width:500px){.placeContainer > div {width:100%; margin:5px; margin-bottom:20px;}}
+
+	    /* USAGE:
+	    	<div class='placeContainer'>
+	    		<div> 	<img src=''> 
+	    			<div> <h3>Title_Content</h3> div_content </div> 
+	    			<div class='tab'>upper_right_corner_content</div>
+	    			<div class='subText'>subtext_content</div> <!-- If using subtext, add <br><br> to end of div_content -->
+	    			<a href='click_link'>link</a> 
+    			</div>
+	    	</div>
+
+	    */
+
+
 /* Image Slideshow with cross-disolve animation */
 .slideShowElement{
 	position:absolute; top:0; left:0;
