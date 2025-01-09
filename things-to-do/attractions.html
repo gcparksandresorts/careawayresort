@@ -6,6 +6,9 @@
     </head>
 	
     <style>
+	    .filterContainer{display:flex; flex-flow:row;}
+	    .filterContainer > div > label {display:inline-block;}
+	    @media screen and (max-width:600px){.filterContainer{flex-flow:column;}}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -13,7 +16,23 @@
 		<!-- BODY CONTENT HERE -->
 
             	<div class='titleBar'><h1>Attractions and Entertainment</h1></div>
-           	<div class='titleBar silver'><p>Subtitle_bar</p></div>
+           	<div class='titleBar silver filterContainer'>
+			<div> <label for='categorySelect'>Type of Attraction</label>
+				<select id='categorySelect'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+			<div> <label for='locationSelect'>Location</label>
+				<select id='locationSelect'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+			<div> <label for='ageSelect'>Height / Age Rating</label>
+				<select id='ageSelect'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+		</div>
             
             	<div class='leftContainer'>
 			<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>
@@ -33,9 +52,50 @@
 	<script>
 		const container = document.getElementById("attractionContainer");
 
+		const categorySelect = document.getElementById("categorySelect");
+		const locationSelect = document.getElementById("locationSelect");
+		const ageSelect = document.getElementById("ageSelect");
+
 		container.innerHTML = "";
 
 		var resultCount = 0;
+
+		var category = 0;
+		var location = 0;
+		var age = 0;
+
+		// Setup Dropdowns
+
+			// Categories
+			for (i = 1; i < attractionCategories.length; i++) {
+				 categorySelect.innerHTML += "<option value='"+i+"'>"+attractionCategories[i]+"</option>";
+			}
+
+			// location
+			for (i = 1; i < attractionLocations.length; i++) {
+				 locationSelect.innerHTML += "<option value='"+i+"'>"+attractionLocations[i]+"</option>";
+			}
+
+			// ages
+			for (i = 1; i < attractionAge.length; i++) {
+				 ageSelect.innerHTML += "<option value='"+i+"'>"+attractionAge[i]+"</option>";
+			}
+
+		// URL Parameters
+
+		if(searchParams.has("category")){
+			category = searchParams.get("category")
+		}
+		if(searchParams.has("location")){
+			location = searchParams.get("location")
+		}
+		if(searchParams.has("age")){
+			age = searchParams.get("age")
+		}
+
+		categorySelect.value = category;
+		locationSelect.value = location;
+		ageSelect.value = age;
 
 		for (i = 0; i < attractionList.length; i++) {
 
