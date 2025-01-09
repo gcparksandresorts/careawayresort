@@ -16,6 +16,7 @@
            	<div class='titleBar silver'><p>Subtitle_bar</p></div>
             
             	<div class='leftContainer'>
+			<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>
 	            	<div class='placeContainer' id='attractionContainer'>
 				Error loading, please refresh page or navigate to the previous webpage.
 			</div>
@@ -34,6 +35,8 @@
 
 		container.innerHTML = "";
 
+		var resultCount = 0;
+
 		for (i = 0; i < attractionList.length; i++) {
 
 			// Gather information from attraction array
@@ -47,6 +50,9 @@
 
 			// Populate the div 
 			container.innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+			resultCount += 1;
 		}
+
+		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
 	</script>
 </html>
