@@ -133,7 +133,7 @@
 		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
 
 		function changeFilters(){
-			const builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions?category="+categorySelect.value+"&location="+locationSelect.value+"&age="+ageSelect.value = ageVal;
+			let builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions?category="+categorySelect.value+"&location="+locationSelect.value+"&age="+ageSelect.value = ageVal;
 			window.open(builtURL, "_self");
 		}
 	</script>
