@@ -7,6 +7,7 @@
 	
     <style>
 	    .filterContainer{display:flex; flex-flow:row;}
+	    .filterContainer > div {padding:10px;}
 	    .filterContainer > div > label {display:inline-block;}
 	    @media screen and (max-width:600px){.filterContainer{flex-flow:column;}}
     </style>
@@ -18,21 +19,23 @@
             	<div class='titleBar'><h1>Attractions and Entertainment</h1></div>
            	<div class='titleBar silver filterContainer'>
 			<div> <label for='categorySelect'>Type of Attraction</label>
-				<select id='categorySelect'>
+				<select id='categorySelect'  onchange='document.GetElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 			<div> <label for='locationSelect'>Location</label>
-				<select id='locationSelect'>
+				<select id='locationSelect'  onchange='document.GetElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 			<div> <label for='ageSelect'>Height / Age Rating</label>
-				<select id='ageSelect'>
+				<select id='ageSelect' onchange='document.GetElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 		</div>
+
+		<p style='text-align:center;'><a id='chngFltr' class='btn' style='animation:fadeIn 0.5s; display:none;' onclick='changeFilters()'>Apply Filters</a>
             
             	<div class='leftContainer'>
 			<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>
@@ -62,9 +65,9 @@
 
 		var resultCount = 0;
 
-		var category = 0;
-		var location = 0;
-		var age = 0;
+		var categoryVal = 0;
+		var locationVal = 0;
+		var ageVal = 0;
 
 		// Setup Dropdowns
 
@@ -86,35 +89,52 @@
 		// URL Parameters
 
 		if(searchParams.has("category")){
-			category = searchParams.get("category")
+			categoryVal = searchParams.get("category")
 		}
 		if(searchParams.has("location")){
-			location = searchParams.get("location")
+			locationVal = searchParams.get("location")
 		}
 		if(searchParams.has("age")){
-			age = searchParams.get("age")
+			ageVal = searchParams.get("age")
 		}
 
-		categorySelect.value = category;
-		locationSelect.value = location;
-		ageSelect.value = age;
+		categorySelect.value = categoryVal;
+		locationSelect.value = locationVal;
+		ageSelect.value = ageVal;
 
 		for (i = 0; i < attractionList.length; i++) {
 
 			// Gather information from attraction array
 			let temp = attractionList[i].split(" | ");
 
-			// Get attraction name and subtitle 
-			let tNm = temp[0].split(" - ");
-				let aName = tNm[0];
-				var aSubtitle = '';
-				if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
-
-			// Populate the div 
-			container.innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
-			resultCount += 1;
-		}
+			if(categoryVal == 0 || categoryVal == temp[2]){
+				if(locationVal == 0 || locationVal == temp[1]){
+					if(ageVal == 0 || ageVal == temp[3]){
+						// Get attraction name and subtitle 
+						let tNm = temp[0].split(" - ");
+							let aName = tNm[0];
+							var aSubtitle = '';
+							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
+			
+						// Populate the div 
+						container.innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+						resultCount += 1;
+					}else{
+						console.log("Skipped attraction: " + temp[0]);
+					}
+				}else{
+					console.log("Skipped attraction: " + temp[0]);
+				}
+			}else{
+				console.log("Skipped attraction: " + temp[0]);
+			}
+		}// end of function
 
 		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
+
+		function changeFilters(){
+			const builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions?category="+categorySelect.value+"&location="+locationSelect.value+"&age="+ageSelect.value = ageVal;
+			window.open(builtURL, "_self");
+		}
 	</script>
 </html>
