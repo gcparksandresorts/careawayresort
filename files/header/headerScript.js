@@ -6,6 +6,8 @@ const loader = document.getElementById("loader");
 
 const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
 
+setTimeout(function(){if(loader.style.display != 'none'){ console.error("Load timeout - page is not finished loading"); finishLoad();}else{console.log("Page fully loaded")}}, 8000); // Clear the loader prematurly if load is taking too long
+
 header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'> \
 			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen' onclick='toggleBarMenu(1)'>&#11206; Things to Do</a> <a class='bigMen' href='"+siteLink+"hotels/home'>Places to Stay</a> <a class='bigMen' id='moreInfoBtn' onclick='toggleBarMenu(2)'>&#11206; Information</a> <a class='bigMen' href='"+siteLink+"store/home'>Online Shop</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openSideMenu()'>☰</a> </div> </div></div> \
