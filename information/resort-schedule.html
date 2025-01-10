@@ -38,7 +38,8 @@
 				</div>
 			</div>
 
-			<p><a style='text-decoration:underline; cursor:pointer;'>View Other Dates</a></p>
+			<p><a style='text-decoration:underline; cursor:pointer;' onclick='document.getElementById("dateInput").style.display = "block";'>Look Ahead</a></p>
+			<p><input type='date' onfocus="this.showPicker()" id='dateInput' style='margin:auto; display:none; animation:fadeIn 0.5s;'></p>
 		</div>
 
 		<div class='spacer'></div>
