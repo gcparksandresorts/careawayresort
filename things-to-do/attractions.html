@@ -6,7 +6,7 @@
     </head>
 	
     <style>
-	    .filterContainer{display:flex; flex-flow:row;}
+	    .filterContainer{display:flex; flex-flow:row; justify-content:center;}
 	    .filterContainer > div {padding:10px;}
 	    .filterContainer > div > label {display:inline-block;}
 	    @media screen and (max-width:600px){.filterContainer{flex-flow:column;}}
@@ -19,23 +19,23 @@
             	<div class='titleBar'><h1>Attractions and Entertainment</h1></div>
            	<div class='titleBar silver filterContainer'>
 			<div> <label for='categorySelect'>Type of Attraction</label>
-				<select id='categorySelect'  onchange='document.GetElementById("chngFltr").style.display="block";'>
+				<select id='categorySelect'  onchange='document.getElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 			<div> <label for='locationSelect'>Location</label>
-				<select id='locationSelect'  onchange='document.GetElementById("chngFltr").style.display="block";'>
+				<select id='locationSelect'  onchange='document.getElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 			<div> <label for='ageSelect'>Height / Age Rating</label>
-				<select id='ageSelect' onchange='document.GetElementById("chngFltr").style.display="block";'>
+				<select id='ageSelect' onchange='document.getElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 		</div>
 
-		<p style='text-align:center;'><a id='chngFltr' class='btn' style='animation:fadeIn 0.5s; display:none;' onclick='changeFilters()'>Apply Filters</a>
+		<p style='text-align:center;'><a id='chngFltr' class='btn' style='animation:fadeIn 0.5s; display:none; max-width:500px; margin:auto;' onclick='changeFilters()'>Apply Filters</a>
             
             	<div class='leftContainer'>
 			<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>
