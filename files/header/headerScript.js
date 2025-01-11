@@ -14,7 +14,7 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \
 				<a onclick='document.getElementById("+'"hbIntd1"'+").classList.toggle("+'"open"'+");'>&#11206; Things to Do</a> <div id='hbIntd1' class='hbSMsubMen'> <a>Destinations</a> <a href='"+siteLink+"things-to-do/attractions'>Attractions & Entertainment</a> <a>Restaurants and Dining</a> <a>Shopping</a> <a>Recreation</a></div> \
 				<a href='"+siteLink+"hotels/home'><span style='opacity:0'>&#11206;</span> Places to Stay</a> \
-				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen' href='"+siteLink+"information/resort-schedule'> <a>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a>Safety Guidelines</a> \
+				<a onclick='document.getElementById("+'"hbIntd2"'+").classList.toggle("+'"open"'+");'>&#11206; Information</a> <div id='hbIntd2' class='hbSMsubMen'> <a href='"+siteLink+"information/resort-schedule'>Operating Schedule</a> <a>GC VIP Admission</a> <a>Annual Passports</a> <a href='"+siteLink+"information/safety-guidelines'>Safety Guidelines</a> \
 				</div> <a href='"+siteLink+"store/home'><span style='opacity:0'>&#11206;</span> Online Shop</a> </div> \
 			<div id='hbSideMenuCloser' onclick='openSideMenu()'></div> \
 			<div id='ttdbarMenu' class='barMenu'> \
