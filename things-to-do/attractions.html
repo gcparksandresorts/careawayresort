@@ -28,7 +28,7 @@
 					<option value='0'>View All</option>
 				</select>
 			</div>
-			<div> <label for='ageSelect'>Height / Age Rating</label>
+			<div> <label for='ageSelect'>Minimum Height / Age Rating</label>
 				<select id='ageSelect' onchange='document.getElementById("chngFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
@@ -113,7 +113,7 @@
 
 			if(categoryVal == 0 || categoryVal == temp[2]){
 				if(locationVal == 0 || locationVal == temp[1]){
-					if(ageVal == 0 || ageVal == temp[3]){
+					if(ageVal == 0 || ageVal >= temp[3]){
 						// Get attraction name and subtitle 
 						let tNm = temp[0].split(" - ");
 							let aName = tNm[0];
