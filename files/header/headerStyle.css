@@ -215,7 +215,7 @@
 			#header .barMenu > #rightSection > div:hover .rsIcon {top:-100%;}
 
 	#header .barMenu > .evenSection {
-		width:auto; margin:0; padding:10px;
+		width:auto; margin:0; padding:10px; padding-right:20px;
 	}
 		#header .barMenu > .evenSection > a {
 			display:block; margin-bottom:10px;
