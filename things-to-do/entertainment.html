@@ -1,1 +1,155 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title>Entertainment | Things to Do | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+	    .filterContainer{display:flex; flex-flow:row; justify-content:center;}
+	    .filterContainer > div {padding:10px;}
+	    .filterContainer > div > label {display:inline-block;}
+	    @media screen and (max-width:600px){.filterContainer{flex-flow:column;}}
+    </style>
 
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+
+            	<div class='titleBar'><h1>Entertainment</h1></div>
+           	<div class='titleBar silver filterContainer'>
+			<div> <label for='categorySelect'>Entertainment Category</label>
+				<select id='categorySelect'  onchange='document.getElementById("chngFltr").style.display="block";'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+			<div> <label for='locationSelect'>Location</label>
+				<select id='locationSelect'  onchange='document.getElementById("chngFltr").style.display="block";'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+			<div> <label for='seasonSelect'>Season</label>
+				<select id='seasonSelect' onchange='document.getElementById("chngFltr").style.display="block";'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+		</div>
+
+		<p style='text-align:center;'><a id='chngFltr' class='btn' style='animation:fadeIn 0.5s; display:none; max-width:500px; margin:auto;' onclick='changeFilters()'>Apply Filters</a>
+            
+            	<div class='leftContainer' id='attractionContainer'>
+			<!--<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>-->
+	            	<div class='placeContainer'>
+				Error loading, please refresh page or navigate to the previous webpage.
+			</div>
+            	</div>
+            
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/entertainment.js"></script>
+	
+	<script>
+		const container = document.getElementById("attractionContainer");
+
+		const categorySelect = document.getElementById("categorySelect");
+		const locationSelect = document.getElementById("locationSelect");
+		const seasonSelect = document.getElementById("seasonSelect");
+
+		const searchParams = new URLSearchParams(window.location.search);
+
+		container.innerHTML = "<p id='resultsCount' style='text-align:center;'>Showing <b>zero</b> results</p><br>";
+
+		var resultCount = 0;
+
+		var categoryVal = 0;
+		var locationVal = 0;
+		var seasonVal = 0;
+
+		// Setup Dropdowns
+
+			// Categories
+			for (i = 1; i < attractionCategories.length; i++) {
+				 categorySelect.innerHTML += "<option value='"+i+"'>"+attractionCategories[i]+"</option>";
+			}
+
+			// location
+			for (i = 1; i < attractionLocations.length; i++) {
+				 locationSelect.innerHTML += "<option value='"+i+"'>"+attractionLocations[i]+"</option>";
+			}
+
+			// seasons
+			for (i = 1; i < attractionAge.length; i++) {
+				 seasonSelect.innerHTML += "<option value='"+i+"'>"+attractionAge[i]+"</option>";
+			}
+
+		// URL Parameters
+
+		if(searchParams.has("category")){
+			categoryVal = searchParams.get("category")
+		}
+		if(searchParams.has("location")){
+			locationVal = searchParams.get("location")
+		}
+		if(searchParams.has("age")){
+			seasonVal = searchParams.get("age")
+		}
+
+		categorySelect.value = categoryVal;
+		locationSelect.value = locationVal;
+		seasonSelect.value = seasonVal;
+
+		// If searching all categories, create individual div for each category of attraction
+		if(categoryVal == 0){
+			for(i = 1; i < attractionCategories.length; i++){
+				container.innerHTML += "<br><br><h2 style='color:midnightblue'>"+attractionCategories[i]+"</h2><div class='placeContainer' id='category-"+i+"'></div>";
+			}// end of for loop
+		}else{
+			container.innerHTML += "<div class='placeContainer' id='allContainer'></div>";
+		}
+		
+		for (i = 0; i < attractionList.length; i++) {
+
+			// Gather information from attraction array
+			let temp = attractionList[i].split(" | "); 
+
+			if(categoryVal == 0 || categoryVal == temp[2]){
+				if(locationVal == 0 || locationVal == temp[1]){
+					if(seasonVal == 0 || seasonVal >= temp[3]){
+						// Get attraction name and subtitle 
+						let tNm = temp[0].split(" - ");
+							let aName = tNm[0];
+							var aSubtitle = '';
+							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
+
+						// If showing all categories, sort div into proper container, if not, then put all into one container
+						if(categoryVal == 0){
+							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+						}else{
+							// Populate the div 
+							document.getElementById("allContainer").innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+						}
+						resultCount += 1;
+						
+					}else{
+						console.log("Skipped show: " + temp[0]);
+					}
+				}else{
+					console.log("Skipped show: " + temp[0]);
+				}
+			}else{
+				console.log("Skipped show: " + temp[0]);
+			}
+		}// end of function
+
+		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
+
+		function changeFilters(){
+			let builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/entertainment?category="+categorySelect.value+"&location="+locationSelect.value+"&season="+seasonSelect.value;
+			window.open(builtURL, "_self");
+		}
+	</script>
+</html>
