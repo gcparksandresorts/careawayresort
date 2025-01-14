@@ -11,5 +11,5 @@ var iter = 0;
 
 /*
 iter += 1;
-entertainmentList[iter] = "showCode | showName | showSubtext | showHours | showSeason | clickLink | imgLink";
+entertainmentList[iter] = "showCode0 | showName1 | showSubtext2 | showHours3 | showSeason4 | clickLink5 | imgLink6";
 */
