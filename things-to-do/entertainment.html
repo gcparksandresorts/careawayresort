@@ -43,6 +43,8 @@
 				Error loading, please refresh page or navigate to the previous webpage.
 			</div>
             	</div>
+
+		<div class='leftContainer' style='color:gray;font-size:12px;'><b>Important Disclaimer:</b> The Attractions, Entertainment, Dining, and other activities shown on this page which are located in Globe-City's Careaway Park, Port of Adventure, and/or Splashport Bay are only accessible to guests with valid admission to the respective properties.</div>
             
 		
 		<!-- END OF BODY CONTENT -->
@@ -121,8 +123,8 @@
 					if(seasonVal == 0 || seasonVal >= temp[7]){
 						// Get attraction name and subtitle 
 						let aName = temp[1];
-						var aSubtitle = disclaimerTexts[temp[3]]; //disclaimer text
-						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}
+						var aSubtitle = temp[3] //disclaimer text
+						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}else{disclaimerTexts[temp[3]];}
 
 						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[2]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[5]]+"</div><a href='"+entertainmentClickLink+temp[8]+"'>link</a></div>";
 						
