@@ -72,18 +72,18 @@
 		// Setup Dropdowns
 
 			// Categories
-			for (i = 1; i < attractionCategories.length; i++) {
-				 categorySelect.innerHTML += "<option value='"+i+"'>"+attractionCategories[i]+"</option>";
+			for (i = 1; i < entertainmentCategory.length; i++) {
+				 categorySelect.innerHTML += "<option value='"+i+"'>"+entertainmentCategory[i]+"</option>";
 			}
 
 			// location
-			for (i = 1; i < attractionLocations.length; i++) {
-				 locationSelect.innerHTML += "<option value='"+i+"'>"+attractionLocations[i]+"</option>";
+			for (i = 1; i < entertainmentLocation.length; i++) {
+				 locationSelect.innerHTML += "<option value='"+i+"'>"+entertainmentLocation[i]+"</option>";
 			}
 
 			// seasons
-			for (i = 1; i < attractionAge.length; i++) {
-				 seasonSelect.innerHTML += "<option value='"+i+"'>"+attractionAge[i]+"</option>";
+			for (i = 1; i < entertainmentSeason.length; i++) {
+				 seasonSelect.innerHTML += "<option value='"+i+"'>"+entertainmentSeason[i]+"</option>";
 			}
 
 		// URL Parameters
@@ -95,7 +95,7 @@
 			locationVal = searchParams.get("location")
 		}
 		if(searchParams.has("age")){
-			seasonVal = searchParams.get("age")
+			seasonVal = searchParams.get("season")
 		}
 
 		categorySelect.value = categoryVal;
@@ -104,33 +104,34 @@
 
 		// If searching all categories, create individual div for each category of attraction
 		if(categoryVal == 0){
-			for(i = 1; i < attractionCategories.length; i++){
-				container.innerHTML += "<br><br><h2 style='color:midnightblue'>"+attractionCategories[i]+"</h2><div class='placeContainer' id='category-"+i+"'></div>";
+			for(i = 1; i < entertainmentCategory.length; i++){
+				container.innerHTML += "<br><br><h2 style='color:midnightblue'>"+entertainmentCategory[i]+"</h2><div class='placeContainer' id='category-"+i+"'></div>";
 			}// end of for loop
 		}else{
 			container.innerHTML += "<div class='placeContainer' id='allContainer'></div>";
 		}
 		
-		for (i = 0; i < attractionList.length; i++) {
+		for (i = 0; i < entertainmentList.length; i++) {
 
 			// Gather information from attraction array
-			let temp = attractionList[i].split(" | "); 
+			let temp = entertainmentList[i].split(" | "); 
 
-			if(categoryVal == 0 || categoryVal == temp[2]){
-				if(locationVal == 0 || locationVal == temp[1]){
-					if(seasonVal == 0 || seasonVal >= temp[3]){
+			if(categoryVal == 0 || categoryVal == temp[6]){
+				if(locationVal == 0 || locationVal == temp[5]){
+					if(seasonVal == 0 || seasonVal >= temp[7]){
 						// Get attraction name and subtitle 
-						let tNm = temp[0].split(" - ");
-							let aName = tNm[0];
-							var aSubtitle = '';
-							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
+						let aName = temp[1];
+						var aSubtitle = temp[3]; //disclaimer text
+						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}
 
+						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+temp[3]+"</div><div class='tab'>📍 "+entertainmentLocation[temp[1]]+"</div><a href='"+entertainmentClickLink+temp[8]+"'>link</a></div>";
+						
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
-							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+							document.getElementById("category-"+temp[6]).innerHTML += builtDiv;
 						}else{
 							// Populate the div 
-							document.getElementById("allContainer").innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+							document.getElementById("allContainer").innerHTML += builtDiv;
 						}
 						resultCount += 1;
 						
