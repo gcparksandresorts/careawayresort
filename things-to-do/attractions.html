@@ -127,12 +127,15 @@
 							var aSubtitle = '';
 							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
 
+						var hyperLink;
+						if(){hyperLink='page-unavailable';}else{hyperLink=attractionClickLink+temp[4];}
+					
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
-							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						}else{
 							// Populate the div 
-							document.getElementById("allContainer").innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+attractionClickLink+temp[4]+"'>link</a></div>";
+							document.getElementById("allContainer").innerHTML += "<div><img src='"+temp[5]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3><em>"+aSubtitle+"</em><br><br></div><div class='subText'>"+attractionAge[temp[3]]+"</div><div class='tab'>📍 "+attractionLocations[temp[1]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						}
 						resultCount += 1;
 						
