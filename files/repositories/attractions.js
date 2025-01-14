@@ -8,8 +8,8 @@ attractionClickLink = "https://gcparksandresorts.github.io/careawayresort/things
 attractionLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District"];
 			// 0		1				2			3				4
 
-attractionCategories = ["none", "Thrill Rides", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences", "Live Entertainment", "Nighttime Spectaculars", "Seasonal Attractions", "Seasonal Entertainment", "Other"];
-			// 0		 1		2			3				4			5			6`			7			8		9
+attractionCategories = ["none", "Thrill Rides", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences",  "Seasonal Attractions", "Other"];
+			// 0		 1		2			3				4			5			6
 
 attractionAge = ["none", "For all ages", 'Minimum Height 35" (89cm)', 'Minimum Height 40" (102cm)', 'Minimum Height 45" (115cm)', 'Minimum Height 48" (122cm)', 'Minimum Height 50" (127cm)', 'Mature Themes (PG13)', 'Other']
 		// 0		 1			2			3				4				5				6`			7
