@@ -121,7 +121,7 @@
 					if(seasonVal == 0 || seasonVal >= temp[7]){
 						// Get attraction name and subtitle 
 						let aName = temp[1];
-						var aSubtitle = temp[3]; //disclaimer text
+						var aSubtitle = disclaimerTexts[temp[3]]; //disclaimer text
 						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}
 
 						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[2]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[5]]+"</div><a href='"+entertainmentClickLink+temp[8]+"'>link</a></div>";
