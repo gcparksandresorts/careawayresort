@@ -128,7 +128,7 @@
 							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
 
 						var hyperLink;
-						if(){hyperLink='page-unavailable';}else{hyperLink=attractionClickLink+temp[4];}
+						if(temp[4] == 'clickLink'){hyperLink='page-unavailable';}else{hyperLink=attractionClickLink+temp[4];}
 					
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
