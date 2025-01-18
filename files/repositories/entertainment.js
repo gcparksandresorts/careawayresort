@@ -5,8 +5,8 @@ entertainmentList = []; entertainmentCategory = []; entertainmentLocation = []; 
 entertainmentCategory = ["none", "Live Entertainment", "Nighttime Spectacular", "Parade / Cavalcade", "Theater Show / Performance", "Interactive Improv", "Atmospheric"];
 			// 0		1			2			3			4			5			6
 
-entertainmentLocation = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District"];
-			// 0		1				2			3				4
+entertainmentLocation = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
+			// 0		1				2				3				4			5
 
 entertainmentSeason = ["none", "Fall", "Winter", "Spring", "Summer", "Always Happening"];
 			// 0	1	2  	   3		4	5
