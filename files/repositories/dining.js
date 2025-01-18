@@ -5,8 +5,8 @@ var iter = 0;
 
 diningClickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/dining/";
 
-diningLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District"];
-			// 0		1				2			3				4
+diningLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
+			// 0		1				2			3				4			5
 
 diningCategories = ["none", "Casual Dining", "Counter Service", "Full Service", "Grab & Go", "Kiosk Ordering", "Poolside Dining"];
 		//   0		1		2			3		4  	   5			6
