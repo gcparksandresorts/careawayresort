@@ -5,8 +5,8 @@ var iter = 0;
 
 attractionClickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
 
-attractionLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District"];
-			// 0		1				2			3				4
+attractionLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
+			// 0		1				2			3				4			  5
 
 attractionCategories = ["none", "Thrill Rides", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences",  "Seasonal Attractions", "Other"];
 			// 0		 1		2			3				4			5			6
