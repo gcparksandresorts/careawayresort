@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en">
+3<!DOCTYPE html> <html lang="en">
     <head id='pgHead'>
 	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
 	    
@@ -144,11 +144,11 @@
 						
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
-							if(document.getElementById("category-"+temp[2]).style.display == 'none'){document.getElementById("category-"+temp[2]).style.display = 'block';}
-							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+typeText+"</div><div class='tab'>📍 "+diningLocations[temp[2]]+"</div><a href='"+hyperLink+"'>link</a></div>";
+							if(document.getElementById("category-"+temp[3]).style.display == 'none'){document.getElementById("category-"+temp[2]).style.display = 'flex';}
+							document.getElementById("category-"+temp[3]).innerHTML += "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+typeText+"</div><div class='tab'>📍 "+diningLocations[temp[2]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						}else{
 							// Populate the div 
-							document.getElementById("category-"+temp[2]).innerHTML += "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+typeText+"</div><div class='tab'>📍 "+diningLocations[temp[2]]+"</div><a href='"+hyperLink+"'>link</a></div>";
+							document.getElementById("allContainer").innerHTML += "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+typeText+"</div><div class='tab'>📍 "+diningLocations[temp[2]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						}
 						resultCount += 1;
 						
