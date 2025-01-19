@@ -106,7 +106,7 @@
 		// If searching all categories, create individual div for each category of attraction
 		if(categoryVal == 0){
 			for(i = 1; i < diningCategories.length; i++){
-				container.innerHTML += "<br><br><h2 style='color:midnightblue'>"+diningCategories[i]+"</h2><div class='placeContainer' id='category-"+i+"' style='display:none;'></div>";
+				container.innerHTML += "<br><br><h2 style='color:midnightblue; display:none;' id='H2category-"+i+"'>"+diningCategories[i]+"</h2><div class='placeContainer' id='category-"+i+"' style='display:none;'></div>";
 			}// end of for loop
 		}else{
 			container.innerHTML += "<div class='placeContainer' id='allContainer'></div>";
@@ -144,7 +144,7 @@
 						
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
-							if(document.getElementById("category-"+temp[3]).style.display == 'none'){document.getElementById("category-"+temp[2]).style.display = 'flex';}
+							if(document.getElementById("category-"+temp[3]).style.display == 'none'){document.getElementById("category-"+temp[3]).style.display = 'flex'; document.getElementById("H2category-"+temp[3]).style.display = 'block';}
 							document.getElementById("category-"+temp[3]).innerHTML += "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+aSubtitle+"<br><br><br></div><div class='subText'>"+typeText+"</div><div class='tab'>📍 "+diningLocations[temp[2]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						}else{
 							// Populate the div 
