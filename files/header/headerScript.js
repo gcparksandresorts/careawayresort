@@ -43,7 +43,7 @@ footer.innerHTML = "<div id='footerLinks'> \
 				<div><h4>Events & Experiences</h4> <a>Seasonal Events</a> <a>Meetings & Events</a> <a>Youth Programs</a> <a>Travel Planning</a></div> \
 				<div><h4>Information</h4> <a href='"+siteLink+"information/safety-guidelines'>Safety Guidelines</a> <a>Frequently Asked Questions</a> <a>Accessibility</a> <a>Resort Services & Rentals</a> <a>Corporate Partners</a> <a href='"+siteLink+"information/blog'>Resort Blog & Updates</a> <a>Contact Us</a></div> \
 			</div> <div class='container' style='color:white;margin-top:0px;margin-bottom:0px;'> <div class='spacer light'></div>  <p><b>Get in Touch</b><br>(311) 868 9000 | <a href='mailto:globecityparksandresorts@gmail.com'>guestservices.gccr@gcpr.net</a></p> <p>300 Adventure Blvd.<br>Oceanfields PN, 53000</p> \
-				<div class='spacer light'></div> <p><span style='font-size:12px'>(C) 2025 Globe-City Entertainment LLC | Parks & Resorts</span><br><a>Privacy Policy</a> | <a href='"+siteLink+"business/legal'>Legal Information</a> | <a>MCBPO</a> | <a>Careers</a></p>";
+				<div class='spacer light'></div> <p><span style='font-size:12px'>(C) 2025 Globe-City Entertainment LLC | Parks & Resorts</span><br><a href='"+siteLink+"business/legal#privacyPolicy'>Privacy Policy</a> | <a href='"+siteLink+"business/legal'>Legal Information</a> | <a href='"+siteLink+"business/mcbpo'>MCBPO</a> | <a>Careers</a></p>";
 
 // PAGE SETUP
 loader.innerHTML = "<img src='https://gcparksandresorts.github.io/careawayresort/files/header/webfavicon.ico'><h2>Loading Page</h2>";
