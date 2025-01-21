@@ -146,6 +146,7 @@ a.btn{
 		border:solid 2px white; color:white; background:midnightBlue;
 	}
 	a.btn.filled:hover{background:white; color:midnightBlue;}
+	a.btn.wide {width:100%;}
 
 
 .rowDiv {
