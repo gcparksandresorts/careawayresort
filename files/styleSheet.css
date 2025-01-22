@@ -147,6 +147,8 @@ a.btn{
 	}
 	a.btn.filled:hover{background:white; color:midnightBlue;}
 	a.btn.wide {width:100%;}
+	a.btn.noLeft {margin-left:0;}
+	a.btn.noRight {margin-right:0;}
 
 
 .rowDiv {
