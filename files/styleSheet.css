@@ -81,7 +81,7 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	
 	@media screen and (max-width:500px){
 		.columnContainer{ flex-flow:column; }
-		.columnContainer > img, .columnContainer.cBanner > img, columnContainer.cBanner > div { width:100%; margin:10px auto 10px auto; }
+		.columnContainer > img, .columnContainer.cBanner > img, .columnContainer.cBanner > div { width:100%; margin:10px auto 10px auto; }
 		.columnContainer > div { width:100%; margin:10px auto 10px auto; }
 	}
 
