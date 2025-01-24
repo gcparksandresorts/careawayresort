@@ -227,9 +227,9 @@ a.btn{
 	.swoopContainer img {width:100%; height:auto;}
 
 	/* How to use:
-		Blue:
-		Silver:
-		White:
+		Blue: 	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/transition-element-blue.png'></div>
+		Silver: <div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/transition-element-silver.png'></div>
+		White: 	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/transition-element-white.png'></div>
 	*/
 
 /* Image Slideshow with cross-disolve animation */
