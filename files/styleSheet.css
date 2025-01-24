@@ -1,4 +1,4 @@
-* {  box-sizing: border-box; } html { scroll-behavior: smooth; }
+e* {  box-sizing: border-box; } html { scroll-behavior: smooth; }
 
 body{ 
 	    font-size:16px; line-height:1.6;
@@ -217,6 +217,20 @@ a.btn{
 
 	    */
 
+/* SWOOPY DIV TRANSITIONS */
+
+.swoopContainer {
+	display:flex;
+	width:100%; height:auto;
+	margin:0px; padding:0px; padding-top:20px;
+}
+	.swoopContainer img {width:100%; height:auto;}
+
+	/* How to use:
+		Blue:
+		Silver:
+		White:
+	*/
 
 /* Image Slideshow with cross-disolve animation */
 .slideShowElement{
