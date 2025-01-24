@@ -147,9 +147,12 @@ a.btn{
 		border:solid 2px white; color:white; background:midnightBlue;
 	}
 	a.btn.filled:hover{background:white; color:midnightBlue;}
+	a.btn.white {border-color:white; color:white;}
+		a.btn.white:hover {background:white; color:midnightblue;}
 	a.btn.wide {width:100%;}
 	a.btn.noLeft {margin-left:0;}
 	a.btn.noRight {margin-right:0;}
+
 
 
 .rowDiv {
