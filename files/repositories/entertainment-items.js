@@ -6,6 +6,9 @@ gcVipInfo = ["None", "Preffered Seating Available", "Early-Access Available", "V
 	//	0	1				2			3
 accessibilityInfo = ["Guest may remain in wheelchair or ECV", "Guest must transfer from wheelchair", "Accessible seating section available"];
 	//		0						1				2
+
+entertainmentCategory = ["none", "Live Entertainment", "Nighttime Spectacular", "Parade / Cavalcade", "Theater Show / Performance", "Interactive Improv", "Atmospheric"];
+
 /* NOTES - leave default value if you dont have someting (I.E. if no extra images, leave as extraImg - extraImg2 
 
       CATEGORY - make sure showCategory is a number that aligns with the categories in the entertainment repository:
