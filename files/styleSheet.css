@@ -153,7 +153,9 @@ a.btn{
 	a.btn.noLeft {margin-left:0;}
 	a.btn.noRight {margin-right:0;}
 
-
+.tagContainer {width:100%; display:block; margin-top:20px;}
+	.tagContainer > a {display:inline-block; margin:10px 10px 10px 0px; padding:5px 10px 5px 10px; background:rgba(255,255,255,0.5); border-radius:15px; text-decoration:none; color:white}
+	.tagContainer.silver {background:silver; color:black;}
 
 .rowDiv {
 	display:flex;  flex-flow:row;
