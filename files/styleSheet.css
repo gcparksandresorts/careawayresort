@@ -26,6 +26,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		height:100%; width:100%;
 	}
 
+
+
 .container, .leftContainer {margin:auto; padding:55px 10px 55px 10px; width:100%; display:block; max-width:1200px; text-align:center;}
 
 	.leftContainer{text-align:left;}
@@ -39,6 +41,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		.container.filled, .leftContainer.filled {border-radius:0px;}
 	}
 
+
+
 .fullContainer{
 	background:silver; color:black; 
 	width:100%; margin:0; position:relative; padding:20px 0px 20px 0px;
@@ -51,6 +55,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 			border:solid 2px white; color:white;
 		}
 		.fullContainer.blue a.btn:hover{background:white; color:midnightblue;}
+
+
 
 .columnContainer{
 	width:100%; display:flex;
@@ -86,6 +92,20 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	}
 
 
+
+
+.halfContainer {display:flex; flex-flow:row;}
+	.halfContainer > div {width:50%;}
+	.halfContainer > :first-child {padding-right:20px;}
+
+	@media screen and (max-width:501px){
+		.halfContainer {flex-flow:column;}
+		.halfContainer > div {width:100%; padding:10px 0px 10px 0px;}
+	}
+
+
+
+
 .tileContainer{
         display:flex; flex-flow:row; justify-content:center; align-items:flex-start;
         width:100%; margin:0; padding:0; flex-wrap:wrap;
@@ -100,6 +120,8 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 		.tileContainer > div.linked:hover > img {scale:1.05;}
 		.tileContainer > div.linked > a {opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
 
+
+
 .miniTileContainer {display:flex; flex-flow:row;}
 		.miniTileContainer > div {position:relative; width:100%; padding:10px; align-self:stretch;  text-align: left;}
 		.miniTileContainer > div > img {display:block; width:100%; height:200px; object-fit:cover; border-radius:15px; margin-bottom:10px; transition:0.5s;}
@@ -112,6 +134,10 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 
 	/* Adds border to the items, similar to place container */
 	.miniTileContainer.bordered > div {padding:5px; border:2px solid black; border-radius:20px; margin:10px;}
+
+
+
+
 
 /* --- Titles and stuff ----- */
 .titleBar{width:100%; padding:10px; color:white; background:midnightblue; color:white; text-align:center;}
