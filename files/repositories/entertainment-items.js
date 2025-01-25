@@ -25,9 +25,9 @@ entertainmentItems[NUM] = "showName0 | showCategory1 | showLocation2,parkIndex |
 */
 
 entertainmentItems[0] = "showName0 | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
-	entertainmentDescription[0] = "shortDescription0 | longDescription1";
+	entertainmentDescription[0] = "shortDescription0 | tagList1 | longDescription2";
 	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
 
 entertainmentItems[1] = "Wicked! The Retelling | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
-  entertainmentDescription[1] = "shortDescription0 | longDescription1";
+  entertainmentDescription[1] = "shortDescription0 | tagList1 | longDescription2";
   entertainmentImages[1] = "https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp | https://www.thehobbycenter.org/wp-content/uploads/2022/12/WickedLargeFeaturedNewsImage1200x650-scaled.jpg - https://wickedthemusical.com/wp-content/uploads/2024/08/0028-Homepage-Carousel-Assets.jpg";
