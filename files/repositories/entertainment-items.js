@@ -15,11 +15,13 @@ accessibilityInfo = ["Guest may remain in wheelchair or ECV", "Guest must transf
                 Careaway Park - 1 ; Port of Adventure - 2; Splashport - 3; Shops&More - 4; Hotels - 5
                 
       DEFAULT ACCESSIBILITY: 0
+
+      CUSTOM FONT - use a google font name or write none
 */
 
 
 /*
-entertainmentItems[NUM] = "showName0 | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
+entertainmentItems[NUM] = "showName0,customFont | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
 	entertainmentDescription[NUM] = "shortDescription0 | longDescription1";
 	entertainmentImages[NUM] = "mainImg0 | extraImg - extraImg2";
 */
@@ -28,6 +30,6 @@ entertainmentItems[0] = "showName0 | showCategory1 | showLocation2,parkIndex | s
 	entertainmentDescription[0] = "shortDescription0 | tagList1,tag2 | longDescription2";
 	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
 
-entertainmentItems[1] = "Wicked! The Retelling | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
+entertainmentItems[1] = "Wicked! The Retelling,none | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
   entertainmentDescription[1] = "shortDescription0 | tagList1,tag2 | longDescription2";
   entertainmentImages[1] = "https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp | https://www.thehobbycenter.org/wp-content/uploads/2022/12/WickedLargeFeaturedNewsImage1200x650-scaled.jpg - https://wickedthemusical.com/wp-content/uploads/2024/08/0028-Homepage-Carousel-Assets.jpg";
