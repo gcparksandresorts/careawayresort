@@ -33,13 +33,14 @@
 			background:midnightblue;
 		}
 	    	#specialHeader #bannerContent{
-			position:fixed; top:0; right:0; bottom:0; left:0; 
-			background:darkseagreen;
+			position:absolute; top:0; right:0; bottom:0; left:0; 
+			background:url("https://gcparksandresorts.github.io/careawayresort/files/images/banners/port-of-entry.webp");
+			background-repeat: no-repeat;
+	                background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
             		z-index:-1;
 		}
-	    		#specialHeader #bannerContent img{
-				width:100%; height:100%; object-fit:cover;
-			}
 	    	#specialHeader #spLogo{
 			position:absolute; top:20px; right:20px; width:35%; height:auto;
 			max-width:600px; min-width:300px;
@@ -58,9 +59,7 @@
         <div id='loader'></div>
 
          <div id='specialHeader'>
-		<div id='bannerContent'>
-			<img src='https://th.bing.com/th/id/R.a8df034f506fe0197f1e84a7cb4bb409?rik=NL5nEY4mQlFUrA&riu=http%3a%2f%2fwww.universal-bookings.co.uk%2fsites%2fdefault%2ffiles%2faa%2fioa_overview_0.jpg&ehk=BTCZ98bY%2biGjIyWm%2fGs%2bjOMdX%2bccDKvSz62iORtM0Sc%3d&risl=&pid=ImgRaw&r=0'>
-		</div>
+		<div id='bannerContent'></div>
 		<div id='bottomBar'><div style='width:100%;height:10px; background:darkblue;'></div></div>
 		<img id='headerMask' src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/careawayIndexMask.png'>
 		<img id='spLogo' src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'>
@@ -182,8 +181,8 @@
 					</div>
 					<div class='linked'>
 						<img src='https://blooloop.com/wp-content/uploads/2016/11/Ghostbusters-triotech.jpg'>
-						<h3>Attractions & Entertainment</h3>
-						Fun for everyone - explore diverse and unique attractions and engaging entertainment; from thrilling rollercoasters to immersive dark rides
+						<h3>Rides and Attractions</h3>
+						Fun for everyone - explore diverse and unique attractions; from thrilling rollercoasters to immersive dark rides
 						<a href='things-to-do/attractions'></a>
 					</div>
 				</div>
@@ -195,12 +194,16 @@
 			<div class='fullContainer' style='margin:0px;'>
 				<div class='container'>
 					<h1>Can't Miss Experiences</h1>
-					<div class='miniTileContainer'>
+					<div class='miniTileContainer' id='cantMissExperiences'>
 						<div><img src='https://upload.wikimedia.org/wikipedia/en/3/3b/Phantom_Manor_View.jpg'><h3>Baron's Mannor</h3> A unique and immersive dark ride featuring goulish delight <a href='things-to-do/attractions'></a></div>
 						<div><img src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/5e/02/67/adventure-kingdom.jpg?w=900&h=500&s=1'><h3>Careaway Castle</h3> Family friendly mini-golf with detailed scenery and playful fun <a href='things-to-do/attractions'></a></div>
 						<div><img src='https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg'><h3>Finona's Grotto</h3> An award winning restauraunt nestled in the snowy hills of the Enchanted Forest<a href='things-to-do/dining'></a></div>
 						<div><img src='https://www.unomaha.edu/college-of-communication-fine-arts-and-media/news/2022/07/img/porter_disneyaacb.jpg'><h3>Globe-City Marching Band</h3> March along to the beat of the drumns of our very own marching band<a href='things-to-do/attractions'></a></div>
 					</div>
+					<br><br>
+					<p>
+						<a class='btn' href='things-to-do/attractions'>Rides and Attractions</a> <a class='btn' href='things-to-do/entertainment'>Performances and Entertainment</a> <a class='btn' href='things-to-do/dining'>Restaurants</a> <a class='btn' href='things-to-do/shopping'>Shopping</a>
+					</p>
 				</div>
 	
 				<div class='container filled' style='background:linear-gradient(cadetblue, darkcyan); color:white;'>
