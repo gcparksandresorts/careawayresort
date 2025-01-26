@@ -2,24 +2,191 @@
     <head id='pgHead'>
 	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
 	    
-		<title>Could Not Locate Item | Shows & Entertainment | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+		<title id='webpageTitle'>Could Not Locate Item | Shows & Entertainment | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 	
     <style>
+	    #imgBlockContent > div > img {height:auto !important; aspect-ratio:4/3 !important;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
 
-		
+		<div class='fullContainer' style='background:dimgray; color:white;'>
+			<div class='leftContainer'>
+				<div class='columnContainer cBanner dImg' id='introSection'>
+					<img src='https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp'>
+					<div>
+						<h1>Item Not Found</h1>
+						The item you're looking for could not be located. In the meantime, here's a poem for you: Roses are red, Elphaba is green, give me your cock, or I just might cream.
+						<div class='tagContainer'><a>This is a Tag</a><a>This is another tag</a><a>The poem isnt</a><a>Supposed to make sense</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='leftContainer'>
+			<h3>Attraction Information</h3>
+			<div class='halfContainer' id='quickFacts'>
+				<div>
+					<ul>
+						<li><b>Entertainment Category: </b>Unspecified Type</li>
+						<li><b>Location: </b>Your Mom's House, Your mom's city</li>
+						<li><b>Duration: </b>Like 10 Minutes</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><b>Showtimes: </b> See <a href='../../information/resort-schedule'>Resort Schedule</a></li>
+						<li><b>GC VIP: </b>Priority Seating is available</li>
+						<li><b>Accessibility: </b>Guest may remain in wheelchair or ECV - <a href='../../information/accessibility'>Learn More</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer' id='moreDescription'>
+			Here is a longer description of the attraction, or idk some words for no one to read because, like, who even reads anymore.
+		</div>
+
+	<section id='imgBlock'>
+		<div class='spacer'></div>
+
+		<div class='container'>
+			<div class='miniTileContainer'>
+				<div><img src='https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/137832563/original/076bb0e0a1e4735f37829d90a0113bc61dccdb7e/do-some-dank-memes-and-i-can-edit-some-funny-videos.png'></div>
+				<div><img src='https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/137832563/original/076bb0e0a1e4735f37829d90a0113bc61dccdb7e/do-some-dank-memes-and-i-can-edit-some-funny-videos.png'></div>
+			</div>
+		</div>
+	</section>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
+			<b>Guest Safety: </b>Before your visit, review our <a href='../../information/safety-guidelines'>Safety Guidelines</a> and read all posted information at an attraction prior to experiencing. Please speak to attraction operators if you have questions or concerns about your experience.
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container' id='finalLinks'>
+			<a class='btn' onclick='history.back()'>Back to previous</a> <a class='btn' href='../entertainment'>Explore all entertainment</a>
+		</div>
+
+		<div class='container' style='font-size:12px;'>
+			All attractions and entertainment at Globe-City's Careaway Resort are subject to closure at anytime. Shows are subject to cancelation or delay. See the resort schedule during your visit for showtimes.
+			<p>Attractions and Entertainment located inside Globe-City's Careaway Park, Port of Adventure, and Splashport Bay are accessible only to guests with valid admission to these properties.</p>
+		</div>
 		
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
 </body>
     	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/entertainment-items.js"></script>
 	<script>
-		// document.getElementById("");
+		console.clear();
+		// Declare sections to be edited
+		const titleBlock = document.getElementById("introSection");
+		const infoBlock = document.getElementById("quickFacts");
+		const descriptionBlock = document.getElementById("moreDescription");
+		const imgBlock = document.getElementById("imgBlock");
+		const finalLinks = document.getElementById("finalLinks");
+		
+		function setupPage(){
+			const urlParams = new URLSearchParams(window.location.search);
+			const index = 1;//urlParams.get("index");
+			
+			if (index !== null) { // if an index value is specified
+		            	console.log("Index value equal to " + index);
+
+				// Populate Page
+				let tempInfo = entertainmentItems[index].split(" | ");
+				let tempDescription = entertainmentDescription[index].split(" | ");
+				let tempImg = entertainmentImages[index].split(" | ");
+
+				// Populate Title Block section
+					// Create the title of the page
+					let tempName = tempInfo[0].split("/");
+					if(tempName[1] != 'none'){
+						document.getElementById("pgHead").innerHTML += "<link href='https://fonts.googleapis.com/css2?family="+tempName[1]+"' rel='stylesheet'>";
+						tempName = "<h1 style='font-family:"+tempName[1]+"'>"+tempName[0]+"</h1>";
+					}else{
+						tempName = "<h1>"+tempName[0]+"</h1>";
+					}
+
+				titleBlock.innerHTML = "<img src='"+tempImg[0]+"'> <div> "+ tempName + tempDescription[0] + "<div class='tagContainer' id='itemTagContainer'></div> </div>";
+
+					// Populate Tags
+					let tempTags = tempDescription[1].split(",");
+					for (let i = 0; i < tempTags.length; i++){
+						document.getElementById("itemTagContainer").innerHTML += "<a>"+tempTags[i]+"</a>";
+					}
+				
+				// Populate Quick Facts Section
+					// Get proper location
+					var locationVal = tempInfo[2].split(",");
+					switch(locationVal[1]){
+						case '0':
+							locationVal[1] = "../entertainment";
+							locationVal[2] = "Location Varries";
+							break;
+						case '1':
+							locationVal[1] = "../../destinations/careaway-park";
+							locationVal[2] = "Globe-City's Careaway Park";
+							break;
+						case '2':
+							locationVal[1] = "../../destinations/port-of-adventure";
+							locationVal[2] = "Globe-City's Port of Adventure";
+							break;
+						case '3':
+							locationVal[1] = "../../destinations/splashport-bay";
+							locationVal[2] = "Globe-City Splashport Bay";
+							break;
+						case '4':
+							locationVal[1] = "../../destinations/shops-and-more-district";
+							locationVal[2] = "The Shops and More District";
+							break;
+						case '5':
+							locationVal[1] = "../../hotels/home";
+							locationVal[2] = "Resort Hotels";
+							break;
+							
+					}// end of switch
+
+					// put in the content
+					infoBlock.innerHTML = "<div> <ul> <li><b>Entertainment Category: </b><a href='../entertainment?category="+tempInfo[1]+"'>"+entertainmentCategory[tempInfo[1]]+"</a></li> \
+								<li><b>Location: </b>"+locationVal[0]+", <a href='"+locationVal[1]+"'>"+locationVal[2]+"</a></li> \
+								<li><b>Duration: </b> "+tempInfo[3]+"</li> </ul></div> \
+							<div> <ul> <li><b>Showtimes: </b> See <a href='../../information/resort-schedule'>Resort Schedule</a></li> \
+								<li><b>GC VIP Perks: </b> "+gcVipInfo[tempInfo[4]]+"</li> \
+								<li><b>Accessibility: </b> "+accessibilityInfo[tempInfo[5]]+" - <a href='../../information/accessibility'>More Information</a> </li> </ul> </div>";
+
+				// Populate the extra description
+					descriptionBlock.innerHTML = tempDescription[2];
+
+				// Populate the image block
+					if(tempImg[2] == "extraImg - extraImg2"){
+						imgBlock.innerHTML = ""; // if there are no extra images
+					}else{
+						// First create the image block
+						imgBlock.innerHTML = "<div class='spacer'></div> <div class='container'><div class='miniTileContainer' id='imgBlockContent'></div></div>";
+
+						// Then add content
+						let tempImgContent = tempImg[1].split(" - ");
+						for (let i = 0; i < tempImgContent.length; i++){
+							document.getElementById("imgBlockContent").innerHTML += "<div><img src='"+tempImgContent[i]+"'><a href='"+tempImgContent[i]+"' target='_blank'></a></div>";
+						}
+					}
+				
+		        } else { // if an index value is NOT specified
+				console.log("Index not appropriatly designated. Could not locate, redirecting page");
+				//setTimeout(function(){window.open("../page-unavailable","_self")},1000);
+		        }
+		}// end of setupPage()
+
+		setupPage();
 	</script>
 </html>
