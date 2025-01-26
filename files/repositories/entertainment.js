@@ -24,7 +24,7 @@ var iter = 0;
 
 
 // OFF-PEAK / GENERIC ENTERTAINMENT
-	entertainmentList[iter] = "GCMB | Globe-City Marching Band | A loud and proud high-rolling group | showDisclaimer3 | 10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM | 1 | 1 | 5 | clickLink8 | https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg";
+	entertainmentList[iter] = "GCMB | Globe-City Marching Band | A loud and proud high-rolling group | showDisclaimer3 | 10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM | 1 | 1 | 5 | entIndex=2 | https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg";
 
 
 // HALLOWEEN SEASON ENTERTAINMENT
@@ -37,4 +37,4 @@ var iter = 0;
 
 // SPRING AND SUMMER SEASON ENTERTAINMENT
 	iter += 1; entertainmentList[iter] = "wick | Wicked! The Retelling | An abridged remake of the world-famous musical based on the book based on the movie based on a really old book. Live from the Sasson Theater at Wonder Reel Studios! | showDisclaimer3 | 12:45 PM, 4:15 PM | 2 | 4 | 4 | entIndex=1 | https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp";
-	iter += 1; entertainmentList[iter] = "das | Dreams of Adventure Spectacular | An epic nighttime fireworks and light show about the magic of dreams and the places they take us | showDisclaimer3 | 9:30 PM | 2 | 2 | 4 | clickLink8 | https://blogmickey.com/wp-content/uploads/2017/05/HappilyEverAfter-0512017-14.jpg";
+	iter += 1; entertainmentList[iter] = "das | Dreams of Adventure Spectacular | An epic nighttime fireworks and light show about the magic of dreams and the places they take us | showDisclaimer3 | 9:30 PM | 2 | 2 | 4 | entIndex=3 | https://blogmickey.com/wp-content/uploads/2017/05/HappilyEverAfter-0512017-14.jpg";
