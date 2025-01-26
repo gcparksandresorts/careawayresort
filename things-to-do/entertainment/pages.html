@@ -6,7 +6,7 @@
     </head>
 	
     <style>
-	    #imgBlockContent > div > img {height:auto !important; aspect-ratio:4/3 !important;}
+	    #imgBlockContent > div > img {height:auto !important; aspect-ratio:4/2 !important;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -97,7 +97,7 @@
 		
 		function setupPage(){
 			const urlParams = new URLSearchParams(window.location.search);
-			const index = 1;//urlParams.get("index");
+			const index = urlParams.get("index");
 			
 			if (index !== null) { // if an index value is specified
 		            	console.log("Index value equal to " + index);
@@ -112,7 +112,7 @@
 					let tempName = tempInfo[0].split("/");
 					if(tempName[1] != 'none'){
 						document.getElementById("pgHead").innerHTML += "<link href='https://fonts.googleapis.com/css2?family="+tempName[1]+"' rel='stylesheet'>";
-						tempName = "<h1 style='font-family:"+tempName[1]+"'>"+tempName[0]+"</h1>";
+						tempName = "<h1 style='font-family:"+tempName[1].replace(/\+/g, ' ')+"'>"+tempName[0]+"</h1>";
 						document.getElementById("webpageTitle").innerHTML = "tempName[0] | Shows & Entertainment | Globe-City's Careaway Resort";
 					}else{
 						tempName = "<h1>"+tempName[0]+"</h1>";
