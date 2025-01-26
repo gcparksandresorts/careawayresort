@@ -33,6 +33,7 @@ entertainmentItems[0] = "showName0 | showCategory1 | showLocation2,parkIndex | s
 	entertainmentDescription[0] = "shortDescription0 | tagList1,tag2 | longDescription2";
 	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
 
-entertainmentItems[1] = "Wicked! The Retelling/none | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
-  entertainmentDescription[1] = "shortDescription0 | tagList1,tag2 | longDescription2";
+entertainmentItems[1] = "Wicked! The Retelling/Great+Vibes | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
+  entertainmentDescription[1] = "Return to the magical land of Oz for an exhilarating 45-minute adaptation of the beloved Broadway musical <em>Wicked</em>. This abridged version brings the spellbinding story of Elphaba and Glinda to life with breathtaking musical numbers, dazzling comedy, and awe-inspiring theater technology. | Broadway,Live Performance,Musical,Magic and Wizardry | \
+	  			Witness the untold tale of the Wicked Witch of the West as her journey intertwines with that of Glinda the Good, revealing the surprising events that shaped the characters we thought we knew. <p>Performed in the cutting-edge Sasson Theater, this high-energy production combines crystal-clear projection mapping, a state-of-the-art fly system, and stunning effects to immerse you in the world of Oz like never before. With powerhouse vocals, heartfelt storytelling, and a touch of humor, <em>Wicked! The Retelling</em> delivers a Broadway-caliber experience in a fraction of the time—perfect for fans of all ages. Don’t miss this magical reimagining of a classic tale!</p>";
   entertainmentImages[1] = "https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp | https://www.thehobbycenter.org/wp-content/uploads/2022/12/WickedLargeFeaturedNewsImage1200x650-scaled.jpg - https://wickedthemusical.com/wp-content/uploads/2024/08/0028-Homepage-Carousel-Assets.jpg";
