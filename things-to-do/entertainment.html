@@ -128,7 +128,11 @@
 
 						// Edit the hyperlink if none is specified 
 						var hyperLink = '';
-						if(temp[8] == 'clickLink8'){hyperLink='page-unavailable';}else{hyperLink=entertainmentClickLink+temp[8];}
+						if(temp[8] == 'clickLink8'){hyperLink='page-unavailable';}
+						else if(temp[8].includes("entIndex=")){
+							let linkTo = temp[8].split('=');
+							hyperLink = 'entertainment/pages?index='+linkTo[1];
+						}else{hyperLink=entertainmentClickLink+temp[8];}
 						
 						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[2]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[5]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						
