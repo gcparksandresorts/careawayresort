@@ -48,3 +48,7 @@ entertainmentItems[3] = "Dreams of Adventure/Marhey | 2 | Atlantis Castle,2 | 15
 				<p>The night sky comes alive with millions of vibrant hues as dreams of exploration, wonder, and adventure are brought to life before your eyes. Stunning water effects rise and fall in perfect harmony with a soaring musical score, while shimmering drones paint the sky with intricate patterns and scenes. Fireworks burst overhead in a kaleidoscope of colors, illuminating the park and filling the air with excitement and awe.</p>\
 				<p><em>Dreams of Adventure</em> is more than just a show—it’s a heartfelt celebration of the imagination and the journeys that unite us all. Whether you’re embarking on your first adventure or reminiscing about your day’s discoveries, this grand finale is the perfect way to conclude your epic journey at Port of Adventure.</p>";
 	entertainmentImages[3] = "https://media.disneylandparis.com/d4th/en-gb/images/n040208_2031jan09_world_disney-elctrical-sky-parade-drones_16-9_tcm752-271775.jpg?w=960 | none";
+
+entertainmentItems[4] = "Kingdom of Darkness: Alive/none | 6 | Kingdom of Darkness,2 | 12 Minutes | 0 | 0";
+	entertainmentDescription[4] = "shortDescription0 | tagList1,tag2 | longDescription2";
+	entertainmentImages[4] = "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg | none";
