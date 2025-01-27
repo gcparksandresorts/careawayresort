@@ -16,9 +16,11 @@ attractionAge = ["none", "For all ages", 'Minimum Height 35" (89cm)', 'Minimum H
 
 /*
 iter+=1; attractionList[iter] = "attractionName - sponsorText | attractionLocation | attractionCategory | attractionAge | clickLink | imageLink";
+
+link to pages: atIndex=NUM
 */
 
-attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 | clickLink | https://i.imgur.com/wsSggBe.jpeg";
+attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 | atIndex=1 | https://i.imgur.com/wsSggBe.jpeg";
 iter+=1; attractionList[iter] = "Careaway Castle Mini Golf - none | 4 | 4 | 1 | clickLink | https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg";
 iter+=1; attractionList[iter] = "Enchanted Forest to Creature Cove Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
 iter+=1; attractionList[iter] = "Escape from Realinu - none | 1 | 2 | 2 | clickLink | https://miro.medium.com/v2/da:true/resize:fit:1200/0*w5Zv7N4WakVhjhKn";
