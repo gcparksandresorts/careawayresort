@@ -121,7 +121,7 @@
 				// Populate Title Block section
 					// Create the title of the page
 					let tempName = tempInfo[0].split("/");
-					if(tempName[1] != 'none'){
+					if(tempName[1] != 'none' || tempName[1] != 'font'){
 						document.getElementById("pgHead").innerHTML += "<link href='https://fonts.googleapis.com/css2?family="+tempName[1]+"' rel='stylesheet'>";
 						document.getElementById("webpageTitle").innerHTML = tempName[0] + " | Rides & Attractions | Globe-City's Careaway Resort";
 						tempName = "<h1 style='font-family:"+tempName[1].replace(/\+/g, ' ')+"'>"+tempName[0]+"</h1>";
@@ -170,10 +170,10 @@
 					}// end of switch
 
 					// put in the content
-					infoBlock.innerHTML = "<div> <ul> <li><b>Attraction Category: </b><a href='../entertainment?category="+tempInfo[1]+"'>"+entertainmentCategory[tempInfo[1]]+"</a></li> \
+					infoBlock.innerHTML = "<div> <ul> <li><b>Attraction Category: </b><a href='../attractions?category="+tempInfo[1]+"'>"+attractionCategories[tempInfo[1]]+"</a></li> \
 								<li><b>Location: </b>"+locationVal[0]+", <a href='"+locationVal[1]+"'>"+locationVal[2]+"</a></li> \
 								<li><b>Duration: </b> "+tempInfo[3]+"</li> </ul></div> \
-							<div> <ul> <li><b>Minimum Height: </b> See <a href='../../information/resort-schedule'>Resort Schedule</a></li> \
+							<div> <ul> <li><b>Minimum Height: </b> "+attractionAge[tempInfo[5]]+"</li> \
 								<li><b>Queuing: </b> "+gcVipInfo[tempInfo[4]]+"</li> \
 								<li><b>Accessibility: </b> "+accessibilityInfo[tempInfo[5]]+" - <a href='../../information/accessibility'>More Information</a> </li> </ul> </div>";
 
@@ -181,7 +181,7 @@
 					descriptionBlock.innerHTML = tempDescription[2];
 
 				// Populate the image block
-					if(tempImg[1] == "none"){
+					if(tempImg[1] == "none" || tempImg[1] == "otherImg1 - otherImg"){
 						imgBlock.innerHTML = ""; // if there are no extra images
 					}else{
 						// First create the image block
@@ -192,6 +192,11 @@
 						for (let i = 0; i < tempImgContent.length; i++){
 							document.getElementById("imgBlockContent").innerHTML += "<div><img src='"+tempImgContent[i]+"'><a href='"+tempImgContent[i]+"' target='_blank'></a></div>";
 						}
+					}
+
+					// GC PhotoPass Section
+					if(tempInfo[7] != 'yes'){
+						gcPhotoPass.style.display = 'none';
 					}
 				
 		        } else { // if an index value is NOT specified
