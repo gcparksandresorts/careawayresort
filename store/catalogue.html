@@ -2,16 +2,24 @@
     <head id='pgHead'>
 	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
 	    
-		<title>🚧 Page under construction | Online Shop | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+		<title>Online Shop | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 	
     <style>
+	    .placeContainer > div > img {height:auto !important;}
+	    .placeContainer > div:hover {scale:1 !important; cursor:pointer;}
+
+	    .productPage {position:fixed; top:100px; left:0; right:0;}
+
+	    #prodDivBkg {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; display:none; animation:fadeIn 0.5s;}
+	    #prodDivBkg.visible {display:block;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
 
+		<!--
 		<div class='container'>
 			<img src='https://www.pngkey.com/png/detail/838-8383571_clip-art-vector-flagger-working-on-road-construction.png' style='width:90%; max-width:400px; margin:auto;'>
 		</div>
@@ -21,10 +29,66 @@
 			We apoligize for the inconvenience 🙇‍♀️. In the meantime, checkout our exciting retail locations at Globe-City's Careaway Resort!
 			<p><a href='../destinations/shops-and-more'>Explore Shopping</a></p>
 		</div>
+		-->
+
+	<div class='leftContainer'>
+		<div class='placeContainer' id='storeContainer'>
+			<!-- <div><img src=''><div><h3 style='margin-bottom:5px'></h3>contentText<br><br></div><div class='subText'>subText</div><div class='tab'>tabText</div><a href='"+hyperLink+"'>link</a></div> -->
+		</div>
+	</div>
+
+	<div id='productPage'>
+		<div id='prodDivBkg' style='' onclick='showHideDiv();'></div>
+	</div>
 		
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
 </body>
-    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/store/product-catalogue.js"></script>
+
+	<script>
+		const storeContainer = document.getElementById("storeContainer");
+		const prodDivBkg = document.getElementById("prodDivBkg");
+
+		function populateStore(){
+
+			const category = 0;
+
+			for (i = 0; i < productList.length; i++) {
+				let tempVar = productList[i].split(" | ");
+
+				// get all the variables
+				const prodName = tempVar[0];
+				const prodCategory = tempVar[1];
+				const prodPrice = tempVar[2];
+				const prodDescriptions = productDescription[i].split(" | ");
+
+				if(prodCategory == category || category == 0){
+					// Get the list of colors
+					if(tempVar[3].includes(",")){
+						const prodColor = tempVar[3].split(',');
+					}else{const prodColor = tempVar[3];}
+	
+					// Get the list of sizes
+					if(tempVar[4].includes(",")){
+						const prodSize = tempVar[4].split(',');
+					}else{const prodSize = tempVar[4];}
+
+					let builtDiv = "<div onclick='showHideDiv();'><img src='"+productImg[i]+"'><div><h3 style='margin-bottom:5px'>"+prodName+"</h3>"+prodDescriptions[0]+"<br><br><br></div><div class='subText'><b style='color:darkgreen;'>$"+prodPrice+"</b></div><div class='tab'>"+productCategories[prodCategory]+"</div></div>";
+
+					storeContainer.innerHTML += builtDiv;
+				}else{console.log("Product Skipped");}// end of if(prodCategory == category || category == 0)
+				
+			}// end of for loop
+			
+		}//end of populateStore
+
+		function showHideDiv(){
+			prodDivBkg.classList.toggle("visible");
+		}
+
+		populateStore();
+	</script>
 </html>
