@@ -28,7 +28,7 @@ var iter = 0;
 
 
 // HALLOWEEN SEASON ENTERTAINMENT
-	iter += 1; entertainmentList[iter] = "koda | Kingdom of Darkness Alive | A spooky special effects performance where the world of the dead comes to the living | 2 | Hourly beggining at 8PM | 2 | 6 | 1 | clickLink8 | https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg";
+	iter += 1; entertainmentList[iter] = "koda | Kingdom of Darkness Alive | A spooky special effects performance where the world of the dead comes to the living | 2 | Hourly beggining at 8PM | 2 | 6 | 1 | entIndex=3 | https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg";
 	iter += 1; entertainmentList[iter] = "haho | Haunting Hollywood | Horror and humor combine in this raunchy halloween retelling of some of the year's hottest gossip | 2 | 8:15 PM, 10:15 PM | 2 | 4 | 1 | clickLink8 | https://i.ytimg.com/vi/Phbnc10RXo4/maxresdefault.jpg";
 
 // HOLIDAY SEASON ENTERTAINMENT
