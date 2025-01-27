@@ -30,6 +30,6 @@ productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 64.50 | #000080,#82c8e
 	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
 	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | longerDescription";
 
-productList[2]="Sprucewood Forest Scented Candle | 3 | $19.99 | Forest Green | Standard Wick";
+productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | Forest Green | Standard Wick";
 	productImg[2] = "https://i.imgur.com/FaR25oS.jpeg";
 	productDescription[2] = "Sprucewood Forest scented soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
