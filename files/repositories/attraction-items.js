@@ -24,6 +24,16 @@ attractionItems[NUM] = "rideName0/font | rideCategory1 | rideLocation2,parkIndex
  PhotoPass? yes | no
 */
 
+attractionItems[3] = "World of Ghibli/Overlock+SC | 3 | Creature's Cove,1 | 4 Minutes | 1 | 2 | 1 | no";
+	attractionDescrition[3] = "<em>Sponsored by Aztech Cinema</em> - <a href='../../business/corporate-partners'>Learn More</a><p>A breathtaking 4D flying theater experience that brings the magic of Studio Ghibli's beloved animated films to life. Take your seat on a swinging platform and prepare to be whisked away on a journey through the stunning landscapes and whimsical worlds that have captured hearts for generations.</p> | Screen Ride,4D Theater,Movies,Animation,Family Fun | \
+				Feel the wind in your hair as you glide alongside Totoro through lush forests, soar above the clouds with the crew of <em>Castle in the Sky</em>, and race through the vibrant streets of <em>Spirited Away</em>. Immerse yourself in the wonder of it all with dazzling visuals, sweeping music, and sensory effects like mist, scents, and gentle breezes that transport you straight into these fantastical adventures. <p>Whether you’re a lifelong fan or discovering these masterpieces for the first time, <em>World of Ghibli</em> is an unforgettable celebration of imagination, beauty, and storytelling that will leave you spellbound.</p>";
+	attractionImg[3] = "../../files/images/banners/ghibliArt.webp | otherImg1 - otherImg";
+
+attractionItems[2] = "Wonder Reel Studio Tour/Delius | 4 | Wonder Reel Studios,2 | 6 Minutes | 1 | 1 | 2 | yes";
+	attractionDescrition[2] = "A scatterbrained director has accidentally lost dozens of film reels around the studio and it’s up to you to save the day. Hop aboard a studio-owned golf cart equipped with a barcode scanner and search through vibrant movie sets. Your mission? Spot and scan the hidden reels to help the director finish his blockbuster masterpiece. | Interactive,Cinema,Family Fun,Movie Making,Cutsey | \
+				Lights, camera, action! With surprises around every corner, larger-than-life props, and plenty of Hollywood magic, this thrilling ride puts you right in the heart of the action. Whether you’re a film buff or just love a good adventure, the Wonder Reel Studio Tour Ride promises lights, laughs, and unforgettable memories for all ages!";
+	attractionImg[2] = "../../ | otherImg1 - otherImg";
+
 attractionItems[0] = "rideName0/font | rideCategory1 | rideLocation2,parkIndex | rideDuration3 | queueIndex4 | minHeight5 | accessibility6 | photoPassYN7";
 	attractionDescrition[0] = "shortIntro0 | tags1,otherTag | longParagraph2";
 	attractionImg[0] = "mainImg0 | otherImg1 - otherImg";
