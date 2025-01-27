@@ -29,6 +29,10 @@ entertainmentItems[0] = "showName0/none | showCategory1 | showLocation2,parkInde
 	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
 */
 
+entertainmentItems[5] = "Haunting Hollywood/Vina+Sans | 4 | Wonder Reel Studios,2 | 33 Minutes | 3 | 2";
+	entertainmentDescription[5] = "Horror and humor combine in this raunchy halloween retelling of some of the year's hottest gossip. It's musical, it's magnificent, it's sure to make you get up and leave.<p><b>Valid admission to <a href='../events/scareaway-screams'>Scareaway Screams event</a> required</b></p> | Comedy,Musical,Crude Humor, PG13,Satirical,World Events | This halloween, laugh in horror as some dreadfully delightful monsters and ghouls sing and dance to covers of hit songs in a dramatic and comedic recap of world events.";
+	entertainmentImages[5] = "https://i.ytimg.com/vi/Phbnc10RXo4/maxresdefault.jpg | https://media.licdn.com/dms/image/D4D12AQFSNMl_D9H18w/article-cover_image-shrink_720_1280/0/1697143116072?e=2147483647&v=beta&t=URzF5qfS1URMCRxdCfMelyCeBvUa4mV4DuV1eKJbX5g - https://i.ytimg.com/vi/BfoV03t7ptQ/maxresdefault.jpg";
+
 entertainmentItems[0] = "showName0/none | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
 	entertainmentDescription[0] = "shortDescription0 | tagList1,tag2 | longDescription2";
 	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
