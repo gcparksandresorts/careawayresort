@@ -7,3 +7,4 @@ https://gcparksandresorts.github.io/careawayresort/destinations/splashport-bay
 https://gcparksandresorts.github.io/careawayresort/destinations/shops-and-more-district
 https://gcparksandresorts.github.io/careawayresort/information/resort-schedule
 https://gcparksandresorts.github.io/careawayresort/information/about-us
+https://gcparksandresorts.github.io/careawayresort/store/home
