@@ -106,7 +106,7 @@
 		
 		function setupPage(){
 			const urlParams = new URLSearchParams(window.location.search);
-			const index = 1;//urlParams.get("index");
+			const index = urlParams.get("index");
 			
 			if (index !== null) { // if an index value is specified
 		            	console.log("Index value equal to " + index);
