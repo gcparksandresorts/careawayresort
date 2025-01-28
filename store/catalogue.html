@@ -11,8 +11,9 @@
 
 	    .productPage {position:fixed; top:100px; left:0; right:0;}
 
-	    #prodDivBkg {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; display:none; animation:fadeIn 0.5s;}
-	    #prodDivBkg.visible {display:block;}
+	    #prodDivBkg {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; animation:fadeIn 0.5s;}
+
+	    #productInfo {position:fixed; background:white; top:110px; left:20px; right:20px; bottom:20px; border-radius:15px; padding:10px; overflow-y:auto;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -39,7 +40,7 @@
 	</div>
 
 	<div id='productPage'>
-		<div id='prodDivBkg' style='' onclick='showHideDiv();'></div>
+		
 	</div>
 		
 		<!-- END OF BODY CONTENT -->
@@ -51,7 +52,7 @@
 
 	<script>
 		const storeContainer = document.getElementById("storeContainer");
-		const prodDivBkg = document.getElementById("prodDivBkg");
+		const productPage = document.getElementById("productPage");
 
 		function populateStore(){
 
@@ -77,7 +78,7 @@
 						const prodSize = tempVar[4].split(',');
 					}else{const prodSize = tempVar[4];}
 
-					let builtDiv = "<div onclick='showHideDiv();'><img src='"+productImg[i]+"'><div><h3 style='margin-bottom:5px'>"+prodName+"</h3>"+prodDescriptions[0]+"<br><br><br></div><div class='subText'><b style='color:darkgreen;'>$"+prodPrice+"</b></div><div class='tab'>"+productCategories[prodCategory]+"</div></div>";
+					let builtDiv = "<div onclick='showItem("+i+");'><img src='"+productImg[i]+"'><div><h3 style='margin-bottom:5px'>"+prodName+"</h3>"+prodDescriptions[0]+"<br><br><br></div><div class='subText'><b style='color:darkgreen;'>$"+prodPrice+"</b></div><div class='tab'>"+productCategories[prodCategory]+"</div></div>";
 
 					storeContainer.innerHTML += builtDiv;
 				}else{console.log("Product Skipped");}// end of if(prodCategory == category || category == 0)
@@ -88,6 +89,32 @@
 
 		function showHideDiv(){
 			prodDivBkg.classList.toggle("visible");
+		}
+
+		function showItem(index){
+			productPage.innerHTML = "<div id='prodDivBkg'></div>";
+			productPage.innerHTML += "<div id='productInfo'></div>";
+			let prodPop = document.getElementById("productInfo");
+
+			// get all the variables
+				let tempVar = productList[index].split(" | ");
+			
+				const prodName = tempVar[0];
+				const prodCategory = tempVar[1];
+				const prodPrice = tempVar[2];
+				const prodDescriptions = productDescription[index].split(" | ");
+
+			prodPop.innerHTML = "<button style='position:absolute; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px;' onclick='closeItem()'>Close</button>";
+			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
+			prodPop.innerHTML += "<div class='spacer'></div>";
+
+			// Populate Colors
+			
+
+			// Populate Size
+		}
+		function closeItem(){
+			productPage.innerHTML = "";
 		}
 
 		populateStore();
