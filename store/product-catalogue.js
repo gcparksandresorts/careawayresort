@@ -30,6 +30,10 @@ productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 64.50 | #000080,#82c8e
 	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
 	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | longerDescription";
 
-productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | Forest Green | Standard Wick";
+productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard Wick";
 	productImg[2] = "https://i.imgur.com/FaR25oS.jpeg";
-	productDescription[2] = "Sprucewood Forest scented soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
+	productDescription[2] = "Hand-poured soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
+
+productList[3]="Careaway Drive Novelty Road Sign | 3 | 40.00 | none | 6x30 inches";
+	productImg[3] = "https://i.imgur.com/Aiac3fm.jpeg";
+	productDescription[3] = "Serving as the first 'sign' that you've arrived at the Careaway Resort | Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
