@@ -107,10 +107,10 @@
 				const prodPrice = tempVar[2];
 				const prodDescriptions = productDescription[index].split(" | ");
 
-			prodPop.innerHTML = "<button style='position:absolute; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px;' onclick='closeItem()'>Close</button>";
+			prodPop.innerHTML = "<button style='position:sticky; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px; left:100%;' onclick='closeItem()'>Close</button>";
 			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
 			prodPop.innerHTML += "<div class='spacer'></div>";
-			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer blue' id='sizeSelect'></div>";
+			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer silver' id='sizeSelect'></div>";
 
 			// Populate Colors
 			let colorSelect = document.getElementById("colorSelect");
@@ -121,10 +121,19 @@
 					colorSelect.innerHTML += "<a style='cursor:pointer; width:50px; height:30px; background:"+vals[i]+"' onclick='setColor("+i+","+'"'+vals[i]+'"'+")'></a>";
 				}
 			}
-			else{colorSelect.innerHTML = "<a style='style='height:20px; background:"+tempVar[3]+"; width:40px;' onclick='setColor("+i+","+'"'+vals[i]+'"'+")'></a>";}
+			else{colorSelect.innerHTML = "<a style='cursor:pointer; width:50px; height:30px; background:"+tempVar[3]+"'></a>"; setColor('0',tempVar[3]);}
 
 			// Populate Size
-			let sizeSelect = document.getElementById("colorSelect");
+			let sizeSelect = document.getElementById("sizeSelect");
+			if(tempVar[4].includes(",")){
+				let vals = tempVar[4].split(",");
+				for(i = 0; i < vals.length; i++){
+					sizeSelect.innerHTML += "<a style='cursor:pointer;' onclick='setSize("+'"'+i+'"'+","+'"'+vals[i]+'"'+");'>"+vals[i]+"</a>";
+				}
+			}else{
+				sizeSelect.innerHTML = "<a>"+tempVar[4]+"</a>";
+				setSize('0',tempVar[4]);
+			}
 			
 		}
 		function closeItem(){
@@ -134,11 +143,12 @@
 		function setColor(val,color){
 			chosenColor = val;
 			console.log("Color Selected: " + chosenColor);
-			document.getElementById("colorDisp").innerHTML = "Color: <span style='color:"+color+"'>■</span>";
+			document.getElementById("colorDisp").innerHTML = "Selected Color: <span style='color:"+color+"; font-size:30px;'>■</span>";
 		}
-		function setSize(val){
+		function setSize(val,text){
 			chosenSize = val;
 			console.log("Size Selected: " + chosenSize);
+			document.getElementById("sizeDisp").innerHTML = "Size Selected: " + text;
 		}
 
 		populateStore();
