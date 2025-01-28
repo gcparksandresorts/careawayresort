@@ -122,6 +122,7 @@
 				for(i = 0; i < vals.length; i++){
 					colorSelect.innerHTML += "<a style='cursor:pointer; width:50px; height:30px; background:"+vals[i]+"' onclick='setColor("+i+","+'"'+vals[i]+'"'+")'></a>";
 				}
+				setColor('0',vals[0]);
 			}
 			else{colorSelect.innerHTML = "<a style='cursor:pointer; width:50px; height:30px; background:"+tempVar[3]+"'></a>"; setColor('0',tempVar[3]);}
 
@@ -132,10 +133,13 @@
 				for(i = 0; i < vals.length; i++){
 					sizeSelect.innerHTML += "<a style='cursor:pointer;' onclick='setSize("+'"'+i+'"'+","+'"'+vals[i]+'"'+");'>"+vals[i]+"</a>";
 				}
+				setSize('0',vals[0]);
 			}else{
 				sizeSelect.innerHTML = "<a>"+tempVar[4]+"</a>";
 				setSize('0',tempVar[4]);
 			}
+
+			prodPop.innerHTML += "<div class='spacer'></div><a class='btn filled' onclick='addToCart("+'"'+index+'"'+")'>ADD TO CART</a>";
 			
 		}
 		function closeItem(){
@@ -151,6 +155,16 @@
 			chosenSize = val;
 			console.log("Size Selected: " + chosenSize);
 			document.getElementById("sizeDisp").innerHTML = "Size Selected: " + text;
+		}
+
+		function addToCart(index){
+			var userCart = localStorage['userCart'] || 'cartStart';
+			userCart += "|"+index+"-"+chosenColor+"-"+chosenSize;
+
+			console.log("New Cart Value: " + userCart);
+			localStorage['userCart'] = userCart;
+
+			closeItem();
 		}
 
 		populateStore();
