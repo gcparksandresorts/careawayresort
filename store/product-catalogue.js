@@ -50,7 +50,7 @@ productList[5]="Splashport Bay Adjustable Structured Hat | 1 | $29.99 | #000000,
 	productImg[5] = "https://i.imgur.com/SGwImBn.png";
 	productDescription[5] = "Embroidered structured brim hat snap adjustable | Don't let the kracken see you! Hide your face without hiding your love for Puertas Nuevas's favorite water park, oh and protect your face from the sun too or whatever.";
 
-productList[NUM]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | $39.99 | #F0FFFF,#000080 | 22oz";
-	productImg[NUM] = "https://cdn.4imprint.com/prod/extras/154054/547741/700/6.jpg";
-	productDescription[NUM] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
+productList[6]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | $39.99 | #F0FFFF,#000080 | 22oz";
+	productImg[6] = "https://cdn.4imprint.com/prod/extras/154054/547741/700/6.jpg";
+	productDescription[6] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
