@@ -34,6 +34,6 @@ productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard W
 	productImg[2] = "https://i.imgur.com/FaR25oS.jpeg";
 	productDescription[2] = "Hand-poured soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
 
-productList[3]="Careaway Drive Novelty Road Sign | 3 | 40.00 | none | 6x30 inches";
+productList[3]="Careaway Drive Novelty Road Sign | 3 | 40.00 | Highway Blue | 6x30 inches";
 	productImg[3] = "https://i.imgur.com/Aiac3fm.jpeg";
 	productDescription[3] = "Serving as the first 'sign' that you've arrived at the Careaway Resort | Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
