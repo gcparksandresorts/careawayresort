@@ -37,7 +37,7 @@
 
 		<!-- BODY CONTENT HERE -->
         	<div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'><h1 style='margin-top:10px;'>Online Store</h1></div>
-            	<div id='shopHeaderBar'><div class='container' style='padding:0;'><a href='home'>Home</a> <section id='extraLinks'><a href='?category=0'>Apparel</a> <a href='?category=1'>Accessories</a> <a href='?category=2'>Novelty / Gifts</a> <a href='?category=3'>Toys & Collectibles</a></section>  <a class='btn filled' id='scBtn' href='#totalSection'><b>Checkout</b></a></div></div>
+            	<div id='shopHeaderBar'><div class='container' style='padding:0;'><a href='home'>Home</a> <section id='extraLinks'><a href='catalogue?category=0'>Apparel</a> <a href='catalogue?category=1'>Accessories</a> <a href='catalogue?category=2'>Novelty / Gifts</a> <a href='catalogue?category=3'>Toys & Collectibles</a></section>  <a class='btn filled' id='scBtn' href='#totalSection'><b>Checkout</b></a></div></div>
 
 		<div class='leftContainer' style='padding-bottom:0;' id='cartContents'>
 			<h2>Shopping Cart - 420 Items</h2>
@@ -75,7 +75,7 @@
 					totalPrice += parseFloat(itemDetails[2]);
 				}
 
-				cartContent.innerHTML += "<p><a onclick='clearCart()' class='btn noLeft'>Empty Cart ( ˇ෴ˇ )</a></p>";
+				cartContent.innerHTML += "<p><a onclick='clearCart()' class='btn noLeft'>Empty Cart ( ˇ෴ˇ )</a> <a href='catalogue'>Continue Shopping (⌐■_■)</a></p>";
 				totals.innerHTML = "<h2>Order Total</h2> <h4>Order Total: $" + totalPrice + "</h4><a class='btn filled noLeft'>Proceed to Checkout ٩(◕‿◕)۶</a>";
 			}else{
 				cartContent.innerHTML = "<h2>No items in cart</h2><a class='btn noLeft' href='catalogue'>Start Shopping</a>";
