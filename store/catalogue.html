@@ -179,7 +179,8 @@
 			let scBtn = document.getElementById("scBtn");
 			let tempVal = userCart.split("|");
 
-			tempVal = "Shopping Cart <span>"+tempVal.length+"</span>";
+			let tempNum = tempVal.length - 1;
+			tempVal = "Shopping Cart <span>"+tempNum+"</span>";
 			
 			scBtn.classList.toggle("emphasize");
 			setTimeout(function(){scBtn.innerHTML = tempVal;},250);
