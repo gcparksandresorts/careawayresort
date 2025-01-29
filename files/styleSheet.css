@@ -255,15 +255,15 @@ a.btn{
 	.swoopContainer img {width:100%; height:auto;}
 
 	/* How to use:
-		Blue: 	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-blue.png'></div>
-		Silver: <div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-silver.png'></div>
-		White: 	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
+		Blue: 	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-blue.png'></div>
+		Silver: <div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-silver.png'></div>
+		White: 	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
 
 		HOLIDAY COLORS
-		Gold: #FFD700	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-gold.png'></div>
-		Pine Green: #228B22	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-green.png'></div>
-		Red: #B22222	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-red.png'></div>
-		Sky Blue: #87CEEB	<div class='swoopContainer'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
+		Gold: #FFD700	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-gold.png'></div>
+		Pine Green: #228B22	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-green.png'></div>
+		Red: #B22222	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-red.png'></div>
+		Sky Blue: #87CEEB	<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
 	*/
 
 /* Image Slideshow with cross-disolve animation */
