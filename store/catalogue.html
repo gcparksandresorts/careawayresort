@@ -13,15 +13,27 @@
 
 	    #prodDivBkg {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; animation:fadeIn 0.5s;}
 
-	    #productInfo {position:fixed; background:white; top:110px; left:20px; right:20px; bottom:20px; border-radius:15px; padding:10px; overflow-y:auto;}
+	    #productInfo {position:fixed; background:white; top:100px; left:20px; right:20px; bottom:20px; border-radius:15px; padding:10px; overflow-y:auto; z-index:998;}
 
-	    .tagContainer > a {border:1px solid black;}
+	     #colorSelect > a {border:1px solid black;}
+
+	    #extraLinks {display:inline-block;}
+	    #shopHeaderBar {margin:0; width:100%; position:sticky; top:80px; background:silver; z-index:997; border-bottom:2px solid midnightblue;}
+		#shopHeaderBar a {padding:0 10px 0 10px; font-size:18px;}
+	    	@media screen and (max-width:500px){
+			#extraLinks{display:none;}
+		}
+
+	    #scBtn.emphasize {scale:1.1; background:midnightblue; color:white;}
+	     #scBtn.emphasize > span {background:orange;}
+	    #scBtn > span {background:lightskyblue; padding:5px; border-radius:50%; border:1px solid midnightblue;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
 		 <div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'><h1 style='margin-top:10px;'>Online Store</h1></div>
+		<div id='shopHeaderBar'><div class='container' style='padding:0;'><a href='home'>Home</a> <section id='extraLinks'><a href='?category=0'>Apparel</a> <a href='?category=1'>Accessories</a> <a href='?category=2'>Novelty / Gifts</a> <a href='?category=3'>Toys & Collectibles</a> </section>  <a class='btn' id='scBtn' href='shopping-cart'><b>Shopping Cart</b></a></div></div>
 
 		<!--
 		<div class='container'>
@@ -139,7 +151,7 @@
 				setSize('0',tempVar[4]);
 			}
 
-			prodPop.innerHTML += "<div class='spacer'></div><a class='btn filled' onclick='addToCart("+'"'+index+'"'+")'>ADD TO CART</a>";
+			prodPop.innerHTML += "<div class='spacer'></div><div class='leftContainer' style='padding-top:0;'><a class='btn filled noLeft' onclick='addToCart("+'"'+index+'"'+","+'"false"'+")'>ADD TO CART</a> <a class='btn' onclick='addToCart("+'"'+index+'"'+","+'"true"'+")'>ADD AND GO TO CART</a></div>";
 			
 		}
 		function closeItem(){
@@ -157,14 +169,27 @@
 			document.getElementById("sizeDisp").innerHTML = "Size Selected: " + text;
 		}
 
-		function addToCart(index){
+		function addToCart(index,step){
 			var userCart = localStorage['userCart'] || 'cartStart';
 			userCart += "|"+index+"-"+chosenColor+"-"+chosenSize;
 
 			console.log("New Cart Value: " + userCart);
 			localStorage['userCart'] = userCart;
 
+			let scBtn = document.getElementById("scBtn");
+			let tempVal = userCart.split("|");
+
+			tempVal = "Shopping Cart <span>"+tempVal.length+"</span>";
+			
+			scBtn.classList.toggle("emphasize");
+			setTimeout(function(){scBtn.innerHTML = tempVal;},250);
+			setTimeout(function(){scBtn.classList.toggle("emphasize");},500);
+
 			closeItem();
+
+			if(step == 'true'){
+				window.open("shopping-cart","_self");
+			}
 		}
 
 		populateStore();
