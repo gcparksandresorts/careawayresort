@@ -71,7 +71,7 @@
 					let itemItems = itemCodes[i].split("-");
 					let itemIndex = itemItems[0];
 						let itemDetails = productList[itemIndex].split(' | ');
-					document.getElementById("contTable").innerHTML += "<tr><td style='font-weight:bold;'>"+itemDetails[0]+"</td><td style='color:green; font-size:20px;'>$"+itemDetails[2]+"</td><td>Color:" + "</td><td> Size:" + "</td></tr>";
+					document.getElementById("contTable").innerHTML += "<tr><td><img src='"+productImg[itemIndex]+"' style='width:80px; height:auto;'></td><td style='font-weight:bold;'>"+itemDetails[0]+"</td><td style='color:green; font-size:20px;'>$"+itemDetails[2]+"</td><td>Color:" + "</td><td> Size:" + "</td></tr>";
 					totalPrice += parseFloat(itemDetails[2]);
 				}
 
