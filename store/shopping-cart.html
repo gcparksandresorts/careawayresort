@@ -75,7 +75,7 @@
 					totalPrice += parseFloat(itemDetails[2]);
 				}
 
-				cartContent.innerHTML += "<p><a onclick='clearCart()' class='btn noLeft'>Empty Cart ( ˇ෴ˇ )</a> <a href='catalogue'>Continue Shopping (⌐■_■)</a></p>";
+				cartContent.innerHTML += "<p><a onclick='clearCart()' class='btn noLeft'>Empty Cart ( ˇ෴ˇ )</a> <a class='btn' href='catalogue'>Continue Shopping (⌐■_■)</a></p>";
 				totals.innerHTML = "<h2>Order Total</h2> <h4>Order Total: $" + totalPrice + "</h4><a class='btn filled noLeft'>Proceed to Checkout ٩(◕‿◕)۶</a>";
 			}else{
 				cartContent.innerHTML = "<h2>No items in cart</h2><a class='btn noLeft' href='catalogue'>Start Shopping</a>";
