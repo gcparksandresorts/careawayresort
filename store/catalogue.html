@@ -101,6 +101,23 @@
 				}else{console.log("Product Skipped");}// end of if(prodCategory == category || category == 0)
 				
 			}// end of for loop
+
+			var userCart = localStorage['userCart'] || 'cartStart';
+			
+			let scBtn = document.getElementById("scBtn");
+			if(userCart.includes("|")){
+				let tempVal = userCart.split("|");
+	
+				let tempNum = tempVal.length - 1;
+				tempVal = "Shopping Cart <span>"+tempNum+"</span>";
+	
+				scBtn.classList.toggle("emphasize");
+				setTimeout(function(){scBtn.innerHTML = tempVal;},250);
+				setTimeout(function(){scBtn.classList.toggle("emphasize");},500);
+			}// if statement
+			else{
+				console.log("Shopping cart is empty");
+			}
 			
 		}//end of populateStore
 
