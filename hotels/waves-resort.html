@@ -17,6 +17,13 @@
 		    position:relative;
 		}
 	    h1 {font-family:Monoton !important; font-weight:normal !important;}
+
+	    .portholeContainer {width:100%; display:flex; flex-flow:row;}
+	    	.portholeContainer > div {width:24%; align-self:stretch; padding:10px 15px 10px 15px; margin:auto;}
+	    		.portholeContainer > div > img {width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:25%;}
+	    		.portholeContainer > div > h3, .portholeContainer > div > h4 {margin:5px; text-align:center;}
+	    @media screen and (max-width:800px){  .portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:49%;} .portholeContainer > div > img{aspect-ratio:4/3;}}
+	     @media screen and (max-width:500px){.portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:100%;} .portholeContainer > div > img{aspect-ratio:1/2;}}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -34,8 +41,8 @@
 		</div>
 		<div class='fullContainer' style='background:#87CEEB; color:midnightblue;'>
 			<div class='leftContainer' style='padding-top:10px;'>
-				<h1 style='margin-top:0;'>Get in the groove</h1>
-				Step back in time to the world of disco and groovy great fun. At the MCR WAVES resort, life is always a boogie party. Enjoy an atmosphere of fun and good vibes, colorful suites and a gorgeous resort pool area. Conviniently located right across the plaza from Globe-City's Splashport Bay and the Shops and More District.
+				<h1 style='margin-top:0; font-size:35px;'>Get in the Groove</h1>
+				Step back in time to the era of vibrant disco pop parties and neon dancefloors. The WAVES resort seamlesssly blends nostalgic 80s groove with contemporary elegance in an atmosphere that's both <b>bold and effortlessly cool</b>.
 			</div>
 		</div>
 		<div class='swoopContainer' style='background:#87CEEB;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
@@ -45,13 +52,128 @@
 				<img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesLobby.jfif' style='height:250px; object-fit:cover;'>
 				<div>
 					<h2>A Prime Value Resort</h2>
-					Embark on a grand adventure for a fraction of the cost at a hotel crafted for comfort and afordability. Our Prime Value Hotels offer thoughtful resort-style conveniences and exclusive benefits at competetive prices.
+					Embark on a grand adventure for a fraction of the cost at a hotel crafted for comfort and afordability. Our Prime Value Hotels offer thoughtful resort-style conveniences and exclusive benefits at competetive prices. The WAVES resort brings you the comfort and hopsitality of the MCR brand coupled with the creative and inspired magic of Globe-City's destinations.
 				</div>
 			</div>
 		</div>		
+
+		<div class='swoopContainer' style=''><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-gold.png'></div>
+		<div class='fullContainer' style='background:gold; padding-top:0; margin-top:0;'>
+			<div class='leftContainer' style=''>
+				<div class='tileContainer'>
+					<div>
+						<img src='https://blog.discoveruniversal.com/wp-content/uploads/2024/02/Cabana-Bay-7.jpg'>
+						<h3>A Beachside Escape with a Beat</h3>
+						From the moment you arrive, you’ll be immersed in an ocean-inspired paradise, where the rhythm of the waves matches the pulse of the dance floor.
+					</div>
+					<div>
+						<img src='https://blog.discoveruniversal.com/wp-content/uploads/2024/02/Cabana-Bay-6.jpg'>
+						<h3>Unwind in Style</h3>
+						Lounge in our poolside cabanas, sip on a signature cocktail at the neon-lit beach bar, or dance the night away under the glow of a mirrorball sky.
+					</div>
+					<div>
+						<img src='https://sparklyeverafter.com/wp-content/uploads/2014/08/IMG_7044-1.jpg'>
+						<h3>A New Wave of Entertainment & Luxury</h3>
+						Think synth beats, sunset swims, and DJ sets that keep the energy high, where the music never stops and the vibes are always right.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='swoopContainer' style='background:gold;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
+		<div class='fullContainer' style='margin:0; padding:0; background:#87CEEB;'>
+			<div class='leftContainer' style=''>
+				<div class='columnContainer cBanner'>
+					<div><h2>Strike Up Some Fun at the WAVES Bowling Alley & Sports Bar</h2> 
+						Glowing lanes, neon lights, and an 80s-inspired soundtrack; This is bowling like you’ve never experienced before. After a few rounds, kick back at our sports bar, where you can catch the latest game on massive LED screens, sip on craft cocktails, and enjoy a menu full of elevated bar bites. Whether you’re rolling strikes or just rolling with the good times, this is the ultimate place to chill, compete, and celebrate.
+						<p><a class='btn noLeft'>Visit Website</a></p>
+					</div>
+					<img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesAlley.jfif'>
+				</div>
+			</div>
+		</div>
+		<div class='swoopContainer' style='background:#87CEEB;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
+
+		<div class='container'>
+			<h1>Rooms & Suites</h1>
+			Designed with sleek modern finishes, vibrant neon accents, and ocean wave motifs.<br><br>
+			<div class='rowDiv'>
+				<img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/109654977.jpg?k=0f38526abd5ac9b9bd65da4c895cf9132e4f871094e646b3ebb926fab6dcb800&o=&hp=1'>
+				<div>
+					<h3>Standard Rooms</h3>
+					<div class='rdPrice'>$ 200+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>2 Queen beds</li> <li>mini-fridge</li> </ul> </div>
+						<div> <ul><li>pool or street view</li> <li>coffee machine</li> </ul> </div>
+					</div>
+					<div class='rdSubtext'>Sleeps 4</div>
+				</div>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/109654977.jpg?k=0f38526abd5ac9b9bd65da4c895cf9132e4f871094e646b3ebb926fab6dcb800&o=&hp=1'>
+				<div>
+					<h3>Deluxe Rooms</h3>
+					<div class='rdPrice'>$ 250+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>2 Queen beds</li> <li>mini-fridge</li> </ul> </div>
+						<div> <ul><li>shops district / theme park view</li> <li>coffee machine</li> </ul> </div>
+					</div>
+					<div class='rdSubtext'>Sleeps 4</div>
+				</div>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/107157240.jpg?k=d1de5206330b966e7e5c4475e854b0203a59fdcbfb4abfc192f136dd30103f5c&o=&hp=1'>
+				<div>
+					<h3>Standard Family Suite</h3>
+					<div class='rdPrice'>$ 350+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>2 Queen beds</li> <li>Additional Bedroom</li> <li>Kitchenette</li></ul> </div>
+						<div> <ul><li>In-wall closet</li><li>Pool / street view</li> </ul> </div>
+					</div>
+					<div class='rdSubtext'>Sleeps 6-7</div>
+				</div>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/107157240.jpg?k=d1de5206330b966e7e5c4475e854b0203a59fdcbfb4abfc192f136dd30103f5c&o=&hp=1'>
+				<div>
+					<h3>Deluxe Family Suite</h3>
+					<div class='rdPrice'>$ 425+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>2 Queen beds</li> <li>Additional Bedroom</li> <li>Kitchenette</li></ul> </div>
+						<div> <ul><li>In-wall closet</li><li>shops district / theme park view</li> </ul> </div>
+					</div>
+					<div class='rdSubtext'>Sleeps 6-7</div>
+				</div>
+			</div>
+			<div class='rowDiv'>
+				<img src='https://www.architecturalrecord.com/ext/resources/archives/projects/Building_Types_Study/Hotels/2015/images/Universals-Cabana-Bay-Beach-Resort-Shulman-Associates-7.jpg'>
+				<div>
+					<h3>Single's Suite</h3>
+					<div class='rdPrice'>$ 155+ / night</div>
+					<div class='rdOffering'>
+						<div> <ul><li>Single king bed</li> <li>Lounge space with futon</li> <li>Mini-fridge</li></ul> </div>
+						<div> <ul><li>Coffee Machine</li><li>Preffered view</li> </ul> </div>
+					</div>
+					<div class='rdSubtext'>Sleeps 2-3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
+		<div class='fullContainer' style='margin:0; background:#87CEEB;'>
+			<div class='container'>
+				<h1>Amenaties</h1>
+				<div class='portholeContainer'>
+					<div><img src='https://d363suj4pdptk4.cloudfront.net/externalApps/b4327255-bda1-4003-b27c-e8196c8a5cc1/conversion/slide/assets/1520180'><h4>Fitness center</h4></div>
+					<div><img src='https://blog.discoveruniversal.com/wp-content/uploads/2022/12/Cabana-Bay-Suite.jpg'><h4>24 hour concierge</h4></div>
+					<div><img src='https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1028,2806-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/STL/STL_126_original.jpg'><h4>Business center</h4></div>
+					<div><img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/109654992.jpg?k=45f9e55f4455d43d9afc56398edf5ae2a22ea2feac72fa6622f3753850904ce9&o=&hp=1'><h4>Daily housekeeping</h4></div>
+					<div><img src='https://cdn.prod.website-files.com/6605d1aff5977f6fb6d2b231/66a2d8a128ccba7121d39f83_664e7908f2b57911103f9400_Knotts-Soak-City.webp'><h4>Close to theme parks</h4></div>
+				</div>
+			</div>
+		</div>
 		<!-- END OF BODY CONTENT -->
 
-	<div id='footer'></div>
+	<div id='footer' style='margin-top:0;'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 </html>
