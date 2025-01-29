@@ -1,1 +1,95 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title>Globe-City Merchandise & Apparel | Online Store | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+	    	 #extraLinks {display:inline-block;}
+	    
+	    	#shopHeaderBar {margin:0; width:100%; position:sticky; top:80px; background:silver; z-index:997; border-bottom:2px solid midnightblue;}
+		#shopHeaderBar a {padding:0 10px 0 10px; font-size:18px;}
+	    	@media screen and (max-width:500px){
+			#extraLinks{display:none;}
+		}
 
+	    	
+
+	    	table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		td, th {
+		  border: 1px solid #dddddd;
+		  text-align: left;
+		  padding: 8px;
+		}
+
+	    	tr:nth-child(even) {
+		  	background-color: #dddddd;
+		}
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+        	<div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'><h1 style='margin-top:10px;'>Online Store</h1></div>
+            	<div id='shopHeaderBar'><div class='container' style='padding:0;'><a href='home'>Home</a> <section id='extraLinks'><a href='?category=0'>Apparel</a> <a href='?category=1'>Accessories</a> <a href='?category=2'>Novelty / Gifts</a> <a href='?category=3'>Toys & Collectibles</a></section>  <a class='btn filled' id='scBtn' href='#totalSection'><b>Checkout</b></a></div></div>
+
+		<div class='leftContainer' style='padding-bottom:0;' id='cartContents'>
+			<h2>Shopping Cart - 420 Items</h2>
+		</div>
+
+		<a id='totalSection'></a>
+		<div class='leftContainer filled' style='padding:20px;' id='totals'>
+			<h2>Order Total</h2>
+		</div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/store/product-catalogue.js"></script>
+	<script>
+		const cartContent = document.getElementById("cartContents");
+		const totals = document.getElementById("totals");
+
+		var totalPrice = 0;
+
+		function setupCart(){
+			var userCart = localStorage['userCart'] || 'cartStart';
+
+			if(userCart != 'cartStart'){
+				let itemCodes = userCart.split("|");
+				let numItems = itemCodes.length - 1;
+				cartContent.innerHTML = "<h2>Shopping Cart - " + numItems + " items</h2> <table id='contTable'><tr><th>Item</th><th>Price</th><th>Color</th><th>Size</th><th>Delete</th></tr></table>";
+				for(i=1; i < itemCodes.length; i++){
+					let itemItems = itemCodes[i].split("-");
+					let itemIndex = itemItems[0];
+						let itemDetails = productList[itemIndex].split(' | ');
+					document.getElementById("contTable").innerHTML += "<tr><td style='font-weight:bold;'>"+itemDetails[0]+"</td><td style='color:green; font-size:20px;'>$"+itemDetails[2]+"</td><td>Color:" + "</td><td> Size:" + "</td></tr>";
+					totalPrice += parseFloat(itemDetails[2]);
+				}
+
+				cartContent.innerHTML += "<p><a onclick='clearCart()' class='btn noLeft'>Empty Cart ( ˇ෴ˇ )</a></p>";
+				totals.innerHTML = "<h2>Order Total</h2> <h4>Order Total: $" + totalPrice + "</h4><a class='btn filled noLeft'>Proceed to Checkout ٩(◕‿◕)۶</a>";
+			}else{
+				cartContent.innerHTML = "<h2>No items in cart</h2><a class='btn noLeft' href='catalogue'>Start Shopping</a>";
+				totals.innerHTML = "<h2>Order Total</h2> <h4>Order Total: $" + totalPrice + "</h4>";
+			}
+
+			
+		}// end of setupCart()
+
+		setupCart();
+
+		function clearCart(){
+			localStorage['userCart'] = "cartStart"; totalPrice = 0;
+			setupCart();
+		}
+	</script>
+</html>
