@@ -54,3 +54,6 @@ productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0
 	productImg[7] = "https://cdn.4imprint.com/prod/extras/154054/547741/700/6.jpg";
 	productDescription[7] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
+productList[8]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
+	productImg[8] = "https://i.imgur.com/rLxkw2F.jpeg";
+	productDescription[8] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <br>🙅‍♂️ Record-player not included 🙅‍♂️";
