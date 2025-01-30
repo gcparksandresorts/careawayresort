@@ -23,7 +23,7 @@
 	    		.portholeContainer > div > img {width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:25%;}
 	    		.portholeContainer > div > h3, .portholeContainer > div > h4 {margin:5px; text-align:center;}
 	    @media screen and (max-width:800px){  .portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:49%;} .portholeContainer > div > img{aspect-ratio:4/3;}}
-	     @media screen and (max-width:500px){.portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:100%;} .portholeContainer > div > img{aspect-ratio:1/2;}}
+	     @media screen and (max-width:500px){.portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:100%;} .portholeContainer > div > img{aspect-ratio:16/9;}}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -43,6 +43,7 @@
 			<div class='leftContainer' style='padding-top:10px;'>
 				<h1 style='margin-top:0; font-size:35px;'>Get in the Groove</h1>
 				Step back in time to the era of vibrant disco pop parties and neon dancefloors. The WAVES resort seamlesssly blends nostalgic 80s groove with contemporary elegance in an atmosphere that's both <b>bold and effortlessly cool</b>.
+				<p><a class='btn noLeft' href='#rooms'>View Rooms & Suites</a></p>
 			</div>
 		</div>
 		<div class='swoopContainer' style='background:#87CEEB;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
@@ -77,12 +78,13 @@
 						Think synth beats, sunset swims, and DJ sets that keep the energy high, where the music never stops and the vibes are always right.
 					</div>
 				</div>
+				<p style='text-align:center;'><a class='btn' style='color:black; border-color:black;' onMouseOut='this.style.color="black";' onMouseOver='this.style.color="white";' href='#resort-features'>Explore Activities & Amenaties</a></p>
 			</div>
 		</div>
 		<div class='swoopContainer' style='background:gold;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
 		<div class='fullContainer' style='margin:0; padding:0; background:#87CEEB;'>
 			<div class='leftContainer' style=''>
-				<div class='columnContainer cBanner'>
+				<div class='columnContainer dImg'>
 					<div><h2>Strike Up Some Fun at the WAVES Bowling Alley & Sports Bar</h2> 
 						Glowing lanes, neon lights, and an 80s-inspired soundtrack; This is bowling like you’ve never experienced before. After a few rounds, kick back at our sports bar, where you can catch the latest game on massive LED screens, sip on craft cocktails, and enjoy a menu full of elevated bar bites. Whether you’re rolling strikes or just rolling with the good times, this is the ultimate place to chill, compete, and celebrate.
 						<p><a class='btn noLeft'>Visit Website</a></p>
@@ -92,7 +94,8 @@
 			</div>
 		</div>
 		<div class='swoopContainer' style='background:#87CEEB;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
-
+		
+		<a id='rooms'></a>
 		<div class='container'>
 			<h1>Rooms & Suites</h1>
 			Designed with sleek modern finishes, vibrant neon accents, and ocean wave motifs.<br><br>
@@ -158,8 +161,19 @@
 			</div>
 		</div>
 
+		<a id='resort-features'></a>
 		<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-winterSky.png'></div>
 		<div class='fullContainer' style='margin:0; background:#87CEEB;'>
+			<div class='container'>
+				<h1>Resort Activities</h1>
+				<div class='portholeContainer'>
+					<div><img src=''><h4>Family Water Play Area</h4></div>
+					<div><img src='https://i.imgur.com/9abZRqg.jpeg'><h4>Poolside Beach Bar</h4></div>
+					<div><img src=''><h4>Rentable Cabanas</h4></div>
+					<div><img src='https://i.imgur.com/GHOwKJt.jpeg'><h4>Pool Deck Dance Parties</h4></div>
+					<div><img src='https://i.imgur.com/2RjN3cf.jpeg'><h4>Retro Arcade and Milkshake Lounge</h4></div>
+				</div>
+			</div>
 			<div class='container'>
 				<h1>Amenaties</h1>
 				<div class='portholeContainer'>
@@ -167,7 +181,7 @@
 					<div><img src='https://blog.discoveruniversal.com/wp-content/uploads/2022/12/Cabana-Bay-Suite.jpg'><h4>24 hour concierge</h4></div>
 					<div><img src='https://www.fourseasons.com/alt/img-opt/~70.1530.0,0000-1028,2806-2250,0000-1265,6250/publish/content/dam/fourseasons/images/web/STL/STL_126_original.jpg'><h4>Business center</h4></div>
 					<div><img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/109654992.jpg?k=45f9e55f4455d43d9afc56398edf5ae2a22ea2feac72fa6622f3753850904ce9&o=&hp=1'><h4>Daily housekeeping</h4></div>
-					<div><img src='https://cdn.prod.website-files.com/6605d1aff5977f6fb6d2b231/66a2d8a128ccba7121d39f83_664e7908f2b57911103f9400_Knotts-Soak-City.webp'><h4>Close to theme parks</h4></div>
+					<div><img src='https://cdn.prod.website-files.com/6605d1aff5977f6fb6d2b231/66a2d8a128ccba7121d39f83_664e7908f2b57911103f9400_Knotts-Soak-City.webp'><h4>Walking Distance from parks</h4></div>
 				</div>
 			</div>
 		</div>
