@@ -135,7 +135,12 @@ h4{font-family: 'Lexend Deca',veranda; font-size:16px;}
 	/* Adds border to the items, similar to place container */
 	.miniTileContainer.bordered > div {padding:5px; border:2px solid black; border-radius:20px; margin:10px;}
 
-
+.portholeContainer {width:100%; display:flex; flex-flow:row;}
+	.portholeContainer > div {width:24%; align-self:flex-start; padding:10px 15px 10px 15px; margin-right:auto;}
+	    		.portholeContainer > div > img {width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:25%;}
+	    		.portholeContainer > div > h3, .portholeContainer > div > h4 {margin:5px; text-align:center;}
+	@media screen and (max-width:800px){  .portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:49%; padding-top:20px;} .portholeContainer > div > img{aspect-ratio:4/3; border-radius:15px;}}
+	@media screen and (max-width:500px){.portholeContainer{flex-wrap:wrap;} .portholeContainer > div {width:100%; padding-top:20px;} .portholeContainer > div > img{aspect-ratio:16/9; border-radius:15px;}}
 
 
 
