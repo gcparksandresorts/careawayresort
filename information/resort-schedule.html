@@ -147,15 +147,16 @@
 				dateDisplay.innerHTML = buildText;
 		}else{
 			// 2025-01-31
-			let tDate = new Date(dateSet);
+			let tempDate = dateSet.split("-");
+			
+			let tDate = new Date(tempDate[0],tempDate[1]-1,tempDate[2]);
 				let day = tDate.getDate();
 				let weekDay = tDate.getDay();
 				let month = tDate.getMonth();
 				let year = tDate.getFullYear();
 
 				let buildText = days[weekDay] +", "+ months[month]+" "+day+", "+year;
-				dateDisplay.innerHTML = buildText;
-			
+				dateDisplay.innerHTML = buildText;		
 		}
 
 		function updatePage(){
