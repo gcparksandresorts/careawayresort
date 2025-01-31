@@ -61,3 +61,7 @@ entertainmentItems[3] = "Dreams of Adventure/Marhey | 2 | Atlantis Castle,2 | 15
 entertainmentItems[4] = "Kingdom of Darkness: Alive/none | 6 | Kingdom of Darkness,2 | 12 Minutes | 0 | 0";
 	entertainmentDescription[4] = "shortDescription0 | tagList1,tag2 | longDescription2";
 	entertainmentImages[4] = "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg | none";
+
+entertainmentItems[7] = "AquaMagic - Rivers of Light/none | 2 | Palace Gardens,1 | 22 Minutes | 3 | 2";
+	entertainmentDescription[7] = "Grab a spot along the Palace Garden Lake and delight in this beautiful lighted boat parade and water show that will ignite the night sky with millions of dazzling colors | Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade | longDescription2";
+	entertainmentImages[7] = "https://i.imgur.com/dyUVluy.jpeg | extraImg - extraImg2";
