@@ -146,7 +146,16 @@
 				let buildText = days[weekDay] +", "+ months[month]+" "+day+", "+year;
 				dateDisplay.innerHTML = buildText;
 		}else{
-			dateDisplay.innerHTML = dateSet;
+			// 2025-01-31
+			let tDate = new Date(dateSet);
+				let day = tDate.getDate();
+				let weekDay = tDate.getDay();
+				let month = tDate.getMonth();
+				let year = tDate.getFullYear();
+
+				let buildText = days[weekDay] +", "+ months[month]+" "+day+", "+year;
+				dateDisplay.innerHTML = buildText;
+			
 		}
 
 		function updatePage(){
