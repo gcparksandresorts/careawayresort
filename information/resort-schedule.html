@@ -92,6 +92,7 @@
 	<script>
 		const entContainer = document.getElementById("entContainer");
 		const eventContainer = document.getElementById("entContainer");
+		const dateDisplay = document.getElementById("dateDisplay");
 
 		// URL Parameters and Filters
 		const searchParams = new URLSearchParams(window.location.search);
@@ -115,6 +116,7 @@
 		// Dropdown Values
 		const entSelect = document.getElementById("entSelect");
 		const eventSelect = document.getElementById("eventSelect");
+		const dateInput = document.getElementById("dateInput");
 
 			// Populate the dropdowns
 			for(i=1; i < entertainmentLocation.length; i++){
@@ -130,7 +132,30 @@
 				eventSelect.value = eventSet;
 			}
 
+		// Setup the Date
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		const days = ["Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"];
+		
+		if(dateSet == 'default'){
+			let tDate = new Date();
+				let day = tDate.getDate();
+				let weekDay = tDate.getDay();
+				let month = tDate.getMonth();
+				let year = tDate.getFullYear();
+
+				let buildText = days[weekDay] +", "+ months[month]+" "+day+", "+year;
+				dateDisplay.innerHTML = buildText;
+		}else{
+			dateDisplay.innerHTML = dateSet;
+		}
+
 		function updatePage(){
+			entSet = entSelect.value;
+			eventSet = eventSelect.value;
+			if(dateInput.value != ''){
+				dateSet=dateInput.value;
+			}
+			
 			let buildText = "https://gcparksandresorts.github.io/careawayresort/information/resort-schedule?dateSet="+dateSet+"&entSet="+entSet+"&eventSet="+eventSet;
 			window.open(buildText,"_self");
 		}
