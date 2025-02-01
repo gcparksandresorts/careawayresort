@@ -36,7 +36,7 @@ productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard W
 
 productList[3]="Careaway Drive Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 inches";
 	productImg[3] = "https://i.imgur.com/Aiac3fm.jpeg";
-	productDescription[3] = "Serving as the first 'sign' that you've arrived at the Careaway Resort | Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
+	productDescription[3] = "Real high-quality all-weather metal sign with reflective coating | Serving as the first 'sign' that you've arrived at the Careaway Resort. Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
 
 productList[4]="Splashport Bay Men's Swim / Board Shorts | 1 | 43.65 | #000080,#2E8B57,#FF4500 | Youth Medium,Youth Large,Adult Small,Adult Medium,Adult Large,Adult XLarge";
 	productImg[4] = "https://flogrown.com/cdn/shop/products/FGSH-006-F_1.jpg?v=1682013894";
@@ -56,4 +56,8 @@ productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0
 
 productList[8]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
 	productImg[8] = "https://i.imgur.com/rLxkw2F.jpeg";
-	productDescription[8] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <br>🙅‍♂️ Record-player not included 🙅‍♂️";
+	productDescription[8] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <h4>Best hits include</h4><div class='rdOffering'><div><ul><li>Boogie Oogie Oogie</li><li>Shining Star</li><li>Back on 74</li></ul></div><div><ul><li>Fantasy</li><li>Night Fever</li><li>Boogie Wonderland</li></ul></div></div>And more!<p>🙅‍♂️ Record-player not included 🙅‍♂️</p>";
+
+productList[3]="Adventure Boulevard Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 inches";
+	productImg[3] = "https://i.imgur.com/ZcPJMzT.jpeg";
+	productDescription[3] = "Real high-quality all-weather metal sign with reflective coating | The street named after our best-selling product: Adventure! For you, your mom -- for everyone!";
