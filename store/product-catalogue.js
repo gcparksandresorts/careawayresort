@@ -25,13 +25,13 @@ iter += 1; productList[iter]="productName0 | category1 | price2 | colorList3,col
 	productDescription[iter] = "shortDescription | longerDescription";
 */
 
-productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 64.50 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
+productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 59.99 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
 	productImg[0] = "https://i.imgur.com/RTTXXNw.jpeg";
-	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Mr. Teddy is still brewing the rest of this description.";
+	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with printed Mr. Teddy image for a unique and long-lasting design.";
 
-productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 64.50 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
+productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 59.99 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
 	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
-	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | longerDescription";
+	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders.";
 
 productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard Wick";
 	productImg[2] = "https://i.imgur.com/FaR25oS.jpeg";
@@ -54,7 +54,7 @@ productList[6]="Splashport Bay Adjustable Structured Hat | 1 | 29.99 | #000000,#
 	productDescription[6] = "Embroidered structured brim hat snap adjustable | Don't let the kracken see you! Hide your face without hiding your love for Puertas Nuevas's favorite water park, oh and protect your face from the sun too or whatever.";
 
 productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0FFFF,#000080 | 22oz";
-	productImg[7] = "https://cdn.4imprint.com/prod/extras/154054/547741/700/6.jpg";
+	productImg[7] = "https://i.imgur.com/NX07kDP.jpeg";
 	productDescription[7] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
 productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
@@ -72,3 +72,7 @@ productList[8]="Globe-City Careaway C Keychain | 3 | 7.99 | none | none";
 iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 3 | 9.99 | none | none";
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
+
+iter += 1; productList[iter]="Port of Adventure Carheart Midweight Pullover Hoodie | 1 | 75.99 | #000080,#000000 | Youth Large, Small, Medium, Large, XLarge, XXLarge";
+	productImg[iter] = "https://i.imgur.com/NFd31iG.jpeg";
+	productDescription[iter] = "Unisex premium pullover hooded sweatshirt | From the opening day merch sale for <a href='../destinations/port-of-adventure'>Globe-City's Port of Adventure</a> park. Heat-transfer vynl print with extra-wash protection for long lasting design. Carheart branded hoodie with premium design and comfort.";
