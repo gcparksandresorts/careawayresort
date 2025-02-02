@@ -65,11 +65,11 @@ productList[9]="Adventure Boulevard Novelty Road Sign | 3 | 40.00 | #0000CD | 6x
 	productImg[9] = "https://i.imgur.com/ZcPJMzT.jpeg";
 	productDescription[9] = "Real high-quality all-weather metal sign with reflective coating | The street named after our best-selling product: Adventure! For you, your mom -- for everyone!";
 
-productList[8]="Globe-City Careaway C Keychain | 3 | 7.99 | none | none";
+productList[8]="Globe-City Careaway C Keychain | 2 | 7.99 | none | none";
 	productImg[8] = "https://i.imgur.com/6gARoUP.jpeg";
 	productDescription[8] = "Jingle Jingle (that's the sound keys make i think) | Keys-- the connector between the world outside and the magic that waits behind a door. A door-- a portal to something new, an experience, a place, a being. Keychains-- a loud dangly bit that attaches to your keys to forever remind you of the magic you found behind that door. Keys not included.";
 
-iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 3 | 9.99 | none | none";
+iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 2 | 9.99 | none | none";
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
 
