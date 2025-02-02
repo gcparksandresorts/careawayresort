@@ -62,6 +62,6 @@ productList[9]="Adventure Boulevard Novelty Road Sign | 3 | 40.00 | #0000CD | 6x
 	productImg[9] = "https://i.imgur.com/ZcPJMzT.jpeg";
 	productDescription[9] = "Real high-quality all-weather metal sign with reflective coating | The street named after our best-selling product: Adventure! For you, your mom -- for everyone!";
 
-productList[3]="Globe-City Careaway Resort Keychain | 3 | $9.99 | none | none";
+productList[3]="Globe-City Careaway Resort Keychain | 3 | 9.99 | none | none";
 	productImg[3] = "https://www.hedgehogscorner.com/wp-content/uploads/2019/12/2019-12-03-11.11.59_rev0.jpg";
 	productDescription[3] = "Jingle Jingle (that's the sound keys make i think) | longerDescription";
