@@ -4,6 +4,8 @@ productList=[];
 productImg = [];
 productDescription = [];
 
+var iter = 10;
+
 // COLOR LIST
 // List the hex codes IE #efefef,#990990, etc.
 // Only list one color if necessary
@@ -17,9 +19,10 @@ productDescription = [];
 // All-0   Apparel-1	Accessories-2	Themepark Gifts-3	Toys/Collectibles-4
 
 /*
-productList[NUM]="productName0 | category1 | price2 | colorList3,colorList | sizeList4,sizeList";
-	productImg[NUM] = "imgLink";
-	productDescription[NUM] = "shortDescription | longerDescription";
+
+iter += 1; productList[iter]="productName0 | category1 | price2 | colorList3,colorList | sizeList4,sizeList";
+	productImg[iter] = "imgLink";
+	productDescription[iter] = "shortDescription | longerDescription";
 */
 
 productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 64.50 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
@@ -39,7 +42,7 @@ productList[10]="Careaway Drive Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 i
 	productDescription[10] = "Real high-quality all-weather metal sign with reflective coating | Serving as the first 'sign' that you've arrived at the Careaway Resort. Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
 
 productList[4]="Splashport Bay Men's Swim / Board Shorts | 1 | 43.65 | #000080,#2E8B57,#FF4500 | Youth Medium,Youth Large,Adult Small,Adult Medium,Adult Large,Adult XLarge";
-	productImg[4] = "https://flogrown.com/cdn/shop/products/FGSH-006-F_1.jpg?v=1682013894";
+	productImg[4] = "https://i.imgur.com/nK3x3Mr.jpeg";
 	productDescription[4] = "High-quality above-knee swim trunks (board shorts) with printed design. | Get ready to splash with these awesome board shorts. The design is printed into the material meaning it won't fade away or deterioriate, even under the wettest conditions!";
 
 productList[5]="Careaway C Adjustable Structured Hat | 1 | 29.99 | #000000,#F0FFFF | Standard";
@@ -54,14 +57,18 @@ productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0
 	productImg[7] = "https://cdn.4imprint.com/prod/extras/154054/547741/700/6.jpg";
 	productDescription[7] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
-productList[8]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
-	productImg[8] = "https://i.imgur.com/rLxkw2F.jpeg";
-	productDescription[8] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <h4>Best hits include</h4><div class='halfContainer'><div><ul><li>Boogie Oogie Oogie</li><li>Shining Star</li><li>Back on 74</li></ul></div><div><ul><li>Fantasy</li><li>Night Fever</li><li>Boogie Wonderland</li></ul></div></div>And more!<p>🙅‍♂️ Record-player not included 🙅‍♂️</p>";
+productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
+	productImg[3] = "https://i.imgur.com/rLxkw2F.jpeg";
+	productDescription[3] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <h4>Best hits include</h4><div class='halfContainer'><div><ul><li>Boogie Oogie Oogie</li><li>Shining Star</li><li>Back on 74</li></ul></div><div><ul><li>Fantasy</li><li>Night Fever</li><li>Boogie Wonderland</li></ul></div></div>And more!<p>🙅‍♂️ Record-player not included 🙅‍♂️</p>";
 
 productList[9]="Adventure Boulevard Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 inches";
 	productImg[9] = "https://i.imgur.com/ZcPJMzT.jpeg";
 	productDescription[9] = "Real high-quality all-weather metal sign with reflective coating | The street named after our best-selling product: Adventure! For you, your mom -- for everyone!";
 
-productList[3]="Globe-City Careaway Resort Keychain | 3 | 9.99 | none | none";
-	productImg[3] = "https://www.hedgehogscorner.com/wp-content/uploads/2019/12/2019-12-03-11.11.59_rev0.jpg";
-	productDescription[3] = "Jingle Jingle (that's the sound keys make i think) | longerDescription";
+productList[8]="Globe-City Careaway C Keychain | 3 | 7.99 | none | none";
+	productImg[8] = "https://www.hedgehogscorner.com/wp-content/uploads/2019/12/2019-12-03-11.11.59_rev0.jpg";
+	productDescription[8] = "Jingle Jingle (that's the sound keys make i think) | Keys-- the connector between the world outside and the magic that waits behind a door. A door-- a portal to something new, an experience, a place, a being. Keychains-- a loud dangly bit that attaches to your keys to forever remind you of the magic you found behind that door. Keys not included.";
+
+iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 3 | 9.99 | none | none";
+	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
+	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
