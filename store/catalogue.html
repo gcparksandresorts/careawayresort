@@ -68,12 +68,19 @@
 		const storeContainer = document.getElementById("storeContainer");
 		const productPage = document.getElementById("productPage");
 
+		
+
 		var chosenColor;
 		var chosenSize;
 
 		function populateStore(){
 
 			const category = 0;
+
+				const urlParams = new URLSearchParams(window.location.search);
+				if(urlParams.has("category")){
+					category = urlParams.get("category");
+				}
 
 			for (i = 0; i < productList.length; i++) {
 				let tempVar = productList[i].split(" | ");
