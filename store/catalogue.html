@@ -117,7 +117,7 @@
 				setSize('0',tempVar[4]);
 			}
 
-			prodPop.innerHTML += "<div class='spacer'></div><div class='leftContainer' style='padding-top:0;'><a class='btn filled noLeft' onclick='addToCart("+'"'+index+'"'+","+'"false"'+")'>ADD TO CART</a> <a class='btn' onclick='addToCart("+'"'+index+'"'+","+'"true"'+")'>ADD AND GO TO CART</a></div>";
+			prodPop.innerHTML += "<div class='spacer'></div><div class='leftContainer' style='padding-top:0;'><a class='btn filled noLeft' onclick='addToCart("+'"'+index+'"'+","+'"false"'+")'>ADD TO CART</a> <a class='btn' onclick='addToCart("+'"'+index+'"'+","+'"true"'+")'>ADD AND GO TO CART</a> <a style='display:inline-block; color:midnightblue; text-decoration:underline; cursor:pointer;' onclick='this.innerHTML="+'"Link Copied!"'+"; copyLink("+'"'+index+'"'+");'>Share Item</a></div>";
 			
 		}// end of function show item
 		
@@ -216,6 +216,12 @@
 			chosenSize = val;
 			console.log("Size Selected: " + chosenSize);
 			document.getElementById("sizeDisp").innerHTML = "Size Selected: " + text;
+		}
+
+		function copyLink(num){
+			const text = "https://gcparksandresorts.github.io/careawayresort/store/catalogue?item=" + num;
+			navigator.clipboard.writeText(text);
+			console.log("Copied to clipboard: " + text);
 		}
 
 		function addToCart(index,step){
