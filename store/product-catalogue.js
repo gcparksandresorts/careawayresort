@@ -41,7 +41,7 @@ productList[10]="Careaway Drive Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 i
 	productImg[10] = "https://i.imgur.com/Aiac3fm.jpeg";
 	productDescription[10] = "Real high-quality all-weather metal sign with reflective coating | Serving as the first 'sign' that you've arrived at the Careaway Resort. Take home that feeling of excitement upon turning onto the official Careaway Drive, you've made it!";
 
-productList[4]="Splashport Bay Men's Swim / Board Shorts | 1 | 43.65 | #000080,#2E8B57,#FF4500 | Youth Medium,Youth Large,Adult Small,Adult Medium,Adult Large,Adult XLarge";
+productList[4]="Splashport Bay Men's Swim / Board Shorts | 1 | 35.00 | #000080,#2E8B57,#FF4500 | Youth Medium,Youth Large,Adult Small,Adult Medium,Adult Large,Adult XLarge";
 	productImg[4] = "https://i.imgur.com/nK3x3Mr.jpeg";
 	productDescription[4] = "High-quality above-knee swim trunks (board shorts) with printed design. | Get ready to splash with these awesome board shorts. The design is printed into the material meaning it won't fade away or deterioriate, even under the wettest conditions!";
 
@@ -57,7 +57,7 @@ productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0
 	productImg[7] = "https://i.imgur.com/NX07kDP.jpeg";
 	productDescription[7] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
-productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 35.00 | none | none";
+productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 45.00 | none | none";
 	productImg[3] = "https://i.imgur.com/rLxkw2F.jpeg";
 	productDescription[3] = "Take the retro magic of WAVES Resort home with you on vinyl! | This exclusive WAVES: Ultimate 80s Hits record features all the iconic disco beats, synth-pop anthems, and beachy grooves that set the vibe of your unforgettable stay. From dance floor classics to smooth seaside jams, this limited-edition vinyl is the perfect way to keep the party going—long after the sun sets! <h4>Best hits include</h4><div class='halfContainer'><div><ul><li>Boogie Oogie Oogie</li><li>Shining Star</li><li>Back on 74</li></ul></div><div><ul><li>Fantasy</li><li>Night Fever</li><li>Boogie Wonderland</li></ul></div></div>And more!<p>🙅‍♂️ Record-player not included 🙅‍♂️</p>";
 
@@ -73,6 +73,6 @@ iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 2 |
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
 
-iter += 1; productList[iter]="Port of Adventure Carheart Midweight Pullover Hoodie | 1 | 75.99 | #000080,#000000 | Youth Large, Small, Medium, Large, XLarge, XXLarge";
+iter += 1; productList[iter]="Adventure Redefined - Port of Adventure Carheart Midweight Pullover Hoodie | 1 | 65.50 | #000080,#000000 | Youth Large, Small, Medium, Large, XLarge, XXLarge";
 	productImg[iter] = "https://i.imgur.com/NFd31iG.jpeg";
 	productDescription[iter] = "Unisex premium pullover hooded sweatshirt | From the opening day merch sale for <a href='../destinations/port-of-adventure'>Globe-City's Port of Adventure</a> park. Heat-transfer vynl print with extra-wash protection for long lasting design. Carheart branded hoodie with premium design and comfort.";
