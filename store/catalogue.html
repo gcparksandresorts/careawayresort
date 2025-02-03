@@ -104,7 +104,7 @@
 				const prodDescriptions = productDescription[i].split(" | ");
 
 				if(prodCategory == category || category == 0){
-					if(searchTerm == 'none' || prodName.toLowerCase().includes(searchTerm)){
+					if(searchTerm == 'none' || prodName.toLowerCase().includes(searchTerm) || prodDescriptions[0].toLowerCase().includes(searchTerm)){
 						// Get the list of colors
 						if(tempVar[3].includes(",")){
 							const prodColor = tempVar[3].split(',');
