@@ -79,6 +79,7 @@
 
 			var searchTerm = 0;
 			var numResult = 0;
+			var showItem = 'none';
 
 				const urlParams = new URLSearchParams(window.location.search);
 			
@@ -93,6 +94,9 @@
 					console.log("Search value: " + searchTerm);
 					document.getElementById("searchInput").value = searchTerm;
 				}else{searchTerm = 'none';}
+				if(urlParams.has("item")){
+					showItem = urlParams.get("item");
+				}
 
 			for (i = 0; i < productList.length; i++) {
 				let tempVar = productList[i].split(" | ");
@@ -142,6 +146,9 @@
 			}
 
 			document.getElementById('numResult').innerHTML = numResult;
+
+			// show item
+			if(showItem != 'none'){showItem(showItem);}
 			
 		}//end of populateStore
 
