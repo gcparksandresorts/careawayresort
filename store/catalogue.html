@@ -34,7 +34,7 @@
 		<!-- BODY CONTENT HERE -->
 		 <div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'><h1 style='margin-top:10px;'>Online Store</h1></div>
 		<div id='shopHeaderBar'><div class='container' style='padding:0;'><a href='home'>Home</a> <section id='extraLinks'><a href='?category=0'>All Categories</a> <a href='?category=1'>Apparel</a> <a href='?category=2'>Accessories</a> <a href='?category=3'>Novelty / Gifts</a> <a href='?category=4'>Toys & Collectibles</a> </section>  <a class='btn' id='scBtn' href='shopping-cart'><b>Shopping Cart</b></a></div></div>
-
+		<div class='container' style='padding-top:10px;'><p style='display:inline-block;'><label for='searchInput'>Search keywords: </label><input type='text' id='searchInput'> <a style='text-decoration:underline; cursor:pointer; color:navy;' onclick=''>Search</a></p><h4 style='font-weight:normal;'>Showing <span style='font-weight:bold' id='numResult'>0</span> results</h4></div>
 		<!--
 		<div class='container'>
 			<img src='https://www.pngkey.com/png/detail/838-8383571_clip-art-vector-flagger-working-on-road-construction.png' style='width:90%; max-width:400px; margin:auto;'>
@@ -73,14 +73,21 @@
 		var chosenColor;
 		var chosenSize;
 
+		var category = 0;
+
 		function populateStore(){
 
-			var category = 0;
+			var searchTerm = 0;
+			var numResult = 0;
 
 				const urlParams = new URLSearchParams(window.location.search);
+			
 				if(urlParams.has("category")){
 					category = urlParams.get("category");
 					//document.getElementById("shopHeaderBar").innerHTML = "";
+				}
+				if(urlParams.has("search")){
+					searchTerm = urlParams.get("search").replace("+",/\s/g);;
 				}
 
 			for (i = 0; i < productList.length; i++) {
@@ -106,6 +113,7 @@
 					let builtDiv = "<div onclick='showItem("+i+");'><img src='"+productImg[i]+"'><div><h3 style='margin-bottom:5px'>"+prodName+"</h3>"+prodDescriptions[0]+"<br><br><br></div><div class='subText'><b style='color:darkgreen;'>$"+prodPrice+"</b></div><div class='tab'>"+productCategories[prodCategory]+"</div></div>";
 
 					storeContainer.innerHTML += builtDiv;
+					numResult += 1;
 				}else{console.log("Product Skipped: " + prodName);}// end of if(prodCategory == category || category == 0)
 				
 			}// end of for loop
@@ -126,6 +134,8 @@
 			else{
 				console.log("Shopping cart is empty");
 			}
+
+			document.getElementById('numResult').innerHTML = numResult;
 			
 		}//end of populateStore
 
@@ -215,6 +225,19 @@
 
 			if(step == 'true'){
 				window.open("shopping-cart","_self");
+			}
+		}
+
+		function newSearch(){
+			var searchBox = document.getElementById("searchInput").value;
+			searchBox = searchBox.replace(/\s/g, "+");
+			
+			if(searchBox != ''){
+				if(category == 0){window.open("catalogue?search=" + searchBox,"_self");}
+				else{window.open("catalogue?category=" + category + "&search=" + searchBox,"_self");}
+			}else{
+				if(category == 0){window.open("catalogue","_self");}
+				else{window.open("catalogue?category=" + category,"_self");}
 			}
 		}
 
