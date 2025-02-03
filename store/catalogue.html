@@ -68,18 +68,65 @@
 		const storeContainer = document.getElementById("storeContainer");
 		const productPage = document.getElementById("productPage");
 
-		
-
 		var chosenColor;
 		var chosenSize;
 
 		var category = 0;
 
+		// Runs when an item is clicked (or if url parameter 'item' has an index value) -> populats display div with item properties
+		function showItem(index){
+			productPage.innerHTML = "<div id='prodDivBkg'></div>";
+			productPage.innerHTML += "<div id='productInfo'></div>";
+			let prodPop = document.getElementById("productInfo");
+
+			// get all the variables
+				let tempVar = productList[index].split(" | ");
+			
+				const prodName = tempVar[0];
+				const prodCategory = tempVar[1];
+				const prodPrice = tempVar[2];
+				const prodDescriptions = productDescription[index].split(" | ");
+
+			prodPop.innerHTML = "<button style='position:sticky; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px; left:100%;' onclick='closeItem()'>Close</button>";
+			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
+			prodPop.innerHTML += "<div class='spacer'></div>";
+			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer silver' id='sizeSelect'></div>";
+
+			// Populate Colors
+			let colorSelect = document.getElementById("colorSelect");
+			if(tempVar[3] == 'none'){colorSelect.innerHTML = "Single option only"; chosenColor = 0;}
+			else if(tempVar[3].includes(",")){
+				let vals = tempVar[3].split(",");
+				for(i = 0; i < vals.length; i++){
+					colorSelect.innerHTML += "<a style='cursor:pointer; width:50px; height:30px; background:"+vals[i]+"' onclick='setColor("+i+","+'"'+vals[i]+'"'+")'></a>";
+				}
+				setColor('0',vals[0]);
+			}
+			else{colorSelect.innerHTML = "<a style='cursor:pointer; width:50px; height:30px; background:"+tempVar[3]+"'></a>"; setColor('0',tempVar[3]);}
+
+			// Populate Size
+			let sizeSelect = document.getElementById("sizeSelect");
+			if(tempVar[4].includes(",")){
+				let vals = tempVar[4].split(",");
+				for(i = 0; i < vals.length; i++){
+					sizeSelect.innerHTML += "<a style='cursor:pointer;' onclick='setSize("+'"'+i+'"'+","+'"'+vals[i]+'"'+");'>"+vals[i]+"</a>";
+				}
+				setSize('0',vals[0]);
+			}else{
+				sizeSelect.innerHTML = "<a>"+tempVar[4]+"</a>";
+				setSize('0',tempVar[4]);
+			}
+
+			prodPop.innerHTML += "<div class='spacer'></div><div class='leftContainer' style='padding-top:0;'><a class='btn filled noLeft' onclick='addToCart("+'"'+index+'"'+","+'"false"'+")'>ADD TO CART</a> <a class='btn' onclick='addToCart("+'"'+index+'"'+","+'"true"'+")'>ADD AND GO TO CART</a></div>";
+			
+		}// end of function show item
+		
+// Runs first - sets up the store and populates page with merch items
 		function populateStore(){
 
 			var searchTerm = 0;
 			var numResult = 0;
-			var showItem = 'none';
+			var goItem = 'none';
 
 				const urlParams = new URLSearchParams(window.location.search);
 			
@@ -95,7 +142,7 @@
 					document.getElementById("searchInput").value = searchTerm;
 				}else{searchTerm = 'none';}
 				if(urlParams.has("item")){
-					showItem = urlParams.get("item");
+					goItem = urlParams.get("item");
 				}
 
 			for (i = 0; i < productList.length; i++) {
@@ -148,60 +195,14 @@
 			document.getElementById('numResult').innerHTML = numResult;
 
 			// show item
-			if(showItem != 'none'){showItem(showItem);}
+			if(goItem != 'none'){showItem(goItem);}
 			
 		}//end of populateStore
 
 		function showHideDiv(){
 			prodDivBkg.classList.toggle("visible");
 		}
-
-		function showItem(index){
-			productPage.innerHTML = "<div id='prodDivBkg'></div>";
-			productPage.innerHTML += "<div id='productInfo'></div>";
-			let prodPop = document.getElementById("productInfo");
-
-			// get all the variables
-				let tempVar = productList[index].split(" | ");
-			
-				const prodName = tempVar[0];
-				const prodCategory = tempVar[1];
-				const prodPrice = tempVar[2];
-				const prodDescriptions = productDescription[index].split(" | ");
-
-			prodPop.innerHTML = "<button style='position:sticky; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px; left:100%;' onclick='closeItem()'>Close</button>";
-			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
-			prodPop.innerHTML += "<div class='spacer'></div>";
-			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer silver' id='sizeSelect'></div>";
-
-			// Populate Colors
-			let colorSelect = document.getElementById("colorSelect");
-			if(tempVar[3] == 'none'){colorSelect.innerHTML = "Single option only"; chosenColor = 0;}
-			else if(tempVar[3].includes(",")){
-				let vals = tempVar[3].split(",");
-				for(i = 0; i < vals.length; i++){
-					colorSelect.innerHTML += "<a style='cursor:pointer; width:50px; height:30px; background:"+vals[i]+"' onclick='setColor("+i+","+'"'+vals[i]+'"'+")'></a>";
-				}
-				setColor('0',vals[0]);
-			}
-			else{colorSelect.innerHTML = "<a style='cursor:pointer; width:50px; height:30px; background:"+tempVar[3]+"'></a>"; setColor('0',tempVar[3]);}
-
-			// Populate Size
-			let sizeSelect = document.getElementById("sizeSelect");
-			if(tempVar[4].includes(",")){
-				let vals = tempVar[4].split(",");
-				for(i = 0; i < vals.length; i++){
-					sizeSelect.innerHTML += "<a style='cursor:pointer;' onclick='setSize("+'"'+i+'"'+","+'"'+vals[i]+'"'+");'>"+vals[i]+"</a>";
-				}
-				setSize('0',vals[0]);
-			}else{
-				sizeSelect.innerHTML = "<a>"+tempVar[4]+"</a>";
-				setSize('0',tempVar[4]);
-			}
-
-			prodPop.innerHTML += "<div class='spacer'></div><div class='leftContainer' style='padding-top:0;'><a class='btn filled noLeft' onclick='addToCart("+'"'+index+'"'+","+'"false"'+")'>ADD TO CART</a> <a class='btn' onclick='addToCart("+'"'+index+'"'+","+'"true"'+")'>ADD AND GO TO CART</a></div>";
-			
-		}
+		
 		function closeItem(){
 			productPage.innerHTML = "";
 		}
