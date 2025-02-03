@@ -73,6 +73,10 @@ iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 2 |
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
 
+iter += 1; productList[iter]="Mr. Teddy's Coffee Corner 16 oz. Grande Coffee Cup | 2 | 9.99 | #104943,#014b78,#adadad | 16oz";
+	productImg[iter] = "https://i.imgur.com/6lgSUTl.jpeg";
+	productDescription[iter] = "Double-walled reusable coffee cup for hot or iced drinks | <h4>✨ Special Offer Available ✨</h4> Drink in style, and save the planet! This adorable Mr. Teddys coffee cup features natural tones and earthy specks, a stylish result of the reclaimed wheat stalk material that makes up 51% of this cup. The matching twist-on lid helps prevent spills and keeps beverages at temperature longer.";
+
 iter += 1; productList[iter]="Adventure Redefined - Port of Adventure Carheart Midweight Pullover Hoodie | 1 | 65.50 | #000080,#000000 | Youth Large, Small, Medium, Large, XLarge, XXLarge";
 	productImg[iter] = "https://i.imgur.com/NFd31iG.jpeg";
 	productDescription[iter] = "Unisex premium pullover hooded sweatshirt | From the opening day merch sale for <a href='../destinations/port-of-adventure'>Globe-City's Port of Adventure</a> park. Heat-transfer vynl print with extra-wash protection for long lasting design. Carheart branded hoodie with premium design and comfort.";
