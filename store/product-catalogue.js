@@ -95,4 +95,4 @@ iter += 1; productList[iter]='Seek Adventure - LuLuLemon Zeroed In Linerless Sho
 
 iter += 1; productList[iter]="Seek Adventure - LuLuLemon Steady State Pullover Hoodie | 1 | 89.00 | #24312a,#334463,#512028 | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/TJnBuZD.jpeg";
-	productDescription[iter] = "Inkprinted premium fleece pullover hoodie | longerDescription";
+	productDescription[iter] = "Inkprinted premium fleece pullover hoodie | Enjoy deluxe comfort in this fleece slim-fit pullover chunk of fabric. With the LuLuLemon stamp of luxury, this hoodie is for those rich folks looking for some adventure.";
