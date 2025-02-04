@@ -88,3 +88,7 @@ iter += 1; productList[iter]="Seek Adventure - LuLuLemon Fabric Keychain | 2 | 2
 iter += 1; productList[iter]="Seek Adventure - LuLuLemon Clippable Nano Pouch | 2 | 29.99 | #000000,#6B8E23 | One Size";
 	productImg[iter] = "https://i.imgur.com/QdLHTqH.jpeg";
 	productDescription[iter] = "Card holder pouch with embroidered design | Small bag, big goals. Store your cards, hand sanitizer, or your favourite lip balm in this nano pouch. Complete with an exterior card holder, zippered main compartment, and 100% polyester waterproof material.";
+
+iter += 1; productList[iter]='Seek Adventure - LuLuLemon Zeroed In Linerless Short 7" | 1 | 68.00 | #232124,#b4b4b4 | XSmall,Small,Medium,Large,XLarge';
+	productImg[iter] = "https://i.imgur.com/dUffV8L.jpeg";
+	productDescription[iter] = "Low profile high-performance 100% synthetic shorts | Some adventures are far away. When things are far away, some may be inclined to <em>run</em> to them. Be prepared for it all with these sexy LuLuLemon brand casual shorts made from breathable and lightweight materials. Even better, there's a knuckle-size pocket for your msot prized jewels.";
