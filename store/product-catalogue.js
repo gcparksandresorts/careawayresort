@@ -92,3 +92,7 @@ iter += 1; productList[iter]="Seek Adventure - LuLuLemon Clippable Nano Pouch | 
 iter += 1; productList[iter]='Seek Adventure - LuLuLemon Zeroed In Linerless Short 7" | 1 | 68.00 | #232124,#b4b4b4 | XSmall,Small,Medium,Large,XLarge';
 	productImg[iter] = "https://i.imgur.com/dUffV8L.jpeg";
 	productDescription[iter] = "Low profile high-performance 100% synthetic shorts | Some adventures are far away. When things are far away, some may be inclined to <em>run</em> to them. Be prepared for it all with these sexy LuLuLemon brand casual shorts made from breathable and lightweight materials. Even better, there's a knuckle-size pocket for your msot prized jewels.";
+
+iter += 1; productList[iter]="Seek Adventure - LuLuLemon Steady State Pullover Hoodie | 1 | 89.00 | #24312a,#334463,#512028 | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/TJnBuZD.jpeg";
+	productDescription[iter] = "Inkprinted premium fleece pullover hoodie | longerDescription";
