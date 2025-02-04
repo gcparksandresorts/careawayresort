@@ -73,7 +73,7 @@
 
 		var category = 0;
 
-		// Runs when an item is clicked (or if url parameter 'item' has an index value) -> populats display div with item properties
+		// Runs when an item is clicked (or if url parameter 'item' has an index value) -> populates display div with item properties
 		function showItem(index){
 			productPage.innerHTML = "<div id='prodDivBkg'></div>";
 			productPage.innerHTML += "<div id='productInfo'></div>";
@@ -87,8 +87,10 @@
 				const prodPrice = tempVar[2];
 				const prodDescriptions = productDescription[index].split(" | ");
 
+				const _imgLink = 'window.open("'+productImg[index]+'","_blank")';
+
 			prodPop.innerHTML = "<button style='position:sticky; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px; left:100%;' onclick='closeItem()'>Close</button>";
-			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
+			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"' style='cursor:pointer;' onclick='"+_imgLink+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
 			prodPop.innerHTML += "<div class='spacer'></div>";
 			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer silver' id='sizeSelect'></div>";
 
