@@ -80,3 +80,11 @@ iter += 1; productList[iter]="Mr. Teddy's Coffee Corner 16 oz. Grande Coffee Cup
 iter += 1; productList[iter]="Adventure Redefined - Port of Adventure Carheart Midweight Pullover Hoodie | 1 | 65.50 | #000080,#000000 | Youth Large, Small, Medium, Large, XLarge, XXLarge";
 	productImg[iter] = "https://i.imgur.com/NFd31iG.jpeg";
 	productDescription[iter] = "Unisex premium pullover hooded sweatshirt | From the opening day merch sale for <a href='../destinations/port-of-adventure'>Globe-City's Port of Adventure</a> park. Heat-transfer vynl print with extra-wash protection for long lasting design. Carheart branded hoodie with premium design and comfort.";
+
+iter += 1; productList[iter]="Seek Adventure - LuLuLemon Fabric Keychain | 2 | 22.00 | #000000,#2F4F4F,#FF69B4 | One Size";
+	productImg[iter] = "https://i.imgur.com/GnA5ECu.jpeg";
+	productDescription[iter] = "Keep your keys close at hand by clipping them to your favourite bag | For those who chronically lose their keys, never suffer again with this massive fabric strap that can probably be seen from space (unconfirmed measure). And of course, always remember to seek adventure!";
+
+iter += 1; productList[iter]="Seek Adventure - LuLuLemon Clippable Nano Pouch | 2 | 29.99 | #000000,#6B8E23 | One Size";
+	productImg[iter] = "https://i.imgur.com/QdLHTqH.jpeg";
+	productDescription[iter] = "Card holder pouch with embroidered design | Small bag, big goals. Store your cards, hand sanitizer, or your favourite lip balm in this nano pouch. Complete with an exterior card holder, zippered main compartment, and 100% polyester waterproof material.";
