@@ -108,3 +108,7 @@ iter += 1; productList[iter]="Seek Adventure - LuLuLemon Steady State Pullover H
 iter += 1; productList[iter]="Seek Adventure - LuLuLemon Back to Life Sport Bottle 24oz | 2 | 45.00 | #2f3b35,#252525,#252525 | 24oz";
 	productImg[iter] = "https://i.imgur.com/eFiSqLz.jpeg";
 	productDescription[iter] = "Insulated waterbottle with twist-on lid | For all y'all thirsty hos. This insulated water bottle features a leak-proof lid and slip-free texture, so no matter how adventurous the adventure gets, your drink is safe.";
+
+iter += 1; productList[iter]="Seek Adventure - LuLuLemon ABC Classic-Fit Men's Casual Pants | 1 | 130 | #000000,#394458,#a0b698 | 28,29,30,31,32,34,38,40";
+	productImg[iter] = "https://i.imgur.com/oUNBlCT.jpeg";
+	productDescription[iter] = "Deluxe men's casual pants with stretchy, wrinkle-resistant fabric | Take great strides towards looking fabulous with these comfortable, breathable, but casual men's pants. It's like going commando but without the wierd looks from grandma-- what, never seen a buldge before g'ma?";
