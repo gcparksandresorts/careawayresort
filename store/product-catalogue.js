@@ -53,9 +53,9 @@ productList[6]="Splashport Bay Adjustable Structured Hat | 1 | 29.99 | #000000,#
 	productImg[6] = "https://i.imgur.com/SGwImBn.png";
 	productDescription[6] = "Embroidered structured brim hat snap adjustable | Don't let the kracken see you! Hide your face without hiding your love for Puertas Nuevas's favorite water park, oh and protect your face from the sun too or whatever.";
 
-productList[7]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0FFFF,#000080 | 22oz";
-	productImg[7] = "https://i.imgur.com/NX07kDP.jpeg";
-	productDescription[7] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
+productList[7]="Adbenture Ryder | 4 | 69.00 | #00FFFF,#9932CC,#B22222,#000000 | 9 inches, 12 inches, massive dragon 2 footer, kraken tentacle 4 footer";
+	productImg[7] = "https://i.imgur.com/8JM5x17.jpeg";
+	productDescription[7] = "Fun tool for finding your inner Adbenture | Find the sense of Adventure located deep inside of you with this unique tool. Crafted from only the best materials, this tool is all you will need for a fun and thrilling ride. BTW, Adventure was purposely spelled incorrectly to prevent this item from appearing in search results.</p>";
 
 productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 45.00 | none | none";
 	productImg[3] = "https://i.imgur.com/rLxkw2F.jpeg";
@@ -72,6 +72,10 @@ productList[8]="Globe-City Careaway C Keychain | 2 | 7.99 | none | none";
 iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 2 | 9.99 | none | none";
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
+
+iter += 1; productList[iter]="Sipping Adventure Careaway Resort 22oz Tumbler | 2 | 31.99 | #F0FFFF,#000080 | 22oz";
+	productImg[iter] = "https://i.imgur.com/NX07kDP.jpeg";
+	productDescription[iter] = "Vacuum sealed insulated tumbler for hot or cold drinks | <h4>Special Offer</h4>Bring your Careaway Resort tumbler to any dining location for 5% off your drinks! <p>Stay hydrated, and caffinated, with this sleek tumbler. The single-color laser-engraved design will ensure you stay classy while recounting your favorite adventure-filled memories.</p>";
 
 iter += 1; productList[iter]="Careaway Resort Interior Logistics Medium Box Truck | 4 | 35420.69 | #FFFFFF | 26' length by 13' height";
 	productImg[iter] = "https://i.imgur.com/Sx2gJmo.jpeg";
