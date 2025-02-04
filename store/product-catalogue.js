@@ -73,6 +73,10 @@ iter += 1; productList[iter]="Globe-City Careaway Resort Postcard Keychain | 2 |
 	productImg[iter] = "https://i.imgur.com/Ijb0evL.jpeg";
 	productDescription[iter] = "Postcard image printed on durability treated alluminum | Metal keychain with acrylic painted postcard image. Protected by a clear-coat layer, the image is safe from knicks and scratches. Keys not included.";
 
+iter += 1; productList[iter]="Careaway Resort Interior Logistics Medium Box Truck | 4 | 35420.69 | #FFFFFF | 26' length by 13' height";
+	productImg[iter] = "https://i.imgur.com/Sx2gJmo.jpeg";
+	productDescription[iter] = "Get around town in style. Little Reuven not included. | How do we stock our stores? Who ensures that your favorite restaurants have the food they need to serve you? The Globe-City Resort Interior Logistics Team! From the minute the park closes to the second it opens, our IL team is bouncing around the resort stocking shelves and delivering goods. Its like our very own in-house delivery service.<p>This is not a toy!</p>";
+
 iter += 1; productList[iter]="Mr. Teddy's Coffee Corner 16 oz. Grande Coffee Cup | 2 | 9.99 | #104943,#014b78,#adadad | 16oz";
 	productImg[iter] = "https://i.imgur.com/6lgSUTl.jpeg";
 	productDescription[iter] = "Double-walled reusable coffee cup for hot or iced drinks | <h4>✨ Special Offer Available ✨</h4> Drink in style, and save the planet! This adorable Mr. Teddys coffee cup features natural tones and earthy specks, a stylish result of the reclaimed wheat stalk material that makes up 51% of this cup. The matching twist-on lid helps prevent spills and keeps beverages at temperature longer.";
