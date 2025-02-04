@@ -13,7 +13,7 @@
 
 	    #prodDivBkg {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; animation:fadeIn 0.5s;}
 
-	    #productInfo {position:fixed; background:white; top:100px; left:20px; right:20px; bottom:20px; border-radius:15px; padding:10px; overflow-y:auto; z-index:998;}
+	    #productInfo {position:fixed; background:white; top:100px; left:20px; right:20px; bottom:20px; border-radius:15px; padding:10px; overflow-y:auto; z-index:920;}
 
 	     #colorSelect > a {border:1px solid black;}
 
@@ -27,6 +27,14 @@
 	    #scBtn.emphasize {scale:1.1; background:midnightblue; color:white;}
 	     #scBtn.emphasize > span {background:orange;}
 	    #scBtn > span {background:lightskyblue; padding:5px; border-radius:50%; border:1px solid midnightblue;}
+
+	    #imageBlowup {position:fixed; text-align:center; z-index:998; cursor:zoom-out; top:90px; left:10px; right:10px; bottom:10px; border:10px solid midnightblue; border-radius:10px; overflow-x:auto; background:midnightblue; animation:zooIn 0.5s;}
+		#imageBlowup > img {position:relative; display:block; height:100%; width:auto; margin:auto;}
+
+	    @keyframes zooIn{
+		0%{scale:0;}
+		100%{scale:1;}
+	    }
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -87,10 +95,10 @@
 				const prodPrice = tempVar[2];
 				const prodDescriptions = productDescription[index].split(" | ");
 
-				const _imgLink = 'window.open("'+productImg[index]+'","_blank")';
+				const _imgLink = 'blowUpImage('+index+')';
 
 			prodPop.innerHTML = "<button style='position:sticky; top:10px; right:10px; padding:5px 10px 5px 10px; border-radius:10px; left:100%;' onclick='closeItem()'>Close</button>";
-			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"' style='cursor:pointer;' onclick='"+_imgLink+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
+			prodPop.innerHTML += "<div class='leftContainer'><div class='columnContainer'><img src='"+productImg[index]+"' style='cursor:zoom-in;' onclick='"+_imgLink+"'><div><h2>"+prodName+"</h2><h3 style='color:green;'>$"+prodPrice+"</h3>"+prodDescriptions[0]+"<p>"+prodDescriptions[1]+"</p></div></div></div>";
 			prodPop.innerHTML += "<div class='spacer'></div>";
 			prodPop.innerHTML += "<div class='leftContainer'><h4 style='margin-bottom:2px' id='colorDisp'>Select Color</h4><div class='tagContainer' id='colorSelect'></div><br><h4 style='margin-bottom:2px' id='sizeDisp'>Select Size</h4><div class='tagContainer silver' id='sizeSelect'></div>";
 
@@ -201,6 +209,11 @@
 			
 		}//end of populateStore
 
+		function blowUpImage(index){
+			var setupText = "<div id='imageBlowup'  onclick='this.remove();'><img  src='"+productImg[index]+"'></div>";
+			productPage.innerHTML += setupText;
+		}
+		
 		function showHideDiv(){
 			prodDivBkg.classList.toggle("visible");
 		}
