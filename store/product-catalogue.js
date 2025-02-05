@@ -122,9 +122,9 @@ iter += 1; productList[iter]="Careaway Resort Est. 2025 Adult Spirit Jersey® | 
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Careaway Resort with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
 
 iter += 1; productList[iter]="Port of Adventure Est. 2027 Children's Spirit Jersey® | 1 | 58.00 | #00BFFF,#000000 | Youth Small, Youth Medium, Youth Large";
-	productImg[iter] = "https://i.imgur.com/Oh2Q8WK.jpeg";
+	productImg[iter] = "https://i.imgur.com/BaCWvG5.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Port of Adventure with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
 
 iter += 1; productList[iter]="Careaway Resort Est. 2025 Children's Spirit Jersey® | 1 | 58.00 | #00BFFF,#000000 | Youth Small, Youth Medium, Youth Large";
-	productImg[iter] = "https://i.imgur.com/anQm5v3.jpeg";
+	productImg[iter] = "https://i.imgur.com/C1VBnkZ.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Careaway Resort with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
