@@ -53,8 +53,8 @@ productList[6]="Splashport Bay Adjustable Structured Hat | 1 | 29.99 | #000000,#
 	productImg[6] = "https://i.imgur.com/SGwImBn.png";
 	productDescription[6] = "Embroidered structured brim hat snap adjustable | Don't let the kracken see you! Hide your face without hiding your love for Puertas Nuevas's favorite water park, oh and protect your face from the sun too or whatever.";
 
-productList[7]="Adbenture Ryder | 4 | 69.00 | #00FFFF,#9932CC,#B22222,#000000 | 9 inches, 12 inches, massive dragon 2 footer, kraken tentacle 4 footer";
-	productImg[7] = "https://i.imgur.com/8JM5x17.jpeg";
+productList[7]="Adbenture Finder | 4 | 69.00 | #00FFFF,#9932CC,#B22222,#000000 | 9 inches, 12 inches, massive dragon 2 footer, kraken tentacle 4 footer";
+	productImg[7] = "https://i.imgur.com/mo5Cfrx.jpeg";
 	productDescription[7] = "Fun tool for finding your inner Adbenture | Find the sense of Adventure located deep inside of you with this unique tool. Crafted from only the best materials, this tool is all you will need for a fun and thrilling ride. BTW, Adventure was purposely spelled incorrectly to prevent this item from appearing in search results.</p>";
 
 productList[3]="MCR WAVES Resort Mixtape Vinyl Record | 3 | 45.00 | none | none";
