@@ -47,3 +47,8 @@ attractionItems[1] = "Action! On the Backlot/Bevan | 1 | Wonder Reel Studios,2 |
 attractionItems[4] = "The CozmiBotz Return/font | 3 | Galaxy Center,1 | 8 Minutes | 3 | minHeight5 | 0 | no";
 	attractionDescrition[4] = "Following a long journey from Highland, Oras Nou, the CosmiBotz are ready for their next grand performance! | Musical,Animatronics,Performance,Experience,Querky | Delight in the sounds of <em>Baroque Hoedown</em> as the CosmiBotz fill the galaxy with energy and music.";
 	attractionImg[4] = "../../files/images/banners/kookieBand.webp | otherImg1 - otherImg";
+
+attractionItems[5] = "Peanuts Wonder Park/Chewy | 3 | Creature's Cove,1 | - | 3 | 1 | 0 | no";
+	attractionDescrition[5] = "Join Snoopy and the Peanuts gang at their new park full of fun activities and lots to do | Family,Young Children,Interactive,Picnic Spots | Take a break from the action at this cute oasis nessled in the wooded outskirts of Creature's Cove. Featuring a delightful play area populated with cute creatures from the Peanuts universe and their new friends, everyone is shore to have an enjoyable time at the Wonder Park! Have snacks? Enjoy shaded picnic tables and water-refill stations.";
+	attractionImg[5] = "https://admin.onlyinyourstate.com/wp-content/uploads/sites/2/2019/07/camp-snoopy-carowinds-1.jpg | https://media.nbclosangeles.com/2023/12/Camp-Snoopy-Barrel-Bridge-Rendering.jpg?quality=85&strip=all&w=1900 - https://cache.undercovertourist.com/blog/2024/06/0624-camp-snoopy-knotts-berry-farm-characters-camp-snoopy.jpg";
+
