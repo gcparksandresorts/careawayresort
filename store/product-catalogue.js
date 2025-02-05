@@ -112,3 +112,7 @@ iter += 1; productList[iter]="Seek Adventure - LuLuLemon Back to Life Sport Bott
 iter += 1; productList[iter]="Seek Adventure - LuLuLemon ABC Classic-Fit Men's Casual Pants | 1 | 130 | #000000,#394458,#a0b698 | 28,29,30,31,32,34,38,40";
 	productImg[iter] = "https://i.imgur.com/oUNBlCT.jpeg";
 	productDescription[iter] = "Deluxe men's casual pants with stretchy, wrinkle-resistant fabric | Take great strides towards looking fabulous with these comfortable, breathable, but casual men's pants. It's like going commando but without the wierd looks from grandma-- what, never seen a buldge before g'ma?";
+
+iter += 1; productList[iter]="Port of Adventure Est. 2027 Spirit Jersey | 1 | 75.00 | #000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/Oh2Q8WK.jpeg";
+	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Port of Adventure with this Classic-style Spirit Jersey. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
