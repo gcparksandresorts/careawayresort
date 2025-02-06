@@ -22,28 +22,78 @@
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
-            <div class='titleBar'><h1>Resort Blog & Operations Updates</h1></div>
-           	<div class='titleBar silver'><p>Explore new happenings and events around Globe-City's Careaway Resort</p></div>
+		<div class='titleBar'><h1>Resort Blog & Operations Updates</h1></div>
+           	<div class='fullContainer' style='background:silver'>
+			<div class='leftContainer'>
+				<h2 style='text-align:center' onclick='buildSpotlight("na");'>Highlighted happenings for <span id='mnthTxt'>this month</span></h2>
+				<div class='tileContainer' id='spotlightDiv'>
+					Error loading, please try again later.
+				</div>
+			</div>
+		</div>
+		<div class='swoopContainer' style='background:silver;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
 
-			<div class='container'>
-				<h3>Sort & Filter</h3>
-				<p>Category: <select>
+		<div class='container' style='padding-top:0;'>
+			<h3>Blog and Operations Posts</h3>
+			<p>Sort by Category: <select>
 					<option>View All</option>
-					</select>
-				</p>
-				<p>Showing <b>NUM</b> results</p>
-			</div>
+				</select>
+			</p>
+			<p>Showing <b>NUM</b> results</p>
+		</div> <!-- filter container -->
             
-            <div class='container' id='resultsBin'>
+            	<div class='container' id='resultsBin'>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
-			</div>
+		</div> <!-- blog links container -->
             
 		
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
 </body>
-    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+
+	<!-- Get the spotlight repository -->
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/indexSpotlight.js"></script>
+
+	<!-- build out the spotlight section -->
+	<script>
+		const spotlightContainer = document.getElementById("spotlightDiv");
+
+		function buildSpotlight(mode){
+			
+			spotlightContainer.innerHTML = "";
+			
+			const mnthTxt = document.getElementById("mnthTxt");
+			const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+			var month = 0;
+			
+			const date = new Date();
+			    if(mode == 'month'){
+			    	month = monthName[date.getMonth()];
+				mnthTxt.innerHTML = month;
+			    }else{
+				month = window.prompt("Enter the month you want to test (January, February, ...","January");
+				mnthTxt.innerHTML = month;
+			    }
+
+			spotlightContainer.innerHTML = "";
+
+			// populate the spotlight content
+				var cntr = 0; // Counts how many spotlight elements there are shown (maximum 3)
+			for (i = 0; i < indexSpotlight.length; i++) {
+				let temp = indexSpotlight[i].split(" | ");
+				if(temp[0] == month && cntr <= 3){
+					spotlightContainer.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
+					cntr += 1;
+				}
+			}// end of for loop
+			
+		}// end of buildSpotlight()
+
+		buildSpotlight('month');
+	</script>
 </html>
