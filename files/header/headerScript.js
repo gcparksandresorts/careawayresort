@@ -28,10 +28,15 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 					<div> <img class='rsBackground' src='https://www.azcentral.com/gcdn/presto/2019/04/17/PPHX/2d57cc62-07ed-4659-8bc6-7f18cebc7a1b-Oogie_Boogie_Bash_Hero_Image.jpg?crop=2699,1518,x1,y207&width=1600&height=800&format=pjpg&auto=webp'> <div class='rsHider'></div> <img class='rsIcon' src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(10).png'> <h4>Seasonal Events</h4> <a></a> </div> \
 				</div> </div> \
 			<div id='infobarMenu' class='barMenu'> \
-					<div class='evenSection'> <h4>Plan Your Visit</h4> <a href='"+siteLink+"information/resort-schedule'>Operating Hours and Resort Schedule</a> <a>Resort Maps</a> <a>Parking & Transportation</a> <a>Mobile App</a></div> \
-					<div class='evenSection'> <h4>Resort Services</h4> <a>Lockers & Rentals</a> <a>Meetings & Event Spaces</a> <a>Security & Medical</a> <a>Accessibility</a></div> \
-					<div class='evenSection'> <h4>Guest Connections</h4> <a>Contact Us</a> <a>Frequently Asked Questions</a> <a href='"+siteLink+"information/safety-guidelines'>Rules and Guidelines</a></div> \
-					<div class='evenSection'> <h4>Upgraded Experiences</h4> <a>GC VIP</a> <a>Guided Tours</a> <a>Dining Reservations</a></div>\
+				<div id='infCont'> \
+					<div id='lft'> \
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-clock.png'><h4>Operating Hours</h4></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-faq.png'><h4>Frequently Asked Questions</h4></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-safety.pn'><h4>Safety Guidelines</h4></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-blog.png'><h4>News & Updates</h4></div>	\
+					</div> \
+					<div id='rht'> <h4>More Information</h4> <a href=''>Plan Your Visit</a> <a href='"+siteLink+"tickets/gc-vip'><b>GC</b><span style='font-family:georgia'>VIP</span> Upgrades</a> <a href='"+siteLink+"tickets/annual-passports'>Annual Passports</a> <a>Accessibility Information</a> </div> \
+				</div> \
 			</div>";
 
 
