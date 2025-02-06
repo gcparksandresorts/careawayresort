@@ -228,7 +228,7 @@
 
 
 /* For more information menu */
-	#infCont {display:flex; flex-flow:row; padding:10px;}
+	#infCont {display:flex; flex-flow:row;}
         	#infCont #lft{width:70%; padding-right:10px; display:flex; flex-wrap:wrap; align-self:stretch;}
 			#infCont #lft > div {width:25%; padding:0px 20px 20px 0px; text-align:center; position:relative; align-self:stretch;}
 			#infCont #lft > div > img {width:80%; height:auto; transition:0.4s;}
