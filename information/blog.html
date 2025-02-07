@@ -138,7 +138,7 @@
 					selectCategory.value = categoryVal;
 				}
 				if(searchParams.has("search")){
-					searchTerm = urlParams.get("search").replace("+",/\s/g);
+					searchTerm = searchParams.get("search").replace("+",/\s/g);
 					searchTerm = searchTerm.toLowerCase();
 					searchBar.value = searchTerm;
 				}
