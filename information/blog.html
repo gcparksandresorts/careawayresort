@@ -86,7 +86,7 @@
 				var cntr = 0; // Counts how many spotlight elements there are shown (maximum 3)
 			for (i = 0; i < indexSpotlight.length; i++) {
 				let temp = indexSpotlight[i].split(" | ");
-				if(temp[0] == month && cntr <= 3){
+				if(temp[0] == month){
 					spotlightContainer.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
 					cntr += 1;
 				}
