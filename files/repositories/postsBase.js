@@ -3,7 +3,7 @@ operationContents = []; // Operational updates dont have their own pages, this d
 blogContents = []; // For auto-populated blog / news report pages
 
 blogCategories = ["none", "Operations Updates", "Attractions", "Restaurants and Dining"];
-		    0		1
+//		    0		1
 
 var iter = 0;
 
