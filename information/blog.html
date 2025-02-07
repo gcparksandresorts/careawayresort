@@ -35,10 +35,20 @@
 
 		<div class='container' style='padding-top:0;'>
 			<h3>Blog and Operations Posts</h3>
-			<p>Sort by Category: <select>
-					<option>View All</option>
-				</select>
-			</p>
+			<div class='halfContainer'>
+				<div>
+					Sort by Category: 
+					<select id='categorySelect'>
+						<option value='0'>View All</option>
+					</select>
+				</div>
+				<div>
+					Search keywords:
+					<input type='text' id='searchBar'>
+					<a style='display:inline-block; cursor:pointer; text-decoration:underline; color:midnightblue;'>Search</a>
+				</div>
+			</div>
+			
 			<p>Showing <b>NUM</b> results</p>
 		</div> <!-- filter container -->
             
@@ -58,9 +68,13 @@
 	<!-- Get the spotlight repository -->
 	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/indexSpotlight.js"></script>
 
+	<!-- Get list of blog posts and operational updates -->
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/postsBase.js"></script>
+
 	<!-- build out the spotlight section -->
 	<script>
 		const spotlightContainer = document.getElementById("spotlightDiv");
+		const resultsBin = document.getElementById("resultsBin");
 
 		function buildSpotlight(mode){
 			
@@ -94,6 +108,36 @@
 			
 		}// end of buildSpotlight()
 
-		buildSpotlight('month');
+		function populateBlogs(){
+			resultsBin.innerHTML = "";
+
+			// Populate Filter
+			const selectCategory = document.getElementById("categorySelect");
+			const searchBar = document.getElementById("searchBar");
+
+				for(i=1; i < ‎blogCategories‎.length; i++){
+					selectCategory.innerHTML += "<option value='"+i+"'>" + blogCategories[i] + "</option>";
+				}
+
+			// Search Parameters
+			const searchParams = new URLSearchParams(window.location.search);
+
+				var categoryVal = 0;
+				var searchTerm = 'none';
+			
+				if(searchParams.has("category")){
+					categoryVal = searchParams.get("category");
+					selectCategory.value = categoryVal;
+				}
+				if(searchParams.has("search")){
+					searchTerm = urlParams.get("search").replace("+",/\s/g);
+					searchTerm = searchTerm.toLowerCase();
+					searchBar.value = searchTerm;
+				}
+			
+			buildSpotlight('month');
+		} // end of populateBlogs()
+
+		populateBlogs();
 	</script>
 </html>
