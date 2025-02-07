@@ -30,10 +30,11 @@ header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbCon
 			<div id='infobarMenu' class='barMenu'> \
 				<div id='infCont'> \
 					<div id='lft'> \
-						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-clock.png'><h4>Operating Hours</h4><a href='"+siteLink+"information/resort-schedule'></div>	\
-						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-faq.png'><h4>Frequently Asked Questions</h4></div>	\
-						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-safety.png'><h4>Safety Guidelines</h4><a href='"+siteLink+"information/safety-guidelines'></div>	\
-						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-blog.png'><h4>News & Updates</h4><a href='"+siteLink+"information/blog'></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-clock.png'><h4>Operating Hours</h4><a href='"+siteLink+"information/resort-schedule'></a></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-faq.png'><h4>Frequently Asked Questions</h4><a></a></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-safety.png'><h4>Safety Guidelines</h4><a href='"+siteLink+"information/safety-guidelines'></a></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-blog.png'><h4>News & Updates</h4><a href='"+siteLink+"information/blog'></a></div>	\
+						<div><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/webIcons-park.png'><h4>Parking & Transit</h4><a></a></div>	\
 					</div> \
 					<div id='rht'> <h4>More Information</h4> <a href=''>Plan Your Visit</a> <a href='"+siteLink+"tickets/gc-vip'><b>GC</b><span style='font-family:georgia'>VIP</span> Upgrades</a> <a href='"+siteLink+"tickets/annual-passports'>Annual Passports</a> <a>Accessibility Information</a> </div> \
 				</div> \
