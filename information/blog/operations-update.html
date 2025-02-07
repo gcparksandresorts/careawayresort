@@ -1,0 +1,57 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+		<title>Operations Update | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+    <style>
+    </style>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<!-- BODY CONTENT HERE -->
+	<div class='titleBar'><h1>Resort Operations Update</h1></div>
+	<div class='titleBar silver' id='subtitleText'><h3>This is the name of the operations update</h3></div>
+	
+	<div id='updateContent'>
+		<div class='container'>
+			Could not find update content - please navigate back to the previous page and try again.
+		</div>
+	</div>
+            
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/postsBase.js"></script>
+
+	<!-- Collects necessary data using the link parameters -->
+	<script>
+		// Reference: https://github.com/aztechadmit/visitpn/blob/main/pages/attractions.html
+		const content = document.getElementById("updateContent");
+		const title = document.getElementById("subtitleText");
+
+		const urlParams = new URLSearchParams(window.location.search);
+
+		
+		function popPage(){
+			var index = 1;
+			
+			if(urlParams.has("index")){
+				index = urlParams.get("index");
+			}
+
+			if(index != 0){
+				var temp = blogHeadings[index].split(" | ");
+				title.innerHTML = "<h3>" + temp[0] + "</h3>";
+				content.innerHTML = "<div class='leftContainer'>" + operationContents[index] + "</div>";
+			}
+			
+			content.innerHTML += "<div class='spacer'></div><div class='container' style='padding-top:0;'><p><a onclick='history.back()' class='btn'>Back to previous</a> <a href='../blog?category=1' class='btn'>View all updates</a></p></div>";
+		}
+
+		popPage();
+	</script>
+</html>
