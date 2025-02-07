@@ -4,55 +4,63 @@
 		<title>Resort Blog | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 	
-    <style>
-		#resultsBin > div {
-			width:100%; background:lightgray; border-radius:10px; padding:10px; text-align:left;
-			transition:0.25s; position:relative; margin-bottom:10px; display:flex; flex-flow:row;
-			border:2px solid rgba(0,0,0,0);
-		}
-			#resultsBin > div > div {width:100%; padding-left:15px;} #resultsBin > div:hover {border:2px solid black;}
-				#resultsBin > div > div > h4 {margin:0px; font-size:16px;}
-				#resultsBin > div > div > p {margin-top:5px; margin-bottom:0px; color:dimgray;}
-				#resultsBin > div > div > a {opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
-		
-			#resultsBin > div > img {width:50px; align-self:center;}
-			
-    </style>
+    
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+			#resultsBin > div {
+				width:100%; background:lightgray; border-radius:10px; padding:10px; text-align:left;
+				transition:0.25s; position:relative; margin-bottom:10px; display:flex; flex-flow:row;
+				border:2px solid rgba(0,0,0,0);
+			}
+				#resultsBin > div > div {width:100%; padding-left:15px;} #resultsBin > div:hover {border:2px solid black;}
+					#resultsBin > div > div > h4 {margin:0px; font-size:16px;}
+					#resultsBin > div > div > p {margin-top:5px; margin-bottom:0px; color:dimgray;}
+					#resultsBin > div > div > a {opacity:0; position:absolute; top:0; right:0; left:0; bottom:0;}
+			
+				#resultsBin > div > img {width:50px; align-self:center;}
+
+			.halfContainer > div {width:auto;}
+			.halfContainer {justify-content:center;}
+			
+  		  </style>	
 
 		<!-- BODY CONTENT HERE -->
 		<div class='titleBar'><h1>Resort Blog & Operations Updates</h1></div>
            	<div class='fullContainer' style='background:silver'>
 			<div class='leftContainer'>
 				<h2 style='text-align:center' onclick='buildSpotlight("na");'>Highlighted happenings for <span id='mnthTxt'>this month</span></h2>
+				<p style='text-align:center'><a  href='#main-content'>Skip to main content</a></p>
 				<div class='tileContainer' id='spotlightDiv'>
 					Error loading, please try again later.
 				</div>
 			</div>
 		</div>
+		<a id='main-content'></a>
 		<div class='swoopContainer' style='background:silver;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
-
+		
 		<div class='container' style='padding-top:0;'>
 			<h3>Blog and Operations Posts</h3>
 			<div class='halfContainer'>
 				<div>
 					Sort by Category: 
-					<select id='categorySelect'>
+					<select id='categorySelect' onchange='document.getElementById("schBtn1").style.display="inline-block";'>
 						<option value='0'>View All</option>
 					</select>
+					<a id='schBtn1' onclick='runSearch()' style='display:none; cursor:pointer; text-decoration:underline; color:midnightblue;'>Apply</a>
 				</div>
 				<div>
 					Search keywords:
-					<input type='text' id='searchBar'>
-					<a style='display:inline-block; cursor:pointer; text-decoration:underline; color:midnightblue;'>Search</a>
+					<input type='text' id='searchBar' onchange='document.getElementById("schBtn").style.display="inline-block";'>
+					<a id='schBtn' onclick='runSearch()' style='display:none; cursor:pointer; text-decoration:underline; color:midnightblue;'>Search</a>
 				</div>
 			</div>
 			
-			<p>Showing <b>NUM</b> results</p>
+			<p>Showing <b id='numResultTxt'>NUM</b> results</p>
 		</div> <!-- filter container -->
             
-            	<div class='container' id='resultsBin'>
+            	<div class='container' id='resultsBin' style='padding-top:0;'>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
 				<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>This is the title of a blog post</h4><p>Category | Posted Date</p><a href='link-to-blog-post'></a></div></div>
@@ -115,7 +123,7 @@
 			const selectCategory = document.getElementById("categorySelect");
 			const searchBar = document.getElementById("searchBar");
 
-				for(i=1; i < ‎blogCategories‎.length; i++){
+				for(i=1; i < blogCategories.length; i++){
 					selectCategory.innerHTML += "<option value='"+i+"'>" + blogCategories[i] + "</option>";
 				}
 
@@ -134,10 +142,47 @@
 					searchTerm = searchTerm.toLowerCase();
 					searchBar.value = searchTerm;
 				}
+
+			// Populate container
+			var numResults = 0;
+
+				for(i = 1; i < blogHeadings.length; i++){
+					let temp = blogHeadings[i].split(" | ");
+
+					if(categoryVal == '0' || temp[2] == categoryVal){ // check category filter
+						if(searchTerm == 'none' || temp[0].toLowerCase().includes(searchTerm)){ // check search term filter
+							if(temp[4] == 'auto' && temp[2] == '1'){ // Operations Update
+								goToLink = "blog/operations-update?index=" + i;
+							}
+		
+							let buildDiv = "<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>"+temp[0]+"</h4><p>"+blogCategories[temp[2]]+" | "+temp[1]+"</p><a href='"+goToLink+"'></a></div></div>";
+							resultsBin.innerHTML += buildDiv;
+							numResults += 1;
+						}// matches search terms
+					}// matches category
+					
+				}// end of for loop
 			
+			
+			document.getElementById("numResultTxt").innerHTML = numResults;
+			
+			if(numResults == 0){
+				resultsBin.innerHTML = "No results. Consider editing search parameters or category selected.";
+			}
 			buildSpotlight('month');
 		} // end of populateBlogs()
 
 		populateBlogs();
+
+		function runSearch(){
+			if(document.getElementById("searchBar").value != ''){
+				const searchTerm = "https://gcparksandresorts.github.io/careawayresort/information/blog?category="+document.getElementById("categorySelect").value+"&search=" + document.getElementById("searchBar").value.replace(/\s/g,"+");
+				window.open(searchTerm,"_self");
+			}else{
+				const searchTerm = "https://gcparksandresorts.github.io/careawayresort/information/blog?category="+document.getElementById("categorySelect").value;
+				window.open(searchTerm,"_self");
+			}
+			
+		}
 	</script>
 </html>
