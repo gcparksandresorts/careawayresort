@@ -28,17 +28,19 @@
 
 		<!-- BODY CONTENT HERE -->
 		<div class='titleBar'><h1>Resort Blog & Operations Updates</h1></div>
-           	<div class='fullContainer' style='background:silver'>
-			<div class='leftContainer'>
-				<h2 style='text-align:center' onclick='buildSpotlight("na");'>Highlighted happenings for <span id='mnthTxt'>this month</span></h2>
-				<p style='text-align:center'><a  href='#main-content'>Skip to main content</a></p>
-				<div class='tileContainer' id='spotlightDiv'>
-					Error loading, please try again later.
+		<section id='highlight-section'>
+	           	<div class='fullContainer' style='background:silver'>
+				<div class='leftContainer'>
+					<h2 style='text-align:center' onclick='buildSpotlight("na");'>Highlighted happenings for <span id='mnthTxt'>this month</span></h2>
+					<p style='text-align:center'><a  href='#main-content'>Skip to main content</a></p>
+					<div class='tileContainer' id='spotlightDiv'>
+						Error loading, please try again later.
+					</div>
 				</div>
 			</div>
-		</div>
+			<div class='swoopContainer' style='background:silver;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
+		</section>
 		<a id='main-content'></a>
-		<div class='swoopContainer' style='background:silver;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
 		
 		<div class='container' style='padding-top:0;'>
 			<h3>Blog and Operations Posts</h3>
@@ -142,6 +144,8 @@
 					searchTerm = searchTerm.toLowerCase();
 					searchBar.value = searchTerm;
 				}
+
+				if(categoryVal != 0 || searchTerm != 'none'){document.getElementById("highlight-section").style.display = 'none';}
 
 			// Populate container
 			var numResults = 0;
