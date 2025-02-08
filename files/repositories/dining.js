@@ -24,6 +24,9 @@ iter+=1;
 diningList[iter] = "Character Cafe | Description | 1 | 2 | 1,2 | clickLink | imageLink";
 
 iter+=1;
+diningList[iter] = "Cosmic Cantina | Take a space shuttle lightyears to the next galaxy top sip on some galactic cocktails and drinks that are out of this world | 1 | 1 | 4 | clickLink | https://cdn.discordapp.com/attachments/1309764417990426687/1337603383711891639/IMG_20250207_175739_508.jpg?ex=67a80bba&is=67a6ba3a&hm=24bf4aef1c73584c4f21c1feab28dcefd8b0f19fd6fee656796e04467bbaf384&";
+
+iter+=1;
 diningList[iter] = "Cosmic Cantina | Take a break and fuel up with some of the best grub in the galaxy. | 1 | 2 | 1,2 | clickLink | imageLink";
 
 iter+=1;
