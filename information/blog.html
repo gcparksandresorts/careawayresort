@@ -86,14 +86,14 @@
 		const spotlightContainer = document.getElementById("spotlightDiv");
 		const resultsBin = document.getElementById("resultsBin");
 
+		const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+		var month = 0;
+
 		function buildSpotlight(mode){
 			
 			spotlightContainer.innerHTML = "";
 			
 			const mnthTxt = document.getElementById("mnthTxt");
-			const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-			var month = 0;
 			
 			const date = new Date();
 			    if(mode == 'month'){
@@ -147,6 +147,10 @@
 
 				if(categoryVal != 0 || searchTerm != 'none'){document.getElementById("highlight-section").style.display = 'none';}
 
+			// Get date and current month
+			const mnthIndx = monthName.indexOf(month);
+			console.log("Month Index = " + mnthIndx);
+			
 			// Populate container
 			var numResults = 0;
 
