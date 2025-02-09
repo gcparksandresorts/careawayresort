@@ -230,10 +230,8 @@ a.btn{
 
 	/* Instructions for setting up:
 
-		<div class='collapsible'>
-			<h3>question_text</h3>
-			<div>answer_text</div>
-		</div>
+		<div class='collapsible'><h3>question_text</h3>
+			<div>answer_text</div></div>
 
 		Insert in bottom of page:
 		<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/collapsible.js"></script>
