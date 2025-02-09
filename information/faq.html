@@ -38,8 +38,15 @@
 	<script>
 		const faqContent = document.getElementById("faqContent");
 
+		const categorySelect = document.getElementById("categorySelect");
+
 		function populatePage() {
 			faqContent.innerHTML = "";
+
+			// Populate Filter Select
+			for(i=0; i < categoryList.length; i++){
+				categorySelect.innerHTML += "";
+			}
 
 			// Populate content
 			for(i=0; i < questionList.length; i++){
