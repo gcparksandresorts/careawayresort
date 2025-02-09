@@ -223,7 +223,7 @@ a.btn{
 .collapsible{}
 	.collapsible > h1, .collapsible > h2, .collapsible > h3 {cursor:pointer; }
 		.collapsible:hover > h1, .collapsible:hover > h2, .collapsible:hover > h3  {color:midnightblue;}
-		.collapsible.active > h1, .collapsible.active > h2, .collapsible.active > h3, {color:midnightblue; background:#efefef;}
+		.collapsible.active > h1, .collapsible.active > h2, .collapsible.active > h3 {color:midnightblue; background:#efefef;}
 
 	.collapsible > div {transition:0.5s; opacity:0; display:none; padding:10px;}
 		.collapsible.active > div {opacity:1; display:block;}
