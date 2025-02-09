@@ -1,0 +1,49 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title>Frequently Asked Questions | Information | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+	  <style>.halfContainer > div {width:auto;} .halfContainer{justify-content:center;}</style>	
+  <!-- BODY CONTENT HERE -->
+
+            	<div class='titleBar'><h1>Frequently Asked Questions</h1></div>
+           	<div class='titleBar silver'><div class='halfContainer'>
+              		<div style='inline-block'><label for='categorySelect'>Sort by Category</label>
+				<select id='categorySelect' onchange='applyFilter()'>
+					<option value='0'>View All</option>
+				</select>
+			</div>
+			<div style='inline-block'><label for='searchBar'>Search Keywords</label>
+				<input id='searchBar' type='text' placeholder='Search Terms' onchange='applyFilter()'>
+			</div>
+            	</div></div>
+
+		<p style='text-align:center' id='resultCount'>Showing <b>ZERO</b> results</p>
+            
+            	<div class='leftContainer' id='faqContent'>
+			Error populating content, please try again later.
+		</div>
+            
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/collapsible.js"></script>
+	<script>
+		const faqContent = document.getElementById("faqContent");
+
+		function populatePage() {
+			faqContent.innerHTML = "";
+		}
+		
+		function applyFilter(){
+			
+		}
+	</script>
+</html>
