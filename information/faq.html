@@ -13,14 +13,14 @@
             	<div class='titleBar'><h1>Frequently Asked Questions</h1></div>
            	<div class='titleBar silver'><div class='halfContainer'>
               		<div style='inline-block'><label for='categorySelect'>Sort by Category</label>
-				<select id='categorySelect' onchange='applyFilter()'>
+				<select id='categorySelect' onchange='document.getElementById("appFltr").style.display="block";'>
 					<option value='0'>View All</option>
 				</select>
 			</div>
 			<div style='inline-block'><label for='searchBar'>Search Keywords</label>
-				<input id='searchBar' type='text' placeholder='Search Terms' onchange='applyFilter()'>
+				<input id='searchBar' type='text' placeholder='Search Terms' onchange='document.getElementById("appFltr").style.display="block";'>
 			</div>
-            	</div></div>
+            	</div><p><a style='display:none; text-decoration:underline; cursor:pointer; color:midnightblue;' id='appFltr' onclick='applyFilter()'>Apply Filters</a></p></div>
 
 		<p style='text-align:center' id='resultCount'>Showing <b>ZERO</b> results</p>
             
