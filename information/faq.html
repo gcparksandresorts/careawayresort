@@ -35,11 +35,21 @@
 </body>
 	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 	<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/collapsible.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/FAQ-questionsList.js"></script>
 	<script>
 		const faqContent = document.getElementById("faqContent");
 
 		function populatePage() {
 			faqContent.innerHTML = "";
+
+			// Populate content
+			for(i=0; i < questionList.length; i++){
+				let tempArray = questionList[i].split(" | ");
+
+				let buildDiv = "<div class='collapsible'><h3>" + tempArray[1] + "</h3><div>" +  answerList[i] + "</div></div>";
+
+				faqContent.innerHTML += buildDiv;
+			}// end of for loop
 		}
 		
 		function applyFilter(){
