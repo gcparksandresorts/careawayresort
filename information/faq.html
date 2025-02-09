@@ -63,8 +63,8 @@
 			
 				for(i=1; i < categoryList.length; i++){
 					categorySelect.innerHTML += "<option value='"+i+"'>"+categoryList[i]+"</option>";
-					categorySelect.value = categoryVal;
 				}
+				categorySelect.value = categoryVal;
 	
 				if(searchVal != 'none'){
 					searchBar.value = searchVal;
@@ -86,11 +86,15 @@
 
 					if(categoryVal == 0 || tempArray[0] == categoryVal){ // check for categorized search
 						if(tempArray[1].includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
-							const destCont = document.getElementById("category-"+tempArray[0]);
-							if(destCont.style.display != 'block'){
-								destCont.style.display = 'block';
+							if(categoryVal == 0){
+								const destCont = document.getElementById("category-"+tempArray[0]);
+								if(destCont.style.display != 'block'){
+									destCont.style.display = 'block';
+								}
+								destCont.innerHTML += buildDiv; numCount += 1;
+							}else{
+								faqContent.innerHTML += buildDiv; numCount += 1;
 							}
-							destCont.innerHTML += buildDiv; numCount += 1;
 						}
 					}else{
 						if(tempArray[1].includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
