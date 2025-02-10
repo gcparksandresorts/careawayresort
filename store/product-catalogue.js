@@ -128,3 +128,11 @@ iter += 1; productList[iter]="Port of Adventure Est. 2027 Children's Spirit Jers
 iter += 1; productList[iter]="Careaway Resort Est. 2025 Children's Spirit Jersey® | 1 | 58.00 | #00BFFF,#000000 | Youth Small, Youth Medium, Youth Large";
 	productImg[iter] = "https://i.imgur.com/C1VBnkZ.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Careaway Resort with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
+
+iter += 1; productList[iter]="Careaway Resort Pride Women's Tshirt | 1 | 25.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
+	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
+
+iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
+	productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
