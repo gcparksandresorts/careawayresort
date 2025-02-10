@@ -19,6 +19,8 @@ attractionItems[NUM] = "rideName0/font | rideCategory1 | rideLocation2,parkIndex
 	attractionDescrition[NUM] = "shortIntro0 | tags1,otherTag | longParagraph2";
 	attractionImg[NUM] = "mainImg0 | otherImg1 - otherImg";
 
+ Sponsored Attraction: <em>Sponsored by COMPANY</em> - <a href='../../business/corporate-partners'>Learn More</a><p>SHORTpARAGRAPH</p>
+
  Replace font with NONE for no font
  Replace otherImg1 with NONE for no extra images
  PhotoPass? yes | no
@@ -52,3 +54,6 @@ attractionItems[5] = "Peanuts Wonder Park/Chewy | 3 | Creature's Cove,1 | - | 3 
 	attractionDescrition[5] = "Join Snoopy and the Peanuts gang at their new park full of fun activities and lots to do | Family,Young Children,Interactive,Picnic Spots | Take a break from the action at this cute oasis nessled in the wooded outskirts of Creature's Cove. Featuring a delightful play area populated with cute creatures from the Peanuts universe and their new friends, everyone is shore to have an enjoyable time at the Wonder Park! Have snacks? Enjoy shaded picnic tables and water-refill stations.";
 	attractionImg[5] = "https://admin.onlyinyourstate.com/wp-content/uploads/sites/2/2019/07/camp-snoopy-carowinds-1.jpg | https://media.nbclosangeles.com/2023/12/Camp-Snoopy-Barrel-Bridge-Rendering.jpg?quality=85&strip=all&w=1900 - https://cache.undercovertourist.com/blog/2024/06/0624-camp-snoopy-knotts-berry-farm-characters-camp-snoopy.jpg";
 
+attractionItems[6] = "Starfield Horizons/Audiowide | 3 | Galaxy Center,1 | 5 Minutes | 1 | 2 | 1 | no";
+	attractionDescrition[6] = "<em>Sponsored by UNITY 3D</em> - <a href='../../business/corporate-partners'>Learn More</a><p>Leave the confines of gravity below you and set course for the breathtaking Cosmiwave Galaxy on a gravity-defying tour of the cosmos.</p> | Simulator,Interspace,Adventure,Family Thrills | At Starfield Horizons Tour Agency, we provide you the opportunity to marvel at shimmering nebulas, distant star systems, and the wonders of deep space. Board a high-tech interplanetary aerojet and set-off on a grand adventure through space. <p>Your tour is full of fun until an unexpected distress signal changes everything. An alien ship, stranded by a powerful planetary flare, needs your help. What starts as a peaceful voyage quickly turns into a high-stakes rescue mission beyond the stars! Do you have what it takes to navigate the unknown and bring them to safety?</p>";
+	attractionImg[6] = "https://ca-times.brightspotcdn.com/dims4/default/e46afb6/2147483647/strip/true/crop/4928x3280+0+0/resize/1200x799!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb2%2Fb8%2F6ae2faf94bdba46e6fd1b98188e4%2F1209zv-0320msa.jpg | https://www.kennedyspacecenter.com/-/media/DNC/KSCVC/Attraction-Images/Gateway/Spaceport-KSC/SpaceportKSC_ListItem_900x600.ashx?la=en&hash=59857FDCB26F2C3BF2355FEFF877F8901C6C04C8 - https://thumbs.dreamstime.com/b/futuristic-spaceport-terminal-filled-advanced-technology-sleek-designs-illuminated-neon-lights-rows-high-tech-340792017.jpg";
