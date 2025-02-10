@@ -161,6 +161,8 @@
 						if(searchTerm == 'none' || temp[0].toLowerCase().includes(searchTerm)){ // check search term filter
 							if(temp[4] == 'auto' && temp[2] == '1'){ // Operations Update
 								goToLink = "blog/operations-update?index=" + i;
+							}else if(temp[4] == 'auto'){
+								goToLink = "blog/blog-post?index=" + i;
 							}
 		
 							let buildDiv = "<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>"+temp[0]+"</h4><p>"+blogCategories[temp[2]]+" | "+temp[1]+"</p><a href='"+goToLink+"'></a></div></div>";
