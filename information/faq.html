@@ -84,19 +84,15 @@
 	
 					let buildDiv = "<div class='collapsible'><h3>" + tempArray[1] + "</h3><div>" +  answerList[i] + "</div></div>";
 
-					if(categoryVal == 0 || tempArray[0] == categoryVal){ // check for categorized search
+					if(categoryVal == 0){ // Organized by category
 						if(tempArray[1].includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
-							if(categoryVal == 0){
-								const destCont = document.getElementById("category-"+tempArray[0]);
-								if(destCont.style.display != 'block'){
-									destCont.style.display = 'block';
-								}
-								destCont.innerHTML += buildDiv; numCount += 1;
-							}else{
-								faqContent.innerHTML += buildDiv; numCount += 1;
+							const destCont = document.getElementById("category-"+tempArray[0]);
+							destCont.innerHTML += buildDiv; numCount += 1;
+							if(destCont.style.display != 'block'){
+								destCont.style.display = 'block';
 							}
 						}
-					}else{
+					}else if(tempArray[0] == categoryVal){ // single category only
 						if(tempArray[1].includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
 							faqContent.innerHTML += buildDiv; numCount += 1;
 						}
