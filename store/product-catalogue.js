@@ -129,7 +129,7 @@ iter += 1; productList[iter]="Careaway Resort Est. 2025 Children's Spirit Jersey
 	productImg[iter] = "https://i.imgur.com/C1VBnkZ.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Careaway Resort with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
 
-iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 25.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
+iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 24.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
 	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
 
@@ -138,6 +138,6 @@ iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 
 	productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
 
 
-iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 25.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
+iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
 	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
