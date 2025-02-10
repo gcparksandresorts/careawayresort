@@ -133,11 +133,11 @@ iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 24.99 
 	productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
 	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
 
+iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
+	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
+
 iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large";
 	productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
 	productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
 
-
-iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
-	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
