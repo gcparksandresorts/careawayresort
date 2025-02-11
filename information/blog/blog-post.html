@@ -61,5 +61,34 @@
 
 	<div id='footer' style='margin:0;'></div>
 </body>
-    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/postsBase.js"></script>
+
+	<script>
+		const blogContent = document.getElementById("blogContent");
+		const blogHeader = document.getElementById("blogHeader");
+		const blogFooter = document.getElementById("blogFooter");
+		
+		const blogTitle = document.getElementById("blogTitle");
+	
+		const urlParams = new URLSearchParams(window.location.search);
+	
+			
+		function popPage(){
+			var index = 2;
+				
+			if(urlParams.has("index")){
+				index = urlParams.get("index");
+			}
+
+			if(index != 0){
+				var temp = blogHeadings[index].split(" | ");
+				blogTitle.innerHTML = temp[0] + "Resort Blog | Globe-City's Careaway Resort";
+				blogContent.innerHTML = blogContents[index];
+				blogHeader.innerHTML = "<img src='"+blogImg[index]+"'><h4>Resort Blog | "+blogCategories[temp[2]]+"</h4><h1>"+temp[0]+"</h1><div><h4>"+temp[3]+"</h4><h4>"+temp[1]+"</h4></div>";
+			}
+		}
+	
+		popPage();
+	</script>
 </html>
