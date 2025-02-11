@@ -26,8 +26,8 @@ iter += 1; productList[iter]="productName0 | category1 | price2 | colorList3,col
 */
 
 productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 59.99 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
-	productImg[0] = "https://i.imgur.com/RTTXXNw.jpeg";
-	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with printed Mr. Teddy image for a unique and long-lasting design.";
+	productImg[0] = "https://i.imgur.com/sIImTkp.jpeg";
+	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with vectorized Mr. Teddy image for a unique and long-lasting design.";
 
 productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 59.99 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
 	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
