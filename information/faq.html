@@ -85,7 +85,7 @@
 					let buildDiv = "<div class='collapsible'><h3>" + tempArray[1] + "</h3><div>" +  answerList[i] + "</div></div>";
 
 					if(categoryVal == 0){ // Organized by category
-						if(tempArray[1].includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
+						if(tempArray[1].toLowerCase().includes(searchVal) || searchVal == 'none'){ // check if search keywords is used and if it matches
 							const destCont = document.getElementById("category-"+tempArray[0]);
 							destCont.innerHTML += buildDiv; numCount += 1;
 							if(destCont.style.display != 'block'){
