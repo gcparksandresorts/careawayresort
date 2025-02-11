@@ -25,11 +25,15 @@ iter += 1; productList[iter]="productName0 | category1 | price2 | colorList3,col
 	productDescription[iter] = "shortDescription | longerDescription";
 */
 
-productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 59.99 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
+productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 64.00 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
 	productImg[0] = "https://i.imgur.com/sIImTkp.jpeg";
 	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with vectorized Mr. Teddy image for a unique and long-lasting design.";
 
-productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 59.99 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
+iter += 1; productList[iter]="Mr. Teddy's Adventures With Friends Youth Sweatshirt | 1 | 45.50 | #2E6F40,#422701 | Youth XS,Youth S,Youth M, Youth L, Youth XL";
+	productImg[iter] = "https://i.imgur.com/cfJOFwg.png";
+	productDescription[iter] = "Champion Youth Midweight 50/50 Crewnech Sweatshirt | Coffee is for the adults, but friends are for everyone!";
+
+productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 64.00 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
 	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
 	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders.";
 
