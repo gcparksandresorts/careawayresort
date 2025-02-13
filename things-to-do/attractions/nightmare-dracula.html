@@ -1,0 +1,109 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title id='webpageTitle'>The Nightmare Dracula | Rides & Attractions | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+			body > #pgCont {background:black; color:white;}
+			#footer {margin-top:0;}
+			@keyframes lightning{
+				0%{opacity:0;}
+				20%{opacity:0;}
+				22%{opacity:1;}
+				24%{opacity:0;}
+				26%{opacity:1;}
+				28%{opacity:0;}
+				55%{opacity:0;}
+				57%{opacity:1;}
+				59%{opacity:0;}
+				100%{opacity:0;}
+			}
+			.spacer{background:linear-gradient(90deg,black,maroon,black);}
+		</style>
+
+
+		<!-- BODY CONTENT HERE -->
+	<section id='pgCont'>
+		<div class='banner full' style='position:relative'>
+			<div style='position:absolute;top:0;bottom:0;left:0;right:0;'><img style='width:100%;height:100%;object-fit:cover; animation:lightning 5s linear 0s infinite alternate;' src='https://pngimg.com/d/lightning_PNG25.png'></div>
+			<div style='position:absolute;top:0;bottom:0;left:0;right:0;'><img style='width:100%;height:100%;object-fit:cover; animation:lightning 5s linear 1s infinite alternate; opacity:0; -webkit-transform: scaleX(-1); transform: scaleX(-1);' src='https://pngimg.com/d/lightning_PNG25.png'></div>
+			<img style='position:absolute; width:90%; max-width:700px; height:auto; top:50%; left:50%; transform: translate(-50%, -50%);' src='https://i.imgur.com/LVeVyBz.png'>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
+			<h3>Attraction Information</h3>
+			<div class='halfContainer' id='quickFacts'>
+				<div>
+					<ul>
+						<li><b>Attraction Category: </b><a href='../attractions?category=1'>Thrill Rides</a></li>
+						<li><b>Location: </b>Kingdom of Darkness, <a href='../../destinations/port-of-adventure'>Port of Adventure</a></li>
+						<li><b>Duration: </b>4.5 Minutes</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><b>Minimum Height: </b> HEIGHT</li>
+						<li><b>Queuing: </b>Priority Queue and Single Riders available</li>
+						<li><b>Accessibility: </b>Guest must transfer from wheelchair - <a href='../../information/accessibility'>Learn More</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='tagContainer'><a>4D Coaster</a><a>Dark Ride</a><a>Story Telling</a><a>Scary</a><a>Vampires</a><a>Danse Macabre</a></div>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer' id='moreDescription'>
+			LONG_DESCRIPTION
+			
+			<h3>Know Before You Go</h3><p>KNOW_BEFORE_YOU_GO </p>
+		</div>
+
+		<section id='gcPhotoPass'>
+			<div class='spacer'></div>
+			<div class='container'>
+				<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/gcPhotoPassAd.png' style='width:100%; height:auto; max-width:600px; margin:auto; cursor:pointer;' onclick='window.open("../../tickets/upgrades/gcPhotoPass")'>
+			</div>
+		</section>
+
+
+		<section id='imgBlock'>
+			<div class='spacer'></div>
+				<div class='container'>
+					<div class='miniTileContainer' id='imgBlockContent'>
+						<div><img src='IMAGE_LINK'></div>
+						<div><img src='IMAGE_LINK'></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
+			<b>Guest Safety: </b>Before your visit, review our <a href='../../information/safety-guidelines'>Safety Guidelines</a> and read all posted information at an attraction prior to experiencing. Please speak to attraction operators if you have questions or concerns about your experience.
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container'>
+			<a class='btn white' onclick='history.back()'>Back to previous</a> <a class='btn white' href='../attractions'>Explore all attractions</a>
+		</div>
+
+		<div class='container' style='font-size:12px;'>
+			All attractions and entertainment at Globe-City's Careaway Resort are subject to closure at anytime. Shows are subject to cancelation or delay. See the resort schedule during your visit for showtimes.
+			<p>Attractions and Entertainment located inside Globe-City's Careaway Park, Port of Adventure, and Splashport Bay are accessible only to guests with valid admission to these properties.</p>
+		</div>
+	</section>
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
