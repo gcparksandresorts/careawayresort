@@ -127,11 +127,12 @@
 							var aSubtitle = '';
 							if(tNm[1] != 'none'){aSubtitle = tNm[1]; }else{aSubtitle = '';}
 
-						var hyperLink;
+						var hyperLink; //.replace(/ /g, '+');
 						if(temp[4] == 'clickLink'){hyperLink='page-unavailable';}
 						else if(temp[4].includes("atIndex=")){
-							let linkTo = temp[4].split('=');
-							hyperLink = 'attractions/pages?index='+linkTo[1];
+							let linkTo = temp[4].split('='); // Get the index id from the link
+							let titleLink = aName.replace(/ /g, '+').replace(/'/g, ''); // Add the ride name to end of link (serves no actual purpose)
+							hyperLink = 'attractions/pages?index='+linkTo[1] + "&title=" + titleLink;
 						}
 						else{hyperLink=attractionClickLink+temp[4];}
 					
