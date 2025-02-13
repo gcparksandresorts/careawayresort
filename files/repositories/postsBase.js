@@ -35,5 +35,5 @@ iter += 1; blogHeadings[iter] = "M.Wesley Family Enterprises Becomes Official Fo
 
 // index = 4
 iter += 1; blogHeadings[iter] = "Romantic Inspiration for an Adventerous Valentine's Day at the Careaway Resort | February 1 | 5 | Fruit Valentine | auto";
-	blogImg[iter] = "flashImage";
- 	blogContents[iter] = "blogContents";
+	blogImg[iter] = "https://i.imgur.com/oSHVWEH.jpeg";
+ 	blogContents[iter] = "Valentine's day is nearing and you know what that means: Depression for the singles and a whole lot of stressful planning and expectant SO's for the cuffed. But fret not my friends and lovers, for I have compiled this guide to assist you with the planning, whether you will be visiting alone or with the one you call yours (or yours with 'conditions') -- or even yours in certain 'situations'.";
