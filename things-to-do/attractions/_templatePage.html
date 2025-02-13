@@ -1,0 +1,99 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    
+		<title id='webpageTitle'>ATTRACTION_NAME | Rides & Attractions | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+			#imgBlockContent > div > img {height:auto !important; aspect-ratio:16/9 !important;}
+		</style>
+
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class='fullContainer' style='background:dimgray; color:white;'>
+			<div class='leftContainer'>
+				<div class='columnContainer cBanner dImg' id='introSection'>
+					<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg'>
+					<div>
+						<h1>ATTRACTION_NAME</h1>
+						SHORT_DESCRIPTION
+						<div class='tagContainer'><a>TAGS</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='leftContainer'>
+			<h3>Attraction Information</h3>
+			<div class='halfContainer' id='quickFacts'>
+				<div>
+					<ul>
+						<li><b>Attraction Category: </b>CATEGORY</li>
+						<li><b>Location: </b>LOCATION, PARK</li>
+						<li><b>Duration: </b>DURATION</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><b>Minimum Height: </b> HEIGHT</li>
+						<li><b>Queuing: </b>Priority Queue and Single Riders available</li>
+						<li><b>Accessibility: </b>Guest must transfer from wheelchair - <a href='../../information/accessibility'>Learn More</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer' id='moreDescription'>
+			LONG_DESCRIPTION
+			
+			<h3>Know Before You Go</h3><p>KNOW_BEFORE_YOU_GO </p>
+		</div>
+
+		<section id='gcPhotoPass'>
+			<div class='spacer'></div>
+			<div class='container'>
+				<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/gcPhotoPassAd.png' style='width:100%; height:auto; max-width:600px; margin:auto; cursor:pointer;' onclick='window.open("../../tickets/upgrades/gcPhotoPass")'>
+			</div>
+		</section>
+
+
+		<section id='imgBlock'>
+			<div class='spacer'></div>
+				<div class='container'>
+					<div class='miniTileContainer' id='imgBlockContent'>
+						<div><img src='IMAGE_LINK'></div>
+						<div><img src='IMAGE_LINK'></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
+			<b>Guest Safety: </b>Before your visit, review our <a href='../../information/safety-guidelines'>Safety Guidelines</a> and read all posted information at an attraction prior to experiencing. Please speak to attraction operators if you have questions or concerns about your experience.
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container'>
+			<a class='btn' onclick='history.back()'>Back to previous</a> <a class='btn' href='../attractions'>Explore all attractions</a>
+		</div>
+
+		<div class='container' style='font-size:12px;'>
+			All attractions and entertainment at Globe-City's Careaway Resort are subject to closure at anytime. Shows are subject to cancelation or delay. See the resort schedule during your visit for showtimes.
+			<p>Attractions and Entertainment located inside Globe-City's Careaway Park, Port of Adventure, and Splashport Bay are accessible only to guests with valid admission to these properties.</p>
+		</div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
