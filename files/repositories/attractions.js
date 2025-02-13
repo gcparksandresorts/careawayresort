@@ -26,7 +26,7 @@ attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 |
 iter+=1; attractionList[iter] = "Careaway Castle Mini Golf - Tickets required | 4 | 4 | 1 | clickLink | https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg";
 iter+=1; attractionList[iter] = "Enchanted Forest to Palace Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
 //iter+=1; attractionList[iter] = "Escape from Realinu - none | 1 | 2 | 2 | clickLink | https://miro.medium.com/v2/da:true/resize:fit:1200/0*w5Zv7N4WakVhjhKn";
-iter+=1; attractionList[iter] = "Frankenkoaster - Sponsored by Duracel<sup>TM</sup> | 2 | 1 | 6 | clickLink | https://i.imgur.com/RwM26qC.jpeg";
+iter+=1; attractionList[iter] = "Frankenkoaster - Sponsored by Duracel<sup>TM</sup> | 2 | 1 | 6 | "+shortLink+"frankenkoaster | https://i.imgur.com/RwM26qC.jpeg";
 iter+=1; attractionList[iter] = "Lightspeed - Sponsored by General Electric | 1 | 1 | 5 | clickLink | https://static.wikia.nocookie.net/tron/images/7/77/Clu2LtCycl01.jpg/revision/latest?cb=20110827053101";
 iter+=1; attractionList[iter] = "Looney's Musical Train - Sponsored by Dole | 1 | 2 | 1 | clickLink | https://s7d2.scene7.com/is/image/TWCNews/1203_n13_disney_mickey_minnie_runaway_railway";
 iter+=1; attractionList[iter] = "Mission 14 - Sponsored by Kracken Eyewear | 1 | 1 | 3 | clickLink | https://insidethemagic.net/wp-content/uploads/2021/02/Space-Mountain-Ride.jpg";
