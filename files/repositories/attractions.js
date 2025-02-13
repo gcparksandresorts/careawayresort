@@ -1,6 +1,8 @@
 attractionList = []; attractionCategories = []; attractionLocations = []; attractionAge = [];
 var iter = 0;
 
+const shortLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
+
 // Tabs 2 No wrap
 
 attractionClickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
@@ -34,7 +36,7 @@ iter+=1; attractionList[iter] = "Alpine Sleds Through Yeti Mountain - sponsorTex
 iter+=1; attractionList[iter] = "Temple of Medusa - none | 1 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/medussa1.webp";
 iter+=1; attractionList[iter] = "The CosmiBotz Return - none | 1 | 3 | 1 | atIndex=4 | https://gcparksandresorts.github.io/careawayresort/files/images/banners/kookieBand.webp";
 iter+=1; attractionList[iter] = "The Magic Bakery Ride - none | 1 | 2 | 1 | clickLink | https://aztechadmit.github.io/gcresorthighland/main/images/banner2.jpg";
-iter+=1; attractionList[iter] = "The Nightmare Dracula - none | 2 | 1 | 4 | clickLink | https://i.imgur.com/Iu4oHYO.jpeg";
+iter+=1; attractionList[iter] = "The Nightmare Dracula - none | 2 | 1 | 4 | "+shortLink+"nightmare-dracula | https://i.imgur.com/Iu4oHYO.jpeg";
 iter+=1; attractionList[iter] = "The Quest of Odysseus - none | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/odyseus1.webp";
 iter+=1; attractionList[iter] = "Voyage to Atlantia - A rebuild of the #1 Globe-City darkride! | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/atlantisConcept4.png";
 iter+=1; attractionList[iter] = "Wonder Reel Studio Tour - none | 2 | 4 | 1 | atIndex=2 | https://i.imgur.com/ZMFbfYk.jpeg";
