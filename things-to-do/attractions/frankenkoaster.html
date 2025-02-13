@@ -1,0 +1,107 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+	    <!--
+	    	<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	    -->
+	    
+		<title id='webpageTitle'>ATTRACTION_NAME | Rides & Attractions | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+	
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+			#imgBlockContent > div > img {aspect-ratio:16/9; height:auto;}
+			#pgCont{background:#06402B; color:white;}
+			#pgCont .spacer {background:linear-gradient(90deg,#06402B,springgreen,#06402B);}
+
+			@keyframes bkgMove{
+				0%{top:0; left:0;}
+				100%{top:-100%; left:-100%;}
+			}
+		</style>
+
+
+		<!-- BODY CONTENT HERE -->
+
+		
+	<section id='pgCont'>
+
+		<div class='banner full' style='border-bottom:5px solid black'>
+			<img>
+			<div style='position:absolute; top:0; left:0; right:0; bottom:0; overflow:hidden;'><div style='position:absolute; width:200%; height:200%; background:linear-gradient(90deg,black,darkgreen,black); animation:bkgMove 5s linear 0s infinite alternate;'></div></div>
+			<img src='https://i.imgur.com/d48lOLI.png' style='width:90%; height:auto; position:absolute; bottom:50%; left:50%; transform:translate(-50%,50%); max-width:1500px;'>
+		</div>
+		
+		<div class='leftContainer'>
+			<h3>Attraction Information</h3>
+			<div class='halfContainer' id='quickFacts'>
+				<div>
+					<ul>
+						<li><b>Attraction Category: </b><a href='../attractions?category=1'>Thrill Rides</a></li>
+						<li><b>Location: </b>Kingdom of Darkness, <a href='../../destinations/port-of-adventure'>Port of Adventure</a></li>
+						<li><b>Duration: </b>2 Minutes</li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><b>Minimum Height: </b> 50" (127cm)</li>
+						<li><b>Queuing: </b>Priority Queue and Single Riders available</li>
+						<li><b>Accessibility: </b>Guest must transfer from wheelchair - <a href='../../information/accessibility'>Learn More</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='tagContainer'><a>Suspended Launch Coaster</a><a>Gravity Defying</a><a>Extreme Thrill</a><a>Metalica</a><a>Monsters</a></div>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer' id='moreDescription'>
+			LONG_DESCRIPTION
+
+			<br><br><div class='spacer'></div></br><br>
+			<h3>Know Before You Go</h3><p><em>FRANKENKOASTER</em> is an intense outdoor launched rollercoaster. This ride feautures intense movevement and forces, multiple inversions, air time, steep drops, and hard stops. Expectant mothers and those with medical conditions which may be aggrevated by this experience should not ride. The restraints on this attraction may be restricting to larger guests.</p>
+		</div>
+
+		<section id='gcPhotoPass'>
+			<div class='spacer'></div>
+			<div class='container'>
+				<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/gcPhotoPassAd.png' style='width:100%; height:auto; max-width:600px; margin:auto; cursor:pointer;' onclick='window.open("../../tickets/upgrades/gcPhotoPass")'>
+			</div>
+		</section>
+
+
+		<section id='imgBlock'>
+			<div class='spacer'></div>
+				<div class='container'>
+					<div class='miniTileContainer' id='imgBlockContent'>
+						<div><img src='IMAGE_LINK'></div>
+						<div><img src='IMAGE_LINK'></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
+			<b>Guest Safety: </b>Before your visit, review our <a href='../../information/safety-guidelines'>Safety Guidelines</a> and read all posted information at an attraction prior to experiencing. Please speak to attraction operators if you have questions or concerns about your experience.
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container'>
+			<a class='btn white' onclick='history.back()'>Back to previous</a> <a class='btn white' href='../attractions'>Explore all attractions</a>
+		</div>
+
+		<div class='container' style='font-size:12px;'>
+			All attractions and entertainment at Globe-City's Careaway Resort are subject to closure at anytime. Shows are subject to cancelation or delay. See the resort schedule during your visit for showtimes.
+			<p>Attractions and Entertainment located inside Globe-City's Careaway Park, Port of Adventure, and Splashport Bay are accessible only to guests with valid admission to these properties.</p>
+		</div>
+	</section>
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer' style='margin-top:0;'></div>
+</body>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+</html>
