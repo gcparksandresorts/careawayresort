@@ -41,6 +41,6 @@ iter+=1; attractionList[iter] = "The Quest of Odysseus - none | 2 | 2 | 2 | clic
 iter+=1; attractionList[iter] = "Voyage to Atlantia - A rebuild of the #1 Globe-City darkride! | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/atlantisConcept4.png";
 iter+=1; attractionList[iter] = "Wonder Reel Studio Tour - none | 2 | 4 | 1 | atIndex=2 | https://i.imgur.com/ZMFbfYk.jpeg";
 iter+=1; attractionList[iter] = "World of Ghibli - Sponsored by Aztech Cinema | 1 | 3 | 2 | atIndex=3 | ../files/images/banners/ghibliArt.webp";
-iter+=1; attractionList[iter] = "8Lanes Bowling Alley and Sports Bar - Pay per game | 4 | 4 | 1 | 8lanes | https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesAlley.jfif";
+iter+=1; attractionList[iter] = "8Lanes Bowling Alley and Sports Bar - Pay per game | 4 | 4 | 1 | "+shortLink+"8lanes | https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesAlley.jfif";
 iter+=1; attractionList[iter] = "Buddy's Wooden Wheel - sponsorText | 1 | 3 | 1 | atIndex=7 | https://i.imgur.com/E0Bbpt0.jpeg";
 
