@@ -172,6 +172,8 @@
 							}else if(temp[4] == 'auto'){ // Blog Post
 								
 								goToLink = "blog/blog-post?index=" + i + "&title=" + textFixedLink;
+							}else{
+								goToLink = temp[4];
 							}
 		
 							let buildDiv = "<div><img src='https://cdn-icons-png.flaticon.com/512/4922/4922073.png'><div><h4>"+temp[0]+"</h4><p>"+blogCategories[temp[2]]+" | "+temp[1]+"</p><a href='"+goToLink+"'></a></div></div>";
