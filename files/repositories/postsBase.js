@@ -7,6 +7,7 @@ blogCategories = ["none", "Operations Updates", "Attractions", "Restaurants and 
 //		    0		1			2		3			5				6
 
 var iter = 0;
+const shortLink = "https://gcparksandresorts.github.io/careawayresort/information/blog/";
 
 // 
 /*
@@ -37,3 +38,5 @@ iter += 1; blogHeadings[iter] = "M.Wesley Family Enterprises Becomes Official Fo
 iter += 1; blogHeadings[iter] = "Romantic Inspiration for an Adventerous Valentine's Day at the Careaway Resort | February 1 | 5 | Fruit Valentine | auto";
 	blogImg[iter] = "https://i.imgur.com/oSHVWEH.jpeg";
  	blogContents[iter] = "Valentine's day is nearing and you know what that means: Depression for the singles and a whole lot of stressful planning and expectant SO's for the cuffed. But fret not my friends and lovers, for I have compiled this guide to assist you with the planning, whether you will be visiting alone or with the one you call yours (or yours with 'conditions') -- or even yours in certain 'situations'.";
+
+ iter += 1; blogHeadings[iter] = "A Look Back to Opening Day of Globe-City's Careaway Resort | May 28, 2025 | category2 | author3 | "+shortLink+"look-back-opening-day";
