@@ -22,6 +22,11 @@ ind += 1; indexSpotlight[ind] = "March | Puertas Nuevas residents: save up to $2
 ind += 1; indexSpotlight[ind] = "March | Spring Break fun for everyone | As spring comes around, enjoy the sunshine with a day of fun. Explore special ticket pricing and more for an affordable vacation that's fun for everyone | "+webLink+"tickets | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/vipBanner1.jpg";
 ind += 1; indexSpotlight[ind] = "March | LaLa's Guide to fun in the sun | Whether its fun with family or cute spring dates or just-because, view this guide to maximize your fun in the sun in and out of the parks | "+webLink+"information/blog/fun-in-the-sun | https://i.imgur.com/danB9Na.jpeg";
 
+// May
+ind += 1; indexSpotlight[ind] = "May | Celebrating Our Opening Day | Take a blast to the past and explore the hectic opening day of Globe-City's Careaway Resort | "+webLink+"information/blog/look-back-opening-day | https://i.imgur.com/pa18xQe.jpeg";
+
 // June
 ind += 1; indexSpotlight[ind] = "June | Loud, Proud, and full of Love! | Celebrate pride month at an all-night party commemorating you and all your colors. Adventerous Nights of Pride is back in Puertas Nuevas and we're ready to be louder and prouder than ever! | click_link | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg";
 ind += 1; indexSpotlight[ind] = "June | The Witches are back! | Welcome Elphaba and Galinda back to the Sasson Theater stage for a summer of defying gravity and beating up old wizards! See Wicked and more with special summer entertainment!  | "+webLink+"things-to-do/entertainment?category=0&location=0&season=4 | https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp";
+
+
