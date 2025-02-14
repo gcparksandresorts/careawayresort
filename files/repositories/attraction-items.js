@@ -3,7 +3,7 @@ attractionDescrition = [];
 attractionImg = [];
 
 queueText = ["Standby queue only", "<a href='../../tickets/gcvip'>Priority Queuing</a> available", "<a href='../../tickets/gcvip'>Priority Queuing</a> and <a href='../../information/single-riders'>Single Riders</a> available", "Not Applicable"];
-		// 0			1 (VIP only)				2 (VIP and single)		3 (not applicable)
+		// 0				1 (VIP only)									2 (VIP and single)				3 (not applicable)
 
 accessibilityInfo = ["Guest may remain in wheelchair or ECV", "Guest must transfer from wheelchair", "Some vehicles can accomodate standard wheelchairs"];
 	//		0						1				2
