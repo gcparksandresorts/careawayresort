@@ -61,3 +61,7 @@ attractionItems[6] = "Starfield Horizons/Audiowide | 3 | Galaxy Center,1 | 5 Min
 attractionItems[7] = "Buddy's Wooden Wheel/none | 3 | Creature's Cove,1 | 5 Minutes | 0 | 1 | 1 | no";
 	attractionDescrition[7] = "Step aboard this family friendly wheel for a delightful spin around Buddy's workshop. | Young Children, Family Friendly, Delightful, Spinning | Get a sweet view of Creatur's Cove aboard Buddy's Wooden Wheel, his newest invention!";
 	attractionImg[7] = "https://i.imgur.com/E0Bbpt0.jpeg | otherImg1 - otherImg";
+
+attractionItems[8] = "The Magic Bakery Ride/font | 2 | Enchanted Forest,1 | 5 Minutes | 1 | 1 | 2 | no";
+	attractionDescrition[8] = "Hope aboard a friendly Magic Cat and take a magical journey into the candied world of Sugarville accompanied by the Magic Bakery's Waffle Witch as she tours you around the farms where she sources her delectible produce. | Magical,Sweets & Treats,Whimsical,Family Fun,Colorful,Cartoon | longParagraph2";
+	attractionImg[8] = "https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner2.jpg | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRQkRn-jRkUXNvGGmxPmdCpVrsFgVTZVHpKw&usqp=CAU - https://thumbs.dreamstime.com/b/candy-land-landscape-night-gingerbread-house-sweet-forest-magic-light-d-illustration-85970831.jpg";
