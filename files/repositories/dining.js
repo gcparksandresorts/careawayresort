@@ -33,5 +33,8 @@ iter+=1;
 diningList[iter] = "Mr. Teddy's Coffee Corner | Greet the cutsey creatures of Creature Cove and enjoy some simple sipping of delicious coffee from the famous bear himself | 1 | 4 | 0,4 | clickLink | https://img.freepik.com/premium-photo/teddy-bear-chair-coffee-shop-kid-room-empty-space-add-artwork-3d-rendering_1028938-222455.jpg";
 
 iter+=1;
+diningList[iter] = "The Hungry Hippo | Enjoy hefty minefraftian classics in a woodsy atmosphere right by the hippo fountain | 1 | 1 | 2,3 | clickLink | imageLink";
+
+iter+=1;
 diningList[iter] = "Yetti Yum | oo yummy | 2 | 4 | 2,4 | clickLink | imageLink";
 
