@@ -59,7 +59,7 @@ entertainmentItems[3] = "Dreams of Adventure/Marhey | 2 | Atlantis Castle,2 | 15
 	entertainmentImages[3] = "https://media.disneylandparis.com/d4th/en-gb/images/n040208_2031jan09_world_disney-elctrical-sky-parade-drones_16-9_tcm752-271775.jpg?w=960 | none";
 
 entertainmentItems[4] = "Kingdom of Darkness: Alive/none | 6 | Kingdom of Darkness,2 | 12 Minutes | 0 | 0";
-	entertainmentDescription[4] = "shortDescription0 | tagList1,tag2 | longDescription2";
+	entertainmentDescription[4] = "<b>Available during Scareaway Screams Event Only</b><p>Witness Draculas decrepit castle ignite in horrific sights and sounds</p> | Projection Show,Pyrotechnics,Lasers,Light Show,Awe | longDescription2";
 	entertainmentImages[4] = "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg | none";
 
 entertainmentItems[7] = "AquaMagic - Rivers of Light/none | 2 | Palace Gardens,1 | 22 Minutes | 3 | 2";
