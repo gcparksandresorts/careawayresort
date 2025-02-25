@@ -13,7 +13,7 @@ const shortLink = "https://gcparksandresorts.github.io/careawayresort/informatio
 /*
 OPERATIONS UPDATE (clickLink = auto) -> auto will take the integer value of iter
 
-iter += 1; blogHeadings[iter] = "blogTitle0 | postDate1 | 1 | author3 | auto";
+iter += 1; blogHeadings[iter] = "blogTitle0 | postDate1 | 1 | Resort Operations | auto";
 	operationContents[iter] = "operationsText";
 
  BLOG POST (clickLink = auto)
@@ -42,3 +42,7 @@ iter += 1; blogHeadings[iter] = "Romantic Inspiration for an Adventerous Valenti
 iter += 1; blogHeadings[iter] = "A Look Back to Opening Day of Globe-City's Careaway Resort | May 28, 2025 | 9 | author3 | "+shortLink+"look-back-opening-day";
 
 iter += 1; blogHeadings[iter] = "Behind the Scenes of the Careaway Resort | February 18 | 9 | author3 | "+shortLink+"behind-the-scenes";
+
+// index = 7
+iter += 1; blogHeadings[iter] = "Closed For Referb: Attraction Referbishment Calendar | January 1 | 1 | Resort Operations | auto";
+	operationContents[iter] = "operationsText";
