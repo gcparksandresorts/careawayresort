@@ -158,7 +158,9 @@
 			if(loadDiv.classList.contains("hidden")){
 				loadDiv.classList.remove("hidden");
 			}
-			setTimeout(function(){document.getElementById("loadingWindow").classList.add("hidden");},time);
+			if(time != 'infinite'){
+				setTimeout(function(){document.getElementById("loadingWindow").classList.add("hidden");},time);
+			}
 		}
 
 		function initializeWebstore(){
@@ -166,11 +168,15 @@
 			// Search Parameters
 			const searchParams = new URLSearchParams(window.location.search);
 
-				if(searchParams.has("tikType")){
+				if(searchParams.has("form")){
+					if(searchParams.has("tikType")){
 					categoryVal = searchParams.get("category");
 					selectCategory.value = categoryVal;
+					}else{
+						runLoad("Loading Tickets and Passes",4000);
+					}
 				}else{
-					runLoad("Loading Tickets and Passes",4000);
+					runLoad("An error has occurred. Please navigate back to the previous page and try again<br>Aztech Admit - Code 0404","infinite");
 				}
 		}
 
