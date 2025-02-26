@@ -48,7 +48,8 @@
 				<h3 id='ldTxt'>Loading Webstore...</h3>
 			</div>
 		</div>
-            <div class="container" id="ticketType">
+	<!-- DAY TICKETS -->
+            <div class="container" id="dayTicketType" style='display:none;'>
                 <h2>Select Ticket Type</h2>
                 <div class="leftContainer">
                     <h3>General Admission</h3>
@@ -140,6 +141,24 @@
                     <a href="promotions">More Information</a>
                 </div>
             </div>
+
+	<!-- ANNUAL PASSPORTS -->
+            <div class="container" id="apTicketType" style='display:none;'>
+                <h2>Select Ticket Type</h2>
+                <div class="leftContainer">
+                    <h3>Annual Passports</h3>
+                    <div class="miniTileContainer dImg">
+                        <div>
+                            <img src="https://i.imgur.com/9gS8Xri.jpeg">
+                            <h3>Puertas Nuevas Resident Admission Single-Park</h3>
+                            <h4>Starting at $65</h4>
+                            For eligibile PN Residents Only. Admission to ONE theme park per day (excluding Splashport Bay)
+                            <a href="?form=day-tickets&tikType=0"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
         </section>
         
 		
@@ -167,17 +186,32 @@
 
 			// Search Parameters
 			const searchParams = new URLSearchParams(window.location.search);
+			var formType;
 
 				if(searchParams.has("form")){
+
+					formType = searchParams.get("form");
+					
 					if(searchParams.has("tikType")){
-					categoryVal = searchParams.get("category");
-					selectCategory.value = categoryVal;
+						
 					}else{
 						runLoad("Loading Tickets and Passes",4000);
+						switch(formType){
+							case 'day-tickets':
+								document.getElementById("dayTicketType").style.display='block';
+								break;
+							case 'annual-passports':
+								document.getElementById("apTicketType").style.display='block';
+								break;
+							default:
+								document.getElementById("dayTicketType").style.display='block';
+								break;
+						}// end of switch(formType)
 					}
+					
 				}else{
 					runLoad("An error has occurred. Please navigate back to the previous page and try again<br>Aztech Admit - Code 0404","infinite");
-				}
+				}// end of if(searchParams.has("form"))
 		}
 
 		initializeWebstore();
