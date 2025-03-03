@@ -148,3 +148,19 @@ iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 
 iter += 1; productList[iter]="Careaway Resort Find Adventure Drawstring Backpack | 2 | 28.00 | #00008B,#696969 | One Size";
 	productImg[iter] = "https://i.imgur.com/PZSZfjW.jpeg";
 	productDescription[iter] = "Ultra-durable drawstring backback with extra interior padding and zippered front pocket | Remember in Minecraft when you'd be out mining and wishing for extra inventory space? Well open up those extra slots with this durable and sleek drawstring bag! And better yet, when you don't need it anymore, it'll roll up tight and fit into your fatass back pocket!";
+
+iter += 1; productList[iter]="Careaway Resort Pride Champion Hoodie | 1 | 64.00 | #000000,#FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/MwOavWX.jpeg";
+	productDescription[iter] = "Champion Originals hooded sweatshirt | Celebrate pride with this colorful version of the classic Careaway Resort sweatshirt.";
+
+iter += 1; productList[iter]="Love is an Adventure Pride Champion Hoodie | 1 | 64.00 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/cKJ3Q7S.jpeg";
+	productDescription[iter] = "Champion Originals hooded sweatshirt | Love is an adventure";
+
+iter += 1; productList[iter]="Love is an Adventure Pride Mens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/NAtzWXU.jpeg";
+	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | Love is an adventure, for the guys and the gays!";
+
+iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
+	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo | A sleek way to let everyone know where you go to experience Adventure.";
