@@ -34,5 +34,4 @@ ind += 1; indexSpotlight[ind] = "May | Celebrating Our Opening Day | Take a blas
 // June
 ind += 1; indexSpotlight[ind] = "June | Loud, Proud, and full of Love! | Celebrate pride month at an all-night party commemorating you and all your colors. Adventerous Nights of Pride is back in Puertas Nuevas and we're ready to be louder and prouder than ever! | click_link | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg";
 ind += 1; indexSpotlight[ind] = "June | The Witches are back! | Welcome Elphaba and Galinda back to the Sasson Theater stage for a summer of defying gravity and beating up old wizards! See Wicked and more with special summer entertainment!  | "+webLink+"things-to-do/entertainment?category=0&location=0&season=4 | https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp";
-
-
+ind += 1; indexSpotlight[ind] = "June | Celebrate Pride With Exclusive Merch | Power to the gays! Proudly display your queer-ness with hot designer merch fresh from our studio. The gays are really cookin' with these! | "+webLink+"store/catalogue?search=pride | https://i.imgur.com/8TeM4rs.jpeg";
