@@ -161,6 +161,10 @@ iter += 1; productList[iter]="Love is an Adventure Pride Mens T-shirt | 1 | 24.9
 	productImg[iter] = "https://i.imgur.com/NAtzWXU.jpeg";
 	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | Love is an adventure, for the guys and the gays!";
 
+iter += 1; productList[iter]="Love is an Adventure Pride Womens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/8TeM4rs.jpeg";
+	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | Love is an adventure, for the girls and the gays!";
+
 iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
 	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo | A sleek way to let everyone know where you go to experience Adventure.";
