@@ -12,9 +12,16 @@
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<style>
-			.resultBin {margin-bottom:20px; width:100%; padding:10px; background:#efefef; border:1px solid black; text-align:left; animation:popIn 0.5s;}
+			.resultBin, .errorBin {margin-bottom:20px; width:100%; padding:10px; background:#efefef; border:1px solid black; text-align:left; animation:popIn 0.5s;}
+			.errorBin {animation:errorIn 0.5s; color:maroon;}
+			
 			@keyframes popIn{
 				0%{background:green; opacity:0;}
+				50%{opacity:1;}
+				100%{background:#efefef;}
+			}
+			@keyframes errorIn{
+				0%{background:red; opacity:0;}
 				50%{opacity:1;}
 				100%{background:#efefef;}
 			}
@@ -26,7 +33,7 @@
 
 		<div class='container filled'>
 			<label for='codeInput'>Enter Ticket ID (Barcode): </label>
-			<input id='codeInput' type='text' onchange="readTicket(this.value); this.value='';">
+			<input id='codeInput' type='text' onchange="runTest(this.value); this.value='';">
 		</div>
 
 		<div class='container' id='ticketResults' style='padding-top:0;'>
@@ -41,40 +48,34 @@
 	<div id='footer'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/generateTicketCode.js"></script>
 
 	<script>
 		const ticketResults = document.getElementById("ticketResults");
 		var numElements = 0;
 		
-		function readTicket(value){
+		function runTest(value){
 			if(value != ""){
 				numElements += 1;
-	
-				let temp = value.split("GC");
-					let tempTwo = temp[1].split("AO");
-					let nameCode = tempTwo[0];
-					let addOnCode = tempTwo[1];
 
-				// Get Ticket Type
-				let tikType = temp[0].substring(4,6);
-				let visDate = temp[0].substring(0,2) + " - " + temp[0].substring(2,4);
-				
-				// Decode Name
-				let nameVal = "";
-				for (let i = 0; i < nameCode.length; i += 2) {
-				        let numStr = nameCode.substring(i, i + 2); // get two digits at a time
-				        let charCode = parseInt(numStr) + 64; // Convert number back to ASCII code
-				        nameVal += String.fromCharCode(charCode); // Convert ASCII code to letter
-				}
-				
 				let divCreated = document.createElement("div");
-					divCreated.id = "result-"+numElements;
+				divCreated.id = "result-"+numElements;
+
+				try {
+				 	const ticketInfo = readTicket(value);
+
 					divCreated.className = "resultBin";
 					divCreated.innerHTML = "<ul><li><b>Ticket ID</b>: "+value+"</li> \
-						<li><b>Ticket Type</b>: "+tikType+"</li> \
-						<li><b>Ticket Holder</b>: "+nameVal+"</li> \
-						<li><b>Date of Visit</b>: "+visDate+"</li> \
+						<li><b>Ticket Type</b>: "+ticketInfo[1]+"</li> \
+						<li><b>Ticket Holder</b>: "+ticketInfo[0]+"</li> \
+						<li><b>Date of Visit</b>: "+ticketInfo[2]+"</li> \
 						</ul>";
+				} catch {
+				 	divCreated.className = "errorBin";
+					divCreated.innerHTML = "<ul><li><b>Ticket ID</b>: "+value+"</li> \
+						<li>Unable to read ticket ID -> INVALID</li> \
+						</ul>";
+				}
 							
 				ticketResults.insertBefore(divCreated, ticketResults.children[0]);
 			}
