@@ -1,4 +1,4 @@
-function generateTicket(type,date,numDays,name){
+function generateTicket(type,date,numDays,name,addOn){
 	// type : # - index value of the type of ticket
 	// date : MM-DD - dual-integer value of month and day of first visit
 	// numDays : ### - number of days the ticket is valid for following the first visit
@@ -32,7 +32,7 @@ function generateTicket(type,date,numDays,name){
 	// Convert Name to Integer Values
 	
 
-	outputCode += "AO";
+	outputCode += "AO" + addOn;
 
 	console.log("Generated Code: " + outputCode);
 
