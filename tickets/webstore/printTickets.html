@@ -107,16 +107,23 @@
 
 <script>
 	const printContent = document.getElementById("printContent");
-	//let ticketList = "TYPE | DATE | NUMDAYS | NAME1,NAME2,NAME3";
+	//let ticketList = "TYPE | DATE | NUMDAYS | NAME1,NAME2,NAME3 | ADDON";
 	// generateTicket(type,date,numDays,name)
 
-	let ticketList = "1 | 03-15 | 2 | Reuven,Andrew";
+	let ticketList = "1 | 03-15 | 2 | Reuven,Andrew | none";
 
 		const values = ticketList.split(" | ");
 		const Names = values[3].split(",");
 
+		var addOnVal;
+
+		if(values[4] != 'none'){
+		}else{
+			addOnVal = "0000"
+		}
+
 		for(i = 0; i < Names.length; i++){
-			let ticketCode = generateTicket(values[0], values[1], values[2], Names[i]);
+			let ticketCode = generateTicket(values[0], values[1], values[2], Names[i], addOnVal);
 			let barcodeID = "barcode-" + i;
 			let tikNum = i+1;
 			printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
@@ -137,19 +144,6 @@
 		        });
 		}// end of forLoop
 
-	
-	 // Generate a ticket code
-        let ticketCode = generateTicket(5, "03-15", 3, "Andrew","0000");
-
-        // Generate the barcode
-        JsBarcode("#barcode-1", ticketCode, {
-            format: "CODE128",
-            lineColor: "#000",
-            width: 1,
-            height: 40,
-	    fontSize: 12,
-            displayValue: true
-        });
 </script>
 	
 </html>
