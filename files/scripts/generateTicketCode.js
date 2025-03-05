@@ -18,7 +18,7 @@ function generateTicket(type,date,numDays,name,addOn){
 	}
 
 	let result = "GC"; // Initialize an empty string to store the result
-	name = name.toUpperCase().replace(/\s/g, '-');
+	name = name.toUpperCase().replace(/\s/g, '');
 	
     	for (let i = 0; i < name.length; i++) {
 		if(name.charCodeAt(i) != 32){
