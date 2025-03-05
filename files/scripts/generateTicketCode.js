@@ -4,6 +4,8 @@ function generateTicket(type,date,numDays,name){
 	// numDays : ### - number of days the ticket is valid for following the first visit
 	// name: ABCDEFG - letter value of the first name, no spaces
 
+	// Final code: MMDDTTGCnametotextAOaddons
+
 	var outputCode = "";
 
 	let temp = date.split("-");
