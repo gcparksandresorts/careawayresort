@@ -1,0 +1,83 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+
+	    	<!--
+	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	   	 -->
+	    
+		<title>Ticket Validator | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+			.resultBin {margin-bottom:20px; width:100%; padding:10px; background:#efefef; border:1px solid black; text-align:left; animation:popIn 0.5s;}
+			@keyframes popIn{
+				0%{background:green; opacity:0;}
+				50%{opacity:1;}
+				100%{background:#efefef;}
+			}
+		</style>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class='titleBar silver'><h2>Ticket Validator</h2>Internal use only</div>
+
+		<div class='container filled'>
+			<label for='codeInput'>Enter Ticket ID (Barcode): </label>
+			<input id='codeInput' type='text' onchange="readTicket(this.value); this.value='';">
+		</div>
+
+		<div class='container' id='ticketResults' style='padding-top:0;'>
+			<div id='result-0'></div>
+		</div>
+		<div class='container'>
+			<button onclick='document.getElementById("ticketResults").innerHTML = "";'>Clear Results</button>
+		</div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+
+	<script>
+		const ticketResults = document.getElementById("ticketResults");
+		var numElements = 0;
+		
+		function readTicket(value){
+			if(value != ""){
+				numElements += 1;
+	
+				let temp = value.split("GC");
+					let tempTwo = temp[1].split("AO");
+					let nameCode = tempTwo[0];
+					let addOnCode = tempTwo[1];
+
+				// Get Ticket Type
+				let tikType = temp[0].substring(4,6);
+				let visDate = temp[0].substring(0,2) + " - " + temp[0].substring(2,4);
+				
+				// Decode Name
+				let nameVal = "";
+				for (let i = 0; i < nameCode.length; i += 2) {
+				        let numStr = nameCode.substring(i, i + 2); // get two digits at a time
+				        let charCode = parseInt(numStr) + 64; // Convert number back to ASCII code
+				        nameVal += String.fromCharCode(charCode); // Convert ASCII code to letter
+				}
+				
+				let divCreated = document.createElement("div");
+					divCreated.id = "result-"+numElements;
+					divCreated.className = "resultBin";
+					divCreated.innerHTML = "<ul><li><b>Ticket ID</b>: "+value+"</li> \
+						<li><b>Ticket Type</b>: "+tikType+"</li> \
+						<li><b>Ticket Holder</b>: "+nameVal+"</li> \
+						<li><b>Date of Visit</b>: "+visDate+"</li> \
+						</ul>";
+							
+				ticketResults.insertBefore(divCreated, ticketResults.children[0]);
+			}
+		}
+	</script>
+</html>
