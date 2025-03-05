@@ -22,11 +22,12 @@
 		.leftContainer {padding-top:20px; padding-bottom:20px; font-size:12px;}
         </style>
 
-<body onload='window.print()'>
+<body onload='window.print()' id='printContent'>
 
 		
 
 		<!-- BODY CONTENT HERE -->
+	<!--
 	<section>
 		<div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div>
 		<div class='titleBar silver'><h2>Theme Park / Event Admission 1/2</h2></div>
@@ -44,14 +45,12 @@
 		<div class='spacer'></div>
 		<div class='leftContainer'>
 			<h3>Ticket holder: Reuven</h3>
-			This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br>
-			<b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b>
-			<p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p>
-			<p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p>
+			This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p>
 		</div>
 		
-		<div class='titleBar silver' style='position:absolute; bottom:0;'><img style='width:300px; height:auto;' src='https://i.imgur.com/5jnXk1N.png'></div>
+		<div class='titleBar silver' style='position:absolute; bottom:0;'><svg class='barcodeDisp' id="barcode-1"></svg></div>
 	</section>
+	
 	<section>
 		<div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div>
 		<div class='titleBar silver'><h2>Theme Park / Event Admission 2/2</h2></div>
@@ -96,10 +95,61 @@
 		
 		<div class='titleBar silver' style='position:absolute; bottom:0;'><img style='width:300px; height:auto;' src='https://i.imgur.com/5jnXk1N.png'></div>
 	</section>
-       
+       -->
             
 		
 		<!-- END OF BODY CONTENT -->
 
 </body>
+	
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+<script src='https://gcparksandresorts.github.io/careawayresort/files/scripts/generateTicketCode.js'></script>
+
+<script>
+	const printContent = document.getElementById("printContent");
+	//let ticketList = "TYPE | DATE | NUMDAYS | NAME1,NAME2,NAME3";
+	// generateTicket(type,date,numDays,name)
+
+	let ticketList = "1 | 03-15 | 2 | Reuven,Andrew";
+
+		const values = ticketList.split(" | ");
+		const Names = values[3].split(",");
+
+		for(i = 0; i < Names.length; i++){
+			let ticketCode = generateTicket(values[0], values[1], values[2], Names[i]);
+			let barcodeID = "barcode-" + i;
+			let tikNum = i+1;
+			printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
+					<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+Names.length+"</h2></div> \
+					<div class='leftContainer'><img src=''><div></div></div> \
+					<div class='spacer'></div> \
+					<div class='leftContainer'><h3>Ticket holder: "+Names[i]+"</h3> \
+					This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p> \
+					</div><div class='titleBar silver' style='position:absolute; bottom:0;'><svg class='barcodeDisp' id="+barcodeID+"></svg></div>";
+
+			JsBarcode("#"+barcodeID, ticketCode, {
+		            format: "CODE128",
+		            lineColor: "#000",
+		            width: 1,
+		            height: 40,
+			    fontSize: 12,
+		            displayValue: true
+		        });
+		}// end of forLoop
+
+	
+	 // Generate a ticket code
+        let ticketCode = generateTicket(5, "03-15", 3, "Andrew");
+
+        // Generate the barcode
+        JsBarcode("#barcode-1", ticketCode, {
+            format: "CODE128",
+            lineColor: "#000",
+            width: 1,
+            height: 40,
+	    fontSize: 12,
+            displayValue: true
+        });
+</script>
+	
 </html>
