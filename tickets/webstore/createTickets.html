@@ -1,0 +1,41 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+
+	    	<!--
+	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	   	 -->
+	    
+		<title>Create Ticket Code | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style></style>
+
+		<div class='titleBar silver'><h1>Ticket Code Generator</h1>Internal Use only</div>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class='container filled'>
+			<label for='txtInput'>Enter Name</label>
+			<input type='text' id='txtInput' oninput="validateInput(this)">
+			<p>
+				<button>Generate Ticket ID</button>
+			</p>
+		</div>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="https://gcparksandresorts.github.io/careawayresort/files/scripts/generateTicketCode.js"></script>
+
+	<script>
+		// Allow only letters and spaces in the text input
+		function validateInput(input) {
+	            input.value = input.value.replace(/[^a-zA-Z\s]/g, ''); // Remove any character that is NOT a letter or space
+	        }
+	</script>
+</html>
