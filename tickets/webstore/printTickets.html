@@ -110,6 +110,67 @@
 	//let ticketList = "TYPE | DATE | NUMDAYS | NAME1,NAME2,NAME3 | ADDON";
 	// generateTicket(type,date,numDays,name)
 
+	const searchParams = new URLSearchParams(window.location.search);
+
+	var idList;
+
+	// Get ticket IDs from URL Parameters
+	if(searchParams.has("tikIds")){
+			idList = searchParams.get("tikIds");
+	}else{
+		window.open("../../error","_self");
+	}
+
+	// Seperate ticket IDs
+	if(idList.includes("+")){ // multiple tickets
+		idList = idList.split("+");
+		for(i = 0; i < idList.length; i++){
+			if(idList[i].includes("ADDON")){ // not admission, addOn ticket (parking voucher)
+				// CODE TO GENERATE TICKET FOR PARKING VOUCHER, ETC.
+			}else{
+				try{
+					let temp = readTicket(idList[i]);
+					// name - type - date - numDay - addOn
+						let tikNum = i+1;
+						let barcodeID = "barcode-" + i;
+					// Create the ticket
+						printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
+							<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+idList.length+"</h2></div> \
+								<div class='leftContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4>Valid for Tier # dates ($90)</h4>Description of ticket</div></div> \
+							<div class='spacer'></div> \
+							<p><h4>Ticket Add Ons</h4><ul><li>None</li></ul></p>\
+							<div class='spacer'></div> \
+								<div class='leftContainer'><h3>Ticket holder: "+temp[0]+"</h3> \
+								This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p> \
+								<p style='color:blue;'><b>To ensure successful scan - </b> Print this page full-size, or half-size at minimum (2 pages per sheet)</p>\
+							</div><div class='titleBar silver' style='position:absolute; bottom:0;'><svg class='barcodeDisp' id="+barcodeID+"></svg></div>";
+
+				} catch {
+					alert("An error has occurred");
+				}
+				
+			}
+			
+		}
+	}else{ // just one ticket
+		let temp = readTicket(idList[i]);
+		// name - type - date - numDay - addOn
+			let tikNum = 1;
+			let barcodeID = "barcode-" + 1;
+		// Create the ticket
+			printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
+				<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+idList.length+"</h2></div> \
+					<div class='leftContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4>Valid for Tier # dates ($90)</h4>Description of ticket</div></div> \
+				<div class='spacer'></div> \
+				<p><h4>Ticket Add Ons</h4><ul><li>None</li></ul></p>\
+				<div class='spacer'></div> \
+					<div class='leftContainer'><h3>Ticket holder: "+temp[0]+"</h3> \
+					This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p> \
+					<p style='color:blue;'><b>To ensure successful scan - </b> Print this page full-size, or half-size at minimum (2 pages per sheet)</p>\
+				</div><div class='titleBar silver' style='position:absolute; bottom:0;'><svg class='barcodeDisp' id="+barcodeID+"></svg></div>";
+	}
+
+	/*
 	let ticketList = "1 | 03-15 | 2 | Reuven,Andrew | none";
 
 		const values = ticketList.split(" | ");
