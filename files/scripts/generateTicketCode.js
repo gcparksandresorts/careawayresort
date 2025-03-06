@@ -48,7 +48,7 @@ function readTicket(ticketID){
 	let temp1= ticketID.split("GC");
 		let temp2 = temp1[1].split("AO"); // seperate name and addOns sections
 		let nameCode = temp2[0]; // name
-			let temp2 = temp2[1].split("D"); // seperate addOns and number of days
+			temp2 = temp2[1].split("D"); // seperate addOns and number of days
 		let addOnCode = temp2[0]; // add on
 		let numDays = temp2[1]; // number of days
 	
