@@ -156,7 +156,7 @@
 					        });
 
 				} catch {
-					alert("An error has occurred");
+					alert("An error has occurred - unable to print one or more tickets");
 				}
 				
 			}
@@ -168,6 +168,8 @@
 		// name - type - date - numDay - addOn
 			let tikNum = 1;
 			let barcodeID = "barcode-" + 1;
+
+		try {
 		// Create the ticket
 			printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
 				<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+idList.length+"</h2></div> \
@@ -188,6 +190,9 @@
 			    fontSize: 13,
 			    displayValue: true
 			});
+		} catch {
+			alert("An error has occurred - unable to print one or more tickets");
+		}
 	} // generate 1 ticket
 
 </script>
