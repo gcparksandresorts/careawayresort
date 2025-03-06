@@ -8,8 +8,8 @@ function generateTicket(type,date,numDays,name,addOn){
 
 	var outputCode = "";
 
-	let temp = date.split("-");
-	outputCode = temp[0] + "" + temp[1];
+	let temp1= date.split("-");
+	outputCode = temp1[0] + "" + temp1[1];
 
 	if(type < 10){
 		outputCode += "0" + type;
@@ -20,9 +20,9 @@ function generateTicket(type,date,numDays,name,addOn){
 	let result = "GC"; // Initialize an empty string to store the result
 	name = name.toUpperCase(); //.replace(/\s/g, '-')
 	
-    	for (let i = 0; i < name.length; i++) {
-		if(name.charCodeAt(i) != '32'){
-		        let charCode = name.charCodeAt(i) - 64; // Get the ASCII code of each character
+    	for (let j= 0; j< name.length; j++) {
+		if(name.charCodeAt(j) != '32'){
+		        let charCode = name.charCodeAt(j) - 64; // Get the ASCIjcode of each character
 		        result += charCode.toString().padStart(2, '0'); // Append the character code to the result string
 		}else{ result += "00";} // Replace SPACE with 00
     	}
@@ -45,24 +45,24 @@ function readTicket(ticketID){
 	// Final code: MMDDTTGCnametotextAOaddonsDnumDays
 	
 	// Split barcode at the GC
-	let temp = ticketID.split("GC");
-		let tempTwo = temp[1].split("AO"); // seperate name and addOns sections
-		let nameCode = tempTwo[0]; // name
-			let tempTwo = tempTwo[1].split("D"); // seperate addOns and number of days
-		let addOnCode = tempTwo[0]; // add on
-		let numDays = tempTwo[1]; // number of days
+	let temp1= ticketID.split("GC");
+		let temp2 = temp1[1].split("AO"); // seperate name and addOns sections
+		let nameCode = temp2[0]; // name
+			let temp2 = temp2[1].split("D"); // seperate addOns and number of days
+		let addOnCode = temp2[0]; // add on
+		let numDays = temp2[1]; // number of days
 	
 
 	// Get Ticket Type TT
-	let tikType = temp[0].substring(4,6);
+	let tikType = temp1[0].substring(4,6);
 
 	// Get visit date (MM-DD)
-	let visDate = temp[0].substring(0,2) + "-" + temp[0].substring(2,4);
+	let visDate = temp1[0].substring(0,2) + "-" + temp1[0].substring(2,4);
 	
 	// Decode Name
 	let nameVal = "";
-	for (let i = 0; i < nameCode.length; i += 2) {
-		let numStr = nameCode.substring(i, i + 2); // get two digits at a time
+	for (let j= 0; j< nameCode.length; j+= 2) {
+		let numStr = nameCode.substring(j, j+ 2); // get two digits at a time
 		if(numStr != '00'){
 			let charCode = parseInt(numStr) + 64; // Convert number back to ASCII code
 			nameVal += String.fromCharCode(charCode); // Convert ASCII code to letter
