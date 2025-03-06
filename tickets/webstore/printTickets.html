@@ -122,8 +122,9 @@
 	}
 
 	// Seperate ticket IDs
-	if(idList.includes("+")){ // multiple tickets
-		idList = idList.split("+");
+	if(idList.includes("-")){ // multiple tickets
+		idList = idList.split("-");
+		console.log("Multiple Tickets - " + idList);
 		for(i = 0; i < idList.length; i++){
 			if(idList[i].includes("ADDON")){ // not admission, addOn ticket (parking voucher)
 				// CODE TO GENERATE TICKET FOR PARKING VOUCHER, ETC.
@@ -136,9 +137,9 @@
 					// Create the ticket
 						printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
 							<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+idList.length+"</h2></div> \
-								<div class='leftContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4>Valid for Tier # dates ($90)</h4>Description of ticket</div></div> \
+								<div class='leftContainer'><div class='columnContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4 style='font-size:12px;'>Valid for Tier # dates ($90)</h4>Description of ticket</div></div></div> \
 							<div class='spacer'></div> \
-							<p><h4>Ticket Add Ons</h4><ul><li>None</li></ul></p>\
+							<div class='leftContainer' style='padding-top:0; padding-bottom:0;'><h4 style='font-size:12px;'>Ticket Add Ons</h4><ul><li>None</li></ul></div>\
 							<div class='spacer'></div> \
 								<div class='leftContainer'><h3>Ticket holder: "+temp[0]+"</h3> \
 								This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p> \
@@ -160,25 +161,26 @@
 				
 			}
 			
-		}
+		}// end of for loop
 	}else{ // just one ticket
-		let temp = readTicket(idList[i]);
+		console.log("Single Ticket");
+		let temp = readTicket(idList);
 		// name - type - date - numDay - addOn
 			let tikNum = 1;
 			let barcodeID = "barcode-" + 1;
 		// Create the ticket
 			printContent.innerHTML += "<section><div class='titleBar'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo-white.png'></div> \
 				<div class='titleBar silver'><h2>Theme Park / Event Admission "+tikNum+"/"+idList.length+"</h2></div> \
-					<div class='leftContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4>Valid for Tier # dates ($90)</h4>Description of ticket</div></div> \
+					<div class='leftContainer'><div class='columnContainer'><img src='https://i.imgur.com/LjFg1mN.jpeg'><div><h3>Ticket Type - "+temp[3]+" days</h3><h4 style='font-size:12px;'>Valid for Tier # dates ($90)</h4>Description of ticket</div></div></div> \
 				<div class='spacer'></div> \
-				<p><h4>Ticket Add Ons</h4><ul><li>None</li></ul></p>\
+				<div class='leftContainer' style='padding-top:0; padding-bottom:0;'><h4 style='font-size:12px;'>Ticket Add Ons</h4><ul><li>None</li></ul></div>\
 				<div class='spacer'></div> \
 					<div class='leftContainer'><h3>Ticket holder: "+temp[0]+"</h3> \
 					This ticket is assigned to the person named above. Tickets are non-transferable, non-refundable, and hold no cash value. <br><b>Puertas Nuevas Resident admission will require a valid PNID to be displayed at initial entry</b><p>For ensured security, your picture will be taken upon initial use of this ticket. Guests visiting with multi-day admission or GC VIP admission will have their tickets printed at the turnstyles.</p><p><b>If you lose your physical ticket</b> - visit Guest Services or Will Call at the park entrance to have them reprinted. Your name, email used for purchasing, and photo ID will be required.</p> \
 					<p style='color:blue;'><b>To ensure successful scan - </b> Print this page full-size, or half-size at minimum (2 pages per sheet)</p>\
 				</div><div class='titleBar silver' style='position:absolute; bottom:0;'><svg class='barcodeDisp' id="+barcodeID+"></svg></div>";
 
-			JsBarcode("#"+barcodeID, idList[i], {
+			JsBarcode("#"+barcodeID, idList, {
 			    format: "CODE128",
 			    lineColor: "#000",
 			    width: 1,
