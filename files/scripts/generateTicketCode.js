@@ -4,7 +4,7 @@ function generateTicket(type,date,numDays,name,addOn){
 	// numDays : ### - number of days the ticket is valid for following the first visit
 	// name: ABCDEFG - letter value of the first name, no spaces
 
-	// Final code: MMDDTTGCnametotextAOaddons
+	// Final code: MMDDTTGCnametotextAOaddonsDnumDays
 
 	var outputCode = "";
 
@@ -34,17 +34,24 @@ function generateTicket(type,date,numDays,name,addOn){
 
 	outputCode += "AO" + addOn;
 
+	outputCode += "D" + numDays;
+
 	console.log("Generated Code: " + outputCode);
 
 	return outputCode;
 }// end of function generateTicket(type,date,numDays,name,addOn)
 
-function readTicket(ticketID){
+function readTicket(ticketID){ 
+	// Final code: MMDDTTGCnametotextAOaddonsDnumDays
+	
 	// Split barcode at the GC
 	let temp = ticketID.split("GC");
 		let tempTwo = temp[1].split("AO"); // seperate name and addOns sections
 		let nameCode = tempTwo[0]; // name
-		let addOnCode = tempTwo[1]; // add on
+			let tempTwo = tempTwo[1].split("D"); // seperate addOns and number of days
+		let addOnCode = tempTwo[0]; // add on
+		let numDays = tempTwo[1]; // number of days
+	
 
 	// Get Ticket Type TT
 	let tikType = temp[0].substring(4,6);
@@ -62,7 +69,7 @@ function readTicket(ticketID){
 		}else{nameVal += " ";}
 	}
 
-	const resultsVal = [nameVal, tikType, visDate, addOnCode];
+	const resultsVal = [nameVal, tikType, visDate, numDays, addOnCode];
 
 	return resultsVal;
 }// end of function readTicket(ticketID)
