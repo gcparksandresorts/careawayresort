@@ -43,6 +43,7 @@ iter+=1; attractionList[iter] = "The CosmiBotz Return - none | 1 | 3 | 1 | atInd
 iter+=1; attractionList[iter] = "The Magic Bakery Ride - none | 1 | 2 | 1 | atIndex=8 | https://aztechadmit.github.io/gcresorthighland/main/images/banner2.jpg";
 iter+=1; attractionList[iter] = "The Nightmare Dracula - none | 2 | 1 | 4 | "+shortLink+"nightmare-dracula | https://i.imgur.com/Iu4oHYO.jpeg";
 iter+=1; attractionList[iter] = "The Quest of Odysseus - none | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/odyseus1.webp";
+iter+=1; attractionList[iter] = "Treetop Tumble - none | 1 | 3 | 2 | clickLink | https://www.intamin.com/wp-content/uploads/2019/09/Parachute-Tower_15_ret-1920x1282.jpg";
 iter+=1; attractionList[iter] = "BATx - none | 2 | 1 | 6 | clickLink | https://orlandoparkstop.com/wp-content/uploads/2019/08/SkyFly.jpg";
 iter+=1; attractionList[iter] = "Voyage to Atlantia - A rebuild of the #1 Globe-City darkride! | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/atlantisConcept4.png";
 iter+=1; attractionList[iter] = "Wonder Reel Studio Tour - none | 2 | 4 | 1 | atIndex=2 | https://i.imgur.com/ZMFbfYk.jpeg";
