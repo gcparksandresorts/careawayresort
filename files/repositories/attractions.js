@@ -24,13 +24,15 @@ link to pages: atIndex=NUM
 
 attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 | atIndex=1 | https://i.imgur.com/wsSggBe.jpeg";
 iter+=1; attractionList[iter] = "Careaway Castle Mini Golf - Tickets required | 4 | 4 | 1 | clickLink | https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg";
-iter+=1; attractionList[iter] = "Enchanted Forest to Palace Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
+//iter+=1; attractionList[iter] = "Enchanted Forest to Palace Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
 //iter+=1; attractionList[iter] = "Escape from Realinu - none | 1 | 2 | 2 | clickLink | https://miro.medium.com/v2/da:true/resize:fit:1200/0*w5Zv7N4WakVhjhKn";
 iter+=1; attractionList[iter] = "Frankenkoaster - Sponsored by Duracel<sup>TM</sup> | 2 | 1 | 6 | "+shortLink+"frankenkoaster | https://i.imgur.com/RwM26qC.jpeg";
 iter+=1; attractionList[iter] = "Lightspeed - Sponsored by General Electric | 1 | 1 | 5 | clickLink | https://static.wikia.nocookie.net/tron/images/7/77/Clu2LtCycl01.jpg/revision/latest?cb=20110827053101";
-iter+=1; attractionList[iter] = "Looney's Musical Train - Sponsored by Dole | 1 | 2 | 1 | clickLink | https://s7d2.scene7.com/is/image/TWCNews/1203_n13_disney_mickey_minnie_runaway_railway";
+iter+=1; attractionList[iter] = "Looney's Musical Train - Sponsored by Frito Lay | 1 | 2 | 1 | clickLink | https://s7d2.scene7.com/is/image/TWCNews/1203_n13_disney_mickey_minnie_runaway_railway";
 iter+=1; attractionList[iter] = "Mission 14 - Sponsored by Kracken Eyewear | 1 | 1 | 3 | "+shortLink+"mission-14 | https://insidethemagic.net/wp-content/uploads/2021/02/Space-Mountain-Ride.jpg";
+iter+=1; attractionList[iter] = "Meowyan Madness - sponsorText | 1 | 3 | 2 | atIndex=9 | https://sometimeshome.com/wp-content/uploads/2017/09/sometimes_home-tokyo_disneysea-photos_advice_0018.jpg";
 iter+=1; attractionList[iter] = "Peanut's Wonder Park - none | 1 | 3 | 1 | atIndex=5 | https://admin.onlyinyourstate.com/wp-content/uploads/sites/2/2019/07/camp-snoopy-carowinds-1.jpg";
+iter+=1; attractionList[iter] = "Peanut's People Mover - Sponsored by Dole | 1 | 3 | 1 | atIndex=10 | https://orlandoinformer.com/wp-content/uploads/photo-gallery/imported_from_media_libray/20160430-_DSC6490.jpg?bwg=1604364022";
 iter+=1; attractionList[iter] = "Starfield Horizons - Sponsored by Unity3D | 1 | 3 | 2 | atIndex=6 | https://ca-times.brightspotcdn.com/dims4/default/e46afb6/2147483647/strip/true/crop/4928x3280+0+0/resize/1200x799!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb2%2Fb8%2F6ae2faf94bdba46e6fd1b98188e4%2F1209zv-0320msa.jpg";
 iter+=1; attractionList[iter] = "Alpine Sleds Through Yeti Mountain - sponsorText | 1 | 1 | 2 | clickLink | https://i.imgur.com/NtKI5ta.jpeg";
 iter+=1; attractionList[iter] = "Temple of Medusa - none | 1 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/medussa1.webp";
