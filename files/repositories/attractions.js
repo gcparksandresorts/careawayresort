@@ -23,6 +23,7 @@ link to pages: atIndex=NUM
 */
 
 attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 | atIndex=1 | https://i.imgur.com/wsSggBe.jpeg";
+iter+=1; attractionList[iter] = "BATx - none | 2 | 1 | 6 | atIndex=11 | https://orlandoparkstop.com/wp-content/uploads/2019/08/SkyFly.jpg";
 iter+=1; attractionList[iter] = "Careaway Castle Mini Golf - Tickets required | 4 | 4 | 1 | clickLink | https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg";
 iter+=1; attractionList[iter] = "Careaway Garden Chair-o-Plane - none | 1 | 3 | 2 | clickLink | https://irvinleisure.co.uk/wp-content/uploads/2023/12/4FB87CE6-FFE4-47A8-9D25-A62B6D4C81A8.jpg";
 //iter+=1; attractionList[iter] = "Enchanted Forest to Palace Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
@@ -44,7 +45,6 @@ iter+=1; attractionList[iter] = "The Magic Bakery Ride - none | 1 | 2 | 1 | atIn
 iter+=1; attractionList[iter] = "The Nightmare Dracula - none | 2 | 1 | 4 | "+shortLink+"nightmare-dracula | https://i.imgur.com/Iu4oHYO.jpeg";
 iter+=1; attractionList[iter] = "The Quest of Odysseus - none | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/odyseus1.webp";
 iter+=1; attractionList[iter] = "Treetop Tumble - none | 1 | 3 | 2 | clickLink | https://www.intamin.com/wp-content/uploads/2019/09/Parachute-Tower_15_ret-1920x1282.jpg";
-iter+=1; attractionList[iter] = "BATx - none | 2 | 1 | 6 | clickLink | https://orlandoparkstop.com/wp-content/uploads/2019/08/SkyFly.jpg";
 iter+=1; attractionList[iter] = "Voyage to Atlantia - A rebuild of the #1 Globe-City darkride! | 2 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/atlantisConcept4.png";
 iter+=1; attractionList[iter] = "Wonder Reel Studio Tour - none | 2 | 4 | 1 | atIndex=2 | https://i.imgur.com/ZMFbfYk.jpeg";
 iter+=1; attractionList[iter] = "World of Ghibli - Sponsored by Aztech Cinema | 1 | 3 | 2 | atIndex=3 | ../files/images/banners/ghibliArt.webp";
