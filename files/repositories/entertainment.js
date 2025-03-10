@@ -24,7 +24,7 @@ var iter = 0;
 
 
 // OFF-PEAK / GENERIC ENTERTAINMENT
-	entertainmentList[iter] = "GCMB | Globe-City Marching Band | A loud and proud high-rolling group | showDisclaimer3 | 10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM | 1 | 1 | 5 | entIndex=2 | https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg";
+	entertainmentList[iter] = "gcmb | Globe-City Marching Band | A loud and proud high-rolling group | showDisclaimer3 | 10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM | 1 | 1 | 5 | entIndex=2 | https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg";
 
 
 // HALLOWEEN SEASON ENTERTAINMENT
