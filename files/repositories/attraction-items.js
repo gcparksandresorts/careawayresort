@@ -42,8 +42,8 @@ attractionItems[0] = "rideName0/font | rideCategory1 | rideLocation2,parkIndex |
 
 attractionItems[1] = "Action! On the Backlot/Bevan | 1 | Wonder Reel Studios,2 | 5 Minutes | 2 | 2 | 1 | yes";
 	attractionDescrition[1] = "Ride into the movies on this action packed silver-screenified thrill ride. | Cinema,Thrilling,Fire Effects,Action,Blockbuster | \
-				Ready for his next blockbuster, famed director Joshua Owens is looking to amp up the action. To perfectly capture his cinematic vision, Owens has employed the use of Stuntmobiles, high tech vehicles capable of capturing the narliest and actioniest shots. <p>Participate in the movies by riding in one of the high-tech stuntmobiles and experience the action of filmaking for yourself!</p>\
-				<p><h3>Know Before You Go</h3><em>Action! On the Backlot</em> is a thrilling simulator dark-ride that employs the use of fire, water, fog, and strobe effects. This ride features simulated motion, sporadic movement, fast turns and drops. Expectant mothers, and those with conditions which may be agrivated by this experience should not ride.</p>";
+				<p>Why watch movies when you can be IN movies? Action! On The Backlot places you on a high-tech Stuntmobile<sup>TM</sup> and right into the Action. Race through practical sets and feel the heat of real fire as you take part in the next biggest Blockbuster. This high-octane adventure is thrilling, it's fun, it's better than anything you've ever experienced before!</p>\
+				<br><p><h3>Know Before You Go</h3><em>Action! On the Backlot</em> is a thrilling simulator dark-ride that employs the use of fire, water, fog, and strobe effects. This ride features simulated motion, sporadic movement, fast turns and drops. Expectant mothers, and those with conditions which may be agrivated by this experience should not ride.</p>";
 	attractionImg[1] = "https://www.rwsentosa.com/-/jssmedia/project/non-gaming/rwsentosa/attractions/universal-studios-singapore/rides/uss-sci-fi-transformers-750-x-422.jpg?mw=1200 | otherImg1 - otherImg";
 
 attractionItems[4] = "The CozmiBotz Return/font | 3 | Galaxy Center,1 | 8 Minutes | 3 | minHeight5 | 0 | no";
