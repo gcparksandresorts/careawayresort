@@ -9,7 +9,7 @@
 		<title>Order Tickets and Passes | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 
-<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+<body onload='finishLoad(); initializeWebstore();'> <a id="pgTop"></a><div id='loader'></div><div id='header'></div>
 
 	<style>
 	    #mainPage {margin-top:0; background:linear-gradient(#0077b6,white); position:relative; padding-top:10px; min-height:100vh;}
@@ -19,6 +19,15 @@
 	    #mainPage .miniTileContainer > div > h3 {margin-bottom:0; margin-top:5px; font-size: 18px;}
 	    #mainPage .miniTileContainer > div > h4 {margin-top:5px; margin-bottom:5px; color:midnightblue;}
 	    #mainPage .miniTileContainer > div{font-size: 12px;}
+
+        #mainPage select {font-size:15px; padding:5px; margin:10px;}
+
+        #calendarContainer {margin: 10px auto 10px auto; width:100%; max-width:700px; border:1px solid black; background-color: aliceblue; padding: 10px;}
+            #calendarElement tr td {font-size: 12px; cursor:pointer; transition:0.4s;}
+            #calendarContainer td.wknd {background:silver;}
+                #calendarContainer td.newMonth {color: maroon; font-weight: bold;}
+            #calendarContainer td.isSelected {background:greenyellow;}
+            #calendarContainer td.noClick {cursor: not-allowed; color:dimgray;}
 		
 		@media screen and (min-width:1000px){#mainPage .miniTileContainer > div{width:25%; font-size: 12px;}}
 		
@@ -36,114 +45,30 @@
 			  100% { transform: rotate(360deg); }
 			}
 		#loadingWindow.hidden {pointer-events: none; opacity:0;}
+
+        .ngst {width:200px; height:60px; display:flex; padding:10px; background:white;}
+            .ngst button {aspect-ratio: 1/1; height:40px; font-size:20px;}
+            .ngst p {font-size:22px; width:100%; align-self:center; text-align:center;}
 		
         </style>
 
 		<!-- BODY CONTENT HERE -->
+        <img style="display:none;" src="https://i.imgur.com/NCyozNl.jpeg">
 	<div class="titleBar"><h1>Order Tickets and Passes</h1></div>
-        <section id="mainPage">
+    <section id="mainPage">
 		<div id='loadingWindow'>
 			<div class='container'>
 				<div id='ldSymb'></div>
 				<h3 id='ldTxt'>Loading Webstore...</h3>
 			</div>
 		</div>
-	<!-- DAY TICKETS -->
-            <div class="container" id="dayTicketType" style='display:none;'>
-                <h2>Select Ticket Type</h2>
-                <div class="leftContainer">
-                    <h3>General Admission</h3>
-                    <div class="miniTileContainer dImg">
-                        <div>
-                            <img src="https://i.imgur.com/9gS8Xri.jpeg">
-                            <h3>Puertas Nuevas Resident Admission Single-Park</h3>
-                            <h4>Starting at $65</h4>
-                            For eligibile PN Residents Only. Admission to ONE theme park per day (excluding Splashport Bay)
-                            <a href="?form=day-tickets&tikType=0"></a>
-                        </div>
-                        <div>
-                            <img src="https://i.imgur.com/LjFg1mN.jpeg">
-                            <h3>Puertas Nuevas Resident Admission Park-to-park</h3>
-                            <h4>Starting at $75</h4>
-                            For eligibile PN Residents Only. Admission to BOTH theme parks per day (excluding Splashport Bay)
-                            <a href="?form=day-tickets&tikType=1"></a>
-                        </div>
-                        <div>
-                            <img src="https://i.imgur.com/9gS8Xri.jpeg">
-                            <h3>General Admission Single-park</h3>
-                            <h4>Starting at $85</h4>
-                            Admission to ONE theme park per day (excluding Splashport Bay)
-                            <a href="?form=day-tickets&tikType=2"></a>
-                        </div>
-                        <div>
-                            <img src="https://i.imgur.com/LjFg1mN.jpeg">
-                            <h3>General Admission Park-to-park</h3>
-                            <h4>Starting at $95</h4>
-                            Admission to BOTH theme parks per day (excluding Splashport Bay)
-                            <a href="?form=day-tickets&tikType=3"></a>
-                        </div>
-                    </div>
-                </div>
-		<p style='color:red; font-size:12px;'>Any guest visiting with Puertas Nuevas Resident Admission will be required to show valid PNID at turnstyles upon ticket activation</p>
-                <div class="spacer"></div>
-                <div class="leftContainer">
-                    <h3>GCVIP Admission</h3>
-                    <div class="miniTileContainer dImg">
-                        <div>
-                            <img src="https://aztechadmit.github.io/client-ticketingservice/globecityresorthighland/clientImages/ticketing3.jpg">
-                            <h3>Priority Bronze Single-Park</h3>
-                            <h4>Starting at $125</h4>
-                            One-time access to priority queues
-                            <a href="?form=day-tickets&tikType=4"></a>
-                        </div>
-                        <div>
-                            <img src="https://aztechadmit.github.io/client-ticketingservice/globecityresorthighland/clientImages/ticketing4.jpg">
-                            <h3>Priority Silver Single-Park</h3>
-                            <h4>Starting at $150</h4>
-                            No limit to number of uses per attraction (see terms for more information)
-                            <a href="?form=day-tickets&tikType=5"></a>
-                        </div>
-                        <div>
-                            <img src="https://aztechadmit.github.io/client-ticketingservice/globecityresorthighland/clientImages/ticketing5.jpg">
-                            <h3>GC VIP Deluxe Single-Park</h3>
-                            <h4>Starting at $189</h4>
-                            Two uses for priority queue access at attractions, access to VIP lounges and priority seating, complimentary GC PhotoPass (see terms for more information)
-                            <a href="?form=day-tickets&tikType=6"></a>
-                        </div>
-                        <div>
-                            <img src="https://aztechadmit.github.io/client-ticketingservice/globecityresorthighland/clientImages/ticketing6.jpg">
-                            <h3>GC VIP Platinum Single-Park</h3>
-                            <h4>Starting at $215</h4>
-                            No limit to number of uses per attraction, access to VIP lounges and priority seating, complimentary GC PhotoPass (see terms for more information)
-                            <a href="?form=day-tickets&tikType=7"></a>
-                        </div>
-                    </div>
-                    <a href="gc-vip">More Information</a>
-                </div>
-                <div class="spacer"></div>
-                <div class="leftContainer">
-                    <h3>Admission Packages / Multi-day Tickets</h3>
-                    <div class="miniTileContainer">
-                        <div>
-                            <img src="https://i.imgur.com/NCyozNl.jpeg">
-                            <h3>Two-Day One-Park-Per-Day Package</h3>
-                            <h4>Starting at $99 ($50 per day)</h4>
-                            General admission for two days (within 30 days of eachother). Tickets valid at only one park per day
-                            <a href="?form=day-tickets&tikType=7"></a>
-                        </div>
-                        <div>
-                            <img src="https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner6.jpg">
-                            <h3>Three-Day One-Park-Per-Day Package</h3>
-                            <h4>Starting at $120 ($40 per day)</h4>
-                            General admission for three days (within 30 days of eachother). Tickets valid at only one park per day
-                            <a href="?form=day-tickets&tikType=7"></a>
-                        </div>
-                    </div>
-                    <a href="promotions">More Information</a>
-                </div>
+	<!-- ticketFormContainer -->
+            <div class="container" id="ticketFormContainer" style='display:none;'>
+                If you are seeing this, an error has occurred ._.
+                
             </div>
 
-	<!-- ANNUAL PASSPORTS -->
+	<!--
             <div class="container" id="apTicketType" style='display:none;'>
                 <h2>Select Ticket Type</h2>
                 <div class="leftContainer">
@@ -195,7 +120,7 @@
                     </div>
                 </div>
             </div>
-		
+		-->
         </section>
         
 		
@@ -203,57 +128,33 @@
 
 	<div id='footer'></div>
 </body>
+    <!-- Gather Repositories and Scripts -->
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    <script src="../files/repositories/ticketTypes.js"></script>
+    <script src="../files/repositories/masterSchedule.js"></script>
 
+    <!-- Loader and Initial Setup -->
 	<script>
+        // Show the loading symbol and text (as specified) -> time is in milliseconds
 		function runLoad(text,time){
 			const loadDiv = document.getElementById("loadingWindow");
 			const loadText = document.getElementById("ldTxt");
+            window.scrollTo(0, 0); // scroll to top of page
 
 			ldTxt.innerHTML = text;
 			if(loadDiv.classList.contains("hidden")){
 				loadDiv.classList.remove("hidden");
+                document.getElementById("ticketFormContainer").style.display='none';
 			}
 			if(time != 'infinite'){
-				setTimeout(function(){document.getElementById("loadingWindow").classList.add("hidden");},time);
+				setTimeout(function(){document.getElementById("loadingWindow").classList.add("hidden");document.getElementById("ticketFormContainer").style.display='block';},time);
 			}
 		}
 
-		function initializeWebstore(){
-
-			// Search Parameters
-			const searchParams = new URLSearchParams(window.location.search);
-			var formType;
-
-				if(searchParams.has("form")){
-
-					formType = searchParams.get("form");
-					
-					if(searchParams.has("tikType")){
-						
-					}else{
-						runLoad("Loading Tickets and Passes",4000);
-						switch(formType){
-							case 'day-tickets':
-								document.getElementById("dayTicketType").style.display='block';
-								break;
-							case 'annual-passports':
-								document.getElementById("apTicketType").style.display='block';
-								break;
-							default:
-								document.getElementById("dayTicketType").style.display='block';
-								break;
-						}// end of switch(formType)
-					}
-					
-				}else{
-					runLoad("An error has occurred. Please navigate back to the previous page and try again<br>Aztech Admit - Code 0404","infinite");
-				}// end of if(searchParams.has("form"))
-		}
-
-		initializeWebstore();
+		
 		
 	</script>
+    <script src="webstore/webstore-scripts/order-form.js"></script>
 </html>
 
 <!--
