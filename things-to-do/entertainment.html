@@ -52,7 +52,7 @@
 	<div id='footer'></div>
 </body>
 <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
-<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/entertainment.js"></script>
+<script src="../files/repositories/attractions-entertainment/entertainment.js"></script>
 	
 	<script>
 		const container = document.getElementById("attractionContainer");
@@ -160,7 +160,7 @@
 		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
 
 		function changeFilters(){
-			let builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/entertainment?category="+categorySelect.value+"&location="+locationSelect.value+"&season="+seasonSelect.value;
+			let builtURL = "?category="+categorySelect.value+"&location="+locationSelect.value+"&season="+seasonSelect.value;
 			window.open(builtURL, "_self");
 		}
 	</script>

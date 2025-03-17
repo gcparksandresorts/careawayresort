@@ -76,10 +76,10 @@
     	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 
 	<!-- Get the spotlight repository -->
-	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/indexSpotlight.js"></script>
+	<script src="../files/repositories/blog-info-spotlight/indexSpotlight.js"></script>
 
 	<!-- Get list of blog posts and operational updates -->
-	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/postsBase.js"></script>
+	<script src="../files/repositories/blog-info-spotlight/postsBase.js"></script>
 
 	<!-- build out the spotlight section -->
 	<script>
@@ -197,10 +197,10 @@
 
 		function runSearch(){
 			if(document.getElementById("searchBar").value != ''){
-				const searchTerm = "https://gcparksandresorts.github.io/careawayresort/information/blog?category="+document.getElementById("categorySelect").value+"&search=" + document.getElementById("searchBar").value.replace(/\s/g,"+");
+				const searchTerm = "?category="+document.getElementById("categorySelect").value+"&search=" + document.getElementById("searchBar").value.replace(/\s/g,"+");
 				window.open(searchTerm,"_self");
 			}else{
-				const searchTerm = "https://gcparksandresorts.github.io/careawayresort/information/blog?category="+document.getElementById("categorySelect").value;
+				const searchTerm = "?category="+document.getElementById("categorySelect").value;
 				window.open(searchTerm,"_self");
 			}
 			
