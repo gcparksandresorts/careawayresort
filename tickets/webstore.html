@@ -28,7 +28,18 @@
                 #calendarContainer td.newMonth {color: maroon; font-weight: bold;}
             #calendarContainer td.isSelected {background:greenyellow;}
             #calendarContainer td.noClick {cursor: not-allowed; color:dimgray;}
-		
+
+        #addOnMasterDisplay {max-width:900px; margin:auto;}
+            #addOnMasterDisplay td {transition:0.5s; border: solid 1px black;} 
+                #addOnMasterDisplay td.isSelected {background-color: rgb(203, 255, 203);}
+                #addOnMasterDisplay td.isSelected button {background-color: orange;}
+
+		    #addOnMasterDisplay td > h3 {margin:0; font-size: 20px;}
+
+        .alertScreen {position:fixed; background:rgba(0,0,0,0.5); top:0; left:0; right:0; bottom:0; z-index:999; display:flex; justify-content:center; align-items:center; animation:fadeIn 0.5s;}
+            .alertScreen > div {background:white; padding:20px; border-radius: 10px;}
+                .alertScreen > div > h3 {margin-top:0;}
+
 		@media screen and (min-width:1000px){#mainPage .miniTileContainer > div{width:25%; font-size: 12px;}}
 		
 		#loadingWindow {position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(#0077b6,white); padding-top:10px; z-index:899; opacity:1; transition:0.5s;}
@@ -67,6 +78,16 @@
                 If you are seeing this, an error has occurred ._.
                 
             </div>
+
+    <!-- END OF ticketFormContainer -->
+
+    <div class="alertScreen" style="display: none;" id="finalAlert">
+        <div>
+            <h3>Review order before continuing</h3>
+            <p id="alertText">Once you proceed to checkout, you will be unable to change your tickets, date of visit, add ons, and other information set here.</p>
+            <p><a class='btn noLeft' onclick="document.querySelector('.alertScreen').style.display='none';">Go back</a><a class='btn filled' onclick="proceedToCheckout();">I am ready to checkout</a></p>
+        </div>
+    </div>
 
 	<!--
             <div class="container" id="apTicketType" style='display:none;'>
@@ -121,6 +142,9 @@
                 </div>
             </div>
 		-->
+        <div class="container" style="background: none;">
+            <button onclick="startFormOver()">Start Over</button>
+        </div>
         </section>
         
 		

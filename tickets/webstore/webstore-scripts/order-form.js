@@ -30,7 +30,9 @@ var numAdults = 1;
 var numChilds = 0;
 var dayTierSelected; // tier of the day selected
 var tikPriceFinal; // The final price of the ticket based on date selected ["adultPrice", "childPrice"]
-var addOnList; // list of chosen addOns
+var addOnList = []; // list of chosen addOns
+var totalCostTickets = 0; // total cost of tickets
+var totalCostAddOns = 0; // total cost of add-ons
 
 // Saved Windows
 var saveCalendarWin; // saves the content of the calendar window 
@@ -48,7 +50,7 @@ function initializeWebstore(){
             formType = searchParams.get("form");
             
             if(searchParams.has("tikType")){ // ticket type has already been specified -> go straight to choosing a date
-                runLoad("Preparing Order Form, Loading Ticket Data",3000);
+                runLoad("Preparing Order Form, Loading Ticket Data",4000);
                 tikType = searchParams.get("tikType");
                     tikArray = TikTypeArray[tikType].split(" | ");
                     tikName = tikArray[2];
@@ -200,6 +202,12 @@ function setupNumTickets(){ // users will select how many people they are buying
     runLoad("Loading...",400); numDaysSelected = document.getElementById("numDaySelect").value;
     saveCalendarWin = ticketFormContainer.innerHTML;
 
+    // If multi-day ticket, calculate cost total (cost per day * num days) -> does not apply to preset tickets
+    if(tikDays == 'select'){ // user must select number of days
+        tikPriceFinal[0] = parseInt(tikPriceFinal[0]) * parseInt(numDaysSelected);
+        tikPriceFinal[1] = parseInt(tikPriceFinal[1]) * parseInt(numDaysSelected);
+    }
+
     // Get date of visit
     let tmp = chosenDateID.split("-");
         let mnthVis = months[tmp[3]];
@@ -208,6 +216,7 @@ function setupNumTickets(){ // users will select how many people they are buying
     ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2><p>First visit on <b>"+mnthVis+" "+dtVis+"</b> (Tier "+dayTierSelected+") for <b>"+numDaysSelected+" days</b> </div> <h2>Number of Guests</h2> \
                                      <table style='width:auto;margin:auto;'><tr><th style='text-align:center;'>Adult (12+) - $"+tikPriceFinal[0]+"</th><th style='text-align:center;'>Child (1-11) - $"+tikPriceFinal[1]+"</th></tr><tr><td><div class='ngst'><button onclick='numGuestFunc(1)'>-</button><p id='numGuestAdultText'>1</p><button onclick='numGuestFunc(2)'>+</button></div></td><td><div class='ngst'><button onclick='numGuestFunc(3)'>-</button><p id='numGuestChildText'>1</p><button onclick='numGuestFunc(4)'>+</button></div></td></tr></table>   \
                                      <p style='font-size:12px'>Children under 12 must be accompanied by an adult 12 years of age or older</p> \
+                                     <p style='font-size:12px'>Price shown is total cost of each ticket including all days</p> \
                                     <div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='reopenCalendar()'>Back</a> <a class='btn filled' onclick='setupAddOns()'>Continue</a></div>";
 
     document.getElementById('numGuestAdultText').innerHTML = numAdults;
@@ -259,14 +268,76 @@ function setupAddOns(){
     saveNumGuestWin = ticketFormContainer.innerHTML;
 
     ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2><p>First visit on <b>"+mnthVis+" "+dtVis+"</b> (Tier "+dayTierSelected+") for <b>"+numDaysSelected+" days</b></p><p><b>"+numAdults+" Adults</b> & <b>"+numChilds+" Children</b></p> </div> <h2>Ticket AddOns</h2> \
-    <p>This module is currently unavailable. Please press continue.</p>\
+    <div class='leftContainer'><table id='addOnMasterDisplay'></table></div> <h4 id='totCostAddOnDisp' style='color:midnightblue'></h4> \
     <div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='reopenNumGuest()'>Back</a> <a class='btn filled' onclick='runReviewOrder()'>Review Order</a></div>";
 
+    // Setup AddOns
+    const addOnMasterDisplay = document.getElementById("addOnMasterDisplay");
+    addOnList = []; // reset add-on list
+
+    for(i=0; i < TikAddOnArray.length; i++){
+        let temp = TikAddOnArray[i].split(" | "); // get ticket array element and seperate
+
+            if(temp[3] == 'none' || temp[3].split(',').includes(formType)){ // check if this add-on is designated for the current order form
+                if(temp[4] == 'none' || temp[4] == tikArray[1]){ // check if this add-on is designated for the current ticket category
+                    let tempPrices = temp[5].split(",");
+                    let tempPrice = tempPrices[dayTierSelected-1];
+
+                    // Check if this add-on is per ticket, per day, or both
+                    var perTikPerDay = "";
+                    if(temp[1] == 'yes'){
+                        perTikPerDay = "per ticket";
+                        if(temp[2] == 'yes'){
+                            perTikPerDay += " per day";
+                        }
+                    }else if(temp[2] == 'yes'){
+                        perTikPerDay = "per day";
+                    }
+
+                    // Add this add-on to the list
+                    addOnMasterDisplay.innerHTML += "<tr><td id='addOnRow-"+i+"'><h3>"+temp[0]+"</h3><h4 style='color:midnightblue;'>$"+tempPrice+" "+perTikPerDay+"</h4><p>"+temp[6]+"</p><button id='tikAddOnButton-"+i+"' onclick='addOnSelect("+i+")'>Add to order</button></div></td></tr>";
+                }
+            }
+    }
 }
     function reopenNumGuest(){
         ticketFormContainer.innerHTML = saveNumGuestWin;
         window.scrollTo(0, 0); // scroll to top of page
+    }
 
+    function addOnSelect(i){ // when a user selects an add-on
+        let temp = TikAddOnArray[i].split(" | "); // get ticket array element and seperate
+        if(addOnList.includes(i)){ // addOn has been deselected
+            document.getElementById("tikAddOnButton-"+i).innerHTML = "Add to order";
+            document.getElementById("addOnRow-"+i).classList.remove("isSelected");
+            addOnList.splice(addOnList.indexOf(i),1); // remove from list
+        }else{ // add on is selected
+            document.getElementById("tikAddOnButton-"+i).innerHTML = "Remove from order";
+            document.getElementById("addOnRow-"+i).classList.add("isSelected");
+            addOnList.push(i); // add to list
+        }
+
+        // Calculate total cost of add-ons
+        totalCostAddOns = 0; // reset total cost of add-ons
+        for(i=0; i < addOnList.length; i++){
+            let temp2 = TikAddOnArray[addOnList[i]].split(" | "); // get ticket array element and seperate
+            let tempPrices = temp2[5].split(","); 
+            let tempPrice = tempPrices[dayTierSelected-1];
+            var tempPriceTotal = tempPrice; // set add on total price to its original value price (OVP) based on date tier
+
+            if(temp2[1] == 'yes'){ // add-on is per ticket -> set price of addon to OVP * numTickets
+                tempPriceTotal = parseInt(tempPrice) * (parseInt(numAdults) + parseInt(numChilds));
+            }
+            if(temp2[2] == 'yes'){ // add-on is per day -> set price of addon to price set above * numDays
+                tempPriceTotal = parseInt(tempPriceTotal) * parseInt(numDaysSelected);
+            }
+
+            totalCostAddOns += tempPriceTotal;
+        }
+
+        // Display total cost of add-ons
+        document.getElementById("totCostAddOnDisp").innerHTML = "Total Add-On Cost: $"+totalCostAddOns;
+        console.log(addOnList);
     }
 
 function runReviewOrder(){
@@ -278,6 +349,76 @@ function runReviewOrder(){
         let mnthVis = months[tmp[3]];
         let dtVis = tmp[5];
 
+    // Get total cost of tickets
+    totalCostTickets = (tikPriceFinal[0]*numAdults) + (tikPriceFinal[1]*numChilds);
+
     ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2></div> <h1>Review Order</h1> Please check that all information is correct before proceeding \
-    ";
+    <div class='container' id='tikReviewDisp'> <h4>Tickets & Guests</h4> <p>"+numAdults+" Adults @ $"+tikPriceFinal[0]+" each</p> <p>"+numChilds+" Children @ $"+tikPriceFinal[1]+" each</p> <p style='color:midnightblue; font-weight:bold'>Cost of tickets: $"+totalCostTickets+"</p> \
+                            <br><h4>Ticket AddOns</h4>";
+
+                            if(addOnList.length > 0){
+                                document.getElementById('tikReviewDisp').innerHTML += "<ul>";
+                                for(i=0; i < addOnList.length; i++){
+                                    let temp2 = TikAddOnArray[addOnList[i]].split(" | "); // get ticket array element and seperate
+                                    let tempPrices = temp2[5].split(","); 
+                                    let tempPrice = tempPrices[dayTierSelected-1];
+                                    var tempPriceTotal = tempPrice; // set add on total price to its original value price (OVP) based on date tier
+
+                                    if(temp2[1] == 'yes'){ // add-on is per ticket -> set price of addon to OVP * numTickets
+                                        tempPriceTotal = parseInt(tempPrice) * (parseInt(numAdults) + parseInt(numChilds));
+                                    }
+                                    if(temp2[2] == 'yes'){ // add-on is per day -> set price of addon to price set above * numDays
+                                        tempPriceTotal = parseInt(tempPriceTotal) * parseInt(numDaysSelected);
+                                    }
+
+                                    document.getElementById('tikReviewDisp').innerHTML += "<li>"+temp2[0]+" - $"+tempPriceTotal+"</li>";
+                                }
+                                document.getElementById('tikReviewDisp').innerHTML += "</ul>";
+                            }else{
+                                document.getElementById('tikReviewDisp').innerHTML += "<p style='color:gray;'>No add-ons selected</p>";
+                            }
+                            document.getElementById('tikReviewDisp').innerHTML += "<p style='color:midnightblue; font-weight:bold'>Cost of add-ons: $"+totalCostAddOns+"</p><br><h4>Order Subtotal: $"+(totalCostTickets + totalCostAddOns)+"</h4>";
+
+    ticketFormContainer.innerHTML += "<div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='reopenAddOns()'>Back</a> <a class='btn filled' onclick='checkOrder()'>Proceed to Checkout</a></div>";
+
 }
+
+    function reopenAddOns(){
+        ticketFormContainer.innerHTML = saveAddOnSelect;
+        window.scrollTo(0, 0); // scroll to top of page
+    }
+
+    function checkOrder(){
+        document.getElementById("finalAlert").style.display = "flex";
+    }
+
+    function startFormOver(){
+        window.open("?form="+formType, "_self");
+    }
+
+// FINAL STEP COMPLETED ON THIS PAGE
+function proceedToCheckout(){
+        let goToLink = "webstore/checkout.html?tikType="+tikType+"&tikCost="+totalCostTickets+"&dateID="+chosenDateID+"&numDays="+numDaysSelected+"&numAdults="+numAdults+"&numChilds="+numChilds;
+        if(addOnList.length > 0){
+            goToLink += "&addOns="+addOnList + "&costAddOns=" + totalCostAddOns; //&addOns=1 or &addOns=1,2,3,...
+        }else{
+            goToLink += "&addOns=none&costAddOns=0";
+        }
+
+        window.open(goToLink, "_self");
+}
+       /* ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2></div> <h1>Checkout</h1> \
+                                        <p style='color:midnightblue;'>Please complete the form below to finalize your order</p> \
+                                        <form id='orderForm' onsubmit='return false;'> \
+                                        <input type='text' name='fName' id='fName' placeholder='First Name' required> \
+                                        <input type='text' name='lName' id='lName' placeholder='Last Name' required> \
+                                        <input type='email' name='email' id='email' placeholder='Email Address (for e-tickets)' required> \
+                                        <input type='tel' name='phoneNum' id='phoneNum' placeholder='Phone Number (for e-tickets)' required> \
+                                        <input type='text' name='add1' id='add1' placeholder='Address Line 1 (Street Address)' required> \
+                                        <input type='text' name='add2' id='add2' placeholder='Address Line 2 (Apartment, Suite, etc...)'> \
+                                        <input type='text' name='city' id='city' placeholder='City/Town/Village/Etc...' required> \
+                                        <select name='stateSelect' id='stateSelect'></select> \
+                                        <input type='number' name='zipCode' id='zipCode' placeholder='Zip Code (5 digits)' pattern='\d{5}' required> \
+                                        </form> \
+                                        <div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='history.back()'>Back</a> <a class='btn filled' onclick='submitOrder()'>Submit Order</a></div>";
+    } */
