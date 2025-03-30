@@ -1,0 +1,73 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+
+	    	<!--
+	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	   	 -->
+	    
+		<title>Master Scheduler | Internal Use Only | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+           td{}
+           input { user-select: all; }
+
+           #mainContainerTable td > p {margin:0px 0px 2px 0px; font-size: 10px; color:dimgray;}
+        
+           #eventEntDisplay {position:fixed; top:80px; left:40%; bottom:0; overflow-y: auto; width:300px; background-color: silver; border: 2px solid black; padding:20px; transition:0.4s;}
+           #eventEntDisplay.hidden {left:-300px;}
+           #eventShowBtn{position:fixed; top:80px; right:0; background:lightgray; padding:10px; border:2px solid black; cursor:pointer;}
+        </style>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class="container filled" id="step1"><h2>Select an initialization setting</h2>
+            <button onclick="setupMain(0);">Start Fresh</button> <button onclick="setupMain(1)">Load in current Master Schedule</button>
+        </div>
+            
+		<div class="fullContainer filled" id="main-container" style="display: none; background:#efefef;">
+            <h2>Master Scheduler</h2>
+            <p><input type="checkbox" id="isLeapYear">Is Leap Year</input></p>
+            <table id="mainContainerTable">
+                <tr>
+                    <th>I</th>
+                    <th>0: Date</th>
+                    <th>1: Weekday</th>
+                    <th>2: Tier</th>
+                    <th>3: Park Hours</th>
+                    <th>4: Splashport Hours</th>
+                    <th>5: Event Schedule</th>
+                    <th>6: Entertainment Schedule</th>
+                </tr>
+            </table>
+            
+            <p>
+                <button onclick="addRow('new')">Add New Row</button>
+                <button onclick="addRow('copy')">Copy Previous Row</button>
+                <input id='numToCopy' type="number" value="1"></input>
+            </p>
+        </div>
+
+        
+		<!-- END OF BODY CONTENT -->
+
+        <div class="titleBar"><a class='btn white' onclick="genSchedule()">Generate New Master Schedule</a></div>
+
+        <div class="fullContainer" style="background: linear-gradient(lightblue,white);" id="resultBin">
+
+        </div>
+
+        <div id="eventEntDisplay" class="hidden"></div>
+        <div id="eventShowBtn" onclick="document.getElementById('eventEntDisplay').classList.toggle('hidden')"><<br><</div>
+        
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    <script src="../repositories/tickets-scheduling/masterSchedule.js"></script>
+    <script src="../repositories/events-dining/events-list.js"></script>
+    <script src="../repositories/attractions-entertainment/entertainment.js"></script>
+    <script src="../scripts/master-scheduler.js"></script>
+</html>

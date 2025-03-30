@@ -1,0 +1,103 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+
+	    	<!--
+	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	   	 -->
+	    
+		<title>Secure Checkout - Ticket Portal | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+
+<body onload='finishLoad(); setupCheckout();'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+            #mainPage {margin-top:0; background:linear-gradient(#0077b6,white); position:relative; padding-top:10px; min-height:100vh;}
+	
+            #mainPage > .container, #loadingWindow > .container, #checkoutContainer > .container, #checkoutContainer > .leftContainer {background:#efefef; border-radius: 15px; padding:20px; margin:20px auto 20px auto; animation:fadeIn 0.5s;}
+
+            #loadingWindow {position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(#0077b6,white); padding-top:10px; z-index:899; opacity:1; transition:0.5s;}
+			#loadingWindow > .container > #ldSymb {
+				border: 16px solid #0077b6;
+				border-radius: 50%; border-top: 16px solid #ffcc29;
+				width: 120px; height: 120px;
+				animation: spin 1.5s ease-in-out infinite;
+				margin:auto;
+			}
+
+			@keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+			}
+		    #loadingWindow.hidden {pointer-events: none; opacity:0;}
+
+            .incorrectVal {
+                border:2px solid red;
+            }
+            input[type="checkbox"].incorrectVal{
+                animation: selectMe 1s ease-in-out infinite;
+            }
+            @keyframes selectMe {
+                0%{scale:1;}
+                100%{scale:3;}
+            }
+
+        </style>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class="titleBar"><h2>Secure Checkout</h2></div>
+
+        <section id="mainPage">
+            <div id='loadingWindow'>
+                <div class='container'>
+                    <div id='ldSymb'></div>
+                    <h3 id='ldTxt'>Loading Webstore...</h3>
+                </div>
+            </div>
+            <div id="checkoutContainer">
+                <div class="container">
+                    <h3>Secure Checkout</h3>
+                    <p>Thank you for your order! Please review your order below and enter your payment information to complete your purchase.</p>
+                    <div id="orderSummary"></div>
+                    <form id="paymentForm">
+                        <label for="cardNumber">Card Number:</label>
+                        <input type="text" id="cardNumber" name="cardNumber" required>
+
+                        <label for="expiryDate">Expiry Date:</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required>
+
+                        <button type="submit">Complete Purchase</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+		
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    <script src="../../files/repositories/tickets-scheduling/ticketTypes.js"></script>
+    <script>
+        // Show the loading symbol and text (as specified) -> time is in milliseconds
+		function runLoad(text,time){
+			const loadDiv = document.getElementById("loadingWindow");
+			const loadText = document.getElementById("ldTxt");
+            window.scrollTo(0, 0); // scroll to top of page
+
+			ldTxt.innerHTML = text;
+			if(loadDiv.classList.contains("hidden")){
+				loadDiv.classList.remove("hidden");
+                document.getElementById("checkoutContainer").style.display='none';
+			}
+			if(time != 'infinite'){
+				setTimeout(function(){document.getElementById("loadingWindow").classList.add("hidden");document.getElementById("checkoutContainer").style.display='block';},time);
+			}
+		}
+    </script>
+    <script src="webstore-scripts/ticket-checkout.js"></script>
+</html>

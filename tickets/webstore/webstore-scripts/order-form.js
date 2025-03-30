@@ -5,6 +5,7 @@ const ticketFormContainer = document.getElementById("ticketFormContainer");
 var formType; // the type of form (day-ticket, annual-passport, ...)
 var tikType; // the specific index of a ticket (I.E. Oras nou resident park-to-park)
 const tikCategories = []; // stores the various categories of tickets for a form (will populate during intializeWebstore)
+const loadMultiplier = 0; // multiplier for load times (IE: 0 = no load, 1 = 1 hard coded time)
 
 var dateSelected; // when user selects date on calendar, value stored here
 
@@ -50,16 +51,16 @@ function initializeWebstore(){
             formType = searchParams.get("form");
             
             if(searchParams.has("tikType")){ // ticket type has already been specified -> go straight to choosing a date
-                runLoad("Preparing Order Form, Loading Ticket Data",4000);
+                runLoad("Preparing Order Form, Loading Ticket Data",loadMultiplier*4000);
                 tikType = searchParams.get("tikType");
-                    tikArray = TikTypeArray[tikType].split(" | ");
+                    tikArray = TikTypeArray[tikType].split(" | "); console.log(tikArray);
                     tikName = tikArray[2];
                     tikPrices = tikArray[3].split(",");
                     tikDays = tikArray[4];
                 setupDateSelect();
                 
             }else{ // user needs to select ticket type based on form (day-ticket, annual-passport,...)
-                runLoad("Loading Tickets and Passes",2000);
+                runLoad("Loading Tickets and Passes",loadMultiplier*2000);
                 ticketFormContainer.innerHTML = "<h2>Select Ticket Type</h2>";
 
                 // Setup the selection of tickets based on the form type
@@ -152,7 +153,7 @@ function setupDateSelect(){ // Choose date of first visit and number of days
                         newDate = calendarDate + calendarCurrentIndex;
                     }
 
-                var thisITier;
+                var thisITier; var pVal;
                 // Get TICKET TIER for this item's date (1-5)
                     // (1) Find the correct date
                     for(p=0; p < mastSchedule.length; p++){
@@ -161,28 +162,81 @@ function setupDateSelect(){ // Choose date of first visit and number of days
                             let dTemp = monthShort[calendarMonth] + "-" + newDate;
                         if(pTemp[0] == dTemp){ // ccheck if MMM-DD matches
                             thisITier = pTemp[2]; // set tier
+                            pVal = p+1; // set calendarItemIndex (number items in calendar) to the current index of the masterList (prevent counting previous dates before today in master count)
                         }
                     }
 
                 let cItemId = "index-"+calendarItemIndex+"-month-"+calendarMonth+"-date-"+newDate+"-tier-"+thisITier; // create ID for new calendar item 
 
-                let tPriceHolder = tikPrices[thisITier-1].split("/");
-                document.getElementById("row-"+calendarRow).innerHTML += "<td id='"+cItemId+"' onclick='selectCalendarDay("+'"'+cItemId+'"'+")'>"+monthShort[calendarMonth]+" "+newDate+"<br><span style='color:gray;'>$"+tPriceHolder[0]+" | $"+tPriceHolder[1]+"</span></td>";
-                if(calendarRowItem == 1 || calendarRowItem == 7){ // item is weekend
-                    document.getElementById(cItemId).classList.add("wknd");
-                }
-                if(newDate == 1){ // item is start of new month
-                    document.getElementById(cItemId).classList.add("newMonth");
-                }
-                calendarItemIndex += 1; calendarCurrentIndex += 1;
-                console.log("Calendar Row " + calendarRowItem + "Date " + monthShort[calendarMonth] + " " + newDate);
 
-                // if this is the first item created
-                if(chosenDateID == 'none'){
-                    selectCalendarDay(cItemId);
+                var dateIsValid;
+                // run if statement to check if this ticket is valid for this date
+                if(tikArray[5] == 'none' && tikArray[6] == 'none' && thisITier != '0'){
+                    dateIsValid = true; // no date restriction
+                }else{
+                    // date restriction in place
+                    var eventListFound;
+                    var splashportHours;
+                    for(k=0; k<mastSchedule.length; k++){
+                        let kTemp = mastSchedule[k].split(" | ");
+                        let kSearchVal = monthShort[calendarMonth] + "-" + newDate; //console.log("Searching for " + kSearchVal);
+                        if(kTemp[0] == kSearchVal){ // check if date matches
+                            if(kTemp[5].includes(",")){
+                                eventListFound = kTemp[5].split(",");
+                            }else{
+                                eventListFound = [kTemp[5]];
+                            }
+                            splashportHours = kTemp[4];
+                            //console.log("Found Event List: " + eventListFound);
+                            break;
+                        }
+                    }
+                    if(eventListFound[0] != 'none' && eventListFound.includes(tikArray[5])){
+                        if(tikArray[6] == 'yes' && splashportHours == '0'){
+                            dateIsValid = false; // ticket is not valid for this date
+                        }else{
+                            dateIsValid = true; // ticket is valid for this date
+                        }
+                    }else if(tikArray[6] == 'yes' && splashportHours != '0'){
+                        dateIsValid = true; // ticket is valid for this date
+                    }
+                    else{
+                        dateIsValid = false; // ticket not valid for this date
+                    }
                 }
-            }
-        }
+
+                if(dateIsValid == true){ // if the date is valid, select it
+                    // no date restriction
+                    let tPriceHolder = tikPrices[thisITier-1].split("/");
+                    document.getElementById("row-"+calendarRow).innerHTML += "<td id='"+cItemId+"' onclick='selectCalendarDay("+'"'+cItemId+'"'+")'>"+monthShort[calendarMonth]+" "+newDate+"<p style='margin:2px 0px 2px 0px; font-size:9px'>Tier "+thisITier+"</p><span style='color:gray;'>$"+tPriceHolder[0]+" | $"+tPriceHolder[1]+"</span></td>";
+                    if(calendarRowItem == 1 || calendarRowItem == 7){ // item is weekend
+                        document.getElementById(cItemId).classList.add("wknd");
+                    }
+                    if(newDate == 1){ // item is start of new month
+                        document.getElementById(cItemId).classList.add("newMonth");
+                    }
+                    calendarItemIndex += 1; calendarCurrentIndex += 1;
+                    //console.log("Calendar Row " + calendarRowItem + "Date " + monthShort[calendarMonth] + " " + newDate);
+                }else{
+                    // ticket not valid for this date
+                    document.getElementById("row-"+calendarRow).innerHTML += "<td id='"+cItemId+"' class='noClick'>"+monthShort[calendarMonth]+" "+newDate+"<br><br></td>";
+                    if(calendarRowItem == 1 || calendarRowItem == 7){ // item is weekend
+                        document.getElementById(cItemId).classList.add("wknd");
+                    }
+                    if(newDate == 1){ // item is start of new month
+                        document.getElementById(cItemId).classList.add("newMonth");
+                    }
+                    calendarItemIndex += 1; calendarCurrentIndex += 1;
+                    //console.log("Calendar Row " + calendarRowItem + "Date " + monthShort[calendarMonth] + " " + newDate + " - Not Valid");
+                }
+                
+
+                // if this is the first item created, choose todays date (unless there are special restrictions on when the ticket is valid)
+                if(chosenDateID == 'none' && tikArray[5] == 'none' && tikArray[6] == 'none'){
+                    selectCalendarDay(cItemId); calendarItemIndex = pVal;
+                }
+            }// end of if(calendarItemIndex < maxIndex)
+        }// end of master for loop (i=0; i<=34; i++)
     }
 
     function selectCalendarDay(elementID){ // when a user clicks on a date to select it
@@ -199,28 +253,33 @@ function setupDateSelect(){ // Choose date of first visit and number of days
     }
 
 function setupNumTickets(){ // users will select how many people they are buying tix for
-    runLoad("Loading...",400); numDaysSelected = document.getElementById("numDaySelect").value;
-    saveCalendarWin = ticketFormContainer.innerHTML;
+    if(chosenDateID != 'none'){
+        runLoad("Loading...",loadMultiplier*400); numDaysSelected = document.getElementById("numDaySelect").value;
+        saveCalendarWin = ticketFormContainer.innerHTML;
 
-    // If multi-day ticket, calculate cost total (cost per day * num days) -> does not apply to preset tickets
-    if(tikDays == 'select'){ // user must select number of days
-        tikPriceFinal[0] = parseInt(tikPriceFinal[0]) * parseInt(numDaysSelected);
-        tikPriceFinal[1] = parseInt(tikPriceFinal[1]) * parseInt(numDaysSelected);
+        // If multi-day ticket, calculate cost total (cost per day * num days) -> does not apply to preset tickets
+        if(tikDays == 'select'){ // user must select number of days
+            tikPriceFinal = tikPrices[dayTierSelected-1].split("/");
+            tikPriceFinal[0] = parseInt(tikPriceFinal[0]) * parseInt(numDaysSelected);
+            tikPriceFinal[1] = parseInt(tikPriceFinal[1]) * parseInt(numDaysSelected);
+        }
+
+        // Get date of visit
+        let tmp = chosenDateID.split("-");
+            let mnthVis = months[tmp[3]];
+            let dtVis = tmp[5];
+
+        ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2><p>First visit on <b>"+mnthVis+" "+dtVis+"</b> (Tier "+dayTierSelected+") for <b>"+numDaysSelected+" days</b> </div> <h2>Number of Guests</h2> \
+                                        <table style='width:auto;margin:auto;'><tr><th style='text-align:center;'>Adult (12+) - $"+tikPriceFinal[0]+"</th><th style='text-align:center;'>Child (1-11) - $"+tikPriceFinal[1]+"</th></tr><tr><td><div class='ngst'><button onclick='numGuestFunc(1)'>-</button><p id='numGuestAdultText'>1</p><button onclick='numGuestFunc(2)'>+</button></div></td><td><div class='ngst'><button onclick='numGuestFunc(3)'>-</button><p id='numGuestChildText'>1</p><button onclick='numGuestFunc(4)'>+</button></div></td></tr></table>   \
+                                        <p style='font-size:12px'>Children under 12 must be accompanied by an adult 12 years of age or older</p> \
+                                        <p style='font-size:12px'>Price shown is total cost of each ticket including all days</p> \
+                                        <div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='reopenCalendar()'>Back</a> <a class='btn filled' onclick='setupAddOns()'>Continue</a></div>";
+
+        document.getElementById('numGuestAdultText').innerHTML = numAdults;
+        document.getElementById('numGuestChildText').innerHTML = numChilds;
+    }else{
+        alert("Please select a date first");
     }
-
-    // Get date of visit
-    let tmp = chosenDateID.split("-");
-        let mnthVis = months[tmp[3]];
-        let dtVis = tmp[5];
-
-    ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2><p>First visit on <b>"+mnthVis+" "+dtVis+"</b> (Tier "+dayTierSelected+") for <b>"+numDaysSelected+" days</b> </div> <h2>Number of Guests</h2> \
-                                     <table style='width:auto;margin:auto;'><tr><th style='text-align:center;'>Adult (12+) - $"+tikPriceFinal[0]+"</th><th style='text-align:center;'>Child (1-11) - $"+tikPriceFinal[1]+"</th></tr><tr><td><div class='ngst'><button onclick='numGuestFunc(1)'>-</button><p id='numGuestAdultText'>1</p><button onclick='numGuestFunc(2)'>+</button></div></td><td><div class='ngst'><button onclick='numGuestFunc(3)'>-</button><p id='numGuestChildText'>1</p><button onclick='numGuestFunc(4)'>+</button></div></td></tr></table>   \
-                                     <p style='font-size:12px'>Children under 12 must be accompanied by an adult 12 years of age or older</p> \
-                                     <p style='font-size:12px'>Price shown is total cost of each ticket including all days</p> \
-                                    <div class='spacer'></div><div class='container' style='padding-top:10px;'><a class='btn noLeft' onclick='reopenCalendar()'>Back</a> <a class='btn filled' onclick='setupAddOns()'>Continue</a></div>";
-
-    document.getElementById('numGuestAdultText').innerHTML = numAdults;
-    document.getElementById('numGuestChildText').innerHTML = numChilds;
 }
 
     function reopenCalendar(){
@@ -258,7 +317,7 @@ function setupNumTickets(){ // users will select how many people they are buying
     }
 
 function setupAddOns(){
-    runLoad("Loading Ticket AddOns",2000);
+    runLoad("Loading Ticket AddOns",loadMultiplier*2000);
 
     // Get date of visit
     let tmp = chosenDateID.split("-");
@@ -341,7 +400,7 @@ function setupAddOns(){
     }
 
 function runReviewOrder(){
-    runLoad("Preparing review...",1000);
+    runLoad("Preparing review...",loadMultiplier*1000);
     saveAddOnSelect = ticketFormContainer.innerHTML;
 
     // Get date of visit
@@ -353,7 +412,7 @@ function runReviewOrder(){
     totalCostTickets = (tikPriceFinal[0]*numAdults) + (tikPriceFinal[1]*numChilds);
 
     ticketFormContainer.innerHTML = "<div class='titleBar silver'><h2>"+tikName+"</h2></div> <h1>Review Order</h1> Please check that all information is correct before proceeding \
-    <div class='container' id='tikReviewDisp'> <h4>Tickets & Guests</h4> <p>"+numAdults+" Adults @ $"+tikPriceFinal[0]+" each</p> <p>"+numChilds+" Children @ $"+tikPriceFinal[1]+" each</p> <p style='color:midnightblue; font-weight:bold'>Cost of tickets: $"+totalCostTickets+"</p> \
+    <div class='container' id='tikReviewDisp'> First visit on <b>"+mnthVis+" "+dtVis+"</b> (Tier "+dayTierSelected+")<br>Visiting for <b>"+numDaysSelected+" days</b><br><br><h4>Tickets & Guests</h4> <p>"+numAdults+" Adults @ $"+tikPriceFinal[0]+" each</p> <p>"+numChilds+" Children @ $"+tikPriceFinal[1]+" each</p> <p style='color:midnightblue; font-weight:bold'>Cost of tickets: $"+totalCostTickets+"</p> \
                             <br><h4>Ticket AddOns</h4>";
 
                             if(addOnList.length > 0){
@@ -375,6 +434,7 @@ function runReviewOrder(){
                                 }
                                 document.getElementById('tikReviewDisp').innerHTML += "</ul>";
                             }else{
+                                totalCostAddOns = 0;
                                 document.getElementById('tikReviewDisp').innerHTML += "<p style='color:gray;'>No add-ons selected</p>";
                             }
                             document.getElementById('tikReviewDisp').innerHTML += "<p style='color:midnightblue; font-weight:bold'>Cost of add-ons: $"+totalCostAddOns+"</p><br><h4>Order Subtotal: $"+(totalCostTickets + totalCostAddOns)+"</h4>";
@@ -398,7 +458,7 @@ function runReviewOrder(){
 
 // FINAL STEP COMPLETED ON THIS PAGE
 function proceedToCheckout(){
-        let goToLink = "webstore/checkout.html?tikType="+tikType+"&tikCost="+totalCostTickets+"&dateID="+chosenDateID+"&numDays="+numDaysSelected+"&numAdults="+numAdults+"&numChilds="+numChilds;
+        let goToLink = "webstore/secure-checkout.html?tikType="+tikType+"&tikCost="+totalCostTickets+"&dateID="+chosenDateID+"&numDays="+numDaysSelected+"&numAdults="+numAdults+"&numChilds="+numChilds;
         if(addOnList.length > 0){
             goToLink += "&addOns="+addOnList + "&costAddOns=" + totalCostAddOns; //&addOns=1 or &addOns=1,2,3,...
         }else{

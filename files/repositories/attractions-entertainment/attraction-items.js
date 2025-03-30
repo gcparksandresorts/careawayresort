@@ -3,16 +3,16 @@ attractionDescrition = [];
 attractionImg = [];
 
 queueText = ["Standby queue only", "<a href='../../tickets/gc-vip'>Priority Queuing</a> available", "<a href='../../tickets/gc-vip'>Priority Queuing</a> and <a href='../../information/single-riders'>Single Riders</a> available", "Not Applicable"];
-		// 0				1 (VIP only)									2 (VIP and single)				3 (not applicable)
+					// 0				1 (VIP only)									2 (VIP and single)				3 (not applicable)
 
 accessibilityInfo = ["Guest may remain in wheelchair or ECV", "Guest must transfer from wheelchair", "Some vehicles can accomodate standard wheelchairs"];
-	//		0						1				2
+						//		0										1									2
 
 attractionAge = ["none", "For all ages", 'Minimum Height 35" (89cm)', 'Minimum Height 40" (102cm)', 'Minimum Height 45" (115cm)', 'Minimum Height 48" (122cm)', 'Minimum Height 50" (127cm)', 'Mature Themes (PG13)', 'Other']
-		// 0		 1			2			3				4				5				6`			7
+					// 0		 1					2									3							4							5							6`								7
 
 attractionCategories = ["none", "Thrill Rides", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences",  "Seasonal Attractions", "Other"];
-			// 0		 1		2			3				4			5			6
+							// 0		 1				2							3							4							5					6
 
 /*
 attractionItems[NUM] = "rideName0/font | rideCategory1 | rideLocation2,parkIndex | rideDuration3 | queueIndex4 | minHeight5 | accessibility6 | photoPassYN7";
@@ -76,3 +76,7 @@ attractionItems[10] = "Peanut's People Mover/none | 3 | Multiple,1 | 5-20 Minute
 attractionItems[11] = "BATx/font | 1 | Kingdom of Darkness,2 | 2 Minutes | 2 | 6 | 1 | no";
 	attractionDescrition[11] = "A thrilling flat ride where you fly around in a Bat. Best part - you get to control how your bat spins! | Thrilling,Spinning,Flying,Interactive | <b>Know Before You Go:</b> This ride involves intense spinning motion. Guests prone to motion sickness should not ride.";
 	attractionImg[11] = "https://i.imgur.com/wQcL9Tt.jpeg | https://www.gerstlauer-rides.de/fileadmin/Daten/Bilder/Produkte/Rundfahrgeschaefte/Sky_Fly/SF_Einleitung/SF_Einleitung_Toverland_02.jpg - https://orlandoparkstop.com/wp-content/uploads/2019/08/SkyFly.jpg";
+
+	attractionItems[12] = "Buddy's Friendship Factory/font | 4 | Creature's Cove,1 | 30 minutes - 1 hour | 0 | 1 | 0 | no";
+	attractionDescrition[12] = "shortIntro0 | tags1,otherTag | longParagraph2";
+	attractionImg[12] = "https://static.wikia.nocookie.net/sixflags/images/4/4d/Build-A-Bear_Workshop_SFMM_2023-04-02.jpg/revision/latest?cb=20230402204023 | otherImg1 - otherImg";

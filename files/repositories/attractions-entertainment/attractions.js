@@ -8,13 +8,13 @@ const shortLink = "https://gcparksandresorts.github.io/careawayresort/things-to-
 attractionClickLink = "https://gcparksandresorts.github.io/careawayresort/things-to-do/attractions/";
 
 attractionLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
-			// 0		1				2			3				4			  5
+			// 				0		1										2								3							4			 		5					
 
 attractionCategories = ["none", "Thrill Rides", "Immersive Dark Rides", "Family Friendly Attractions", "Interactive Experiences",  "Seasonal Attractions", "Other"];
-			// 0		 1		2			3				4			5			6
+						// 0		 1					2						3								4						5						6
 
 attractionAge = ["none", "For all ages", 'Minimum Height 35" (89cm)', 'Minimum Height 40" (102cm)', 'Minimum Height 45" (115cm)', 'Minimum Height 48" (122cm)', 'Minimum Height 50" (127cm)', 'Mature Themes (PG13)', 'Other']
-		// 0		 1			2			3				4				5				6`			7
+				// 0		 1					2										3								4							5							6`						7				8
 
 /*
 iter+=1; attractionList[iter] = "attractionName - sponsorText | attractionLocation | attractionCategory | attractionAge | clickLink | imageLink";
@@ -50,4 +50,5 @@ iter+=1; attractionList[iter] = "Wonder Reel Studio Tour - none | 2 | 4 | 1 | at
 iter+=1; attractionList[iter] = "World of Ghibli - Sponsored by Aztech Cinema | 1 | 3 | 2 | atIndex=3 | ../files/images/banners/ghibliArt.webp";
 iter+=1; attractionList[iter] = "8Lanes Bowling Alley and Sports Bar - Pay per game | 4 | 4 | 1 | "+shortLink+"8lanes | https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesAlley.jfif";
 iter+=1; attractionList[iter] = "Buddy's Wooden Wheel - none | 1 | 3 | 1 | atIndex=7 | https://i.imgur.com/E0Bbpt0.jpeg";
+iter+=1; attractionList[iter] = "Buddy's Friendship Factory - Sponsored by Build-a-bear | 1 | 4 | 1 | atIndex=12 | https://static.wikia.nocookie.net/sixflags/images/4/4d/Build-A-Bear_Workshop_SFMM_2023-04-02.jpg/revision/latest?cb=20230402204023";
 

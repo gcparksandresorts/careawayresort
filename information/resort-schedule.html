@@ -17,8 +17,9 @@
             	<div class='container' style='margin-top:0;'>
 			<h3 id='dateDisplay'>January 6, 2024</h3>
 			
-			<div class='miniTileContainer bordered dImg'>
-				<div style='text-align:center;'>
+			<div class='miniTileContainer bordered dImg' id="parkTilesDisplay" style="text-align: center;">
+				<h3>An error has occurred.</h3>
+				<!--<div style='text-align:center;'>
 					<img src='https://i.imgur.com/KJdoVlE.jpeg'>
 					<p><b>Careaway Park Hours</b><br>10:00 AM - 10:00 PM</p>
 					<a href='../destinations/careaway-park'></a>
@@ -38,11 +39,10 @@
 					<img src='https://i.imgur.com/7qV4F2N.jpeg'>
 					<p><b>Shops & More District Hours</b><br>10:00 AM - 10:00 PM</p>
 					<a href='../destinations/shops-and-more-district'></a>
-				</div>
+				</div>-->
 			</div>
 
-			<p><a style='text-decoration:underline; cursor:pointer;' onclick='document.getElementById("dateInput").style.display = "block";'>Look Ahead</a></p>
-			<p><input type='date' onfocus="this.showPicker()" id='dateInput' style='margin:auto; display:none; animation:fadeIn 0.5s;'></p>
+			<p><label for='dateSelect'>Select a different date to see schedule: </label><select id='dateSelect'></select> <button id="viewScheduleBtn" onclick="viewSchedule()">View Schedule</button></p>
 		</div>
 
 		<div class='spacer'></div>
@@ -53,7 +53,7 @@
 				<option value='0'>View All</option>
 			</select>
 			<a id='entUpdt' style='color:navy; cursor:pointer; display:none; margin:5px;' onclick='updatePage();'><u>Apply filter</u></a>
-			<div class='miniTileContainer bordered' id='entContainer'>
+			<div class='container' id='entContainer'>
 			</div>
 		</div>
 
@@ -65,7 +65,7 @@
 				<option value='0'>View All</option>
 			</select>
 			<a id='evntUpdt' style='color:navy; cursor:pointer; display:none; margin:5px;' onclick='updatePage();'><u>Apply filter</u></a>
-			<div class='miniTileContainer bordered' id='eventContainer'>
+			<div class='container' id='eventContainer'>
 			</div>
 		</div>
 
@@ -86,11 +86,14 @@
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
 
-	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/events.js"></script>
-	<script src="https://gcparksandresorts.github.io/careawayresort/files/repositories/entertainment.js"></script>
+	<script src="../files/repositories/events-dining/events-list.js"></script>
+	<script src="../files/repositories/attractions-entertainment/entertainment.js"></script>
+	<script src="../files/repositories/tickets-scheduling/masterSchedule.js"></script>
+	<script src="../files/repositories/tickets-scheduling/ticketTypes.js"></script>
+	<script src="../files/scripts/resort-schedule.js"></script>
 
 	<script>
-		const entContainer = document.getElementById("entContainer");
+		/*const entContainer = document.getElementById("entContainer");
 		const eventContainer = document.getElementById("entContainer");
 		const dateDisplay = document.getElementById("dateDisplay");
 
@@ -169,7 +172,7 @@
 			
 			let buildText = "https://gcparksandresorts.github.io/careawayresort/information/resort-schedule?dateSet="+dateSet+"&entSet="+entSet+"&eventSet="+eventSet;
 			window.open(buildText,"_self");
-		}
+		}*/
 	</script>		
 
 </html>
