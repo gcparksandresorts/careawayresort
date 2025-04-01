@@ -20,34 +20,35 @@ restaurantInfo[4] = "preciseLocation0, parkLocation1"; // use park index for 1
     iter+=1; restaurantCMen[iter] = "new | subCategory | description";
 
 -> after category, start listing items.
-    iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2";
-    iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
-    iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
+    iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
+    iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
+    iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
 
 -> If no breakfast category use restaurantBreakfast[0] = "empty"; -> same goes for others too
 
 -> restaurantCMen is used for items that are always on the menu (such as drinks, etc) no matter time of day
     For restaurants with no breakfast and lunch menus (ie. snack stands) just use restaurantCMen only
 
+- > Allergen -> v = vegan, gf = gluten free, leave as is to ignore. (v,gf for both)
 */
 
 // BREAKFAST
 iter=0; restaurantBreakfast[iter] = "new | subCategory | description";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2";
+iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
 
 // LUNCH & DINNER
 iter=0; restaurantDinner[iter] = "new | subCategory | description";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
+iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
 
 // ALLWAYS ON THE MENU
 iter=0; restaurantCMen[iter] = "new | subCategory | description";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
+iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
+iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
 
 
 

@@ -5,7 +5,7 @@ const ticketFormContainer = document.getElementById("ticketFormContainer");
 var formType; // the type of form (day-ticket, annual-passport, ...)
 var tikType; // the specific index of a ticket (I.E. Oras nou resident park-to-park)
 const tikCategories = []; // stores the various categories of tickets for a form (will populate during intializeWebstore)
-const loadMultiplier = 0; // multiplier for load times (IE: 0 = no load, 1 = 1 hard coded time)
+const loadMultiplier = 1; // multiplier for load times (IE: 0 = no load, 1 = 1 hard coded time)
 
 var dateSelected; // when user selects date on calendar, value stored here
 

@@ -6,13 +6,25 @@
 	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
 	   	 -->
 	    
-		<title id="pgTitle">PAGE_TITLE | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+		<title id="pgTitle">Restaurants & Dining | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<style>
             .menuMainContainer {animation:fadeIn 0.7s;}
+            .menuMainContainer .menuItemContainer {display:flex; flex-flow:row; flex-wrap:wrap; max-width:900px; margin:auto;}
+            .menuItemContainer > div {width:50%; margin:0; padding:10px; text-align:left;}
+            .menuItemContainer:nth-child(even){padding-left:20px;}
+
+            @media screen and (max-width:700px) {
+                .menuItemContainer {flex-flow: column;}
+                .menuItemContainer > div {width:100%; padding:10px; padding-bottom:20px;}
+                .menuItemContainer:nth-child(even) {padding-left: 10px;}
+            }
+
+            .vegan {color:green;}
+            .gf {color:goldenrod;}
         </style>
 
 		<!-- BODY CONTENT HERE -->
@@ -25,6 +37,17 @@
 
         <div class="container" id="menu-container">
 
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="container">
+            <p><span class="vegan">V</span> - Vegan option available</p>
+            <p><span class="gf">GF</span> - Gluten Free option available</p>
+            
+            Please inform your server if you have a severe food allergy. <br> All food prepared in this facility holds the possibility of coming into contact with meat, dairy, and nuts.
+            <p>For more information visit the resort <a href="../../information/accessibility">accessibility</a> webpage</p>
+            <p style='font-size:12px'>Prices subject to change. All restaurants and dining at the Careaway Resort are subject to closure at any time.</p>
         </div>
 
         <div class="spacer"></div>

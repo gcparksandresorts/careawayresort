@@ -20,9 +20,9 @@ restaurantInfo[4] = "Park Entryway, 1"; // use park index for 1
    iter+=1; restaurantCMen[iter] = "new | subCategory | description";
 
 -> after category, start listing items.
-    iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2";
-    iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
-    iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
+    iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
+    iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
+    iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
 
 -> If no breakfast category use restaurantBreakfast[0] = "empty"; -> same goes for others too
 
@@ -32,43 +32,44 @@ restaurantInfo[4] = "Park Entryway, 1"; // use park index for 1
 */
 
 // BREAKFAST
-iter=0; restaurantBreakfast[iter] = "new | Classic Breakfast Plates | description";
-iter+=1; restaurantBreakfast[iter] = "Careacado Toast | 14.00 | Avocado on thick slice of olive bread with pickled onions, feta cheese, parsley. Served with breakfast potatos";
-iter+=1; restaurantBreakfast[iter] = "Reuven's Classic Egg Sandwich | 13.99 | Half-bagel with cheddar cheese, skillet-fried sausage, avocado mayo, and fried egg. Served with choice of breakfast potatoes or fruit";
-iter+=1; restaurantBreakfast[iter] = "Minecraftian Breakfast Plate | 21.99 | 2 eggs your way, skillet cooked breakfast sausage, bacon, choice of fruit or breakfast potatoes, choice of toast with jam";
-iter+=1; restaurantBreakfast[iter] = "Careaway Proper Skillet | 19.99 | Breakfast potatoes, scrambled egg, cheddar cheese, diced tomatoes, onions, mushrooms, creamy sauce, all cooked in a cast-iron skillet";
+iter=0; restaurantBreakfast[iter] = "new | Classic Breakfast Plates | Available for oink oink package";
+iter+=1; restaurantBreakfast[iter] = "Careacado Toast | 14.00 | Avocado on thick slice of olive bread with pickled onions, feta cheese, parsley. Served with breakfast potatos | v,gf";
+iter+=1; restaurantBreakfast[iter] = "Reuven's Classic Egg Sandwich | 13.99 | Half-bagel with cheddar cheese, skillet-fried sausage, avocado mayo, and fried egg. Served with choice of breakfast potatoes or fruit | allergen";
+iter+=1; restaurantBreakfast[iter] = "Minecraftian Breakfast Plate | 21.99 | 2 eggs your way, skillet cooked breakfast sausage, bacon, choice of fruit or breakfast potatoes, choice of toast with jam | gf";
+iter+=1; restaurantBreakfast[iter] = "Careaway Proper Skillet | 19.99 | Breakfast potatoes, scrambled egg, cheddar cheese, diced tomatoes, onions, mushrooms, creamy sauce, all cooked in a cast-iron skillet | allergen";
+iter+=1; restaurantBreakfast[iter] = "Minecraftian Steak & Eggs | 21.99 | Breaded steak fried and smothered in creamy sausage gravy. Served with two over-easy eggs and breakfast potatos | allergen";
 
 iter+=1; restaurantBreakfast[iter] = "new | Sweet Breakfast | description";
-iter+=1; restaurantBreakfast[iter] = "Vegas Boy's Granola French Toast | 14.00 | Brioche french toast topped with fresh banana puree, peanut butter, honey and oats granola, blueberries";
-iter+=1; restaurantBreakfast[iter] = "Berry French Toast | 12.99 | Thick brioche bread dipped in vanilla egg mixture and toasted to a delightful golden brown. Served with jam and berries.";
-iter+=1; restaurantBreakfast[iter] = "Lemon Blackberry Pancakes | 15.00 | Thick buttermilk pancakes sandwiching a layer of creamy lemon curd with blackberry jam";
-iter+=1; restaurantBreakfast[iter] = "Strawberry n' Cream Crepe | 15.00 | description2";
-iter+=1; restaurantBreakfast[iter] = "Nutella Peanutbutter Crepe | 15.00 | description2";
+iter+=1; restaurantBreakfast[iter] = "Vegas Boy's Granola French Toast | 14.00 | Brioche french toast topped with fresh banana puree, peanut butter, honey and oats granola, blueberries | allergen";
+iter+=1; restaurantBreakfast[iter] = "Berry French Toast | 12.99 | Thick brioche bread dipped in vanilla egg mixture and toasted to a delightful golden brown. Served with jam and berries. | allergen";
+iter+=1; restaurantBreakfast[iter] = "Lemon Blackberry Pancakes | 15.00 | Thick buttermilk pancakes sandwiching a layer of creamy lemon curd with blackberry jam | allergen";
+iter+=1; restaurantBreakfast[iter] = "Strawberry n' Cream Crepe | 15.00 | description2 | allergen";
+iter+=1; restaurantBreakfast[iter] = "Nutella Peanutbutter Crepe | 15.00 | description2 | allergen";
 
 iter+=1; restaurantBreakfast[iter] = "new | Al a Carte | description";
-iter+=1; restaurantBreakfast[iter] = "Breakfast potatoes | 8.99 | description2";
-iter+=1; restaurantBreakfast[iter] = "Hashbrowns | 8.99 | description2";
-iter+=1; restaurantBreakfast[iter] = "Fresh Fruit | 8.99 | description2";
-iter+=1; restaurantBreakfast[iter] = "Scrambled Eggs | 7.99 | description2";
-iter+=1; restaurantBreakfast[iter] = "Fried Egg (1) | 4.00 | description2";
-iter+=1; restaurantBreakfast[iter] = "Slice of Toast | 2.75 | description2";
+iter+=1; restaurantBreakfast[iter] = "Breakfast potatoes | 8.99 | description2 | v,gf";
+iter+=1; restaurantBreakfast[iter] = "Hashbrowns | 8.99 | description2 | allergen";
+iter+=1; restaurantBreakfast[iter] = "Fresh Fruit | 8.99 | description2 | v,gf";
+iter+=1; restaurantBreakfast[iter] = "Scrambled Eggs | 7.99 | description2 | gf";
+iter+=1; restaurantBreakfast[iter] = "Fried Egg (1) | 4.00 | description2 | gf";
+iter+=1; restaurantBreakfast[iter] = "Slice of Toast | 2.75 | description2 | v";
 
 
 
 // LUNCH & DINNER
-iter=0; restaurantDinner[iter] = "new | Main Course | description";
-iter+=1; restaurantDinner[iter] = "Minecraftian Beef Wellington | 27.99 | Scillet cooked beef slices with mushroom, potato, onion, in creamy gravy sauce baked inside a butter puff pastry. Served with vegitables and potatoes";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2";
+iter=0; restaurantDinner[iter] = "new | Main Course | All main course options apply for the oink oink dining package";
+iter+=1; restaurantDinner[iter] = "Minecraftian Beef Wellington | 27.99 | Scillet cooked beef slices with mushroom, potato, onion, in creamy gravy sauce baked inside a butter puff pastry. Served with vegitables and potatoes | allergen";
+iter+=1; restaurantDinner[iter] = "Italian Sausage and Parmasean Penne | 21.99 | Italian Sausage, baby spinach, onion, heavy cream parmesean sauce with red pepper and garlic | allergen";
+iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
 
 iter+=1; restaurantDinner[iter] = "new | Al a carte | description";
 
 
 // ALLWAYS ON THE MENU
 iter=0; restaurantCMen[iter] = "new | Beverages | description";
-iter+=1; restaurantCMen[iter] = "Iced Tea | 5.00 | Optional sweetener";
-iter+=1; restaurantCMen[iter] = "Fresh Lemonade | 5.00 | With a hint of mint";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2";
+iter+=1; restaurantCMen[iter] = "Iced Tea | 5.00 | Optional sweetener | allergen";
+iter+=1; restaurantCMen[iter] = "Fresh Lemonade | 5.00 | With a hint of mint | allergen";
+iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
 
 
 

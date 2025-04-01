@@ -24,9 +24,9 @@ entertainmentCategory = ["none", "Live Entertainment", "Nighttime Spectacular", 
 
 
 /*
-entertainmentItems[0] = "showName0/none | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
-	entertainmentDescription[0] = "shortDescription0 | tagList1,tag2 | longDescription2";
-	entertainmentImages[0] = "mainImg0 | extraImg - extraImg2";
+entertainmentItems[NUM] = "showName0/none | showCategory1 | showLocation2,parkIndex | showDuration3 | gcVipInfo4 | accessibility5";
+	entertainmentDescription[NUM] = "shortDescription0 | tagList1,tag2 | longDescription2";
+	entertainmentImages[NUM] = "mainImg0 | extraImg - extraImg2";
 */
 
 entertainmentItems[6] = "Fountains of Light/none | 2 | Palace Gardens,1 | 18 Minutes | 1 | 2";
@@ -65,3 +65,11 @@ entertainmentItems[4] = "Kingdom of Darkness: Alive/none | 6 | Kingdom of Darkne
 entertainmentItems[7] = "AquaMagic - Rivers of Light/none | 2 | Palace Gardens,1 | 22 Minutes | 3 | 2";
 	entertainmentDescription[7] = "Grab a spot along the Palace Garden Lake and delight in this beautiful lighted boat parade and water show that will ignite the night sky with millions of dazzling colors | Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade | longDescription2";
 	entertainmentImages[7] = "https://i.imgur.com/dyUVluy.jpeg | extraImg - extraImg2";
+
+entertainmentItems[8] = "The Greatest Showman - A Funtastic Stageshow Spectacle/none | 4 | Wonder Reel Studios,2 | 45 Minutes | 2 | 2";
+	entertainmentDescription[8] = "Experience the magic and mystique of the Greatest Showman as the wonderful and energy-filled circus leaves the screen and comes to life right before your very eyes! | Live Performance,Circus,Spectacle,Musical,Based on a movie | longDescription2";
+	entertainmentImages[8] = "https://townsquare.media/site/442/files/2017/12/the-greatest-showman.jpg | https://images.bauerhosting.com/legacy/empire-images/articles/59a5eb714fd5042f0596aaaf/greatest%20showman2.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80 - https://imageio.forbes.com/blogs-images/scottmendelson/files/2018/01/MV5BYTE0ZTE1MTAtZWQ3OS00MTc2LTg0OTUtZmIzYzc1NzMzOThmXkEyXkFqcGdeQXVyNDg2MjUxNjM@._V1_SY1000_SX1500_AL_-1200x800.jpg?height=474&width=711&fit=bounds";
+
+entertainmentItems[9] = "The Polar Express Parade/none | 3 | Palace Gardens,1 | 15 Minutes | 0 | 1";
+	entertainmentDescription[9] = "On this rare occassion, witness snowfall over the Palace Gardens and -- chug, chug, chug -- OMG! The Polar Express locamotive is coming right for us! | Magical,Snow,Based on a movie,Dazzling | <h2>Ho Ho HO!</h2>Step into the magic of the beloved holiday classic as The Polar Express comes to life in this enchanting parade! Watch as the grand locomotive steams down a snow-dusted resort boulevard, bringing with it the spirit of Christmas. Dancers dressed as conductors, festive carolers, and jolly snowmen spread holiday cheer, while twinkling lights and swirling snow create a breathtaking winter wonderland. With heartwarming music and dazzling performances, this parade is a magical journey to the North Pole you won’t want to miss!";
+	entertainmentImages[9] = "../../files/images/shows/polarExpressShow.jpg | extraImg - extraImg2";

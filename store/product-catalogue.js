@@ -33,13 +33,14 @@ iter += 1; productList[iter]="Mr. Teddy's Adventures With Friends Youth Sweatshi
 	productImg[iter] = "https://i.imgur.com/cfJOFwg.png";
 	productDescription[iter] = "Champion Youth Midweight 50/50 Crewnech Sweatshirt | Coffee is for the adults, but friends are for everyone!";
 
-productList[1]="Careaway Resort Crewneck Sweatshirt | 1 | 64.00 | #000080,#82c8e5 | Small, Medium, Large, XLarge, XXLarge";
-	productImg[1] = "https://i.imgur.com/9LQCTqY.png";
-	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders.";
+productList[1]="Careaway Resort Modern Crewneck Sweatshirt | 1 | 58.99 | #000080,#000000,#ffffff | Small, Medium, Large, XLarge, XXLarge";
+	productImg[1] = "https://i.imgur.com/U5dznan.jpeg";
+	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
 
-productList[2]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard Wick";
-	productImg[2] = "https://i.imgur.com/FaR25oS.jpeg";
-	productDescription[2] = "Hand-poured soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
+productList[2]="Careaway Resort Modern Womens Cropped Crewneck Sweatshirt | 1 | 65.00 | #36454F,#ffffff | Small, Medium, Large, XLarge, XXLarge";
+	productImg[2] = "https://i.imgur.com/Bc6twpN.jpeg";
+	productDescription[2] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
+
 
 productList[10]="Careaway Drive Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 inches";
 	productImg[10] = "https://i.imgur.com/Aiac3fm.jpeg";
@@ -168,3 +169,7 @@ iter += 1; productList[iter]="Love is an Adventure Pride Womens T-shirt | 1 | 24
 iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
 	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo | A sleek way to let everyone know where you go to experience Adventure.";
+
+iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard Wick";
+	productImg[iter] = "https://i.imgur.com/FaR25oS.jpeg";
+	productDescription[iter] = "Hand-poured soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";

@@ -75,7 +75,7 @@ function setupCheckout(){
         }
 
         // Price Includes Section
-        document.getElementById("orderSummaryCont").innerHTML += "<div style='margin-top:12px; color:dimgray;'>Puertas Nuevas Act 6-143A: The price of your ticket includes $"+Number(costTickets*(.08+.03+.02) + 1.25)+" in fees: <ul style='margin-top:5px;'><li>PN Sales Tax (8%): $"+Number(costTickets*0.08)+"</li><li>PN Tourism Fee (3%): $"+Number(costTickets*0.03)+"</li><li>PN Conservation Fee: $1.25</li><li>Webstore Service Fee (2%): $"+Number(costTickets*0.02)+"</li></ul></div>";
+        document.getElementById("orderSummaryCont").innerHTML += "<div style='margin-top:12px; color:dimgray;'>Puertas Nuevas Transparent Costs Act: The price of your ticket includes $"+Number(costTickets*(.08+.03+.02) + 1.25).toFixed(2)+" in fees: <ul style='margin-top:5px;'><li>PN Sales Tax (8%): $"+Number(costTickets*0.08).toFixed(2)+"</li><li>PN Tourism Fee (3%): $"+Number(costTickets*0.03).toFixed(2)+"</li><li>PN Conservation Fee: $1.25</li><li>Webstore Service Fee (2%): $"+Number(costTickets*0.02).toFixed(2)+"</li></ul></div>";
 
         // Order total
         document.getElementById("orderSummaryCont").innerHTML += "<br><br><div class='spacer'></div><p>Order Subtotal: $"+(costTickets+costAddOns).toFixed(2)+"</p><p>Taxes and Fees: Included in price</p><h3 style='color:midnightblue'>Order Total: $"+(costTickets+costAddOns).toFixed(2)+"</h3>";

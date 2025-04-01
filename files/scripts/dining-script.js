@@ -84,7 +84,17 @@ const container = document.getElementById("attractionContainer");
 
             if(isApplicaple){
                 let hyperLink = "dining/page?name=" + temp[1];
-                let divContent = "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+temp[0]+"</h3>"+temp[5]+"<br><br><br></div><div class='subText'>"+temp[3]+"</div><div class='tab'>📍 "+diningLocations[temp[4]]+"</div><a href='"+hyperLink+"'>link</a></div>";
+
+				// meal type(s)
+				var mealTypes;
+				if(temp[3].includes(',')){
+					let tmel = temp[3].split(','); mealTypes = '';
+					for(l=0; l<tmel.length; l++){
+						mealTypes += mealStyle[tmel[l]] + ", ";
+					}
+				}else{mealTypes = mealStyle[temp[3]];}
+
+                let divContent = "<div><img src='"+temp[6]+"'><div><h3 style='margin-bottom:5px'>"+temp[0]+"</h3>"+temp[5]+"<br><br><br></div><div class='subText'>"+mealTypes+"</div><div class='tab'>&#128205; "+diningLocations[temp[4]]+"</div><a href='"+hyperLink+"'>link</a></div>";
                 if(categoryVal == 0){
                     if(document.getElementById("category-"+temp[2]).style.display == 'none'){document.getElementById("category-"+temp[2]).style.display = 'flex'; document.getElementById("H2category-"+temp[2]).style.display = 'block';}
                     document.getElementById("category-"+temp[2]).innerHTML += divContent;
@@ -99,6 +109,6 @@ const container = document.getElementById("attractionContainer");
 		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";
 
 		function changeFilters(){
-			let builtURL = "https://gcparksandresorts.github.io/careawayresort/things-to-do/dining?category="+categorySelect.value+"&location="+locationSelect.value+"&age="+mealSelect.value;
+			let builtURL = "?category="+categorySelect.value+"&location="+locationSelect.value+"&age="+mealSelect.value;
 			window.open(builtURL, "_self");
 		}

@@ -3,16 +3,16 @@ entertainmentClickLink = "https://gcparksandresorts.github.io/careawayresort/thi
 entertainmentList = []; entertainmentCategory = []; entertainmentLocation = []; entertainmentSeason = [];
 
 entertainmentCategory = ["none", "Live Entertainment", "Nighttime Spectacular", "Parade / Cavalcade", "Theater Show / Performance", "Interactive Improv", "Atmospheric"];
-			// 0		1			2			3			4			5			6
+						// 0		1						2						3						4							5						6
 
 entertainmentLocation = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
-			// 0		1				2				3				4			5
+						// 0		1				2				3				4			5
 
 entertainmentSeason = ["none", "Fall", "Winter", "Spring", "Summer", "Always Happening"];
-			// 0	1	2  	   3		4	5
+						// 0	1		 2  	   3		  4			5
 
 disclaimerTexts = ["Seperate ticket required", "Special event admission required", "Scareaway Screams admission required"];
-			// 0				1				2
+								// 0						1							2
 
 var iter = 0;
 
@@ -34,6 +34,9 @@ var iter = 0;
 // HOLIDAY SEASON ENTERTAINMENT
 	iter += 1; entertainmentList[iter] = "iss | Ignite the Season Spectacular | A cheery fireworks, projections, and light spectacular featuring classic holiday magic | showDisclaimer3 | 9:30 PM | 2 | 2 | 2 | clickLink8 | https://media.wdwnt.com/2022/11/Believe-in-Holiday-Magic-Fireworks.jpg";
 	iter += 1; entertainmentList[iter] = "fol | Fountains of Light | A dazzling watershow celebrating the magic of the holiday season | showDisclaimer3 | 9:00 PM, 10:30 PM | 1 | 2 | 2 | entIndex=6 | https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/disneyland/entertainment/disney-california-adventure/world-of-color-season-of-light/holidays-8-hr-duratex-16x9.jpg?1736238112292";
+	iter += 1; entertainmentList[iter] = "showman | The Greatest Showman - A Funtastic Stageshow Spectacle | Step into the world of the Greatest Showman as the circus comes alive right infront of you in this magical musical spectacular based on the movie! | showDisclaimer3 | 12:15 PM, 1:45 PM, 3:15PM | 2 | 4 | 2 | entIndex=8 | https://townsquare.media/site/442/files/2017/12/the-greatest-showman.jpg";
+	iter += 1; entertainmentList[iter] = "polarXpress | The Polar Express Parade | Dance and cheer as the Polar Express choo-choo's its way down the boulevard under a delightful snowfall | showDisclaimer3 | 3:15 PM, 5:15 PM, 7:15 PM | 1 | 3 | 2 | entIndex=9 | ../files/images/shows/polarExpressShow.jpg";
+
 
 // SPRING AND SUMMER SEASON ENTERTAINMENT
 	iter += 1; entertainmentList[iter] = "wick | Wicked! The Retelling | An abridged remake of the world-famous musical based on the book based on the movie based on a really old book. Live from the Sasson Theater at Wonder Reel Studios! | showDisclaimer3 | 12:45 PM, 4:15 PM | 2 | 4 | 4 | entIndex=1 | https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp";
