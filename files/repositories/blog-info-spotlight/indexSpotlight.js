@@ -25,7 +25,10 @@ ind += 1; indexSpotlight[ind] = "March | A year's worth of adventure | Feel unli
 ind += 1; indexSpotlight[ind] = "March | Closed for refurbishment | Know before you go: some attractions may be closed for refurbishment. Click here to view the referb calendar. | "+webLink+"information/blog/operations-update?index=7 | https://i.imgur.com/4Xlk2uz.jpeg";
 
 // April
+ind += 1; indexSpotlight[ind] = "April | Birthday Celebrations are Happening! | This month, we celebrate two birthdays for two amazing gals! Happy Birthday Andrew and Leora <3 | "+webLink+"tickets/resident-admission | https://i.imgur.com/pa18xQe.jpeg";
 ind += 1; indexSpotlight[ind] = "April | A year's worth of adventure | Feel unlimited. Purchase a Careaway Resort annual passport for 12 months of theme park fun! | "+webLink+"tickets/annual-passports | https://i.imgur.com/NCyozNl.jpeg";
+ind += 1; indexSpotlight[ind] = "April | Puertas Nuevas residents: save up to $200 on tickets | Residents with valid PNID can access exclusive offers on tickets to resort theme parks including 3-day, 1 park per day tickets as low as $53 per day | "+webLink+"tickets/resident-admission | https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNno5endza3Nxdm53YWpjMWhydGtwcXFuZmh2dHNyMDRwbzdkd2x4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k5SZBJqzdOnF6Tdjj4/giphy.gif";
+ind += 1; indexSpotlight[ind] = "April | Closed for refurbishment | Know before you go: some attractions may be closed for refurbishment. Click here to view the referb calendar. | "+webLink+"information/blog/operations-update?index=7 | https://i.imgur.com/4Xlk2uz.jpeg";
 
 
 // May
