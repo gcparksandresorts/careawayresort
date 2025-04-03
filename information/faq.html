@@ -24,7 +24,7 @@
 
 		<p style='text-align:center' id='resultCount'>Showing <b>ZERO</b> results</p>
             
-            	<div class='leftContainer' id='faqContent'>
+        <div class='leftContainer' id='faqContent' style="padding-top:0;">
 			Error populating content, please try again later.
 		</div>
             
@@ -73,7 +73,7 @@
 			// Setup Categorized Containers if not sorting by category
 				if(categoryVal == 0){
 					for(i=1; i < categoryList.length; i++){
-						faqContent.innerHTML += "<section style='display:none' id='category-"+i+"'><div class='titleBar' style='border-radius:10px; background:silver; color:midnightblue;'><h2 style='text-align:left;'>"+categoryList[i]+"</h2></div></section>";
+						faqContent.innerHTML += "<section style='display:none' id='category-"+i+"'><br><br><div class='titleBar' style='border-radius:10px; background:silver; color:midnightblue;'><h2 style='text-align:left;'>"+categoryList[i]+"</h2></div></section>";
 					}
 				}
 				

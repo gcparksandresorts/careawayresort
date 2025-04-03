@@ -94,30 +94,6 @@ iter += 1; productList[iter]="Adventure Redefined - Port of Adventure Carheart M
 	productImg[iter] = "https://i.imgur.com/NFd31iG.jpeg";
 	productDescription[iter] = "Unisex premium pullover hooded sweatshirt | From the opening day merch sale for <a href='../destinations/port-of-adventure'>Globe-City's Port of Adventure</a> park. Heat-transfer vynl print with extra-wash protection for long lasting design. Carheart branded hoodie with premium design and comfort.";
 
-iter += 1; productList[iter]="Seek Adventure - LuLuLemon Fabric Keychain | 2 | 22.00 | #000000,#2F4F4F,#FF69B4 | One Size";
-	productImg[iter] = "https://i.imgur.com/GnA5ECu.jpeg";
-	productDescription[iter] = "Keep your keys close at hand by clipping them to your favourite bag | For those who chronically lose their keys, never suffer again with this massive fabric strap that can probably be seen from space (unconfirmed measure). And of course, always remember to seek adventure!";
-
-iter += 1; productList[iter]="Seek Adventure - LuLuLemon Clippable Nano Pouch | 2 | 29.99 | #000000,#6B8E23 | One Size";
-	productImg[iter] = "https://i.imgur.com/QdLHTqH.jpeg";
-	productDescription[iter] = "Card holder pouch with embroidered design | Small bag, big goals. Store your cards, hand sanitizer, or your favourite lip balm in this nano pouch. Complete with an exterior card holder, zippered main compartment, and 100% polyester waterproof material.";
-
-iter += 1; productList[iter]='Seek Adventure - LuLuLemon Zeroed In Linerless Short 7" | 1 | 68.00 | #232124,#b4b4b4 | XSmall,Small,Medium,Large,XLarge';
-	productImg[iter] = "https://i.imgur.com/dUffV8L.jpeg";
-	productDescription[iter] = "Low profile high-performance 100% synthetic shorts | Some adventures are far away. When things are far away, some may be inclined to <em>run</em> to them. Be prepared for it all with these sexy LuLuLemon brand casual shorts made from breathable and lightweight materials. Even better, there's a knuckle-size pocket for your msot prized jewels.";
-
-iter += 1; productList[iter]="Seek Adventure - LuLuLemon Steady State Pullover Hoodie | 1 | 89.00 | #24312a,#334463,#512028 | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/TnWQZFP.jpeg";
-	productDescription[iter] = "Inkprinted premium fleece pullover hoodie | Enjoy deluxe comfort in this fleece slim-fit pullover chunk of fabric. With the LuLuLemon stamp of luxury, this hoodie is for those rich folks looking for some adventure.";
-
-iter += 1; productList[iter]="Seek Adventure - LuLuLemon Back to Life Sport Bottle 24oz | 2 | 45.00 | #2f3b35,#252525,#252525 | 24oz";
-	productImg[iter] = "https://i.imgur.com/eFiSqLz.jpeg";
-	productDescription[iter] = "Insulated waterbottle with twist-on lid | For all y'all thirsty hos. This insulated water bottle features a leak-proof lid and slip-free texture, so no matter how adventurous the adventure gets, your drink is safe.";
-
-iter += 1; productList[iter]="Seek Adventure - LuLuLemon ABC Classic-Fit Men's Casual Pants | 1 | 130 | #000000,#394458,#a0b698 | 28,29,30,31,32,34,38,40";
-	productImg[iter] = "https://i.imgur.com/oUNBlCT.jpeg";
-	productDescription[iter] = "Deluxe men's casual pants with stretchy, wrinkle-resistant fabric | Take great strides towards looking fabulous with these comfortable, breathable, but casual men's pants. It's like going commando but without the wierd looks from grandma-- what, never seen a buldge before g'ma?";
-
 iter += 1; productList[iter]="Port of Adventure Est. 2027 Adult Spirit Jersey® | 1 | 75.00 | #000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/Oh2Q8WK.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Port of Adventure with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
@@ -134,42 +110,92 @@ iter += 1; productList[iter]="Careaway Resort Est. 2025 Children's Spirit Jersey
 	productImg[iter] = "https://i.imgur.com/C1VBnkZ.jpeg";
 	productDescription[iter] = "Heavyweight cotton jersey with screen-printed artwork and puff paint details | Show your love for the Careaway Resort with this Classic-style Spirit Jersey®. Timeless, bold, and iconic, it’s perfect for representing the heart of all things fun and thrilling. This is an official Spirit Jersey® featuring the trademarked garment design: Dropped shoulders, long cuffed sleeves, banded neckline, and a curved hem. Flag label at side.";
 
-iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 24.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
-	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
-
-iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
-	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
-
-iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large";
-	productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
-	productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
-
 iter += 1; productList[iter]="Careaway Resort Find Adventure Drawstring Backpack | 2 | 28.00 | #00008B,#696969 | One Size";
 	productImg[iter] = "https://i.imgur.com/PZSZfjW.jpeg";
 	productDescription[iter] = "Ultra-durable drawstring backback with extra interior padding and zippered front pocket | Remember in Minecraft when you'd be out mining and wishing for extra inventory space? Well open up those extra slots with this durable and sleek drawstring bag! And better yet, when you don't need it anymore, it'll roll up tight and fit into your fatass back pocket!";
 
-iter += 1; productList[iter]="Careaway Resort Pride Champion Hoodie | 1 | 64.00 | #000000,#FFFFFF | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/MwOavWX.jpeg";
-	productDescription[iter] = "Champion Originals hooded sweatshirt | Celebrate pride with this colorful version of the classic Careaway Resort sweatshirt.";
-
-iter += 1; productList[iter]="Love is an Adventure Pride Champion Hoodie | 1 | 64.00 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/cKJ3Q7S.jpeg";
-	productDescription[iter] = "Champion Originals hooded sweatshirt | Love is an adventure";
-
-iter += 1; productList[iter]="Love is an Adventure Pride Mens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/NAtzWXU.jpeg";
-	productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | Love is an adventure, for the guys and the gays!";
-
-iter += 1; productList[iter]="Love is an Adventure Pride Womens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/8TeM4rs.jpeg";
-	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | Love is an adventure, for the girls and the gays!";
-
-iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
-	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo | A sleek way to let everyone know where you go to experience Adventure.";
-
 iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | none | Standard Wick";
 	productImg[iter] = "https://i.imgur.com/FaR25oS.jpeg";
 	productDescription[iter] = "Hand-poured soy wax candle | Bring the magic of the Sprucewood Lodge home with you.";
+
+
+
+
+
+// PRIDE PRODUCTS
+	iter += 1; productList[iter]="Love is an Adventure Pride Womens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/8TeM4rs.jpeg";
+		productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | Love is an adventure, for the girls and the gays!";
+
+	iter += 1; productList[iter]="Careaway Resort Pride Champion Hoodie | 1 | 64.00 | #000000,#FFFFFF | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/MwOavWX.jpeg";
+		productDescription[iter] = "Champion Originals hooded sweatshirt | Celebrate pride with this colorful version of the classic Careaway Resort sweatshirt.";
+
+	iter += 1; productList[iter]="Love is an Adventure Pride Champion Hoodie | 1 | 64.00 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/cKJ3Q7S.jpeg";
+		productDescription[iter] = "Champion Originals hooded sweatshirt | Love is an adventure";
+
+	iter += 1; productList[iter]="Love is an Adventure Pride Mens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/NAtzWXU.jpeg";
+		productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | Love is an adventure, for the guys and the gays!";
+
+	iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 24.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
+		productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
+	
+	iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
+		productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
+	
+	iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large";
+		productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
+		productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
+	
+
+
+
+// CAREAWAY RESORT CLASSIC STYLE 
+	iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
+	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo in classic style | A sleek way to let everyone know where you go to experience Adventure.";
+
+
+
+
+// DESIGNER CLOTHING SERIES
+//	-> <p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way.</p>
+	iter += 1; productList[iter]="Adventure Awaits - The Main Entrances DC Series Performance T-Shirt | 1 | 25.99 | #E7E0D3 | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/zQCgELG.jpeg";
+	productDescription[iter] = "Close-fit t-shirt with vynl prints on front and back | The Main Entrances performance t-shirt is a closer fit made from blend of cotton and polyester for all-day comfort and sleek style. The 'Main Entrances' logo represents the three theme-parks of the resort with our historic <em>Adventure Awaits</em> tagline.<p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close fitting and stylish. These pieces feature artful designs which will make you stand out in the best way.</p>";
+
+	iter += 1; productList[iter]="Careaway C - Charles River Hudson Quarter Zip Pullover | 1 | 79.99 | #E7E0D3,#353535 | Small,Medium,Large,XLarge,Womens Small,Womens Medium,Womens Large";
+	productImg[iter] = "imgLink";
+	productDescription[iter] = "DC Series Lightweight pullover with high-quality Careaway C embroidered patch. Mens and womens sizes available | Stay stylish and comfortable in any weather with this versatile layer! The Charles River Hudson Quarter Zip Pullover blends fashion with functionality, featuring a rib knit trim at the sleeve cuff and bottom hem. This lightweight pullover is perfect for the office or casual outings to the parks.";
+
+
+
+
+// LULULEMON SEEK ADVENTURE SERIES
+	iter += 1; productList[iter]="Seek Adventure - LuLuLemon Fabric Keychain | 2 | 22.00 | #000000,#2F4F4F,#FF69B4 | One Size";
+		productImg[iter] = "https://i.imgur.com/GnA5ECu.jpeg";
+		productDescription[iter] = "Keep your keys close at hand by clipping them to your favourite bag | For those who chronically lose their keys, never suffer again with this massive fabric strap that can probably be seen from space (unconfirmed measure). And of course, always remember to seek adventure!";
+
+	iter += 1; productList[iter]="Seek Adventure - LuLuLemon Clippable Nano Pouch | 2 | 29.99 | #000000,#6B8E23 | One Size";
+		productImg[iter] = "https://i.imgur.com/QdLHTqH.jpeg";
+		productDescription[iter] = "Card holder pouch with embroidered design | Small bag, big goals. Store your cards, hand sanitizer, or your favourite lip balm in this nano pouch. Complete with an exterior card holder, zippered main compartment, and 100% polyester waterproof material.";
+
+	iter += 1; productList[iter]='Seek Adventure - LuLuLemon Zeroed In Linerless Short 7" | 1 | 68.00 | #232124,#b4b4b4 | XSmall,Small,Medium,Large,XLarge';
+		productImg[iter] = "https://i.imgur.com/dUffV8L.jpeg";
+		productDescription[iter] = "Low profile high-performance 100% synthetic shorts | Some adventures are far away. When things are far away, some may be inclined to <em>run</em> to them. Be prepared for it all with these sexy LuLuLemon brand casual shorts made from breathable and lightweight materials. Even better, there's a knuckle-size pocket for your msot prized jewels.";
+
+	iter += 1; productList[iter]="Seek Adventure - LuLuLemon Steady State Pullover Hoodie | 1 | 89.00 | #24312a,#334463,#512028 | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/TnWQZFP.jpeg";
+		productDescription[iter] = "Inkprinted premium fleece pullover hoodie | Enjoy deluxe comfort in this fleece slim-fit pullover chunk of fabric. With the LuLuLemon stamp of luxury, this hoodie is for those rich folks looking for some adventure.";
+
+	iter += 1; productList[iter]="Seek Adventure - LuLuLemon Back to Life Sport Bottle 24oz | 2 | 45.00 | #2f3b35,#252525,#252525 | 24oz";
+		productImg[iter] = "https://i.imgur.com/eFiSqLz.jpeg";
+		productDescription[iter] = "Insulated waterbottle with twist-on lid | For all y'all thirsty hos. This insulated water bottle features a leak-proof lid and slip-free texture, so no matter how adventurous the adventure gets, your drink is safe.";
+
+	iter += 1; productList[iter]="Seek Adventure - LuLuLemon ABC Classic-Fit Men's Casual Pants | 1 | 130 | #000000,#394458,#a0b698 | 28,29,30,31,32,34,38,40";
+		productImg[iter] = "https://i.imgur.com/oUNBlCT.jpeg";
+		productDescription[iter] = "Deluxe men's casual pants with stretchy, wrinkle-resistant fabric | Take great strides towards looking fabulous with these comfortable, breathable, but casual men's pants. It's like going commando but without the wierd looks from grandma-- what, never seen a buldge before g'ma?";

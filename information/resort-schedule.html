@@ -11,6 +11,27 @@
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<!-- BODY CONTENT HERE -->
+		 <style>
+			.thingContainer{
+				display:flex; flex-flow:row; flex-wrap:wrap;
+			}
+				.thingContainer > div {
+					border:1px solid black; border-radius: 15px;
+					width:24%; align-self: stretch; margin:10px 0.5% 10px 0.5%;
+					text-align: left; padding:10px;
+				}
+					.thingContainer > div.linked {cursor: pointer;}
+					.thingContainer > div.linked:hover {background:#efefef;}
+				.thingContainer > div > p {margin:5px 0px 0px 0px; font-size:12px; color:dimgray;}
+
+				@media screen and (max-width:900px){
+					.thingContainer > div {width:49%;}
+				}
+				@media screen and (max-width:600px){
+					.thingContainer > div {width:99%;}
+					.thingContainer {flex-flow:column;}
+				}
+		 </style>
 
             	<div class='titleBar'><h1>Resort Operating Hours & Schedule</h1></div>
 	

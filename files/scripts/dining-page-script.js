@@ -11,10 +11,16 @@ const urlParams = new URLSearchParams(window.location.search);
 if(urlParams.has('name')){
     restaurantScriptTitle = urlParams.get('name');
 
-    //Bring in the restaurant script
-    const restaurantScript = document.createElement('script');
-    restaurantScript.src = "../../files/repositories/events-dining/dining-menus/" + restaurantScriptTitle + ".js";
-    document.head.appendChild(restaurantScript);
+    if(restaurantScriptTitle != 'clickName1'){
+        //Bring in the restaurant script
+        const restaurantScript = document.createElement('script');
+        restaurantScript.src = "../../files/repositories/events-dining/dining-menus/" + restaurantScriptTitle + ".js";
+        document.head.appendChild(restaurantScript);
+    }
+    else{
+        window.open('dining-redirect','_self');
+    }
+    
 
     console.log(restaurantScript);
 }else{

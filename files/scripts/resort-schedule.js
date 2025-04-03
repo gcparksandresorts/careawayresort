@@ -87,7 +87,7 @@ function setupEntertainment(){
             entertainmentSchedule = [tSchedule[6]];
         }
 
-        entContainer.innerHTML = "<ul id='entUl' style='text-align:left'></ul>";
+        entContainer.innerHTML = "<div class='thingContainer' id='entUl'></div>";
     
         // populate entertainment section
         for(i=0; i<entertainmentSchedule.length;i++){
@@ -96,7 +96,18 @@ function setupEntertainment(){
                 let temp = entertainmentList[j].split(' | ');
                 if(temp[0] == entertainmentSchedule[i]){
                     //indexOfEntTemp = j;
-                    document.getElementById('entUl').innerHTML += "<li>"+temp[1]+"<br><em>"+temp[4]+"</em></li>";
+                    var madeDiv;
+                    if(temp[8] != 'clickLink8' && temp[8].includes('entIndex=')){
+                        let tempIndex = temp[8].split('=');
+                        let setclick = "../things-to-do/entertainment/pages?index=" + tempIndex[1];
+                        madeDiv = "<div class='linked' onclick='window.open(\""+setclick+"\")'><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>";
+                    }else if(temp[8] != 'clickLink8'){
+                        madeDiv = "<div class='linked' onclick='window.open(\""+temp[8]+"\")'><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>"; 
+                    }else{
+                        madeDiv = "<div><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>";
+                    }
+
+                    document.getElementById('entUl').innerHTML += madeDiv;
                 }
             }
              
@@ -113,14 +124,21 @@ function setupEntertainment(){
             eventsSchedule = [tSchedule[5]];
         }
 
-        eventContainer.innerHTML = "<ul id='eventUL' style='text-align:left'></ul>";
+        eventContainer.innerHTML = "<div class='thingContainer' id='eventUL'></div>";
 
         // eventlistArray
         for(i=0; i<eventsSchedule.length; i++){
             for(j=0; j<eventlistArray.length; j++){
                 let temp = eventlistArray[j].split(" | ");
                 if(temp[0] == eventsSchedule[i]){
-                    document.getElementById('eventUL').innerHTML += "<li>"+temp[1]+"<br><em>"+temp[2]+"</em></li>";
+                    var madeDiv;
+                    if(temp[4] != 'clickLink4'){
+                        temp[4] = eventSiteLink + temp[4];
+                        madeDiv = "<div class='linked' onclick='window.open(\""+temp[4]+"\")'><b>"+temp[1]+"</b><p>"+eventLocationList[temp[3]]+"</p><em>"+temp[2]+"</em></div>";
+                    }else{
+                        madeDiv = "<div><b>"+temp[1]+"</b><p>"+eventLocationList[temp[3]]+"</p><em>"+temp[2]+"</em></div>";
+                    }
+                    document.getElementById('eventUL').innerHTML += madeDiv;
                 }
             }
         }

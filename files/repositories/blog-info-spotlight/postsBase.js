@@ -3,8 +3,12 @@ operationContents = []; // Operational updates dont have their own pages, this d
 blogImg = [];
 blogContents = []; // For auto-populated blog / news report pages
 
-blogCategories = ["none", "Operations Updates", "Attractions & Entertainment", "Restaurants and Dining", "Vacation Inspiration & Advice", "Business Operations", "Merchandise", "Seasonal Events & Celebrations", "Community Service", "Just for Fun"];
-//		    0		1			2				3			4				5			6		7				8			9
+blogCategories = ["none", "Operations Updates", // 0 1
+	"Attractions & Entertainment", "Restaurants and Dining",// 2 3
+	"Vacation Inspiration & Advice", "Business Operations",  // 4 5
+	"Merchandise", "Seasonal Events & Celebrations",  // 6 7
+	"Community Service", "Just for Fun"];// 8 9
+		
 
 var iter = 0;
 const shortLink = "https://gcparksandresorts.github.io/careawayresort/information/blog/";
@@ -46,3 +50,8 @@ iter += 1; blogHeadings[iter] = "Behind the Scenes of the Careaway Resort | Febr
 // index = 7
 iter += 1; blogHeadings[iter] = "Closed For Referb: Attraction Referbishment Calendar | January 1 | 1 | Resort Operations | auto";
 	operationContents[iter] = "During our off-season we take the time to ensure our rides and attractions are operating at their best! This includes repairing and improving the things you see, and sometimes the things you may not see. Here is the current calendar for our refurbishment closures.<p><em><b>Note:</b> This calendar is subject to change, we recommend downloading the GC RESORT mobile app for the most up-to-date attraction operating schedules</em></p><table><tr><th>Attraction Name</th><th>Closure Type</th><th>Closure Dates</th><th>Closure Plans</th></tr><tr><td>Gondolas</td><td>Full Closure</td><td>January 6 - March 7</td><td>Extensive inspection and mechanical maintenance</td></tr><tr><td>Wonder Reel Studio Tour</td><td>Full Closure</td><td>January 6 - March 28</td><td>Repair and restoration of guest interaction points</td></tr><tr><td>Looney's Musical Train</td><td>Weekday Only</td><td>February 1 - February 18</td><td>Exterior ride path cleaning and general maintenance</td></tr><tr><td>Temple of Medusa</td><td>Weekdays Only</td><td>February 3 - April 18</td><td>Vehicle maintenance, scenery enhancement, operational improvements, queue enhancement</td></tr><tr><td>Mission 14</td><td>Full Closure</td><td>March 1 - March 14</td><td>Vehicle maintenance, scenery enhancement, operational improvements</td></tr><tr><td>Voyage to Atlantis</td><td>Full Closure</td><td>January 6 - March 24</td><td>Water basin maintenance, painting, scenery enhancement</td></tr><tr><td>Action! On the backlot</td><td>Weekdays Only</td><td>March 1 - March 24</td><td>General maintenance, painting, queue enhancement</td></tr><tr><td>The Nightmare Dracula</td><td>Full Closure</td><td>February 24 - March 14</td><td>Ride system maintenance, large animatronic / scenery maintenance, queue and scenery enhancement</td></tr></table>";
+
+// index = 8
+iter += 1; blogHeadings[iter] = "April Birthday Celebrations: Celebrating Andrew and Leora &#129395; | April 1 | 7 | Booven Bayman | auto";
+	blogImg[iter] = "https://i.imgur.com/rDQnaiQ.jpeg";
+ 	blogContents[iter] = "This month we celebrate two (well actually three) very important birthdays! From the valley, Happy Birthday to my mommy, Leora Reyman! And from northern California, we have my bestie friend in the whole world, Andrew Sanchez!<p>As an honorable mention, it is also Dassy DeBasc, my auntie's birthday, so make sure to give her a blessing too!</p><h2>Celebration Activities</h2>My mommy and bestie <em>obviously</em> deserve the bestest celebration, so this month enjoy deluxe chocolate cakes (my mommy's favorite) served at every resort eatery and 10% off all sour candies (andrews fav) at select locations!<p>Additionally, individual celebrations will be happening on each of their respective birthdays:<ul><li><b>April 26 - Leora's Birthday</b><br>Enjoy a fun mini-event at Careaway Park featuring free chocolate cake and strawberries!</li><li><b>April 27 - Andreew's Birfday</b><br>Enjoy a buffet of sour candies and goldfish and a meet and greet with Mr. Teddy in his birfday fit!</li></ul>Thank you all for helping celebrate two of the most important people in my life!! Whoo Hoo &#129395; ";
