@@ -25,22 +25,6 @@ iter += 1; productList[iter]="productName0 | category1 | price2 | colorList3,col
 	productDescription[iter] = "shortDescription | longerDescription";
 */
 
-productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 64.00 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
-	productImg[0] = "https://i.imgur.com/sIImTkp.jpeg";
-	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with vectorized Mr. Teddy image for a unique and long-lasting design.";
-
-iter += 1; productList[iter]="Mr. Teddy's Adventures With Friends Youth Sweatshirt | 1 | 45.50 | #2E6F40,#422701 | Youth XS,Youth S,Youth M, Youth L, Youth XL";
-	productImg[iter] = "https://i.imgur.com/cfJOFwg.png";
-	productDescription[iter] = "Champion Youth Midweight 50/50 Crewnech Sweatshirt | Coffee is for the adults, but friends are for everyone!";
-
-productList[1]="Careaway Resort Modern Crewneck Sweatshirt | 1 | 58.99 | #000080,#000000,#ffffff | Small, Medium, Large, XLarge, XXLarge";
-	productImg[1] = "https://i.imgur.com/U5dznan.jpeg";
-	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
-
-productList[2]="Careaway Resort Modern Womens Cropped Crewneck Sweatshirt | 1 | 65.00 | #36454F,#ffffff | Small, Medium, Large, XLarge, XXLarge";
-	productImg[2] = "https://i.imgur.com/Bc6twpN.jpeg";
-	productDescription[2] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
-
 
 productList[10]="Careaway Drive Novelty Road Sign | 3 | 40.00 | #0000CD | 6x30 inches";
 	productImg[10] = "https://i.imgur.com/Aiac3fm.jpeg";
@@ -121,17 +105,16 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 
 
 
-
 // PRIDE PRODUCTS
 	iter += 1; productList[iter]="Love is an Adventure Pride Womens T-shirt | 1 | 24.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
 		productImg[iter] = "https://i.imgur.com/8TeM4rs.jpeg";
 		productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | Love is an adventure, for the girls and the gays!";
 
-	iter += 1; productList[iter]="Careaway Resort Pride Champion Hoodie | 1 | 64.00 | #000000,#FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	iter += 1; productList[iter]="Careaway Resort Pride Champion Hoodie | 1 | 54.99 | #000000,#FFFFFF | XSmall,Small,Medium,Large,XLarge";
 		productImg[iter] = "https://i.imgur.com/MwOavWX.jpeg";
 		productDescription[iter] = "Champion Originals hooded sweatshirt | Celebrate pride with this colorful version of the classic Careaway Resort sweatshirt.";
 
-	iter += 1; productList[iter]="Love is an Adventure Pride Champion Hoodie | 1 | 64.00 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
+	iter += 1; productList[iter]="Love is an Adventure Pride Champion Hoodie | 1 | 54.99 | #FFFFFF | XSmall,Small,Medium,Large,XLarge";
 		productImg[iter] = "https://i.imgur.com/cKJ3Q7S.jpeg";
 		productDescription[iter] = "Champion Originals hooded sweatshirt | Love is an adventure";
 
@@ -150,28 +133,49 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 	iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large";
 		productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
 		productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
-	
+
 
 
 
 // CAREAWAY RESORT CLASSIC STYLE 
-	iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 64.00 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
+	iter += 1; productList[iter]="Careaway Resort Gradient Hoodie | 1 | 54.99 | #000080,#000000,#ffffff | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/p9kmHyg.jpeg";
 	productDescription[iter] = "Champion Originals hooded sweatshirt with special-print blue gradient logo in classic style | A sleek way to let everyone know where you go to experience Adventure.";
 
+	productList[0]="Mr. Teddy's Cafe Crewneck Sweatshirt | 1 | 64.00 | #2E6F40,#d6b588,#422701 | Small, Medium, Large, XLarge";
+	productImg[0] = "https://i.imgur.com/sIImTkp.jpeg";
+	productDescription[0] = "Stay warm with this cozy cotton crewneck and always be reminded of your favorite furry Barista, Mr. Teddy! | Deluxe extra wash protection vynl logo with vectorized Mr. Teddy image for a unique and long-lasting design.";
 
+	iter += 1; productList[iter]="Mr. Teddy's Adventures With Friends Youth Sweatshirt | 1 | 45.50 | #2E6F40,#422701 | Youth XS,Youth S,Youth M, Youth L, Youth XL";
+	productImg[iter] = "https://i.imgur.com/cfJOFwg.png";
+	productDescription[iter] = "Champion Youth Midweight 50/50 Crewnech Sweatshirt | Coffee is for the adults, but friends are for everyone!";
+
+	productList[1]="Careaway Resort Modern Crewneck Sweatshirt | 1 | 61.99 | #000080,#000000,#ffffff | Small, Medium, Large, XLarge, XXLarge";
+	productImg[1] = "https://i.imgur.com/U5dznan.jpeg";
+	productDescription[1] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
+
+	productList[2]="Careaway Resort Modern Womens Cropped Crewneck Sweatshirt | 1 | 61.99 | #36454F,#ffffff | Small, Medium, Large, XLarge, XXLarge";
+	productImg[2] = "https://i.imgur.com/Bc6twpN.jpeg";
+	productDescription[2] = "The official Careaway Resort sweatshirt. Formal on the front, party on the back. | Embroidered Careaway C logo on front left section. Special extra thick heat transfered vynl logo on upper back shoulders with navy blue border.";
+
+	iter += 1; productList[iter]="Maybe the Adventure Mr. Teddy Graphic T-Shirt | 1 | 24.99 | #000080,#efefef | XSmall,Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/tpm8XA3.jpeg";
+	productDescription[iter] = "Heavy weight cotton t-shirt with printed graphic on front | There's that common meme saying \"Maybe the BLANK is the friends we made along the way...\" usually attributed to clickbait videos claiming there's some crazy thing (there's no crazy thing). <p>But this time we mean it! You come to the Careaway Resort for the Adventure, but you stay for the friends you make along the way. And of course, the coffee.</p>";
 
 
 // DESIGNER CLOTHING SERIES
-//	-> <p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way.</p>
+//	-> <p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way. Locate DC Series items by the iconic REY Signature.</p>
 	iter += 1; productList[iter]="Adventure Awaits - The Main Entrances DC Series Performance T-Shirt | 1 | 25.99 | #E7E0D3 | XSmall,Small,Medium,Large,XLarge";
-	productImg[iter] = "https://i.imgur.com/zQCgELG.jpeg";
-	productDescription[iter] = "Close-fit t-shirt with vynl prints on front and back | The Main Entrances performance t-shirt is a closer fit made from blend of cotton and polyester for all-day comfort and sleek style. The 'Main Entrances' logo represents the three theme-parks of the resort with our historic <em>Adventure Awaits</em> tagline.<p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close fitting and stylish. These pieces feature artful designs which will make you stand out in the best way.</p>";
+	productImg[iter] = "https://i.imgur.com/vD8FYHg.jpeg";
+	productDescription[iter] = "Close-fit t-shirt with vynl prints on front and back | The Main Entrances performance t-shirt is a closer fit made from blend of cotton and polyester for all-day comfort and sleek style. The 'Main Entrances' logo represents the three theme-parks of the resort with our historic <em>Adventure Awaits</em> tagline. <p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way. Locate DC Series items by the iconic REY Signature.</p>";
 
-	iter += 1; productList[iter]="Careaway C - Charles River Hudson Quarter Zip Pullover | 1 | 79.99 | #E7E0D3,#353535 | Small,Medium,Large,XLarge,Womens Small,Womens Medium,Womens Large";
+	/*iter += 1; productList[iter]="Careaway C - Charles River Hudson Quarter Zip Pullover | 1 | 79.99 | #E7E0D3,#353535 | Small,Medium,Large,XLarge,Womens Small,Womens Medium,Womens Large";
 	productImg[iter] = "imgLink";
 	productDescription[iter] = "DC Series Lightweight pullover with high-quality Careaway C embroidered patch. Mens and womens sizes available | Stay stylish and comfortable in any weather with this versatile layer! The Charles River Hudson Quarter Zip Pullover blends fashion with functionality, featuring a rib knit trim at the sleeve cuff and bottom hem. This lightweight pullover is perfect for the office or casual outings to the parks.";
-
+*/
+	iter += 1; productList[iter]="Adventure Awaits - Always Everywhere Signed Hoodie | 1 | 54.99 | #000080,#efefef | XSmall,Small,Medium,Large,XLarge,XXLarge";
+	productImg[iter] = "https://i.imgur.com/Z3qACik.jpeg";
+	productDescription[iter] = "DC Series Fleece Hoodie Sweatshirt with Adventure Awaits tagline and gradient REY signature | Our founder, Reuven Reyman, believed that everyday is an Adventure. His motto was \"Adventure Awaits, Always & Everywhere\" and that's the spirit he infused into Globe-City's DNA.<p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way. Locate DC Series items by the iconic REY Signature.</p>";
 
 
 
