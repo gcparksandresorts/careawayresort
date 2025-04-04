@@ -122,14 +122,16 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 		productImg[iter] = "https://i.imgur.com/NAtzWXU.jpeg";
 		productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | Love is an adventure, for the guys and the gays!";
 
+	/*
 	iter += 1; productList[iter]="Careaway Resort Pride Women's T-shirt | 1 | 24.99 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large,XLarge";
-		productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
-		productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
+	productImg[iter] = "https://i.imgur.com/ByRoZz7.jpeg";
+	productDescription[iter] = "100% cotton comfort-fit t-shirt with rainbow vinyl logo | For the girls who like girls or the girls supporting girls who like girls. A beautifully simple yet bold statement on pride and the love of love!";
 	
 	iter += 1; productList[iter]="Careaway Resort Pride Men's Cotton T-shirt | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
 		productImg[iter] = "https://i.imgur.com/ZEmLc5K.jpeg";
 		productDescription[iter] = "Every Wear Short Sleeve T-Shirt, Lightweight cotton-blend fabric provides all-day comfort | For the guys and the gays!";
-	
+	*/
+
 	iter += 1; productList[iter]="Careaway Resort Pride Gymshark Cropped Hoodie | 1 | 32.00 | #FFFFFF,#000000,#00BFFF | XSmall,Small,Medium,Large";
 		productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
 		productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
@@ -161,6 +163,13 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 	iter += 1; productList[iter]="Maybe the Adventure Mr. Teddy Graphic T-Shirt | 1 | 24.99 | #000080,#efefef | XSmall,Small,Medium,Large,XLarge";
 	productImg[iter] = "https://i.imgur.com/tpm8XA3.jpeg";
 	productDescription[iter] = "Heavy weight cotton t-shirt with printed graphic on front | There's that common meme saying \"Maybe the BLANK is the friends we made along the way...\" usually attributed to clickbait videos claiming there's some crazy thing (there's no crazy thing). <p>But this time we mean it! You come to the Careaway Resort for the Adventure, but you stay for the friends you make along the way. And of course, the coffee.</p>";
+
+	iter += 1; productList[iter]="Coffee's better with my bestie Heavyweight T-Shirt | 1 | 24.99 | #093329,#3f3f3f | Small,Medium,Large,XLarge";
+	productImg[iter] = "https://i.imgur.com/BKIQ8Ol.jpeg";
+	productDescription[iter] = "Heavyweight cotton t-shirt with multi-layered vynl design on front and back | Why drink coffee alone when you can drink it with your bestie? This shirt is perfect for those who love coffee and love their bestie. <p>And of course, Mr. Teddy's Cafe is the best place to get coffee with your bestie!</p>";
+
+
+
 
 
 // DESIGNER CLOTHING SERIES
