@@ -3,7 +3,9 @@ var ind = 0;
 
 const webLink = 'https://gcparksandresorts.github.io/careawayresort/';
 
-// ind += 1; indexSpotlight[ind] = "month | heading | text_content | click_link | image_link";
+/* 
+ind += 1; indexSpotlight[ind] = "months | heading | text_content | click_link | image_link";
+*/
 
 // January
 indexSpotlight[ind] = "January | A year's worth of adventure | Start the new year with Adventure by purchsing a Careaway Resort annual passport for 12 months of theme park fun! | "+webLink+"tickets/annual-passports | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg";
@@ -33,6 +35,8 @@ ind += 1; indexSpotlight[ind] = "April | Closed for refurbishment | Know before 
 
 // May
 ind += 1; indexSpotlight[ind] = "May | Celebrating Our Opening Day | Take a blast to the past and explore the hectic opening day of Globe-City's Careaway Resort | "+webLink+"information/blog/look-back-opening-day | https://i.imgur.com/pa18xQe.jpeg";
+ind += 1; indexSpotlight[ind] = "May | Your wardrobe called... it wants an upgrade | Get summer ready with some sleek and stylish clothing from the coolest resort in town! | "+webLink+"store/home | image_link";
+
 
 // June
 ind += 1; indexSpotlight[ind] = "June | Loud, Proud, and full of Love! | Celebrate pride month at an all-night party commemorating you and all your colors. Adventerous Nights of Pride is back in Puertas Nuevas and we're ready to be louder and prouder than ever! | click_link | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg";

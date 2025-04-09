@@ -39,7 +39,7 @@ iter+=1; attractionList[iter] = "Posideon's Plunge - none | 2 | 1 | 2 | clickLin
 iter+=1; attractionList[iter] = "Starfield Horizons - Sponsored by Unity3D | 1 | 2 | 2 | atIndex=6 | https://ca-times.brightspotcdn.com/dims4/default/e46afb6/2147483647/strip/true/crop/4928x3280+0+0/resize/1200x799!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb2%2Fb8%2F6ae2faf94bdba46e6fd1b98188e4%2F1209zv-0320msa.jpg";
 iter+=1; attractionList[iter] = "Star Shuttle Drop - none | 1 | 1 | 4 | clickLink | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/cc3.jpg";
 iter+=1; attractionList[iter] = "Alpine Sleds Through Yeti Mountain - none | 1 | 1 | 2 | clickLink | https://i.imgur.com/NtKI5ta.jpeg";
-iter+=1; attractionList[iter] = "Temple of Medusa - none | 1 | 2 | 2 | clickLink | https://gcparksandresorts.github.io/careawayresort/files/images/rides/medussa1.webp";
+iter+=1; attractionList[iter] = "Temple of Medusa - none | 1 | 2 | 2 | "+shortLink+"temple-of-medusa | https://gcparksandresorts.github.io/careawayresort/files/images/rides/medussa1.webp";
 iter+=1; attractionList[iter] = "The CosmiBotz Return - none | 1 | 3 | 1 | atIndex=4 | https://gcparksandresorts.github.io/careawayresort/files/images/banners/kookieBand.webp";
 iter+=1; attractionList[iter] = "The Magic Bakery Ride - none | 1 | 2 | 1 | atIndex=8 | https://aztechadmit.github.io/gcresorthighland/main/images/banner2.jpg";
 iter+=1; attractionList[iter] = "The Nightmare Dracula - none | 2 | 1 | 4 | "+shortLink+"nightmare-dracula | https://i.imgur.com/Iu4oHYO.jpeg";

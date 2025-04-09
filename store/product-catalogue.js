@@ -169,8 +169,19 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 	productDescription[iter] = "Heavyweight cotton t-shirt with multi-layered vynl design on front and back | Why drink coffee alone when you can drink it with your bestie? This shirt is perfect for those who love coffee and love their bestie. <p>And of course, Mr. Teddy's Cafe is the best place to get coffee with your bestie!</p>";
 
 
+// MEME STUFF
+	iter += 1; productList[iter]="Thinking About Cheese Fries Unisex T-Shirt | 1 | 24.99 | #232124,#efefef | XSmall,Small,Medium,Large,XLarge,XXLarge";
+	productImg[iter] = "https://i.imgur.com/e1oAigS.jpeg";
+	productDescription[iter] = "Cotton blend t-shirt with screen printed graphic | You know you're craving them... they're calling you, their delicious, oily, cheesey, crispy, sexy surface. Damn, now i'm hungry. This is for my fellow cheese fry lovers!";
 
+	iter += 1; productList[iter]="Thinking About In-N-Out Unisex T-Shirt | 1 | 24.99 | #232124,#efefef | XSmall,Small,Medium,Large,XLarge,XXLarge";
+	productImg[iter] = "https://i.imgur.com/QH9gB66.jpeg";
+	productDescription[iter] = "Cotton blend t-shirt with screen printed graphic | As one of the first places in Puertas Nuevas to open an In-N-Out, we know how much you guys love it. So, to those 4x4 animal style Lovers, this cotton blend shirt is for you!";
 
+	iter += 1; productList[iter]="Yeti Mountain Foam Hat | 2 | 39.99 | #4f4f4f | One Size";
+	productImg[iter] = "https://i.imgur.com/T2TePkr.jpeg";
+	productDescription[iter] = "Goofy injection-mold foam painted hat based on Yeti Mountain in Careaway Park | It's not just a boulder! It's a rock! <p>Bring a new meaning to \"Living Under a Rock\" walking around with a literal rock on your head! It may look like a mountain, but it's actually made from very lightweight and comfortable foam. But folks don't need to know that.. let them believe you have the strongest neck in all mankind!</p>";
+	
 
 // DESIGNER CLOTHING SERIES
 //	-> <p><b>The DC Series</b> - Our Designer Clothing series is made up of clothing which is both comfortable, yet close-fitting and stylish. These pieces feature artful designs which will make you stand out in the best way. Locate DC Series items by the iconic REY Signature.</p>
