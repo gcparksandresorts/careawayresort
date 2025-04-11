@@ -26,6 +26,10 @@
 	    cursor:pointer;
 	  }
 
+	  #headerBar #hbContent #searchIcon{
+		align-self:center; height:30px; width:30px; object-fit:cover; margin-left:10px; cursor:pointer;
+	  }
+
 		#hbLinks{
         	margin:auto 10px auto auto;
             	color:white;
