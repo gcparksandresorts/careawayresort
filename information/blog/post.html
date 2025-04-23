@@ -1,7 +1,7 @@
 <!DOCTYPE html> <html lang="en">
     <head id='pgHead'>
 	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
-	    
+			<meta charset="UTF-8">
 		<title id='blogTitle'>Resort Blog | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
     </head>
 
@@ -81,15 +81,24 @@
 		function popPage(){
 			var index = 0;
 				
-			if(urlParams.has("index")){
-				index = urlParams.get("index");
+			if(urlParams.has("n")){
+				index = urlParams.get("n");
 			}
 
 			if(index != 0){
-				var temp = blogHeadings[index].split(" | ");
-				blogTitle.innerHTML = temp[0] + "Resort Blog | Globe-City's Careaway Resort";
-				blogContent.innerHTML = blogContents[index];
-				blogHeader.innerHTML = "<img src='"+blogImg[index]+"'><h4>Resort Blog | "+blogCategories[temp[2]]+"</h4><h1>"+temp[0]+"</h1><div><h4>"+temp[3]+"</h4><h4>"+temp[1]+"</h4></div>";
+
+				var blogObject;
+				for(i=0;i<blogData.length;i++){
+					if(index == blogData[i].blogLink){
+						blogObject = blogData[i];
+						break;
+					}
+				}
+
+				var qInfo = blogObject.info.split(' | ');
+				blogTitle.innerHTML = blogObject.title + " | Resort Blog | Globe-City's Careaway Resort";
+				blogContent.innerHTML = blogObject.contents;
+				blogHeader.innerHTML = "<img src='"+blogObject.headerImg+"'><h4>Resort Blog | "+blogCategories[qInfo[1]]+"</h4><h1>"+blogObject.title+"</h1><div><h4>"+qInfo[2]+"</h4><h4>"+qInfo[0]+"</h4></div>";
 			}
 		}
 	

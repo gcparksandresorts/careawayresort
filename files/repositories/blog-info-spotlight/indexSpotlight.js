@@ -1,11 +1,76 @@
 indexSpotlight = [];
-var ind = 0;
+var ind = -1;
 
 const webLink = 'https://gcparksandresorts.github.io/careawayresort/';
 
+/*
+ind+=1; indexSpotlight[ind] = {
+    title: "spotlightTitle",
+    months: "monthS", // use full month name, use comma no-space to add extra months
+    textContent: "textContent",
+    imgLink: "imageLink",
+    clickLink: webLink+"local_link" 
+}
+*/
+
+// IMPORTANT (SHOULD BE ON FIRST PAGE)
+
+ind+=1; indexSpotlight[ind] = {
+    title: "Celebrating Passover: Passover-Friendly Meals for Family YUM",
+    months: "April", 
+    textContent: "This Passover, we're excited to offer a variety of Passover-friendly meal options throughout the park so that all of our guests can savor delicious food while observing the holiday.",
+    imgLink: "https://i.imgur.com/ikKyxdg.png",
+    clickLink: webLink+"information/blog/post?n=passover-meal-options" 
+}
+ind+=1; indexSpotlight[ind] = {
+    title: "Birthday Celebrations are Happening &#129395;",
+    months: "April", 
+    textContent: "This month, we celebrate two birthdays for two amazing gals! Happy Birthday Andrew and Leora <3 Click for two fun mini celebrations at Careaway Park!",
+    imgLink: "https://i.imgur.com/rDQnaiQ.jpeg",
+    clickLink: webLink+"information/blog/post?n=april-birthdays" 
+}
+
+
+
+// SLIGHTLY LESS IMPORTANT
+ind+=1; indexSpotlight[ind] = {
+    title: "☎️ Your wardrobe is calling - it wants an upgrade.",
+    months: "May,July,August,September", // use full month name, use comma no-space to add extra months
+    textContent: "Forget that summer bod, invest in that Summer Style. Click to explore our amazing catalogue of clothes and accessories!",
+    imgLink: "https://www.universalstudioshollywood.com/tridiondata/ush/en/us/files/images/universal-citywalk-shopping-802x535.jpg",
+    clickLink: webLink+"store/home" 
+}
+
+ind+=1; indexSpotlight[ind] = {
+    title: "Wear your colors with PRIDE",
+    months: "June", // use full month name, use comma no-space to add extra months
+    textContent: "This Pride Month, show off your style with sleek and sexy new looks from our online store!",
+    imgLink: "https://i.imgur.com/XedZgQ5.jpeg",
+    clickLink: webLink+"store/home" 
+}
+
+// LESS IMPORTANT (DOESEN'T HAVE TO BE ON FIRST PAGE)
+
+ind+=1; indexSpotlight[ind] = {
+    title: "Puertas Nuevas Residents: Save BIG on Theme-Park Tickets!",
+    months: "February,March,April,May", 
+    textContent: "Residents with valid PNID can access exclusive offers on tickets including 3-day, 1 park per day tickets as low as $53 per day",
+    imgLink: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNno5endza3Nxdm53YWpjMWhydGtwcXFuZmh2dHNyMDRwbzdkd2x4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k5SZBJqzdOnF6Tdjj4/giphy.gif",
+    clickLink: webLink+"tickets/webstore?form=day-ticket" 
+}
+
+ind+=1; indexSpotlight[ind] = {
+    title: "Closed for refurbishment",
+    months: "January,February,March,April,May", 
+    textContent: "Know before you go: some attractions may be closed for refurbishment. Click here to view the referb calendar.",
+    imgLink: "https://i.imgur.com/4Xlk2uz.jpeg",
+    clickLink: webLink+"information/blog/operations-update?n=referb-calendar" 
+}
+
+
 /* 
 ind += 1; indexSpotlight[ind] = "months | heading | text_content | click_link | image_link";
-*/
+
 
 // January
 indexSpotlight[ind] = "January | A year's worth of adventure | Start the new year with Adventure by purchsing a Careaway Resort annual passport for 12 months of theme park fun! | "+webLink+"tickets/annual-passports | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/tts3.jpg";
@@ -27,18 +92,15 @@ ind += 1; indexSpotlight[ind] = "March | A year's worth of adventure | Feel unli
 ind += 1; indexSpotlight[ind] = "March | Closed for refurbishment | Know before you go: some attractions may be closed for refurbishment. Click here to view the referb calendar. | "+webLink+"information/blog/operations-update?index=7 | https://i.imgur.com/4Xlk2uz.jpeg";
 
 // April
-ind += 1; indexSpotlight[ind] = "April | Birthday Celebrations are Happening &#129395; | This month, we celebrate two birthdays for two amazing gals! Happy Birthday Andrew and Leora <3 Click for two fun mini celebrations at Careaway Park! | "+webLink+"information/blog/blog-post?index=8&title=april+birthday+celebrations... | https://i.imgur.com/rDQnaiQ.jpeg";
-ind += 1; indexSpotlight[ind] = "April | A year's worth of adventure | Feel unlimited. Purchase a Careaway Resort annual passport for 12 months of theme park fun! | "+webLink+"tickets/annual-passports | https://i.imgur.com/NCyozNl.jpeg";
-ind += 1; indexSpotlight[ind] = "April | Puertas Nuevas residents: save up to $200 on tickets | Residents with valid PNID can access exclusive offers on tickets to resort theme parks including 3-day, 1 park per day tickets as low as $53 per day | "+webLink+"tickets/resident-admission | https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNno5endza3Nxdm53YWpjMWhydGtwcXFuZmh2dHNyMDRwbzdkd2x4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k5SZBJqzdOnF6Tdjj4/giphy.gif";
-ind += 1; indexSpotlight[ind] = "April | Closed for refurbishment | Know before you go: some attractions may be closed for refurbishment. Click here to view the referb calendar. | "+webLink+"information/blog/operations-update?index=7 | https://i.imgur.com/4Xlk2uz.jpeg";
 
 
 // May
 ind += 1; indexSpotlight[ind] = "May | Celebrating Our Opening Day | Take a blast to the past and explore the hectic opening day of Globe-City's Careaway Resort | "+webLink+"information/blog/look-back-opening-day | https://i.imgur.com/pa18xQe.jpeg";
-ind += 1; indexSpotlight[ind] = "May | Your wardrobe called... it wants an upgrade | Get summer ready with some sleek and stylish clothing from the coolest resort in town! | "+webLink+"store/home | image_link";
 
 
 // June
 ind += 1; indexSpotlight[ind] = "June | Loud, Proud, and full of Love! | Celebrate pride month at an all-night party commemorating you and all your colors. Adventerous Nights of Pride is back in Puertas Nuevas and we're ready to be louder and prouder than ever! | click_link | https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg";
 ind += 1; indexSpotlight[ind] = "June | The Witches are back! | Welcome Elphaba and Galinda back to the Sasson Theater stage for a summer of defying gravity and beating up old wizards! See Wicked and more with special summer entertainment!  | "+webLink+"things-to-do/entertainment?category=0&location=0&season=4 | https://gcparksandresorts.github.io/careawayresort/files/images/shows/wickedMusical.webp";
 ind += 1; indexSpotlight[ind] = "June | Celebrate Pride With Exclusive Merch | Power to the gays! Proudly display your queer-ness with hot designer merch fresh from our studio. The gays are really cookin' with these! | "+webLink+"store/catalogue?search=pride | https://i.imgur.com/8TeM4rs.jpeg";
+
+*/

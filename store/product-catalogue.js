@@ -136,7 +136,13 @@ iter += 1; productList[iter]="Sprucewood Forest Scented Candle | 3 | 19.99 | non
 		productImg[iter] = "https://i.imgur.com/YDZzeX6.jpeg";
 		productDescription[iter] = "Cosy, soft brushed back fleece interior hoodie with adjustable drawcord hood | For the girls and the gays, show your pride-- and your bellybutton-- to the world!";
 
+	iter += 1; productList[iter]="Careaway Resort Pride Unisex T-Shirt | 1 | 21.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge,XXLarge";
+		productImg[iter] = "https://i.imgur.com/XedZgQ5.jpeg";
+		productDescription[iter] = "100% lightweight cotton comfort-fit t-shirt with rainbow vinyl logo | longerDescription";
 
+	iter += 1; productList[iter]="Classic Style Est. 2025 Careaway Pride Rainbow Longsleeve | 1 | 24.99 | #FFFFFF,#000000 | XSmall,Small,Medium,Large,XLarge";
+		productImg[iter] = "https://i.imgur.com/7XUCwnf.jpeg";
+		productDescription[iter] = "100% lightweight cotton comfort-fit long-sleeved t-shirt with rainbow vinyl logo | longerDescription";
 
 
 // CAREAWAY RESORT CLASSIC STYLE 

@@ -118,28 +118,26 @@
 			// Gather information from attraction array
 			let temp = entertainmentList[i].split(" | "); 
 
-			if(categoryVal == 0 || categoryVal == temp[6]){
-				if(locationVal == 0 || locationVal == temp[5]){
-					if(seasonVal == 0 || seasonVal == temp[7]){
+			if(categoryVal == 0 || categoryVal == temp[7]){
+				if(locationVal == 0 || locationVal == temp[6]){
+					if(seasonVal == 0 || seasonVal == temp[8]){
 						// Get attraction name and subtitle 
 						let aName = temp[1];
-						var aSubtitle = temp[3] //disclaimer text
+						var aSubtitle = temp[4] //disclaimer text
 						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}else{aSubtitle = disclaimerTexts[temp[3]];}
 
 						// Edit the hyperlink if none is specified 
 						var hyperLink = '';
 						if(temp[8] == 'clickLink8'){hyperLink='page-unavailable';}
-						else if(temp[8].includes("entIndex=")){
-							let linkTo = temp[8].split('=');
-							let titleLink = aName.replace(/ /g, '+').replace(/'/g, ''); // Add the ride name to end of link (serves no actual purpose)
-							hyperLink = 'entertainment/pages?index='+linkTo[1] + "&title=" + titleLink;
-						}else{hyperLink=entertainmentClickLink+temp[8];}
+						else{
+							hyperLink = 'entertainment/page?n=' + temp[2];
+						}
 						
-						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[2]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[5]]+"</div><a href='"+hyperLink+"'>link</a></div>";
+						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[3]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[6]]+"</div><a href='"+hyperLink+"'>link</a></div>";
 						
 						// If showing all categories, sort div into proper container, if not, then put all into one container
 						if(categoryVal == 0){
-							document.getElementById("category-"+temp[6]).innerHTML += builtDiv;
+							document.getElementById("category-"+temp[7]).innerHTML += builtDiv;
 						}else{
 							// Populate the div 
 							document.getElementById("allContainer").innerHTML += builtDiv;

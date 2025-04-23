@@ -39,14 +39,24 @@
 		function popPage(){
 			var index = 0;
 			
-			if(urlParams.has("index")){
-				index = urlParams.get("index");
+			if(urlParams.has("n")){
+				index = urlParams.get("n");
 			}
 
 			if(index != 0){
-				var temp = blogHeadings[index].split(" | ");
-				title.innerHTML = "<h3>" + temp[0] + "</h3>";
-				content.innerHTML = "<div class='leftContainer'>" + operationContents[index] + "</div>";
+
+			var blogObject;
+			for(i=0;i<blogData.length;i++){
+				if(index == blogData[i].blogLink){
+					blogObject = blogData[i];
+					break;
+				}
+			}
+
+			let qInfo = blogObject.info.split(' | ');
+
+			title.innerHTML = "<h3>(" + qInfo[0] + ") " + blogObject.title + "</h3>";
+			content.innerHTML = "<div class='leftContainer'>" + blogObject.contents + "</div>";
 			}
 			
 			content.innerHTML += "<div class='spacer'></div><div class='container' style='padding-top:0;'><p><a onclick='history.back()' class='btn'>Back to previous</a> <a href='../blog?category=1' class='btn'>View all updates</a></p></div>";

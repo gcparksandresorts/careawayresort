@@ -294,11 +294,14 @@
 			spotlightContent.innerHTML = "";
 
 			// populate the spotlight content
-				var cntr = 0; // Counts how many spotlight elements there are shown (maximum 3)
+			var cntr = 0; // Counts how many spotlight elements there are shown (maximum 3)
 			for (i = 0; i < indexSpotlight.length; i++) {
-				let temp = indexSpotlight[i].split(" | ");
-				if(temp[0] == month && cntr <= 2){
-					spotlightContent.innerHTML += "<div class='linked'><img src='"+temp[4]+"'><h3>"+temp[1]+"</h3>"+temp[2]+"<a href='"+temp[3]+"'>link</a></div>";
+				let temp = indexSpotlight[i];
+
+				var monthsList = [];
+				if(temp.months.includes(',')){monthsList = temp.months.split(',');}else{monthsList[0] = temp.months;}
+				if(monthsList.includes(month) && cntr<3){ // spotlight is valid for this month
+					spotlightContent.innerHTML += "<div class='linked'><img src='"+temp.imgLink+"'><h3>"+temp.title+"</h3>"+temp.textContent+"<a href='"+temp.clickLink+"'>link</a></div>";
 					cntr += 1;
 				}
 			}// end of for loop

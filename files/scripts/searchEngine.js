@@ -119,17 +119,30 @@ function populateSearch(){
 
         // Search Blog Posts
         searchResults.innerHTML += "<div id='blogResultsBin' style='display:none'><br><h2>Blog Posts & Operations Updates</h2></div>";
-        for(k=1; k<blogHeadings.length; k++){
+        for(k=1; k<blogData.length; k++){
             if(itemsList.includes('blog-'+k) == false){ // if the item is not already in the list of items to display
-                let temp = blogHeadings[k].split(' | '); // split the event into its components
-                const blogName = temp[0].toLowerCase().split(' '); // contents of blog heading / title
-                const blogCategory = blogCategories[temp[2]].toLowerCase().split(' '); // the category of the blog post
-                var blogAuthor = temp[3].toLowerCase().split(' '); // the author of the blog
+                let temp = blogData[k]; // get the blog object
+                const blogName = temp.title.toLowerCase().split(' '); // contents of blog heading / title
+                    let qInfo = temp.info.split(' | ');
+                const blogCategory = blogCategories[qInfo[1]].toLowerCase().split(' '); // the category of the blog post
+                var blogAuthor = qInfo[2].toLowerCase().split(' '); // the author of the blog
+                var blogDate = qInfo[0].split(' ');// get the components of the date
+                var blogTags = temp.tagsList.split(',');
 
                 // check if the search word is in the event name or description
-                if(blogName.includes(srchWrd) || blogCategory.includes(srchWrd) || blogAuthor.includes(srchWrd)){
+                if(blogName.includes(srchWrd) || blogCategory.includes(srchWrd) || blogAuthor.includes(srchWrd) || blogDate.includes(srchWrd) || blogTags.includes(srchWrd)){
                     // create a new div for the search result
-                    document.getElementById('blogResultsBin').innerHTML += "<div id='blog-"+k+"'><h3 style='margin-bottom:5px; color:midnightblue;'><a href=''>Blog Post: "+temp[0]+"</a></h3>"+blogCategories[temp[2]]+" - " + temp[3] + "</div>";
+
+                    var bLink;
+                    if(temp.hasOwnProperty('externalLink')){
+                        bLink = temp.externalLink;
+                    }else if(qInfo[1] == '1'){
+                        bLink = "information/blog/operations-update?n=" + temp.blogLink;
+                    }else{
+                        bLink = "information/blog/post?n=" + temp.blogLink;
+                    }
+
+                    document.getElementById('blogResultsBin').innerHTML += "<div id='blog-"+k+"'><h3 style='margin-bottom:5px; color:midnightblue;'><a href='"+bLink+"'>Blog Post: "+temp.title+"</a></h3>"+blogCategories[qInfo[1]]+" - " + qInfo[2] + "</div>";
                     resultsCount += 1;
                     itemsList.push('blog-'+k); // add the item to the list of items to display
 

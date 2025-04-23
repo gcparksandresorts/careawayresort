@@ -19,14 +19,14 @@ var iter = -1;
 
 iter+=1; websiteIndex[iter] = {title: "Accessibility and Guests with Allergies", 
     description: "Information on accomodations for guests with disabilities and food allergies", 
-    tagsList: "mda,blind,hearing,ramp,wheelchair,allergy,allergens,severe,food,service,animal",
+    tagsList: "mda,blind,hearing,ramp,wheelchair,allergy,allergens,severe,food,service,animal,support,accessible,ada,disabled,handicap,aid",
     link: "information/accessibility"
     };
 
 iter+=1; websiteIndex[iter] = {title: "Wheelchair / Stroller Rentals and Lockers", 
     description: "Information about renting wheelchairs, strollers, and daily lockers for storing personal belongings in the parks", 
-    tagsList: "wheelchairs,strollers,lockers,rentals,rental,locker,rent,renting",
-    link: "information/rentals"
+    tagsList: "wheelchairs,strollers,lockers,rentals,rental,locker,rent,renting,stuff,storage,store,parcel,bag,belongings,personal",
+    link: "information/services/rentals"
     };
 
 iter+=1; websiteIndex[iter] = {title: "Order Theme Park Tickets", 
@@ -49,7 +49,7 @@ iter+=1; websiteIndex[iter] = {title: "Annual Passports",
 
 iter+=1; websiteIndex[iter] = {title: "Seasonal Events and Celebrations", 
     description: "Information about seasonal events and celebrations at the Careaway Resort happening throughout the year", 
-    tagsList: "event,season,celebration,party,pride,holiday,celebrate,halloween,scary,scareaway,spooky,food,special,specials",
+    tagsList: "event,season,celebration,party,pride,holiday,celebrate,halloween,scary,scareaway,spooky,food,special,specials,holidays",
     link: "things-to-do/events"
     };
 
@@ -95,11 +95,12 @@ iter+=1; websiteIndex[iter] = {title: "Online Store",
     link: "store/home"
     }; 
 
-iter+=1; websiteIndex[iter] = {title: "pageTitle", 
-    description: "pageDescription", 
-    tagsList: "tag1,tag2,tag3",
-    link: "pageLink"
+iter+=1; websiteIndex[iter] = {title: "Park Hours and Daily Entertainment & Events Schedule", 
+    description: "View the operating hours for Careaway Park, Port of Adventre, Splashport Bay, and the Shops & More District as well as a schedule of today's entertainment and events. Also look ahead to view this information for other dates", 
+    tagsList: "hour,operations,schedule,entertainment,show,shows,events,calendar,calender,seasonal,time,weather,parking,tier,day,days,price,ticket,cost,info,information",
+    link: "information/resort-schedule"
     }; 
+
 
 
     

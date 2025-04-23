@@ -1,0 +1,76 @@
+<!DOCTYPE html> <html lang="en">
+    <head id='pgHead'>
+	    	<link rel='stylesheet' href='https://gcparksandresorts.github.io/careawayresort/files/header/headerStyle.css'>
+
+	    	<!--
+	    		<link href="https://fonts.googleapis.com/css?family=FONT_NAME" rel="stylesheet">
+	   	 -->
+	    
+		<title>Blog Builder (Internal) | Globe-City's Careaway Resort</title> <!-- Dont Forget the page title!! -->
+    </head>
+
+<body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
+
+		<style>
+            select{font-size: 16px;}
+        </style>
+
+		<!-- BODY CONTENT HERE -->
+
+		<div class="titleBar"><h1>Blog Post / Operations Update Maker</h1></div>
+
+        <div class="leftContainer" id="blogMode" style="display: block;">
+            <h2>Build a Blog or Operations Update</h2>
+            <p>
+                <label for="blogCategorySelect">Select Category </label> <select id="blogCategorySelect"></select>
+            </p>
+            <p>
+                <label for="authorName">Author Name (don't include for Op-Update): </label> <input type="text" id="authorName" placeholder="Big Chungus"  />
+                <label for="blogPostingDate"> - Posting Date: </label> <input type="text" id="blogPostingDate" placeholder="Month DD" />
+            </p>
+            <p>
+                <label for="blogTitle">Blog Title: </label> <input style='width:50%; font-size:18px;' type="text" id="blogTitle" placeholder="Title of the Best Blog Ever" />
+            </p>
+            <p>
+                <label for="blogLink">Blog Index Link: </label><input type="text" placeholder="example-link" id="blogLink" /> - will show as <em>blog/page?n=example-link</em> when clicked
+                <br>
+                <label for="blogTags">Search Tags (no spaces, comma separated): </label><input type="text" style='width:50%;' placeholder="tag1,tag2,tag3,tag4,..." id="blogTags" />
+            </p>
+            <p>
+                <label for="blogImg">Header Image (don't include for Op-Update): </label> <input style='width:50%;' type="text" id="blogImg" placeholder="https://example.com/image.jpg" />
+            </p>
+            <div class="spacer"></div>
+            <h4>Blog / Update Contents</h4>
+            <textarea id="blogContents" style="width:100%;" rows="10"></textarea>
+            <p>
+                <h4>Important Considerations</h4>
+                <ul>
+                    <li><b>Including inline images:</b> &lt;img src=''&gt;&lt;p class='imgCaption'&gt;caption_text&lt;/p&gt;  </li>
+                    <li>ALWAYS use <b>'</b>, if you have to use <b>"</b> make sure to use <b>\"</b> instead</li>
+                    <li>Line breaks (except for &lt;br&gt; will be ignored)</li>
+                </ul>
+            </p>
+            <div class="spacer"></div>
+            <button onclick="buildPost()">Build Code Element & Preview Post</button>
+        </div>
+
+        <div class="leftContainer filled" id="codeOut">
+            
+        </div>
+
+        
+        <div class="leftContainer">
+            <h2>Blog / Update Preview</h2>
+            <div style="border:2px solid black; width:100%; padding:10px;" id="blogPreview">
+
+            </div>
+        </div>
+		<!-- END OF BODY CONTENT -->
+
+	<div id='footer'></div>
+</body>
+    <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+    <script src="../repositories/blog-info-spotlight/postsBase.js"></script>
+    <script src="../scripts/blog-builder-script.js"></script>
+   
+</html>
