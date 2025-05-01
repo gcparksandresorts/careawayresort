@@ -60,6 +60,6 @@ function generatePreview(){
     }else{
         const qInfo = codePreview.info.split(' | ');
         blogPreview.innerHTML = "<div class='titleBar'><h1>Operations Update</h1></div><div class='titleBar silver'><h2>("+qInfo[0]+") "+codePreview.title+"</h2></div>\
-        <div class='leftContainer'>"+document.getElementById('blogContents').value.replace(/(\r\n|\n|\r)/gm, "")+"</div>";
+        <div class='leftContainer' id='opsUpdateCont'>"+document.getElementById('blogContents').value.replace(/(\r\n|\n|\r)/gm, "")+"</div>";
     }
 }

@@ -20,6 +20,14 @@
            #eventEntDisplay {position:fixed; top:80px; left:40%; bottom:0; overflow-y: auto; width:300px; background-color: silver; border: 2px solid black; padding:20px; transition:0.4s;}
            #eventEntDisplay.hidden {left:-300px;}
            #eventShowBtn{position:fixed; top:80px; right:0; background:lightgray; padding:10px; border:2px solid black; cursor:pointer;}
+           #eventEntDisplay p.clicked{animation: clickedAnim 0.5s;}
+            @keyframes clickedAnim {
+                0% {color:black;}
+                50% {color:green;}
+                100% {color:black;}
+            }
+
+        .isLoading {cursor:wait;}
         </style>
 
 		<!-- BODY CONTENT HERE -->

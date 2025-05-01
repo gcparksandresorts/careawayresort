@@ -49,6 +49,14 @@ ind+=1; indexSpotlight[ind] = {
     clickLink: webLink+"store/home" 
 }
 
+ind+=1; indexSpotlight[ind] = {
+    title: "A Weekend Just Won't Be Enough...",
+    months: "May,June,July,August", // use full month name, use comma no-space to add extra months
+    textContent: "This summer, there's so much happening at the Careaway Resort. Events, Celebrations, Parties, and More! There's so much to explore, you'll just have to come back.",
+    imgLink: "https://cpfoodblog.com/wp-content/uploads/2019/06/2019-Knotts-Summer-Nights-Smores.jpg",
+    clickLink: webLink+"events/summer-adventures" 
+}
+
 // LESS IMPORTANT (DOESEN'T HAVE TO BE ON FIRST PAGE)
 
 ind+=1; indexSpotlight[ind] = {

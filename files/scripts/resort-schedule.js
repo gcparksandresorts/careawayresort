@@ -128,15 +128,19 @@ function setupEntertainment(){
 
         // eventlistArray
         for(i=0; i<eventsSchedule.length; i++){
-            for(j=0; j<eventlistArray.length; j++){
-                let temp = eventlistArray[j].split(" | ");
-                if(temp[0] == eventsSchedule[i]){
-                    var madeDiv;
-                    if(temp[4] != 'clickLink4'){
-                        temp[4] = eventSiteLink + temp[4];
-                        madeDiv = "<div class='linked' onclick='window.open(\""+temp[4]+"\")'><b>"+temp[1]+"</b><p>"+eventLocationList[temp[3]]+"</p><em>"+temp[2]+"</em></div>";
+            for(j=0; j<eventData.length; j++){
+                let temp = eventData[j];
+                    let qInfo = temp.info.split(' | ')
+                if(temp.codeName == eventsSchedule[i]){
+                    var madeDiv; var goLink;
+                    if(temp.hasOwnProperty('externalLink')){
+                        goLink = temp.externalLink;
+                        madeDiv = "<div class='linked' onclick='window.open(\""+goLink+"\")'><b>"+temp.name+"</b><p>"+eventLocationList[qInfo[1]]+"</p><em>"+temp.eventHours+"</em></div>";
+                    }else if(temp.clickLink != 'click_link'){
+                        goLink = eventSiteLink+'page?n='+temp.clickLink;
+                        madeDiv = "<div class='linked' onclick='window.open(\""+goLink+"\")'><b>"+temp.name+"</b><p>"+eventLocationList[qInfo[1]]+"</p><em>"+temp.eventHours+"</em></div>";
                     }else{
-                        madeDiv = "<div><b>"+temp[1]+"</b><p>"+eventLocationList[temp[3]]+"</p><em>"+temp[2]+"</em></div>";
+                        madeDiv = "<div class=''><b>"+temp.name+"</b><p>"+eventLocationList[qInfo[1]]+"</p><em>"+temp.eventHours+"</em></div>";
                     }
                     document.getElementById('eventUL').innerHTML += madeDiv;
                 }

@@ -7,23 +7,37 @@
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
-		<style></style>
+		<style>
+			.columnContainer > div {align-self:center;}
+			.columnContainer > div > .tagContainer > a {color:black;}
+		</style>
 
 		<!-- BODY CONTENT HERE -->
 		<div class="banner">
 			<img src="https://cdn2.nbcuni.com/NBCUniversal/2024-08/HHN24-Hero-DuelingDragons-RG38475-RET-1220x940-1.jpg?VersionId=O2InsIdwYA_MZiS7K7j06DGZiF1gSPuk">
 		</div>
 		<div class="titleBar"><h1>Seasonal Events & Celebrations</h1></div>
-
+		<div class="titleBar silver">
+			<label for='categorySearch'>Sort by event type </label><select id="categorySearch" onchange="showConfirm()"></select>
+			<label for='seasonSearch'> Sort by season </label><select onchange="showConfirm()" id="seasonSearch"></select>
+			<label for='locationSearch'> Sort by location </label><select onchange="showConfirm()" id="locationSearch"></select>
+			<p>
+			<input id='paidEvent' type="checkbox" checked onchange="showConfirm()" /><label for="paidEvent">Include events requiring seperate admission </label>
+			</p>
+			<label for='searchBar'> Search keywords </label><input type="search" title="Search for events using keywords" id="searchBar" onchange="showConfirm()"/>
+		</div>
+		<p style="text-align:center">
+			<a class="btn" style="display:none; max-width:200px; margin:auto;" onclick="applyFilter();" id="applyFilter">Apply Filters</a>
+		</p>
+		<div class="" id="bigEventDisp"></div>
 		<br><br>
-		<div class="titleBar silver"><h2>Other Events</h2></div>
+		<div class="titleBar"><h2>Other Events</h2></div>
 		<div class="leftContainer">
 			<div class="placeContainer" id="fullEventsList">
 
 			</div>
 		</div>
 
-		<a href='events/scareaway-screams'>Scareaway Screams</a>
             
 		
 		<!-- END OF BODY CONTENT -->

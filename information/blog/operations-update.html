@@ -56,7 +56,7 @@
 			let qInfo = blogObject.info.split(' | ');
 
 			title.innerHTML = "<h3>(" + qInfo[0] + ") " + blogObject.title + "</h3>";
-			content.innerHTML = "<div class='leftContainer'>" + blogObject.contents + "</div>";
+			content.innerHTML = "<div class='leftContainer' id='opsUpdateCont'>" + blogObject.contents + "</div>";
 			}
 			
 			content.innerHTML += "<div class='spacer'></div><div class='container' style='padding-top:0;'><p><a onclick='history.back()' class='btn'>Back to previous</a> <a href='../blog?category=1' class='btn'>View all updates</a></p></div>";

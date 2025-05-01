@@ -102,6 +102,14 @@ iter += 1; blogData[iter] = {
 	externalLink: shortLink+"look-back-opening-day"
 }
 
+iter += 1; blogData[iter] = {
+	title: "Space Day! at Careaway Park",
+	info: "May 4 | 7 | Jeffrey Beppler",
+	blogLink: "space-day", tagsList: "space,fun,star,wars,starwars,may,4,fourth,force,alien,interspace",
+	headerImg: "https://i.imgur.com/HCfptzU.png",
+	contents: "It's Space Day! Celebrate the stars, the strange, and the spectacular at Galaxy Center's ultimate outer space celebration! One <b>one day only - May Fourth!</b><h4>👨‍🚀 Exclusive Character Appearances</h4><ul><li><em>Captain Umbra</em> the mysterious Dark Galaxy Astronaut</li><li>the <em>Clank & Clatter Crew</em>, a band of silly Droids big and small</li><li><em>Zarnok the Alien Ambassador</em>, a mischievous and cooky creature</li><li>The <em>Cosmos Crusaders</em>, defenders of peace from the outer-ring pirates</li><li>and the <em>Starlight Sages</em>, wise space monks guided by the cosmic current</li></ul><h4>🍧 Taste the Universe</h4>Feast on stellar snacks made just for Space Day:<ul><li><em>Galactic Glow Churros</em> - glowing sugar dusted, neon-colored (nighttime only)</li><li><em>Alien Goo Pudding</em> - matcha + popping boba in a slimy swirl</li><li><em>Binary Brownies</em></li><li><em>Rocket Fuel Floats</em> - soda + glowing ice cubes in a souvenir cup</li><li><em>Meteor Munch Popcorn</em> - black cocoa and starlight sprinkles</li></ul><h4>🎭 Intergalactic Entertainment (Daytime)</h4>Witness the Epic Duel: A live-action showdown between a Cosmos Crusader and a Starlight Sage! Or, if you're lucky catch the Robot Rhythms Dance-Off — synchronized moves from droids gone funky!<h4>🌌 Out-of-This-World Nightlife</h4>When the stars come out, join the alien dance party — an interstellar rave with lights, beats, and characters from across the cosmos. Event-exclusive Glow gear encouraged for max energy ⚡🪩<br><br><p>✨ <b>One Day Only: May 4th</b> — Don’t miss your chance to celebrate a universe of fun.<br>Costumes welcome. Space imagination required.</p><p><em>All special items and exclusive food offerings are subject to availability; we do not overstock - some items may be sold out</em></p>"
+}
+
 
 // JUNE
 

@@ -1,5 +1,4 @@
-restaurantInfo = []; restaurantBreakfast = []; restaurantDinner = []; restaurantCMen = []; restaurantImages = [];
-
+restaurantInfo = []; rSections = []; rSubsections = []; rItems = [];
 // diningLocations = ["none", "Globe-City's Careaway Park", "Globe-City Port of Adventure", "Globe-City's Splashport Bay", "Shops & More District", "Resort Hotels"];
 // diningCategories = ["none", "Casual Dining", "Counter Service", "Full Service", "Grab & Go", "Kiosk Ordering", "Poolside Dining", "Other"];
 // mealStyle = ["none", "Breakfast", "Lunch", "Dinner", "Snacks & Beverages", "Bar Drinks"];
@@ -14,41 +13,46 @@ restaurantInfo[3] = "Tag1,Tag2,Tag3";
 restaurantInfo[4] = "preciseLocation0, parkLocation1"; // use park index for 1
 
 /* Menu Arrays
--> new | categoryName will start a new sub category (I.E. new | Entrees | served with fries) - leave description as-is for none
-    iter+=1; restaurantBreakfast[iter] = "new | subCategory | description";
-    iter+=1; restaurantDinner[iter] = "new | subCategory | description";
-    iter+=1; restaurantCMen[iter] = "new | subCategory | description";
 
--> after category, start listing items.
-    iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
-    iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
-    iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
+-> NEW SECTION (Breakfast, Lunch, ETC)
 
--> If no breakfast category use restaurantBreakfast[0] = "empty"; -> same goes for others too
+sIter+=1; rSections[sIter]="code0 | sectionName1";
+    -> code0: will be used for child sections
 
--> restaurantCMen is used for items that are always on the menu (such as drinks, etc) no matter time of day
-    For restaurants with no breakfast and lunch menus (ie. snack stands) just use restaurantCMen only
+-> NEW SUB-SECTION (Appetizers, Entres, Etc.)
 
-- > Allergen -> v = vegan, gf = gluten free, leave as is to ignore. (v,gf for both)
+subIter+=1; rSubsections[subIter]="parentCode0 | newCode1 | sectionName2 | sectionSubtitle3";
+    -> parentCode0: the code of the section this subsection belongs to
+    -> sectionSubtitle: leave as-is if none
+
+
+-> MENU ITEM
+
+    iIter+=1; rItems[iIter]="sectionCode0 | itemName1 | itemPrice2 | allergens3 | itemDescription4";
+        -> sectionCode0: 
+            default (will always appear): none
+            otherwise, code of parent section it will appear in (can be a section or subsection)
+        -> allergens3: include comma if needed (gf or gf,v) - leave as is for neither
+    
+
+- > Allergen -> v = vegan, gf = gluten free, k = certified kosher, df = dairy free, ef = egg free
 */
 
-// BREAKFAST
-iter=0; restaurantBreakfast[iter] = "new | subCategory | description";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantBreakfast[iter] = "itemName0 | price1 | description2 | allergen";
+var sIter = -1; var subIter = -1; var iIter=-1;
 
-// LUNCH & DINNER
-iter=0; restaurantDinner[iter] = "new | subCategory | description";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantDinner[iter] = "itemName0 | price1 | description2 | allergen";
+sIter+=1; rSections[sIter]="breakfast | Breakfast (opening - 12PM)";
 
-// ALLWAYS ON THE MENU
-iter=0; restaurantCMen[iter] = "new | subCategory | description";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
-iter+=1; restaurantCMen[iter] = "itemName0 | price1 | description2 | allergen";
+subIter+=1; rSubsections[subIter]="breakfast | section1 | sectionName2 | sectionSubtitle3";
+    iIter+=1; rItems[iIter]="section1 | itemName1 | itemPrice2 | allergens3 | itemDescription4";
+    iIter+=1; rItems[iIter]="section1 | itemName1 | itemPrice2 | allergens3 | itemDescription4";
+    iIter+=1; rItems[iIter]="section1 | itemName1 | itemPrice2 | allergens3 | itemDescription4";
+
+
+subIter+=1; rSubsections[subIter]="none | drinks | Standard Beverages | sectionSubtitle3";
+    iIter+=1; rItems[iIter]="drinks | Fountain Drink | 5.00 | allergens3 | Self-Serve, choose from over 100 different flavors";
+    iIter+=1; rItems[iIter]="drinks | Premium Bottled Water | 6.00 | allergens3 | itemDescription4";
+    iIter+=1; rItems[iIter]="drinks | Apple Juice Box | 4.00 | allergens3 | itemDescription4";
+    iIter+=1; rItems[iIter]="drinks | 2% Milk Bottle | 4.00 | allergens3 | itemDescription4";
 
 
 

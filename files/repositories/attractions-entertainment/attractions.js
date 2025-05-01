@@ -1,3 +1,5 @@
+attractionData = [];
+
 attractionList = []; attractionCategories = []; attractionLocations = []; attractionAge = [];
 var iter = 0;
 
@@ -52,3 +54,31 @@ iter+=1; attractionList[iter] = "8Lanes Bowling Alley and Sports Bar - Pay per g
 iter+=1; attractionList[iter] = "Buddy's Wooden Wheel - none | 1 | 3 | 1 | atIndex=7 | https://i.imgur.com/E0Bbpt0.jpeg";
 iter+=1; attractionList[iter] = "Buddy's Friendship Factory - Sponsored by Build-a-bear | 1 | 4 | 1 | atIndex=12 | https://static.wikia.nocookie.net/sixflags/images/4/4d/Build-A-Bear_Workshop_SFMM_2023-04-02.jpg/revision/latest?cb=20230402204023";
 
+/*
+
+AUTO-GENERATED ATTRACTION PAGES
+
+iter+=1; attractionData[iter] = {
+	name: "attraction_name", font:"googleFont", // or put none
+	sponsorText: "sponsorText", clickLink: "click-link",
+	info: "exactLocation,parkIndex | category1 | age2", coverImage: "image_link",
+	tags: "tag1,tag2,tag3",
+	details: "duration | photoPass1 | queuing2 | accessibility3", // yes or no for photoPass
+	shortDescription: "shortDescription",
+	knowBeforeYouGo: "whatToKnow", // delete this line if not needed
+	longDescription: "longDescription",
+	otherImages: "image1 | image2" // delete this line if not needed
+}
+
+
+EXTERNAL LINKED ATTRACTIONS
+
+iter+=1; attractionData[iter] = {
+	name: "attraction_name", font:"googleFont", // or put none
+	sponsorText: "sponsorText", coverImage: "image_link",
+	info: "exactLocation,parkIndex | category1 | age2", 
+	tags: "tag1,tag2,tag3",
+	externalLinkL: shortLink+"clickLink"
+}
+
+*/

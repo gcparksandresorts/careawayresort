@@ -13,17 +13,18 @@ function isOdd(num) {
 }
 
 function setupMain(num){
+    document.body.classList.add('loading'); // set cursor to loading
     // Setup Entertainment and Events List
     let entDisp = document.getElementById("eventEntDisplay");
     entDisp.innerHTML = "<em>Click to copy</em><h2>Events</h2>";
-        for(i=0; i<eventlistArray.length; i++){
-            let temp = eventlistArray[i].split(" | ");
-            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp[0]+'"'+");'>"+temp[0]+" - " + temp[1] + "</p>";
-        } 
+        for(i=0; i<eventData.length; i++){
+            let temp = eventData[i];
+            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp.codeName+'"'+"); this.classList.toggle(\"clicked\");'>"+temp.codeName+" - " + temp.name + "</p>";
+        }
     entDisp.innerHTML += "<h2>Entertainment</h2>";
         for(i=0; i<entertainmentList.length; i++){
             let temp = entertainmentList[i].split(" | ");
-            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp[0]+'"'+");'>"+temp[0]+" - " + temp[1] + "</p>";
+            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp[0]+'"'+"); this.classList.toggle(\"clicked\");'>"+temp[0]+" - " + temp[1] + "</p>";
         }
 
     mainContaner.style.display = "block";
@@ -49,7 +50,7 @@ function setupMain(num){
         let temp = masterList[i].split(" | ");
         mainTable.innerHTML += "<tr id='row-"+i+"'><td>"+i+"</td></tr>"; // create the row
             let thisRow = document.getElementById("row-"+i);
-                thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td id='row-"+i+"-weekday'>"+temp[1]+"</td>"; // add the date and weekday
+                thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td><input id='row-"+i+"-weekday' onchange='saveRowValues("+i+")' style='width:100px;' type='text' value='"+temp[1]+"'></td>"; // add the date and weekday
                 thisRow.innerHTML += "<td><p>Tier</p><select id='row-"+i+"-tier' onchange='saveRowValues("+i+"); setTierColor(this.id);'></select></td>"; // add tier selector
                 thisRow.innerHTML += "<td><p>Park Hours (Shops District, Careaway, Port Adventure)</p><select id='row-"+i+"-parkHours' onchange='saveRowValues("+i+")'></select></td>"; // park hours selector
                 thisRow.innerHTML += "<td><p>Splashport Bay Hours</p><select id='row-"+i+"-splashHours' onchange='saveRowValues("+i+")'></select></td>"; // splashport hours
@@ -76,7 +77,7 @@ function setupMain(num){
                     thisRow.style.backgroundColor = 'white';
                 }
     }// end of for(i=0; i<masterList.length,i++)
-
+    document.body.classList.remove('loading'); // set cursor to loading
     repopulateSelects();
 }// end of function setupMain()
 
@@ -88,16 +89,16 @@ function setTierColor(id){
             tierVal.style.backgroundColor = "rgb(255,255,250)";
             break;
         case "2":
-            tierVal.style.backgroundColor = "rgb(255,255,230)";
+            tierVal.style.backgroundColor = "rgb(232, 254, 138)";
             break;
         case "3":
-            tierVal.style.backgroundColor = "rgb(255,255,210)";
+            tierVal.style.backgroundColor = "rgb(255, 235, 148)";
             break;
         case "4":
-            tierVal.style.backgroundColor = "rgb(255,255,190)";
+            tierVal.style.backgroundColor = "rgb(255, 191, 127)";
             break;
         case "5":
-            tierVal.style.backgroundColor = "rgb(255,255,170)";
+            tierVal.style.backgroundColor = "rgb(255, 149, 125)";
             break;
         case "0":
             tierVal.style.backgroundColor = "rgb(255,0,0)";
@@ -107,32 +108,26 @@ function setTierColor(id){
     console.log("setTierColor("+id+") -> "+tierVal.value);
 } // end of function setTierColor(id)
 
-function addRow(type){
-  
-
-    if(isOdd(rowCount)){
-        thisRow.style.backgroundColor = "white";
-    }
-}
 
 function repopulateSelects(){ // since the selects reset, populates them with correct values
-
+    document.body.classList.add('loading'); // set cursor to loading
     for(i=0;i<masterList.length;i++){
         let temp = masterList[i].split(" | ");
 
+        document.getElementById('row-'+i+'-weekday').value = temp[1];
         document.getElementById('row-'+i+'-tier').value = temp[2]; setTierColor('row-'+i+'-tier');
         document.getElementById('row-'+i+'-parkHours').value = temp[3];
         document.getElementById('row-'+i+'-splashHours').value = temp[4];
         document.getElementById('row-'+i+'-events').value = temp[5];
         document.getElementById('row-'+i+'-entertainment').value = temp[6];
     }
-
+    document.body.classList.remove('loading'); // set cursor to loading
 }
 
 function saveRowValues(num){
-
+    document.body.classList.add('loading'); // set cursor to loading
     let rDate = document.getElementById('row-'+num+'-date').innerText;
-    let rWeekday = document.getElementById('row-'+num+'-weekday').innerText;
+    let rWeekday = document.getElementById('row-'+num+'-weekday').value;
     let rTier = document.getElementById('row-'+num+'-tier').value;
     let rParkHours = document.getElementById('row-'+num+'-parkHours').value;
     let rSplashHours = document.getElementById('row-'+num+'-splashHours').value;
@@ -141,9 +136,11 @@ function saveRowValues(num){
 
     masterList[num] = rDate + " | " + rWeekday + " | " + rTier + " | " + rParkHours + " | " + rSplashHours + " | " + rEvent + " | " + rEnt;
     console.log("Row " + num + " value saved: " + masterList[num]);
+    document.body.classList.remove('loading'); // set cursor to loading
 }
 
 function addRow(type){
+    document.body.classList.add('loading'); // set cursor to loading
     for(k=0; k<numToCopy.value;k++){
         let i = rowCount; rowCount += 1; 
 
@@ -151,7 +148,7 @@ function addRow(type){
     let temp = [];
     let previousDate = document.getElementById("row-"+Number(i-1)+"-date").innerText.split("-"); // [MMM, DD]
         previousDate[1] = parseInt(previousDate[1]);
-    let previousWeekday = document.getElementById("row-"+Number(i-1)+"-weekday").innerText; // Monday
+    let previousWeekday = document.getElementById("row-"+Number(i-1)+"-weekday").value; // Monday
 
     // check if new month
     if(previousDate[0] == 'FEB' && previousDate[1] == '28' && document.getElementById('isLeapYear').checked){ // is leap year
@@ -172,7 +169,7 @@ function addRow(type){
 
     mainTable.innerHTML += "<tr id='row-"+i+"'><td>"+i+"</td></tr>"; // create the row
     let thisRow = document.getElementById("row-"+i);
-        thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td id='row-"+i+"-weekday'>"+temp[1]+"</td>"; // add the date and weekday
+        thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td><input id='row-"+i+"-weekday' onchange='saveRowValues("+i+")' style='width:100px;' type='text' value='"+temp[1]+"'></td>"; // add the date and weekday
         thisRow.innerHTML += "<td><p>Tier</p><select id='row-"+i+"-tier' onchange='saveRowValues("+i+"); setTierColor(this.id);'></select></td>"; // add tier selector
         thisRow.innerHTML += "<td><p>Park Hours (Shops District, Careaway, Port Adventure)</p><select id='row-"+i+"-parkHours' onchange='saveRowValues("+i+")'></select></td>"; // park hours selector
         thisRow.innerHTML += "<td><p>Splashport Bay Hours</p><select id='row-"+i+"-splashHours' onchange='saveRowValues("+i+")'></select></td>"; // splashport hours
@@ -207,7 +204,7 @@ function addRow(type){
         } 
 
     }// end of for
-
+    document.body.classList.remove('loading'); // set cursor to loading
     repopulateSelects();
 
 }// end of function addRow();
