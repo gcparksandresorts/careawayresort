@@ -13,6 +13,7 @@ if(urlParams.has("query")){ // search query already inputted
     populateSearch();
 }else{ // user still needs to search for something
     searchText.innerHTML = "Search the entire website:<br><input type=\"text\" id=\"searchQuery\" placeholder=\"Search...\" onchange='runSearch(this.value, \"int\");' />";
+    document.getElementById('searchQuery').select();
 }
 
 // Populate Search Results
@@ -167,5 +168,6 @@ function populateSearch(){
 
 function resetSearchBar(){
     searchText.innerHTML = "Search the entire website:<br><input type=\"text\" id=\"searchQuery\" placeholder=\"Search...\" onchange='runSearch(this.value, \"int\");' />";
+    document.getElementById('searchQuery').select();
 }
 

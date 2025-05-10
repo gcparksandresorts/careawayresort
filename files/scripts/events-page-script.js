@@ -57,7 +57,7 @@ for(i=0; i<eventData.length;i++){
                 hyperlink = "<a class='btn noLeft' href='events/page?n="+temp.clickLink+"'>View Event</a>";
             }
     
-            let buildDiv = "<div class='leftContainer filled'><div class='columnContainer dImg'><img src='"+temp.bannerImg+"'>\
+            let buildDiv = "<div class='leftContainer filled' style='background:#efefef;'><div class='columnContainer dImg'><img src='"+temp.bannerImg+"'>\
                 <div><h2>"+temp.name+"</h2>"+temp.synopsis+"<div class='spacer'></div><p class='tagContainer'><a>&#128205; "+locationVal+"</a> <a>"+eventSeasons[qInfo[3]]+" season</a> <a>"+eventAdmissionList[qInfo[2]]+"</a></p><div class='spacer'></div><p>"+hyperlink+"</p></div> </div>";
     
             bigEventsBin.innerHTML += buildDiv;

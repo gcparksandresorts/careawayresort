@@ -45,11 +45,11 @@ if(urlParams.has('n')){
 
 function setupGallery(index){
     let temp = eventData[index];
-    const imgList = temp.extraImg.split(' | ');
+    const imgList = temp.extraImg.split(' || ');
     const  galleryIndex = []; iVald = -1;
 
     for(p=0; p<imgList.length; p++){
-       galleryIndex[p] = imgList[p] + " | none";
+       galleryIndex[p] = imgList[p];
     }
 
     indLength = galleryIndex.length-1
@@ -60,7 +60,7 @@ function setupGallery(index){
                 let tempVal = galleryIndex[i].split(" | ");
                 if(tempVal[1] != 'none'){
                     let iT = i + 1;
-                    gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div><span style='color:silver'>"+iT+" of "+galleryIndex.length+": </span> "+tempVal[1]+"</div></div>";
+                    gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div><span style='color:silver'>"+iT+" of "+galleryIndex.length+": "+tempVal[1]+"</span></div></div>";
                 }else{
                     let iT = i + 1;
                     gallery.innerHTML += "<div id='gallery-"+i+"'> <img src='"+tempVal[0]+"'> <div><span style='color:silver'>"+iT+" of "+galleryIndex.length+"</span></div></div>";

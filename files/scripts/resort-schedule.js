@@ -93,20 +93,13 @@ function setupEntertainment(){
         for(i=0; i<entertainmentSchedule.length;i++){
             //var indexOfEntTemp;
             for(j=0; j<entertainmentList.length; j++){ //find index of current entertainment item
-                let temp = entertainmentList[j].split(' | ');
-                if(temp[0] == entertainmentSchedule[i]){
+                let temp = entertainmentList[j];
+                if(temp.code == entertainmentSchedule[i]){
                     //indexOfEntTemp = j;
-                    var madeDiv;
-                    if(temp[8] != 'clickLink8' && temp[8].includes('entIndex=')){
-                        let tempIndex = temp[8].split('=');
-                        let setclick = "../things-to-do/entertainment/pages?index=" + tempIndex[1];
-                        madeDiv = "<div class='linked' onclick='window.open(\""+setclick+"\")'><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>";
-                    }else if(temp[8] != 'clickLink8'){
-                        madeDiv = "<div class='linked' onclick='window.open(\""+temp[8]+"\")'><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>"; 
-                    }else{
-                        madeDiv = "<div><b>"+temp[1]+"</b><p>"+entertainmentLocation[temp[5]]+"</p><em>"+temp[4]+"</em></div>";
-                    }
-
+                    var clickLink = entertainmentClickLink + "page?n=" + temp.pageLink;
+                    let qInfo = temp.info.split(' | ');
+                    let locationValue = qInfo[2].split(',');
+                    let madeDiv = "<div class='linked' onclick='window.open(\""+clickLink+"\")'><b>"+temp.name+"</b><p>"+entertainmentLocation[locationValue[1]]+"</p><em>"+temp.showTimes+"</em></div>";
                     document.getElementById('entUl').innerHTML += madeDiv;
                 }
             }

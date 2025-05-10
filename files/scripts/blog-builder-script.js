@@ -63,3 +63,8 @@ function generatePreview(){
         <div class='leftContainer' id='opsUpdateCont'>"+document.getElementById('blogContents').value.replace(/(\r\n|\n|\r)/gm, "")+"</div>";
     }
 }
+
+window.addEventListener("beforeunload", function (e) {
+    //confirm('Are you sure you want to leave? Changes ARE NOT saved once this page is closed!');
+    e.preventDefault();
+  });

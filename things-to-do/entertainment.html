@@ -107,7 +107,7 @@
 		// If searching all categories, create individual div for each category of attraction
 		if(categoryVal == 0){
 			for(i = 1; i < entertainmentCategory.length; i++){
-				container.innerHTML += "<br><br><h2 style='color:midnightblue'>"+entertainmentCategory[i]+"</h2><div class='placeContainer' id='category-"+i+"'></div>";
+				container.innerHTML += "<div id='parentOf-"+i+"'' style='display:none'><br><br><h2 style='color:midnightblue'>"+entertainmentCategory[i]+"</h2><div class='placeContainer' id='category-"+i+"'></div></div>";
 			}// end of for loop
 		}else{
 			container.innerHTML += "<div class='placeContainer' id='allContainer'></div>";
@@ -116,43 +116,47 @@
 		for (i = 0; i < entertainmentList.length; i++) {
 
 			// Gather information from attraction array
-			let temp = entertainmentList[i].split(" | "); 
+			let temp = entertainmentList[i]; 
+				let qInfo = temp.info.split(' | ');
+				var locInd = qInfo[2].split(',');
+					locInd = locInd[1];
 
-			if(categoryVal == 0 || categoryVal == temp[7]){
-				if(locationVal == 0 || locationVal == temp[6]){
-					if(seasonVal == 0 || seasonVal == temp[8]){
-						// Get attraction name and subtitle 
-						let aName = temp[1];
-						var aSubtitle = temp[4] //disclaimer text
-						if(aSubtitle == 'none' || aSubtitle == 'showDisclaimer3'){aSubtitle = '';}else{aSubtitle = disclaimerTexts[temp[3]];}
+			if(temp.showOnPage != 'no'){
+					if(categoryVal == 0 || categoryVal == qInfo[3]){
+					if(locationVal == 0 || locationVal == locInd){
+						if(seasonVal == 0 || seasonVal == qInfo[1]){
+							// Get attraction name and subtitle 
+							let aName = temp.name;
+							var aSubtitle = disclaimerTexts[qInfo[0]]; //disclaimer text
+							if(qInfo[0] == 'none'){aSubtitle = '';}
 
-						// Edit the hyperlink if none is specified 
-						var hyperLink = '';
-						if(temp[8] == 'clickLink8'){hyperLink='page-unavailable';}
-						else{
-							hyperLink = 'entertainment/page?n=' + temp[2];
-						}
-						
-						const builtDiv = "<div><img src='"+temp[9]+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp[3]+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[temp[6]]+"</div><a href='"+hyperLink+"'>link</a></div>";
-						
-						// If showing all categories, sort div into proper container, if not, then put all into one container
-						if(categoryVal == 0){
-							document.getElementById("category-"+temp[7]).innerHTML += builtDiv;
+							// Edit the hyperlink if none is specified 
+							var hyperLink = '';
+							hyperLink = 'entertainment/page?n=' + temp.pageLink;
+							
+							const builtDiv = "<div><img src='"+temp.img+"'><div><h3 style='margin-bottom:5px'>"+aName+"</h3>"+temp.description+"<br><br><br></div><div class='subText'>"+aSubtitle+"</div><div class='tab'>📍 "+entertainmentLocation[locInd]+"</div><a href='"+hyperLink+"'>link</a></div>";
+							
+							// If showing all categories, sort div into proper container, if not, then put all into one container
+							if(categoryVal == 0){
+								document.getElementById("category-"+qInfo[3]).innerHTML += builtDiv;
+								document.getElementById("parentOf-"+qInfo[3]).style.display = 'block';
+							}else{
+								// Populate the div 
+								document.getElementById("allContainer").innerHTML += builtDiv;
+							}
+							resultCount += 1;
+							
 						}else{
-							// Populate the div 
-							document.getElementById("allContainer").innerHTML += builtDiv;
+							console.log("Skipped show: " + temp.pageLink);
 						}
-						resultCount += 1;
-						
 					}else{
-						console.log("Skipped show: " + temp[0]);
+						console.log("Skipped show: " + temp.pageLink);
 					}
 				}else{
-					console.log("Skipped show: " + temp[0]);
+					console.log("Skipped show: " + temp.pageLink);
 				}
-			}else{
-				console.log("Skipped show: " + temp[0]);
-			}
+			}// if show on page
+			
 		}// end of function
 
 		document.getElementById("resultsCount").innerHTML = "Showing <b>"+resultCount+"</b> results";

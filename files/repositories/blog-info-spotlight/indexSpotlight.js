@@ -30,6 +30,22 @@ ind+=1; indexSpotlight[ind] = {
     clickLink: webLink+"information/blog/post?n=april-birthdays" 
 }
 
+ind+=1; indexSpotlight[ind] = {
+    title: "The holidays are here, it's time for cheer!",
+    months: "November,December", // use full month name, use comma no-space to add extra months
+    textContent: "It's time for snowfall over Careaway Dr, sparkling lights all around, and delightful sights! The holidays are here and there's more cheer every year!",
+    imgLink: "https://i.imgur.com/f6pbLx8.png",
+    clickLink: webLink+"things-to-do/events/careaway-holidays" 
+}
+
+ind+=1; indexSpotlight[ind] = {
+    title: "June is Pride Month",
+    months: "June", // use full month name, use comma no-space to add extra months
+    textContent: "This month, we celebrate all our colors! Explore fun events, parties, and rainbows across the resort",
+    imgLink: "https://i.imgur.com/3PvobC9.png",
+    clickLink: webLink+"information/blog/post?n=pride-month" 
+}
+
 
 
 // SLIGHTLY LESS IMPORTANT
@@ -51,7 +67,7 @@ ind+=1; indexSpotlight[ind] = {
 
 ind+=1; indexSpotlight[ind] = {
     title: "A Weekend Just Won't Be Enough...",
-    months: "May,June,July,August", // use full month name, use comma no-space to add extra months
+    months: "June,July,August", // use full month name, use comma no-space to add extra months
     textContent: "This summer, there's so much happening at the Careaway Resort. Events, Celebrations, Parties, and More! There's so much to explore, you'll just have to come back.",
     imgLink: "https://cpfoodblog.com/wp-content/uploads/2019/06/2019-Knotts-Summer-Nights-Smores.jpg",
     clickLink: webLink+"events/summer-adventures" 

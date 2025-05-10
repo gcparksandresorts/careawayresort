@@ -85,7 +85,7 @@
 	<div id='footer'></div>
 </body>
     	<script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
-	<script src="../../files/repositories/attractions-entertainment/entertainment-items.js"></script>
+	<script src="../../files/repositories/attractions-entertainment/entertainment.js"></script>
 	<script>
 		console.clear();
 		// Declare sections to be edited
@@ -97,39 +97,46 @@
 		
 		function setupPage(){
 			const urlParams = new URLSearchParams(window.location.search);
-			const index = urlParams.get("index");
+			const index = urlParams.get("n");
 			
 			if (index !== null) { // if an index value is specified
 		            	console.log("Index value equal to " + index);
 
 				// Populate Page
-				let tempInfo = entertainmentItems[index].split(" | ");
-				let tempDescription = entertainmentDescription[index].split(" | ");
-				let tempImg = entertainmentImages[index].split(" | ");
+				var foundIndex;
+				for(n=0; n<entertainmentList.length; n++){
+					let tsearch = entertainmentList[n];
+					if(tsearch.pageLink == index){
+						foundIndex = n;
+						break;
+					}
+				}
+
+				let temp = entertainmentList[foundIndex];
 
 				// Populate Title Block section
 					// Create the title of the page
-					let tempName = tempInfo[0].split("/");
-					if(tempName[1] != 'none'){
-						document.getElementById("pgHead").innerHTML += "<link href='https://fonts.googleapis.com/css2?family="+tempName[1]+"' rel='stylesheet'>";
-						document.getElementById("webpageTitle").innerHTML = tempName[0] + " | Shows & Entertainment | Globe-City's Careaway Resort";
-						tempName = "<h1 style='font-weight:normal; font-family:"+tempName[1].replace(/\+/g, ' ')+"'>"+tempName[0]+"</h1>";
+					if(temp.font == 'none' || temp.font == 'font'){
+						document.getElementById("webpageTitle").innerHTML = temp.name + " | Shows & Entertainment | Globe-City's Careaway Resort";
+						tempName = "<h1>"+temp.name+"</h1>";
 					}else{
-						document.getElementById("webpageTitle").innerHTML = tempName[0] + " | Shows & Entertainment | Globe-City's Careaway Resort";
-						tempName = "<h1>"+tempName[0]+"</h1>";
+						document.getElementById("pgHead").innerHTML += "<link href='https://fonts.googleapis.com/css2?family="+ temp.font +"' rel='stylesheet'>";
+						document.getElementById("webpageTitle").innerHTML = temp.name + " | Shows & Entertainment | Globe-City's Careaway Resort";
+						tempName = "<h1 style='font-weight:normal; font-family:"+temp.font.replace(/\+/g, ' ')+"'>"+temp.name+"</h1>";
 					}
 
-				titleBlock.innerHTML = "<img src='"+tempImg[0]+"'> <div> "+ tempName + tempDescription[0] + "<div class='tagContainer' id='itemTagContainer'></div> </div>";
+				titleBlock.innerHTML = "<img src='"+temp.img+"'> <div> "+ tempName + temp.pageIntro + "<div class='tagContainer' id='itemTagContainer'></div> </div>";
 
 					// Populate Tags
-					let tempTags = tempDescription[1].split(",");
+					let tempTags = temp.tagsList.split(",");
 					for (let i = 0; i < tempTags.length; i++){
 						document.getElementById("itemTagContainer").innerHTML += "<a>"+tempTags[i]+"</a>";
 					}
 				
 				// Populate Quick Facts Section
+				let qInfo = temp.info.split(' | ');
 					// Get proper location
-					var locationVal = tempInfo[2].split(",");
+					var locationVal = qInfo[2].split(',');
 					switch(locationVal[1]){
 						case '0':
 							locationVal[1] = "../entertainment";
@@ -159,25 +166,25 @@
 					}// end of switch
 
 					// put in the content
-					infoBlock.innerHTML = "<div> <ul> <li><b>Entertainment Category: </b><a href='../entertainment?category="+tempInfo[1]+"'>"+entertainmentCategory[tempInfo[1]]+"</a></li> \
+					infoBlock.innerHTML = "<div> <ul> <li><b>Entertainment Category: </b><a href='../entertainment?category="+qInfo[3]+"'>"+entertainmentCategory[qInfo[3]]+"</a></li> \
 								<li><b>Location: </b>"+locationVal[0]+", <a href='"+locationVal[1]+"'>"+locationVal[2]+"</a></li> \
-								<li><b>Duration: </b> "+tempInfo[3]+"</li> </ul></div> \
+								<li><b>Duration: </b> "+temp.showDuration+"</li> </ul></div> \
 							<div> <ul> <li><b>Showtimes: </b> See <a href='../../information/resort-schedule'>Resort Schedule</a></li> \
-								<li><b>GC VIP Perks: </b> "+gcVipInfo[tempInfo[4]]+"</li> \
-								<li><b>Accessibility: </b> "+accessibilityInfo[tempInfo[5]]+" - <a href='../../information/accessibility'>More Information</a> </li> </ul> </div>";
+								<li><b>GC VIP Perks: </b> "+gcVipInfo[qInfo[5]]+"</li> \
+								<li><b>Accessibility: </b> "+accessibilityInfo[qInfo[4]]+" - <a href='../../information/accessibility'>More Information</a> </li> </ul> </div>";
 
 				// Populate the extra description
-					descriptionBlock.innerHTML = tempDescription[2];
+					descriptionBlock.innerHTML = temp.longDescription;
 
 				// Populate the image block
-					if(tempImg[1] == "none" || tempImg[1] == "extraImg - extraImg2"){
+					if(temp.otherImg == "none" || temp.otherImg == "img1 | img2"){
 						imgBlock.innerHTML = ""; // if there are no extra images
 					}else{
 						// First create the image block
 						imgBlock.innerHTML = "<div class='spacer'></div> <div class='container'><div class='miniTileContainer' id='imgBlockContent'></div></div>";
 
 						// Then add content
-						let tempImgContent = tempImg[1].split(" - ");
+						let tempImgContent = temp.otherImg.split(" | ");
 						for (let i = 0; i < tempImgContent.length; i++){
 							document.getElementById("imgBlockContent").innerHTML += "<div><img src='"+tempImgContent[i]+"'><a href='"+tempImgContent[i]+"' target='_blank'></a></div>";
 						}

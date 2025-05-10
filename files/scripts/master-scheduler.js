@@ -19,12 +19,12 @@ function setupMain(num){
     entDisp.innerHTML = "<em>Click to copy</em><h2>Events</h2>";
         for(i=0; i<eventData.length; i++){
             let temp = eventData[i];
-            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp.codeName+'"'+"); this.classList.toggle(\"clicked\");'>"+temp.codeName+" - " + temp.name + "</p>";
+            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp.codeName+'"'+"); this.classList.add(\"clicked\"); const el = this; setTimeout(function(){el.classList.remove(\"clicked\");},500);'><b>"+temp.codeName+"</b> - " + temp.name + "</p>";
         }
     entDisp.innerHTML += "<h2>Entertainment</h2>";
         for(i=0; i<entertainmentList.length; i++){
-            let temp = entertainmentList[i].split(" | ");
-            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp[0]+'"'+"); this.classList.toggle(\"clicked\");'>"+temp[0]+" - " + temp[1] + "</p>";
+            let temp = entertainmentList[i];
+            entDisp.innerHTML += "<p style='margin-top:0; font-size:12px; cursor:pointer;' onclick='navigator.clipboard.writeText("+'"'+temp.code+'"'+"); this.classList.toggle(\"clicked\");'><b>"+temp.code+"</b> - " + temp.name + "</p>";
         }
 
     mainContaner.style.display = "block";
@@ -105,7 +105,7 @@ function setTierColor(id){
             break;
     }
 
-    console.log("setTierColor("+id+") -> "+tierVal.value);
+    //console.log("setTierColor("+id+") -> "+tierVal.value);
 } // end of function setTierColor(id)
 
 
@@ -121,7 +121,7 @@ function repopulateSelects(){ // since the selects reset, populates them with co
         document.getElementById('row-'+i+'-events').value = temp[5];
         document.getElementById('row-'+i+'-entertainment').value = temp[6];
     }
-    document.body.classList.remove('loading'); // set cursor to loading
+    setTimeout(function(){document.body.classList.remove('loading');},200);
 }
 
 function saveRowValues(num){
@@ -136,77 +136,84 @@ function saveRowValues(num){
 
     masterList[num] = rDate + " | " + rWeekday + " | " + rTier + " | " + rParkHours + " | " + rSplashHours + " | " + rEvent + " | " + rEnt;
     console.log("Row " + num + " value saved: " + masterList[num]);
-    document.body.classList.remove('loading'); // set cursor to loading
+    setTimeout(function(){document.body.classList.remove('loading');},200); // set cursor to loading
 }
 
 function addRow(type){
-    document.body.classList.add('loading'); // set cursor to loading
-    for(k=0; k<numToCopy.value;k++){
-        let i = rowCount; rowCount += 1; 
-
-    // dates
-    let temp = [];
-    let previousDate = document.getElementById("row-"+Number(i-1)+"-date").innerText.split("-"); // [MMM, DD]
-        previousDate[1] = parseInt(previousDate[1]);
-    let previousWeekday = document.getElementById("row-"+Number(i-1)+"-weekday").value; // Monday
-
-    // check if new month
-    if(previousDate[0] == 'FEB' && previousDate[1] == '28' && document.getElementById('isLeapYear').checked){ // is leap year
-        temp[0] = previousDate[0]+"-"+Number(previousDate[1]+1);
-    }else if(monthsDays[monthShort.indexOf(previousDate[0])] < Number(previousDate[1]+1)){ // is new month
-        if(previousDate[0]+1 == 12){previousDate[0] = 0;} // reset to january
-        temp[0] = monthShort[monthShort.indexOf(previousDate[0])+1] + "-1";
-    }else{ // is not new month
-        temp[0] = previousDate[0]+"-"+Number(previousDate[1]+1);
-    }
-
-    // day of week
-    if(previousWeekday != "Saturday"){
-        temp[1] = weekDays[weekDays.indexOf(previousWeekday)+1];
+    if(numToCopy.value > rowCount){
+        alert("Error. Number of rows to copy cannot be larger than number of rows!");
     }else{
-        temp[1] = weekDays[0];
-    }
+        let originalRowCount = rowCount-1;
+        document.body.classList.add('loading'); // set cursor to loading
+        for(k=0; k<numToCopy.value;k++){
+            let i = rowCount; rowCount += 1; 
 
-    mainTable.innerHTML += "<tr id='row-"+i+"'><td>"+i+"</td></tr>"; // create the row
-    let thisRow = document.getElementById("row-"+i);
-        thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td><input id='row-"+i+"-weekday' onchange='saveRowValues("+i+")' style='width:100px;' type='text' value='"+temp[1]+"'></td>"; // add the date and weekday
-        thisRow.innerHTML += "<td><p>Tier</p><select id='row-"+i+"-tier' onchange='saveRowValues("+i+"); setTierColor(this.id);'></select></td>"; // add tier selector
-        thisRow.innerHTML += "<td><p>Park Hours (Shops District, Careaway, Port Adventure)</p><select id='row-"+i+"-parkHours' onchange='saveRowValues("+i+")'></select></td>"; // park hours selector
-        thisRow.innerHTML += "<td><p>Splashport Bay Hours</p><select id='row-"+i+"-splashHours' onchange='saveRowValues("+i+")'></select></td>"; // splashport hours
-        thisRow.innerHTML += "<td><p>Events</p><input type='text' id='row-"+i+"-events' onchange='saveRowValues("+i+")'></input></td>"; // events list
-        thisRow.innerHTML += "<td><p>Entertainment</p><input type='text' id='row-"+i+"-entertainment' onchange='saveRowValues("+i+")'></input></td>"; // entertainment list
-   
-        // Fill selects with options
-        let tierSelect = document.getElementById("row-"+i+"-tier");
-        for(j=0; j<=5; j++){
-            tierSelect.innerHTML += "<option value='"+j+"'>"+j+"</option>";
+        // dates
+        let temp = [];
+        let previousDate = document.getElementById("row-"+Number(i-1)+"-date").innerText.split("-"); // [MMM, DD]
+            previousDate[1] = parseInt(previousDate[1]);
+        let previousWeekday = document.getElementById("row-"+Number(i-1)+"-weekday").value; // Monday
+
+        // check if new month
+        if(previousDate[0] == 'FEB' && previousDate[1] == '28' && document.getElementById('isLeapYear').checked){ // is leap year
+            temp[0] = previousDate[0]+"-"+Number(previousDate[1]+1);
+        }else if(monthsDays[monthShort.indexOf(previousDate[0])] < Number(previousDate[1]+1)){ // is new month
+            if(previousDate[0]+1 == 12){previousDate[0] = 0;} // reset to january
+            temp[0] = monthShort[monthShort.indexOf(previousDate[0])+1] + "-1";
+        }else{ // is not new month
+            temp[0] = previousDate[0]+"-"+Number(previousDate[1]+1);
         }
 
-        let parkHourSelect = document.getElementById("row-"+i+"-parkHours");
-        for(j=0; j<msPrkHours.length;j++){
-            parkHourSelect.innerHTML += "<option value='"+j+"'>"+msPrkHours[j]+"</option>";
-        }
-
-        let splashHoursSelect = document.getElementById("row-"+i+"-splashHours");
-        for(j=0; j<msSplshHrs.length;j++){
-            splashHoursSelect.innerHTML += "<option value='"+j+"'>"+msSplshHrs[j]+"</option>";
-        }
-
-        if(isOdd(i)){
-            thisRow.style.backgroundColor = 'white';
-        }
-
-        if(type == 'copy'){
-            let tempList = masterList[i-1].split(" | ");
-            masterList[i] = temp[0]+" | "+temp[1]+" | "+tempList[2]+" | "+tempList[3]+" | "+tempList[4]+" | "+tempList[5]+" | "+tempList[6];
+        // day of week
+        if(previousWeekday != "Saturday"){
+            temp[1] = weekDays[weekDays.indexOf(previousWeekday)+1];
         }else{
-            masterList[i] = temp[0]+" | "+temp[1]+" | 0 | 0 | 0 | none | none";
-        } 
+            temp[1] = weekDays[0];
+        }
 
-    }// end of for
-    document.body.classList.remove('loading'); // set cursor to loading
-    repopulateSelects();
+        mainTable.innerHTML += "<tr id='row-"+i+"'><td>"+i+"</td></tr>"; // create the row
+        let thisRow = document.getElementById("row-"+i);
+            thisRow.innerHTML += "<td id='row-"+i+"-date'>"+temp[0]+"</td><td><input id='row-"+i+"-weekday' onchange='saveRowValues("+i+")' style='width:100px;' type='text' value='"+temp[1]+"'></td>"; // add the date and weekday
+            thisRow.innerHTML += "<td><p>Tier</p><select id='row-"+i+"-tier' onchange='saveRowValues("+i+"); setTierColor(this.id);'></select></td>"; // add tier selector
+            thisRow.innerHTML += "<td><p>Park Hours (Shops District, Careaway, Port Adventure)</p><select id='row-"+i+"-parkHours' onchange='saveRowValues("+i+")'></select></td>"; // park hours selector
+            thisRow.innerHTML += "<td><p>Splashport Bay Hours</p><select id='row-"+i+"-splashHours' onchange='saveRowValues("+i+")'></select></td>"; // splashport hours
+            thisRow.innerHTML += "<td><p>Events</p><input type='text' id='row-"+i+"-events' onchange='saveRowValues("+i+")'></input></td>"; // events list
+            thisRow.innerHTML += "<td><p>Entertainment</p><input type='text' id='row-"+i+"-entertainment' onchange='saveRowValues("+i+")'></input></td>"; // entertainment list
+    
+            // Fill selects with options
+            let tierSelect = document.getElementById("row-"+i+"-tier");
+            for(j=0; j<=5; j++){
+                tierSelect.innerHTML += "<option value='"+j+"'>"+j+"</option>";
+            }
 
+            let parkHourSelect = document.getElementById("row-"+i+"-parkHours");
+            for(j=0; j<msPrkHours.length;j++){
+                parkHourSelect.innerHTML += "<option value='"+j+"'>"+msPrkHours[j]+"</option>";
+            }
+
+            let splashHoursSelect = document.getElementById("row-"+i+"-splashHours");
+            for(j=0; j<msSplshHrs.length;j++){
+                splashHoursSelect.innerHTML += "<option value='"+j+"'>"+msSplshHrs[j]+"</option>";
+            }
+
+            if(isOdd(i)){
+                thisRow.style.backgroundColor = 'white';
+            }
+
+            if(type == 'copy'){
+                let indexOfCopied = (parseInt(numToCopy.value) - Math.abs(parseInt(numToCopy.value)-k)) + (originalRowCount-parseInt(numToCopy.value)+1);
+                console.log("Index to copy: "+indexOfCopied);
+                let tempList = masterList[indexOfCopied].split(" | ");
+                masterList[i] = temp[0]+" | "+temp[1]+" | "+tempList[2]+" | "+tempList[3]+" | "+tempList[4]+" | "+tempList[5]+" | "+tempList[6];
+            }else{
+                masterList[i] = temp[0]+" | "+temp[1]+" | 0 | 0 | 0 | none | none";
+            } 
+
+        }// end of for
+        repopulateSelects();
+        document.body.classList.remove('loading'); // set cursor to loading
+    }
+    
 }// end of function addRow();
 
 function genSchedule(){
@@ -216,3 +223,8 @@ function genSchedule(){
         resultBin.innerHTML += "<br>mastSchedule["+i+"] = '"+masterList[i]+"';";
     }
 }
+
+window.addEventListener("beforeunload", function (e) {
+    //confirm('Are you sure you want to leave? Changes ARE NOT saved once this page is closed!');
+    e.preventDefault();
+  });

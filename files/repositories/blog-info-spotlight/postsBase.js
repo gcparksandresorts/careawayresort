@@ -112,7 +112,13 @@ iter += 1; blogData[iter] = {
 
 
 // JUNE
-
+iter += 1; blogData[iter] = {
+	title: "Pride Month at Globe-City's Careaway Resort",
+	info: "June 1 | 7 | Lady GorGor",
+	blogLink: "pride-month", tagsList: "lgbt,gay,lgbtq,june,rainbow,color,proud",
+	headerImg: "https://i.imgur.com/3PvobC9.png",
+	contents: "June is Pride Month across the globe! Join the celebration at Globe-City's Careaway Resort featuring dozens of fun activities, new events, and much more to explore!<h2>Celebrating You and All Your Colors</h2> That's right, this month is a celebration, and boy is it packed with fun! In addition to colorful decorations throughout the resort, guests can also enjoy the following:<ul><li><b>Rainbow Cookies & Brownies</b> at all our in-park quick/counter service restaurants</li><li><b>Pride Photo-Ops</b> at various locations</li><li><b>Sexy Pride Merchandise & Apparel</b> for a colorful new wardrobe</li><li><b>New Events & Celebrations</b> happening, see below for details!</li></ul><h1>Events & Parties</h1>Pride time is Party time, and that's why we're excited to announce the return of <b>Adventurous Nights of Pride</b> at the Careaway Resort!<img style='aspect-ratio:16/9; object-fit:cover;' src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg'><p class='imgCaption'>Adventurous Nights of Pride Logo</p><h4>About the Event</h4>Adventurous Nights of Pride is an event that originally started at our other resort in Highland, Oras Nou. Now, we're excited to bring the popular event to Puertas Nuevas! This seperate-ticket nighttime event takes place at Globe-City's Port of Adventure and is a night packed full of dance parties, fireworks, parades, drag shows, and all the things that make being gay so much fun!<p><a href='../../things-to-do/events/nights-of-pride'>Learn More about Adventurous Nights of Pride</a></p><br><h2>Visit Us at PN-Pride!</h2>In support of the community, we are honored to have a booth at this year's <a href='https://aztechadmit.github.io/visitpn/'>Puertas Nuevas Pride (PN-Pride)</a>! Come visit us for free gifts, exclusive merchandise, and to meet Mr. Teddy and Mr. Zebra in their pride fits! <img src='https://i.imgur.com/bcveOPb.png'><p class='imgCaption'>Mr. Teddy and Mr. Zebra on the Globe-City float at last year's pride festival</p>We can't wait to see you there! More information about Puertas Nuevas Pride is available <a href='https://aztechadmit.github.io/visitpn/things-to-do/events/pn-pride'>here</a>.<h1>Seasonal Specials</h1>In addition to the fun events there's plenty of other special stuff to check out<p>This Pride Month, we're excited to welcome all our guests in all their colors. We're proud of who you are, and we can't wait to celebrate with you!</p>"
+}
 
 
 // JULY
