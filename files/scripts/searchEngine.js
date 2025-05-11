@@ -22,152 +22,185 @@ function populateSearch(){
 
     // break up search query into individual words
     const searchWords = searchQuery.split(" ");
-    const itemsList = [];
+    const itemsList = []; // Will be the populated list of all items to be searched
 
-    for(i=0; i<searchWords.length; i++){
-        const srchWrd = searchWords[i].toLowerCase(); // the word we're searching for in the site index
+    // FIRST - Convert Site Index, Entertainment, Attractions, etc. into objects to be searched
+        var curIndex = 0; // the current value of itemsList being edited
 
-        searchResults.innerHTML += "<div id='webpageResultsBin' style='display:none'><h2>Webpage Results</h2></div>";
-        // Search Website Index
-        for(k=0; k<websiteIndex.length; k++){
-            const itemTitleArray = websiteIndex[k].title.toLowerCase().split(' '); // the title of the current item in the index
-            const itemDescArray = websiteIndex[k].description.toLowerCase().split(' '); // the description of the current item in the index
-            const itemTagsArray = websiteIndex[k].tagsList.toLowerCase().split(','); // the tags of the current item in the index
+        // Site Index First
+        for(i=0; i<websiteIndex.length; i++){
+            let temp = websiteIndex[i];
+            // Generate Tag List
+            let tempTagList = [
+                ...temp.tagsList.split(/[ ,]+/),
+                ...temp.title.split(' '),
+                ...temp.description.split(/[ ,]+/)
+            ].map(tag => tag.toLowerCase().trim()).filter(tag => tag !== '');
 
-            // check if the search word is in the title, description, or tags of the current item in the index
-            if(itemTitleArray.includes(srchWrd) || itemDescArray.includes(srchWrd) || itemTagsArray.includes(srchWrd)){
-                // create a new div for the search result
-                
-                if(itemsList.includes('siteIndex-'+k) == false){ // if the item is not already in the list of items to display
+            // Add item to itemsList
+            itemsList[curIndex] = {
+                pageName: temp.title, pageDescription: temp.description,
+                pageLink: temp.link, pageTags: tempTagList,
+                pageType: 'webpage'
+            }
 
-                    if(websiteIndex[k].link.includes('[external]')){
-                        websiteIndex[k].link = websiteIndex[k].link.replace('[external]', ''); // remove the [external] tag from the link
-                    }
+            //console.log(itemsList[curIndex]);
+            curIndex += 1; 
+        }// end of webpages
 
-                    document.getElementById('webpageResultsBin').innerHTML += "<div id='siteIndex-"+k+"'><h3 style='margin-bottom:5px;color:midnightblue;'><a href='"+websiteIndex[k].link+"'>"+websiteIndex[k].title+"</a></h3>"+websiteIndex[k].description+"<p style='margin-top:5px; color:dimgray;'>"+itemTagsArray+"</p></div>";
-                    itemsList.push('siteIndex-'+k); // add the item to the list of items to display
+        // Blog Posts Next
+        for(i=0; i<blogData.length; i++){
+            let temp = blogData[i];
+            // Generate Tag List
+            let tempTagList = [
+                ...temp.tagsList.split(/[ ,]+/),
+                ...temp.title.split(' '),
+            ].map(tag => tag.toLowerCase().trim()).filter(tag => tag !== '');
+
+            // Add item to itemsList
+            itemsList[curIndex] = {
+                pageName: temp.title,
+                pageTags: tempTagList,
+                pageType: 'blogPost'
+            }
+
+            //console.log(itemsList[curIndex]);
+            curIndex += 1; 
+        }// end of blog posts
+
+        // Now search entertainment
+        for(i=0; i<entertainmentList.length; i++){
+            let temp = entertainmentList[i];
+            // Generate Tag List
+            let tempTagList = [
+                ...temp.tagsList.split(/[ ,]+/),
+                ...temp.name.split(' '),
+                ...temp.description.split(/[ ,]+/)
+            ].map(tag => tag.toLowerCase().trim()).filter(tag => tag !== '');
+
+            // Add item to itemsList
+            var tempLink;
+            if(temp.hasOwnProperty('pageLink')){
+                tempLink = 'things-to-do/entertainment/page?n=' + temp.pageLink;
+            }
+            itemsList[curIndex] = {
+                pageName: temp.name, pageDescription: temp.description,
+                pageTags: tempTagList, pageLink: tempLink,
+                pageType: 'attraction'
+            }
+
+            //console.log(itemsList[curIndex]);
+            curIndex += 1; 
+        }// end of entertainment
+
+        // Search Attractions
+        for(i=0; i<attractionList.length; i++){
+            let temp = attractionList[i].split(' | ');
+            // Generate Tag List
+            let tempTagList = [
+                ...temp[0].split(/[ ,]+/),
+                ...attractionCategories[temp[2]].split(' ')
+            ].map(tag => tag.toLowerCase().trim()).filter(tag => tag !== '');
+
+            // Add item to itemsList
+            var tempLink;
+            if(temp[4].includes('atIndex=')){
+                let $temp4 = temp[4].split('=');
+                tempLink = 'things-to-do/attractions/page?index=' + $temp4[1];
+            }else{
+                tempLink = temp[4];
+            }
+            let $name = temp[0].split(' - ');
+            itemsList[curIndex] = {
+                pageName: $name[0],
+                pageTags: tempTagList, pageLink: tempLink,
+                pageDescription: 'Attraction located at ' + attractionLocations[temp[1]],
+                pageType: 'attraction'
+            }
+
+            //console.log(itemsList[curIndex]);
+            curIndex += 1; 
+        }// end of attractions
+
+        // Last one: Search Events
+        for(i=0; i<eventData.length; i++){
+            let temp = eventData[i];
+            // Generate Tag List
+            let tempTagList = [
+                ...temp.tags.split(/[ ,]+/),
+                ...temp.name.split(' '),
+                ...temp.synopsis.split(/[ ,]+/)
+            ].map(tag => tag.toLowerCase().trim()).filter(tag => tag !== '');
+
+            // Add item to itemsList
+            var tempLink;
+            if(temp.hasOwnProperty('clickLink')){
+                tempLink = 'things-to-do/events/page?n=' + temp.clickLink;
+            }else{
+                tempLink = temp.externalLink;
+            }
+            itemsList[curIndex] = {
+                pageName: temp.name, pageDescription: temp.synopsis,
+                pageTags: tempTagList, pageLink: tempLink,
+                pageType: 'event'
+            }
+
+            //console.log(itemsList[curIndex]);
+            curIndex += 1; 
+        }// end of events
+
+
+    // SECOND - Prepare search page for results
+        searchResults.innerHTML = "<p id='resultsCountDisp' style='text-align:center;'>Error</p>";
+        searchResults.innerHTML += "<div id='webpageResults' class='leftContainer' style='display:none; padding-top:0;'></div> \
+            <div id='blogResults' class='leftContainer' style='display:none;'><h2>Blog Posts & Operating Updates</h2></div>\
+            <div id='attractionResults' class='leftContainer' style='display:none;'><h2>Attractions & Entertainment</h2></div>\
+            <div id='eventResults' class='leftContainer' style='display:none;'><h2>Seasonal Events</h2></div>";
+        const webpageResults = document.getElementById('webpageResults');
+        const blogResults = document.getElementById('blogResults');
+        const attractionResults = document.getElementById('attractionResults');
+        const eventResults = document.getElementById('eventResults');
+
+    // THIRD - Find items that contain keywords and populate search page
+        for(i=0; i<searchWords.length; i++){
+            let tempWord = searchWords[i].toLowerCase();
+            for(k=0; k<itemsList.length; k++){
+                let tempItem = itemsList[k];
+                if (tempItem.pageTags.some(tag => tag === tempWord)){
                     resultsCount += 1;
-
-                    if(document.getElementById('webpageResultsBin').style.display == 'none'){
-                        document.getElementById('webpageResultsBin').style.display = 'block'; // show the search results
+                    switch(tempItem.pageType){
+                        case 'webpage':
+                            webpageResults.innerHTML += "<a class='pageLink' href='"+tempItem.pageLink+"'>"+tempItem.pageName+"</a>"+tempItem.pageDescription;
+                            if(webpageResults.style.display != 'block'){webpageResults.style.display = 'block';}
+                            break;
+                        case 'blogPost':
+                            blogResults.innerHTML += "<a class='pageLink' href='"+tempItem.pageLink+"'>"+tempItem.pageName+"</a>"+tempItem.pageTags;
+                            if(blogResults.style.display != 'block'){blogResults.style.display = 'block';}
+                            break;
+                        case 'attraction':
+                            attractionResults.innerHTML += "<a class='pageLink' href='"+tempItem.pageLink+"'>"+tempItem.pageName+"</a>"+tempItem.pageDescription;
+                            if(attractionResults.style.display != 'block'){attractionResults.style.display = 'block';}
+                            break;
+                        case 'event':
+                            eventResults.innerHTML += "<a class='pageLink' href='"+tempItem.pageLink+"'>"+tempItem.pageName+"</a>"+tempItem.pageDescription;
+                            if(eventResults.style.display != 'block'){eventResults.style.display = 'block';}
+                            break;
                     }
+                    itemsList.splice(k, 1);
                 }
             }
+            console.log('Searched for word ' + tempWord);
         }
 
-        //itemsList.length = 0; // clear the list of items displayed
-
-        
-        // Search Events
-        searchResults.innerHTML += "<div id='eventResultsBin' style='display:none'><br><h2>Resort Events Results</h2></div>";
-        for(k=0; k<eventlistArray.length; k++){
-            if(itemsList.includes('event-'+k) == false){ // if the item is not already in the list of items to display
-                let temp = eventlistArray[k].split('|'); // split the event into its components
-                const eventName = temp[1].toLowerCase().split(' '); // the name of the event
-                var eventDescription;
-                if(temp[5].includes('no/') == false){ // if the event is not showing, ignore description
-                    eventDescription = temp[5].replace('yes/', '').toLowerCase().split(' '); // the description of the event
-                }else{
-                    eventDescription = ['No Description'];
-                }
-
-                // check if the search word is in the event name or description
-                if(eventName.includes(srchWrd) || eventDescription.includes(srchWrd)){
-                    // create a new div for the search result
-                    if(temp[4].includes('none') == false){ // if the event has a link
-                        document.getElementById('eventResultsBin').innerHTML += "<div id='event-"+k+"'><h3 style='margin-bottom:5px;color:midnightblue;'><a href='"+temp[4]+"'>"+temp[1]+"</a></h3>"+temp[5].replace('yes/', '')+"</div>";
-                        resultsCount += 1;
-                        itemsList.push('event-'+k); // add the item to the list of items to display
-                    }else{
-                        document.getElementById('eventResultsBin').innerHTML += "<div id='event-"+k+"'><h3 style='margin-bottom:5px;color:midnightblue;'>"+temp[1]+"</h3>"+eventDescription+"</div>";
-                        resultsCount += 1;
-                        itemsList.push('event-'+k); // add the item to the list of items to display
-                    }
-
-                    if(document.getElementById('eventResultsBin').style.display =='none'){
-                        document.getElementById('eventResultsBin').style.display = 'block'; // show the search results
-                    }
-                }
-            }
+        // Update results counter
+        if(resultsCount > 10){
+            document.getElementById('resultsCountDisp').innerHTML = "<b>" + resultsCount + "</b> results found<br><span style='color:orange'>Seeing too many results? Search for keywords only. For example: <em>Rides and Shows</em> -> <em>Rides Shows</em></span>";
+        }else{
+             document.getElementById('resultsCountDisp').innerHTML = "<b>" + resultsCount + "</b> results found";
         }
-
-        //itemsList.length = 0; // clear the list of items displayed
-
-        // Search Restaurants
-        searchResults.innerHTML += "<div id='diningResultsBin' style='display:none'><br><h2>Restaurants & Dining</h2></div>";
-        for(k=0; k<diningArray.length; k++){
-            if(itemsList.includes('dining-'+k) == false){ // if the item is not already in the list of items to display
-                let temp = diningArray[k].split(' | '); // split the event into its components
-                const diningName = temp[0].toLowerCase().split(' '); // the name of the restaurant
-                var diningDescription = temp[5].toLowerCase().split(' '); // the description of the restaurant;
-
-                // check if the search word is in the event name or description
-                if(diningName.includes(srchWrd) || diningDescription.includes(srchWrd)){
-                    // create a new div for the search result
-                    document.getElementById('diningResultsBin').innerHTML += "<div id='dining-"+k+"'><h3 style='margin-bottom:5px;color:midnightblue;'><a href='things-to-do/dining/page?name="+temp[1]+"'>"+temp[0]+"</a></h3>"+temp[5]+"</div>";
-                    resultsCount += 1;
-                    itemsList.push('dining-'+k); // add the item to the list of items to display
-
-                    if(document.getElementById('diningResultsBin').style.display =='none'){
-                        document.getElementById('diningResultsBin').style.display = 'block'; // show the search results
-                    }
-                }
-            }
-        }
-
-        //itemsList.length = 0; // clear the list of items displayed
-
-
-        // Search Blog Posts
-        searchResults.innerHTML += "<div id='blogResultsBin' style='display:none'><br><h2>Blog Posts & Operations Updates</h2></div>";
-        for(k=1; k<blogData.length; k++){
-            if(itemsList.includes('blog-'+k) == false){ // if the item is not already in the list of items to display
-                let temp = blogData[k]; // get the blog object
-                const blogName = temp.title.toLowerCase().split(' '); // contents of blog heading / title
-                    let qInfo = temp.info.split(' | ');
-                const blogCategory = blogCategories[qInfo[1]].toLowerCase().split(' '); // the category of the blog post
-                var blogAuthor = qInfo[2].toLowerCase().split(' '); // the author of the blog
-                var blogDate = qInfo[0].split(' ');// get the components of the date
-                var blogTags = temp.tagsList.split(',');
-
-                // check if the search word is in the event name or description
-                if(blogName.includes(srchWrd) || blogCategory.includes(srchWrd) || blogAuthor.includes(srchWrd) || blogDate.includes(srchWrd) || blogTags.includes(srchWrd)){
-                    // create a new div for the search result
-
-                    var bLink;
-                    if(temp.hasOwnProperty('externalLink')){
-                        bLink = temp.externalLink;
-                    }else if(qInfo[1] == '1'){
-                        bLink = "information/blog/operations-update?n=" + temp.blogLink;
-                    }else{
-                        bLink = "information/blog/post?n=" + temp.blogLink;
-                    }
-
-                    document.getElementById('blogResultsBin').innerHTML += "<div id='blog-"+k+"'><h3 style='margin-bottom:5px; color:midnightblue;'><a href='"+bLink+"'>Blog Post: "+temp.title+"</a></h3>"+blogCategories[qInfo[1]]+" - " + qInfo[2] + "</div>";
-                    resultsCount += 1;
-                    itemsList.push('blog-'+k); // add the item to the list of items to display
-
-                    if(document.getElementById('blogResultsBin').style.display =='none'){
-                        document.getElementById('blogResultsBin').style.display = 'block'; // show the search results
-                    }
-                }
-            }
-        }
-        
-    }
-
-    
-
-    if(resultsCount == 0){
-        document.getElementById("resultsCountDisplay").innerHTML = "No results found";
-        searchResults.innerHTML = "<p>We could not find any pages containing the keywords. Consider searching for just 1 - 2 keywords, avoid using special characters or punctuation.</p>";
-    }else{
-        document.getElementById("resultsCountDisplay").innerHTML = "Showing <b>" + resultsCount + "</b> results";
-    }
-} // end of populateSearch()
+}// end of function populateSearch()
 
 function resetSearchBar(){
     searchText.innerHTML = "Search the entire website:<br><input type=\"text\" id=\"searchQuery\" placeholder=\"Search...\" onchange='runSearch(this.value, \"int\");' />";
     document.getElementById('searchQuery').select();
 }
-

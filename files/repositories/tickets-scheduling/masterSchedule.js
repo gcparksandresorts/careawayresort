@@ -29,7 +29,6 @@ weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
     // if closed: closed
 
 
-
 mastSchedule = []; //mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr3 | SplshPrtHr4 | Evnt5 | Entrtnmnt6";
 
 // Insert Schedule Values Below

@@ -145,9 +145,53 @@ function setupEntertainment(){
    
 }
 
+function setupTierInfo(){
+    const ticketInfo = document.getElementById('ticketingInfo');
+    const passholderInfo = document.getElementById('passholderInfo');
+
+    let tTier = tSchedule[2];
+  
+    ticketInfo.innerHTML = "<ul><li>Ticket Tier: <b>" + tTier + "</b> - <a href='../tickets/ticketing-tiers'>Learn More</a></li>\
+        <li>Daily Parking General: <b>$30</b></li><li>Shops District Parking: <b>$10 / hr | $30 max</b><br><span style='font-size:10px'>First hour free, first 2 hours free with validation</span></li></ul>";
+
+    switch(tTier){
+        case '0':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Grand Adventure Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:red'>Unavailable</span></li></ul>";
+            break;
+        case '1':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Grand Adventure Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
+            break;
+        case '2':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Grand Adventure Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
+            break;
+        case '3':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Grand Adventure Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
+            break;
+        case '4':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Grand Adventure Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
+            break;
+        case '5':
+            passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Grand Adventure Passport: <span style='color:red'>Unavailable</span></li>\
+                <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
+            break;
+    }
+}
+
 // Call functions
 setupParkHours();
 setupEntertainment();
+setupTierInfo();
 
 function viewSchedule(){
     window.open("?date=" + dateSelect.value, "empty");

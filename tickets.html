@@ -7,6 +7,28 @@
 	
     <style>
 	    @media screen and (min-width:700px){.placeContainer > div {width:48% !important;}}
+
+		#chooseForm {
+			display:none; transition:0.5s; opacity:0;
+			position: fixed; top:80px; bottom:0; left:0; right:0;
+		}
+
+		#chooseForm #closeForm {
+			position: absolute; top:0; bottom:0; left:0; right:0; cursor:pointer; z-index: 900;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		#chooseForm #chooseItems {
+			transition:0.7s; position:absolute; top:80px; z-index: 901;
+			left:50%; transform: translate(-50%,0);
+		}
+
+		#chooseForm.isVisible {
+			opacity:1;
+		}
+
+		#chooseForm.isVisible #chooseItems {top:40px;}
+		
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -16,9 +38,9 @@
             	<div class='titleBar'><h1>Your Adventure Starts Here!</h1></div>
            	<div class='titleBar silver'><p>Purchasing admisison to our world-renowned theme parks and seasonal events is the first step to your next grand adventure. Before your visit, make sure you review <a href='information/safety-guidelines'>these safety guidelines</a>.</p></div>
             
-            	<div class='leftContainer'>
+            <div class='leftContainer'>
 			<div class='placeContainer'>
-				<div><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner4.jpg'><div><h2 style='margin-bottom:5px'>Theme Park Tickets</h2>Purchase per-day admission for one or more visits to Globe-City's Careaway Park, Port of Adventure, and Splashport Bay. Ticket pricing is determined by date of visit<sup>1</sup>.<br><br><br></div><div class='subText'><b>Tickets starting at $75</b></div><a href='tickets/webstore?form=day-ticket'>link</a></div>
+				<div onclick="chooseTikForm()" style="cursor:pointer"><img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/banners/banner4.jpg'><div><h2 style='margin-bottom:5px'>Theme Park Tickets</h2>Purchase per-day admission for one or more visits to Globe-City's Careaway Park, Port of Adventure, and Splashport Bay. Ticket pricing is determined by date of visit<sup>1</sup>.<br><br><br></div><div class='subText'><b>Tickets starting at $75</b></div></div>
 				<div><img src='https://i.imgur.com/NCyozNl.jpeg'><div><h2 style='margin-bottom:5px'>Annual Passports</h2>Expand your adventure with 12 months admission to theme parks starting at 230<sup>2</sup> days of fun!<br><br></div><div class='subText'><b>Passes starting at $299</b></div><a href='tickets/annual-passports'>link</a></div>
 			</div>
 		</div>
@@ -58,10 +80,34 @@
 			</ol>
 		</div>
             
+		<div id="chooseForm">
+			<div id="closeForm" onclick="closeTikForm()"></div>
+			<div id="chooseItems" class="container filled" style="background:white;">
+				<h2>Select Your Destination</h2>
+				<div class="tileContainer">
+					<div class="linked"><img src='https://i.imgur.com/9gS8Xri.jpeg'><h3>Careaway Park / Port of Adventure</h3><a href="tickets/webstore.html?form=day-ticket"></a></div>
+					<div class="linked"><img src='https://i.imgur.com/cUXRXTp.jpeg'><h3>Splashport Bay</h3><a href="tickets/webstore.html?form=splashport-ticket"></a></div>
+				</div>
+				<h4>View special event admission <a href="things-to-do/events">here</a></h4>
+			</div>
+		</div>
 		
 		<!-- END OF BODY CONTENT -->
 
 	<div id='footer'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script>
+		const chooseForm = document.getElementById('chooseForm');
+
+		function chooseTikForm(){
+			chooseForm.style.display = 'block';
+			setTimeout(function(){chooseForm.classList.add('isVisible');},10);
+		}
+
+		function closeTikForm(){
+			chooseForm.classList.remove('isVisible');
+			setTimeout(function(){chooseForm.style.display = 'none';},500);
+		}
+	</script>
 </html>

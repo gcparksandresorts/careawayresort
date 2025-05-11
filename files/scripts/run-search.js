@@ -1,5 +1,5 @@
 function runSearch(value, type){
-    value = value.replace(/\ /g, '+');
+    value = value.replace(/[^a-zA-Z0-9 ]/g, '').replace(/ /g, '+');
 
     if(type == 'int'){
         window.open("?query=" + value, "_self");

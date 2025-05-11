@@ -17,6 +17,30 @@ iter+=1; websiteIndex[iter] = {title: "pageTitle",
 
 var iter = -1;
 
+iter+=1; websiteIndex[iter] = {title: "Globe-City's Careaway Park", 
+    description: "Explore the original theme park property of the Careaway Resort featuring family friendly fun and thrilling rides", 
+    tagsList: "themepark,rides,destination,destinations,parks",
+    link: "destinations/careaway-park"
+    };
+
+iter+=1; websiteIndex[iter] = {title: "Globe-City's Port of Adventure", 
+    description: "Discover four magical and wonderful lands full of heartpounding rides and immersive entertainment", 
+    tagsList: "themepark,rides,destination,park,parks",
+    link: "destinations/port-of-adventure"
+    };
+
+iter+=1; websiteIndex[iter] = {title: "Globe-City's Splashport Bay", 
+    description: "Find your fun at Puertas Nuevas's most attended and most immersive water park!", 
+    tagsList: "waterpark,pool,summer",
+    link: "destinations/splashport-bay"
+    };
+
+iter+=1; websiteIndex[iter] = {title: "Shops & More District", 
+    description: "Stroll a mile of shops, restaurants, and more! The shops district is the ultimate vacation getaway for shopping and dining fun", 
+    tagsList: "store,free,mall,shop,eat,food,merchandise,merch",
+    link: "destinations/shops-and-more-district"
+    };
+
 iter+=1; websiteIndex[iter] = {title: "Accessibility and Guests with Allergies", 
     description: "Information on accomodations for guests with disabilities and food allergies", 
     tagsList: "mda,blind,hearing,ramp,wheelchair,allergy,allergens,severe,food,service,animal,support,accessible,ada,disabled,handicap,aid",
@@ -29,16 +53,16 @@ iter+=1; websiteIndex[iter] = {title: "Wheelchair / Stroller Rentals and Lockers
     link: "information/services/rentals"
     };
 
-iter+=1; websiteIndex[iter] = {title: "Order Theme Park Tickets", 
-    description: "Order tickets to Globe-City's Careaway Park and Port of Adventure, does not include splashport bay admission", 
-    tagsList: "ticket,themepark,theme-park,admission,park,entry,webstore,store",
-    link: "tickets/webstore?form=day-ticket"
+iter+=1; websiteIndex[iter] = {title: "Restaurants and Dining", 
+    description: "Explore places to eat at the Careaway Resort", 
+    tagsList: "food,restaurant",
+    link: "things-to-do/dining"
     };
 
-iter+=1; websiteIndex[iter] = {title: "Order Splashport Bay Tickets", 
-    description: "Order tickets to Globe-City's Splashport Bay. Does not include annual passports", 
-    tagsList: "splashport,ticket,admission,waterpark,water,park,entry",
-    link: "tickets/webstore?form=splashport-ticket"
+iter+=1; websiteIndex[iter] = {title: "Order Theme Park Tickets", 
+    description: "Order tickets to Globe-City's Careaway Park, Port of Adventure, or Splashport Bay", 
+    tagsList: "ticket,themepark,theme-park,admission,park,entry,webstore,store",
+    link: "tickets"
     };
 
 iter+=1; websiteIndex[iter] = {title: "Annual Passports",
@@ -101,6 +125,17 @@ iter+=1; websiteIndex[iter] = {title: "Park Hours and Daily Entertainment & Even
     link: "information/resort-schedule"
     }; 
 
+iter+=1; websiteIndex[iter] = {title: "Shows & Entertainment", 
+    description: "View all our entertainment offerings available during various seasons and events throughout the year", 
+    tagsList: "show,performance,theater,play,music,musical,character,things,activity,activities",
+    link: "things-to-do/entertainment"
+    };
+
+iter+=1; websiteIndex[iter] = {title: "Information about Ticket Tiers", 
+    description: "Learn about how the price of theme park admission is determined and how to know when your annual passport may be invalid", 
+    tagsList: "ticket,tier,price,valid,passport",
+    link: "tickets/ticketing-tiers"
+    };
 
 
     

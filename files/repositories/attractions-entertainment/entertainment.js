@@ -60,7 +60,7 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "Kingdom of Darkness Alive", code: "koda", pageLink: "kingdom-of-darkness",
 		font:"font", description: "A spooky special effects performance where the world of the dead comes to the living",
-		info: "1 | 1 | Kingdom of Darkness,2 | 6 | 0 | 0", img: "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg",
+		info: "1 | 1 | Kingdom of Darkness,2 | 4 | 0 | 0", img: "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg",
 		showTimes: "Hourly beggining at 8PM", showDuration: "11 minutes", showOnPage: "yes", // show on events page
 		tagsList: "projection,show,scareaway,screams", pageIntro: "<b>Available during Scareaway Screams Event Only</b><p>Witness Draculas decrepit castle ignite in horrific sights and sounds</p>", 
 		longDescription: "Powered by dozens of advanced projectors, hidden speakers, and other dazzling effects. You won't want to miss it!",
