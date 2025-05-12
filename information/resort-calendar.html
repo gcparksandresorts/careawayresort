@@ -12,7 +12,8 @@
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
 
 		<style>
-			#viewInfoSelect > a.isSelected {background:green; color:White;}
+			#infoSelector > a {cursor:cell; transition:0.5s;}
+			#infoSelector > a.isSelected {background:green; color:White;}
 		</style>
 
 		<!-- BODY CONTENT HERE -->
@@ -20,15 +21,19 @@
 		<div class='titleBar'><h1>Resort Calendar</h1></div>
 		<div class='titleBar silver'><p>Look ahead to see what's happening at Globe-City's Careaway Resort in the coming weeks</p></div>
 		<div class='container'>
-			<p>	<h4>Select information to view</h4>
-				<div class='tagContainer silver' id='viewInfoSelect'>
-					<a onclick='this.classList.toggle("isSelected");'>Operating Hours</a>
-					<a onclick='this.classList.toggle("isSelected");'>Ticket Prices</a>
-					<a onclick='this.classList.toggle("isSelected");'>Events</a>
-					<a onclick='this.classList.toggle("isSelected");'>Entertainment</a>
-				</div>
-			</p>
-			<div class='spacer'></div>
+			<h4>Select information to view</h4>
+			<div class='tagContainer silver' id='infoSelector'>
+				<a onclick='this.classList.toggle("isSelected");'>Operating Hours</a>
+				<a onclick='this.classList.toggle("isSelected");'>Ticket Prices</a>
+				<a onclick='this.classList.toggle("isSelected");'>Events</a>
+				<a onclick='this.classList.toggle("isSelected");'>Entertainment</a>
+			</div>
+			<p id='updateInfoSelector'></p>
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='leftContainer'>
 		</div>
             
 		
@@ -37,4 +42,5 @@
 	<div id='footer'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src='../files/scripts/resort-calendar-script.js'></script>
 </html>
