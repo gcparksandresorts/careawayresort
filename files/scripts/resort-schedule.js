@@ -177,7 +177,7 @@ function setupTierInfo(){
             break;
         case '4':
             passholderInfo.innerHTML = "<ul><li>Local Resident Passport: <span style='color:red'>Unavailable</span></li>\
-                <li>Grand Adventure Passport: <span style='color:green'>Good to go</span></li>\
+                <li>Grand Adventure Passport: <span style='color:red'>Unavailable</span></li>\
                 <li>Premier / VIP Platinum Passports: <span style='color:green'>Good to go</span></li></ul>";
             break;
         case '5':

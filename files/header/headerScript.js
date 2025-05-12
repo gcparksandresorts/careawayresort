@@ -94,3 +94,17 @@ function toggleBarMenu(num){
 		infobarMenu.classList.remove("open");
 	}
 }
+/*
+// replace img url for images that did not load properly
+function addFallbackToImages(defaultImageUrl) {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    img.onerror = () => {
+      img.onerror = null; // prevent infinite loop if default image also fails
+      img.src = defaultImageUrl;
+    };
+  });
+}
+
+setTimeout(function(){addFallbackToImages('https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg');},100);
+*/

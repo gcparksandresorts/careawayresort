@@ -60,7 +60,7 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "Kingdom of Darkness Alive", code: "koda", pageLink: "kingdom-of-darkness",
 		font:"font", description: "A spooky special effects performance where the world of the dead comes to the living",
-		info: "1 | 1 | Kingdom of Darkness,2 | 4 | 0 | 0", img: "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg",
+		info: "1 | 1 | Kingdom of Darkness,2 | 6 | 0 | 0", img: "https://www.wfla.com/wp-content/uploads/sites/71/2018/01/the-nighttime-lights-at-hogwarts-castle_36661926_ver1.0.jpg",
 		showTimes: "Hourly beggining at 8PM", showDuration: "11 minutes", showOnPage: "yes", // show on events page
 		tagsList: "projection,show,scareaway,screams", pageIntro: "<b>Available during Scareaway Screams Event Only</b><p>Witness Draculas decrepit castle ignite in horrific sights and sounds</p>", 
 		longDescription: "Powered by dozens of advanced projectors, hidden speakers, and other dazzling effects. You won't want to miss it!",
@@ -70,7 +70,7 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "Haunting Hollywood", code: "haho", pageLink: "haunting-hollywood",
 		font:"font", description: "Horror and humor combine in this raunchy halloween retelling of some of the year's hottest gossip",
-		info: "1 | 1 | Wonder Reel Studios,2 | 6 | 2 | 0", img: "https://i.ytimg.com/vi/Phbnc10RXo4/maxresdefault.jpg",
+		info: "1 | 1 | Wonder Reel Studios,2 | 4 | 2 | 0", img: "https://i.ytimg.com/vi/Phbnc10RXo4/maxresdefault.jpg",
 		showTimes: "8:15 PM, 10:15 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
 		tagsList: "comedy,topical,dark,raunchy", pageIntro: "Horror and humor combine in this raunchy halloween retelling of some of the year's hottest gossip. It's musical, it's magnificent, it's sure to make you get up and leave.", 
 		longDescription: "This halloween, laugh in horror as some dreadfully delightful monsters and ghouls sing and dance to covers of hit songs in a dramatic and comedic recap of world events",
@@ -126,14 +126,12 @@ var iter = -1;
 
 	iter+=1; entertainmentList[iter] = {
 		name: "Dreams of Adventure Spectacular", code: "das", pageLink: "dreams-of-adventure",
-		font:"font", description: "An epic nighttime fireworks and light show about the magic of dreams and the places they take us",
-		info: "none | 4 | Port of Entry,2 | 2 | 2 | 1", img: "https://blogmickey.com/wp-content/uploads/2017/05/HappilyEverAfter-0512017-14.jpg",
+		font:"Playwrite+DK+Loopet", description: "An epic nighttime fireworks and light show about the magic of dreams and the places they take us",
+		info: "none | 4 | Port of Entry,2 | 2 | 2 | 1", img: "https://i.imgur.com/kUIvNws.png",
 		showTimes: "9:30 PM", showDuration: "20 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "tag1,tag2", pageIntro: "A glorious nighttime spectacular that has it all. Fireworks, lasers, dancing fountains, and illumated drones fill the night sky with millions of wonderfull colors. It's a beautiful conclusion and grand finale to anyone's epic Adventure!", 
-		longDescription: "As the sun sets over Port of Adventure, prepare to be captivated by <em>Dreams of Adventure</em>, a breathtaking nighttime spectacular that celebrates the magic of dreams and the incredible places they take us. This awe-inspiring show combines the brilliance of fireworks, the elegance of dancing fountains, the enchantment of illuminated drones, and the dazzling spectacle of lasers to create an unforgettable symphony of light, color, and music.\
-				<p>The night sky comes alive with millions of vibrant hues as dreams of exploration, wonder, and adventure are brought to life before your eyes. Stunning water effects rise and fall in perfect harmony with a soaring musical score, while shimmering drones paint the sky with intricate patterns and scenes. Fireworks burst overhead in a kaleidoscope of colors, illuminating the park and filling the air with excitement and awe.</p>\
-				<p><em>Dreams of Adventure</em> is more than just a show—it’s a heartfelt celebration of the imagination and the journeys that unite us all. Whether you’re embarking on your first adventure or reminiscing about your day’s discoveries, this grand finale is the perfect way to conclude your epic journey at Port of Adventure.</p>",
-		otherImg: "img1 | img2" // leave default if none
+		tagsList: "adventure,dream,show,water,watershow,fireworks", pageIntro: "As night falls over the Port of Adventure, the lake awakens with magic. Dreams of Adventure is an unforgettable nighttime spectacular that brings the power of imagination to life through dancing fountains, dazzling pyrotechnics, expansive projections, and an orchestral score", 
+		longDescription: "Journey through four fantastical realms—Atlantis, Kingdom of Darkness, Port of Entry, and Wonder Reel Studios—as dreams unfold in vibrant color and light. From epic discoveries beneath the sea to cinematic escapes among the stars, this dazzling celebration reminds us that adventure begins with a dream.",
+		otherImg: "https://i.imgur.com/EdE4wYz.png | https://i.imgur.com/R0qmsvV.png" // leave default if none
 	}
 
 	iter+=1; entertainmentList[iter] = {
@@ -141,7 +139,7 @@ var iter = -1;
 		font:"font", description: "A lighted boat parade with musical fountains and dazzling colors",
 		info: "none | 4 | Palace Gardens,1 | 2 | 2 | 1", img: "https://i.imgur.com/dyUVluy.jpeg",
 		showTimes: "8:15 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Palace Garden Lake and delight in this beautiful lighted boat parade and water show that will ignite the night sky with millions of dazzling colors", 
+		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Palace Garden Lake and delight in this beautiful lighted boat parade and water show that will ignite the night with millions of dazzling colors", 
 		longDescription: "longDescription",
 		otherImg: "img1 | img2" // leave default if none
 	}
