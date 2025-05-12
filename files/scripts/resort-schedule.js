@@ -67,7 +67,7 @@ function setupParkHours(){
         if(tSchedule[4] != '0'){
             if(msSplshHrs[tSchedule[4]].includes(' + ')){
                 let temp = msSplshHrs[tSchedule[4]].split(' + ');
-                shopsDistrictHours = "<div style='text-align:center;' id='shpsHr'><img src='https://i.imgur.com/cUXRXTp.jpeg'><b>Splashport Bay Hours</b><br>" + temp[0] + "<p><b>Special Event Hours</b><br>" + temp[1] + "</p><a href='../destinations/splashport-bay'></a></div>";
+                splashportHours = "<div style='text-align:center;' id='shpsHr'><img src='https://i.imgur.com/cUXRXTp.jpeg'><b>Splashport Bay Hours</b><br>" + temp[0] + "<p><b>Special Event Hours</b><br>" + temp[1] + "</p><a href='../destinations/splashport-bay'></a></div>";
             }else{
                 splashportHours = "<div style='text-align:center;' id='splshHr'><img src='https://i.imgur.com/cUXRXTp.jpeg'><b>Splashport Bay Hours</b><br>"+msSplshHrs[tSchedule[4]]+"<a href='../destinations/splashport-bay'></a></div>";  
             }
