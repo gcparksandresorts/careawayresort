@@ -3,7 +3,8 @@ const updateInfoSelectBtn = document.getElementById('updateInfoSelector'); // pr
 
 const infoOptions = [ // Options for what info can be displayed
   "Operating Hours", // 0
-  "Ticket Prices", // 1
+  "Lowest Ticket Prices", // 1
+  "Ticketing Tier",
   "Annual Passport Validity", // 2
   "Events Schedule", // 3
   "Entertainment Schedule" // 4
@@ -13,7 +14,18 @@ var infoOptionsChosen = []; // list of items selected to be displayed
 
 const searchParams = new URLSearchParams(window.location.search);
 
-if(searchParams.has('showInfo')){}
+if(searchParams.has('showInfo')){
+	let temp = searchParams.get('showInfo');
+	if(temp.includes('-')){
+		temp = temp.split('-');
+	}else{
+		temp = [temp];
+	}
+
+	for(t=0; t<temp.length; t++){
+		infoOptionsChosen[t] = temp[t].replace(/\+/g, ' ');
+	}
+}
 else{infoOptionsChosen = ['Operating Hours'];}
 
 // populate infoSelector
@@ -50,3 +62,124 @@ function addInfoType(){
 	else{updateInfoSelectBtn.innerHTML = '<em>Select at least one type of information</em>';}
 	
 }// end of addInfoType()
+
+
+// POPULATE CALENDAR ------------------------------------------------------------------------------------------------
+
+const tDate = new Date();
+	var curMonth = tDate.getMonth();
+	var curDay = tDate.getDate();
+	var curWeekday = tDate.getDay();
+	var curYear = tDate.getFullYear();
+
+const calendarContainer = document.getElementById('calendarContainer'); calendarContainer.innerHTML = "";
+	//calendarContainer.innerHTML = "<h2>"+months[curMonth]+" "+curYear+"</h2><div class='calendarWindow' id='month-"+curMonth+"'></div>";
+
+for(d=0; d<mastSchedule.length; d++){
+
+	// See if there is a container for this month, if not -> make one
+	var tempDestination = document.getElementById('month-' + curMonth);
+	if(tempDestination == null){
+		calendarContainer.innerHTML += "<br><br><h2>"+months[curMonth]+" "+curYear+"</h2><div class='calendarWindow' id='month-"+curMonth+"'></div>";
+		tempDestination = document.getElementById('month-' + curMonth);
+	}
+
+	let temp = mastSchedule[d].split(' | ');
+	// mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr3 | SplshPrtHr4 | Evnt5 | Entrtnmnt6";
+
+	tempDestination.innerHTML += "<div onclick='window.open(\"resort-schedule?date="+temp[0]+"\")' id='item-"+d+"'><h3>"+temp[1]+", "+months[curMonth]+" " +curDay+ "</h3></div>";
+	const madeDestination = document.getElementById('item-' + d);
+
+	// Populate with content based on specified preferences in infoOptionsChosen
+		if(infoOptionsChosen.includes('Operating Hours')){
+			let $temp = msPrkHours[temp[3]].split(' | ').map(item => item.replace(/\+/g, "<br>Special Event:<br>"));
+			madeDestination.innerHTML += "<p class='lItem'><b style='color:rgb(11, 0, 73);'>Careaway Park</b><br>"+$temp[1]+"</p>";
+			madeDestination.innerHTML += "<p class='lItem'><b style='color:rgb(0, 74, 2);'>Port of Adventure</b><br>"+$temp[2]+"</p>";
+			madeDestination.innerHTML += "<p class='lItem'><b style='color:rgb(80, 17, 0);'>Shops & More District</b><br>"+$temp[0]+"</p>";
+
+			var $plashHr = msSplshHrs[temp[4]]; if(msSplshHrs[temp[4]].includes('+')){$plashHr = msSplshHrs[temp[4]].replace(/\+/g, "<br>Special Event:<br>");}
+			madeDestination.innerHTML += "<p class='lItem'><b style='color:rgb(0, 76, 80);'>Splashport Bay</b><br>"+$plashHr+"</p>";
+		}
+
+		if(infoOptionsChosen.includes('Lowest Ticket Prices')){
+			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
+			let $temp = msTikPrice[temp[2]-1].split(' | ');
+			madeDestination.innerHTML += "<p class='lItem'>Resident SP: <b style='color:rgb(0, 81, 3);'>$"+$temp[0]+"</b></p>";
+			madeDestination.innerHTML += "<p class='lItem'>General SP: <b style='color:rgb(0, 81, 3);'>$"+$temp[1]+"</b></p>";
+			madeDestination.innerHTML += "<p class='lItem'>GCVIP SP: <b style='color:rgb(0, 81, 3);'>$"+$temp[2]+"</b></p>";
+		}
+
+		if(infoOptionsChosen.includes('Ticketing Tier')){
+			switch(temp[2]){
+				case '1':
+					madeDestination.style.backgroundColor = 'rgb(188, 254, 138)';
+					break;
+				case '2':
+					madeDestination.style.backgroundColor = 'rgb(232, 254, 138)';
+					break;
+				case '3':
+					madeDestination.style.backgroundColor = 'rgb(254, 239, 138)';
+					break;
+				case '4':
+					madeDestination.style.backgroundColor = 'rgb(254, 215, 138)';
+					break;
+				case '5':
+					madeDestination.style.backgroundColor = 'rgb(254, 155, 138)';
+					break;
+			}
+		}
+
+		if(infoOptionsChosen.includes('Annual Passport Validity')){
+			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
+			switch(temp[2]){
+				case '1':
+					madeDestination.innerHTML += "<p class='lItem'>&#9989;Resident Pass</p>\
+						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					break;
+				case '2':
+					madeDestination.innerHTML += "<p class='lItem'>&#9989;Resident Pass</p>\
+						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					break;
+				case '3':
+					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
+						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					break;
+				case '4':
+					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
+						<p class='lItem'>&#10060;Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					break;
+				case '5':
+					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
+						<p class='lItem'>&#10060;Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					break;
+			}
+		}
+
+		if(infoOptionsChosen.includes('Events Schedule')){
+			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
+			madeDestination.innerHTML += "Error loading events. <u>Click this tile to see events on this date</u>";
+		}
+
+		if(infoOptionsChosen.includes('Entertainment Schedule')){
+			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
+			madeDestination.innerHTML += "Error loading entertainment. <u>Click this tile to see entertainment on this date</u>";
+		}
+
+	
+
+	// Setup for next date
+	curDay += 1;
+	if(curDay > monthsDays[curMonth]){
+		curDay = 1;
+		curMonth += 1;
+		if(curMonth > months.length){curMonth = 0; curYear += 1;}
+	}
+
+}// end of for(d=0; d<mastSchedule.length; d++)
+
+

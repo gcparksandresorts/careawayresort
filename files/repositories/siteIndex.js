@@ -41,6 +41,12 @@ iter+=1; websiteIndex[iter] = {title: "Shops & More District",
     link: "destinations/shops-and-more-district"
     };
 
+iter+=1; websiteIndex[iter] = {title: "Resort Monthly Calendar", 
+    description: "View information about operating hours, ticket pricing, annual passport validity, events, and entertainment on a large scale", 
+    tagsList: "tier,ticketing,schedule,blackout,dates",
+    link: "information/resort-calendar"
+    };
+
 iter+=1; websiteIndex[iter] = {title: "Accessibility and Guests with Allergies", 
     description: "Information on accomodations for guests with disabilities and food allergies", 
     tagsList: "mda,blind,hearing,ramp,wheelchair,allergy,allergens,severe,food,service,animal,support,accessible,ada,disabled,handicap,aid",

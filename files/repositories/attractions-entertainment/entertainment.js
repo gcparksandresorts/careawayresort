@@ -49,10 +49,10 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "Globe-City Marching Band", code: "gcmb", pageLink: "gc-marching-band",
 		font: "font", description: "A loud and proud high-rolling group",
-		info: "none | 5 | Palace Gardens,1 | 1 | 0 | 0", img: "https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg",
+		info: "none | 5 | Paradise Gardens,1 | 1 | 0 | 0", img: "https://www.widener.edu/sites/default/files/2019-07/marching-band.jpg",
 		showTimes: "10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM", showDuration: "15 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "atmospheric,musical,orchestral", pageIntro: "Dressed in vibrant shades of blue, this high-energy ensemble brings the Palace Gardens to life with electrifying performances and infectious rhythms. With a mix of classic tunes and modern hits, their dynamic music and lively choreography will have you clapping, dancing, and marching along in no time!", 
-		longDescription: "Get ready to groove with the Globe-City Marching Band, an energetic ensemble decked out in vibrant blue uniforms that bring the Palace Gardens to life! With lively rhythms, bold brass, and infectious energy, this talented band fills the air with music that will have you clapping, dancing, and marching along. Don't miss their electrifying performances as they celebrate the spirit of adventure and joy in every note!",
+		tagsList: "atmospheric,musical,orchestral", pageIntro: "Dressed in vibrant shades of blue, this high-energy ensemble brings the Paradise Gardens to life with electrifying performances and infectious rhythms. With a mix of classic tunes and modern hits, their dynamic music and lively choreography will have you clapping, dancing, and marching along in no time!", 
+		longDescription: "Get ready to groove with the Globe-City Marching Band, an energetic ensemble decked out in vibrant blue uniforms that bring the Paradise Gardens to life! With lively rhythms, bold brass, and infectious energy, this talented band fills the air with music that will have you clapping, dancing, and marching along. Don't miss their electrifying performances as they celebrate the spirit of adventure and joy in every note!",
 		otherImg: "img1 | img2" // leave default if none
 	}
 
@@ -93,9 +93,9 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "The Polar Express Parade", code: "pxp", pageLink: "polar-express-parade",
 		font:"font", description: "Dance and cheer as the Polar Express choo-choo's its way down the boulevard under a delightful snowfall.",
-		info: "none | 2 | Palace Gardens,1 | 3 | 0 | 3", img: "https://gcparksandresorts.github.io/careawayresort/files/images/shows/polarExpressShow.jpg",
+		info: "none | 2 | Paradise Gardens,1 | 3 | 0 | 3", img: "https://gcparksandresorts.github.io/careawayresort/files/images/shows/polarExpressShow.jpg",
 		showTimes: "3:15 PM, 5:15 PM, 7:15 PM", showDuration: "15 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "tag1,tag2", pageIntro: "On this rare occassion, witness snowfall over the Palace Gardens and -- chug, chug, chug -- OMG! The Polar Express locamotive is coming right for us!", 
+		tagsList: "tag1,tag2", pageIntro: "On this rare occassion, witness snowfall over the Paradise Gardens and -- chug, chug, chug -- OMG! The Polar Express locamotive is coming right for us!", 
 		longDescription: "<h2>Ho Ho HO!</h2>Step into the magic of the beloved holiday classic as The Polar Express comes to life in this enchanting parade! Watch as the grand locomotive steams down a snow-dusted resort boulevard, bringing with it the spirit of Christmas. Dancers dressed as conductors, festive carolers, and jolly snowmen spread holiday cheer, while twinkling lights and swirling snow create a breathtaking winter wonderland. With heartwarming music and dazzling performances, this parade is a magical journey to the North Pole you won’t want to miss!",
 		otherImg: "img1 | img2" // leave default if none
 	}
@@ -103,7 +103,7 @@ var iter = -1;
 	iter+=1; entertainmentList[iter] = {
 		name: "Fountains of Light", code: "fol", pageLink: "fountains-of-light",
 		font:"font", description: "A dazzling watershow celebrating the magic of the holiday season",
-		info: "none | 2 | Palace Gardens,1 | 2 | 2 | 2", img: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/disneyland/entertainment/disney-california-adventure/world-of-color-season-of-light/holidays-8-hr-duratex-16x9.jpg?1736238112292",
+		info: "none | 2 | Paradise Gardens,1 | 2 | 2 | 2", img: "https://i.imgur.com/KSPnZzt.png",
 		showTimes: "9:00 PM, 10:30 PM", showDuration: "18 minutes", showOnPage: "yes", // show on events page
 		tagsList: "water,dazzling", pageIntro: "Embrace the spirit and cheer of the holiday season in this advanced water and projection spectacular. Featuring nostaligic and familiar holiday music and some new heartfelt songs, this show is the perfect holiday kiss goodnight.", 
 		longDescription: "<h4>Immerse in the Holidays</h4>With a wonderous orchestral overture to kick off the show, The <em>Fountains of Light</em> spectacular whips you right into the magic. Featuring over one-hundred advanced LED water fountains, dozens of lasers and advanced lighting effects, and hundreds of square feet of projection mapping, there will be magic and wonder to see all around you.<p>\
@@ -135,11 +135,11 @@ var iter = -1;
 	}
 
 	iter+=1; entertainmentList[iter] = {
-		name: "AquaMagic - River of Light", code: "aqm", pageLink: "aquamagic",
-		font:"font", description: "A lighted boat parade with musical fountains and dazzling colors",
-		info: "none | 4 | Palace Gardens,1 | 2 | 2 | 1", img: "https://i.imgur.com/dyUVluy.jpeg",
-		showTimes: "8:15 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Palace Garden Lake and delight in this beautiful lighted boat parade and water show that will ignite the night with millions of dazzling colors", 
+		name: "AquaMagic - River of Possibility", code: "aqm", pageLink: "aquamagic",
+		font:"font", description: "A lighted boat parade celebrating the colors of adventure and wonder",
+		info: "none | 4 | Paradise Gardens,1 | 2 | 2 | 1", img: "https://i.imgur.com/dyUVluy.jpeg",
+		showTimes: "8:30 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
+		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Paradise Gardens Lake and delight in this beautiful lighted boat parade and water show that will ignite the night with millions of dazzling colors", 
 		longDescription: "longDescription",
 		otherImg: "img1 | img2" // leave default if none
 	}

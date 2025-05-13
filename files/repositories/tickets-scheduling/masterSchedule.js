@@ -28,6 +28,14 @@ weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
     msSplshHrs[3] = "10:00 AM - 9:00 PM + 6:00 PM - 11:00 PM"; // Stars and Splashes
     // if closed: closed
 
+// Lowest Ticket Prices
+    msTikPrice = [];
+    msTikPrice[0]= "60 / 49 | 65 / 59 | 89 / 79";
+    msTikPrice[1]= "65 / 59 | 75 / 69 | 99 / 89";
+    msTikPrice[2]= "75 / 69 | 99 / 89 | 199 / 190";
+    msTikPrice[3]= "99 / 89 | 109 / 99 | 209 / 199";
+    msTikPrice[4]= "109 / 95 | 129 / 119 | 245 / 229";
+
 
 mastSchedule = []; //mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr3 | SplshPrtHr4 | Evnt5 | Entrtnmnt6";
 
@@ -54,31 +62,31 @@ mastSchedule[17] = 'MAY-29 | Thursday | 2 | 2 | 0 | none | cmng,gcmb,blvdBand';
 mastSchedule[18] = 'MAY-30 | Friday | 4 | 3 | 2 | roovBday | cmng,gcmb,blvdBand';
 mastSchedule[19] = 'MAY-31 | Saturday | 5 | 4 | 2 | sAdv | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[20] = 'JUN-1 | Sunday | 4 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[21] = 'JUN-2 | Monday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[22] = 'JUN-3 | Tuesday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[23] = 'JUN-4 | Wednesday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[24] = 'JUN-5 | Thursday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[21] = 'JUN-2 | Monday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[22] = 'JUN-3 | Tuesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[23] = 'JUN-4 | Wednesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[24] = 'JUN-5 | Thursday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[25] = 'JUN-6 | Friday | 4 | 3 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[26] = 'JUN-7 | Saturday | 5 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[27] = 'JUN-8 | Sunday | 4 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[28] = 'JUN-9 | Monday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[29] = 'JUN-10 | Tuesday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[30] = 'JUN-11 | Wednesday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[31] = 'JUN-12 | Thursday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[28] = 'JUN-9 | Monday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[29] = 'JUN-10 | Tuesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[30] = 'JUN-11 | Wednesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[31] = 'JUN-12 | Thursday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[32] = 'JUN-13 | Friday | 4 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[33] = 'JUN-14 | Saturday | 5 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[34] = 'JUN-15 | Sunday | 5 | 4 | 2 | sAdv,pM,wveSum | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[35] = 'JUN-16 | Monday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[36] = 'JUN-17 | Tuesday | 3 | 3 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[35] = 'JUN-16 | Monday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[36] = 'JUN-17 | Tuesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[37] = 'JUN-18 | Wednesday | 3 | 7 | 1 | sAdv,pM,nop | cmng,gcmb,blvdBand,aqm,nopEnt';
 mastSchedule[38] = 'JUN-19 | Thursday | 3 | 6 | 1 | sAdv,pM,nop | cmng,gcmb,blvdBand,aqm,nopEnt';
-mastSchedule[39] = 'JUN-20 | Friday | 4 | 3 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[39] = 'JUN-20 | Friday | 4 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[40] = 'JUN-21 | Saturday | 5 | 4 | 2 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[41] = 'JUN-22 | Sunday | 5 | 4 | 2 | sAdv,pM,wveSum | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[42] = 'JUN-23 | Monday | 4 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[43] = 'JUN-24 | Tuesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[44] = 'JUN-25 | Wednesday | 3 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[45] = 'JUN-26 | Thursday | 4 | 4 | 1 | sAdv,pM | cmng,gcmb,blvdBand,wick,das,aqm';
-mastSchedule[46] = 'JUN-27 | Friday | 4 | 3 | 3 | sAdv,pM,StrSpl | cmng,gcmb,blvdBand,wick,das,aqm';
+mastSchedule[46] = 'JUN-27 | Friday | 4 | 4 | 3 | sAdv,pM,StrSpl | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[47] = 'JUN-28 | Saturday | 5 | 4 | 3 | sAdv,pM,StrSpl | cmng,gcmb,blvdBand,wick,das,aqm';
 mastSchedule[48] = 'JUN-29 | Sunday | 5 | 4 | 2 | sAdv,pM,wveSum | cmng,gcmb,blvdBand,wick,das,aqm';

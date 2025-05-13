@@ -26,7 +26,7 @@ attractionList[iter] = "Action! On the Backlot - Sponsored by Audi | 2 | 1 | 2 |
 iter+=1; attractionList[iter] = "BATx - none | 2 | 1 | 6 | atIndex=11 | https://i.imgur.com/wQcL9Tt.jpeg";
 iter+=1; attractionList[iter] = "Careaway Castle Mini Golf - Tickets required | 4 | 4 | 1 | clickLink | https://blog-cdn.touringplans.com/blog/wp-content/uploads/2021/04/hollywoodriveingolf_sperduto-700x465.jpeg";
 iter+=1; attractionList[iter] = "Careaway Garden Chair-o-Plane - none | 1 | 3 | 2 | clickLink | https://irvinleisure.co.uk/wp-content/uploads/2023/12/4FB87CE6-FFE4-47A8-9D25-A62B6D4C81A8.jpg";
-//iter+=1; attractionList[iter] = "Enchanted Forest to Palace Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
+//iter+=1; attractionList[iter] = "Enchanted Forest to Paradise Gardens Gondola - none | 1 | 3 | 1 | clickLink | https://www.disneytouristblog.com/wp-content/uploads/2019/06/hollywood-studios-skyliner-gondolas-disney-world-2215.jpg";
 //iter+=1; attractionList[iter] = "Escape from Realinu - none | 1 | 2 | 2 | clickLink | https://miro.medium.com/v2/da:true/resize:fit:1200/0*w5Zv7N4WakVhjhKn";
 iter+=1; attractionList[iter] = "Frankenkoaster - Sponsored by Duracel<sup>TM</sup> | 2 | 1 | 6 | "+pageLink+"frankenkoaster | https://i.imgur.com/RwM26qC.jpeg";
 iter+=1; attractionList[iter] = "Lightspeed - Sponsored by General Electric | 1 | 1 | 5 | clickLink | https://static.wikia.nocookie.net/tron/images/7/77/Clu2LtCycl01.jpg/revision/latest?cb=20110827053101";

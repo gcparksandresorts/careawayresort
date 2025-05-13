@@ -14,6 +14,33 @@
 		<style>
 			#infoSelector > a {cursor:cell; transition:0.5s;}
 			#infoSelector > a.isSelected {background:green; color:White;}
+
+			.calendarWindow {
+				display:flex; margin:0; padding:-10px; width:100%;
+				flex-flow:row; flex-wrap:wrap;
+			}
+
+			.calendarWindow > div{
+				margin:10px; padding:10px; border-radius: 15px;
+				background-color: #efefef; width:calc(100%/5 - 20px); 
+				cursor:pointer;
+			}
+
+			.lItem {display:block; margin:0; margin-bottom:5px;}
+
+			#calendarContainer > h2 {text-align: center;}
+
+			@media screen and (max-width:1000px) {
+				.calendarWindow > div {width:calc(100%/3 - 20px);}
+			}
+
+			@media screen and (max-width:700px) {
+				.calendarWindow > div {width:calc(100%/2 - 20px);}
+			}
+
+			@media screen and (max-width:400px) {
+				.calendarWindow > div {width:calc(100% - 20px);}
+			}
 		</style>
 
 		<!-- BODY CONTENT HERE -->
@@ -23,17 +50,19 @@
 		<div class='container'>
 			<h4>Select information to view</h4>
 			<div class='tagContainer silver' id='infoSelector'>
-				<a onclick='this.classList.toggle("isSelected");'>Operating Hours</a>
-				<a onclick='this.classList.toggle("isSelected");'>Ticket Prices</a>
-				<a onclick='this.classList.toggle("isSelected");'>Events</a>
-				<a onclick='this.classList.toggle("isSelected");'>Entertainment</a>
+				
 			</div>
 			<p id='updateInfoSelector'></p>
 		</div>
 
 		<div class='spacer'></div>
 
-		<div class='leftContainer'>
+		<div class='leftContainer' style="padding-left:0; padding-right:0;" id="calendarContainer">
+			<h2>Starting Month</h2>
+			<img src="https://i.imgur.com/w6T6Ege.jpeg" style="display:block; width:90%; max-width: 400px; margin:auto;">
+			<div class="calendarWindow">
+				An error has occurred.
+			</div>
 		</div>
             
 		
@@ -42,5 +71,6 @@
 	<div id='footer'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
+	<script src="../files/repositories/tickets-scheduling/masterSchedule.js"></script>
 	<script src='../files/scripts/resort-calendar-script.js'></script>
 </html>
