@@ -162,12 +162,44 @@ for(d=0; d<mastSchedule.length; d++){
 
 		if(infoOptionsChosen.includes('Events Schedule')){
 			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
-			madeDestination.innerHTML += "Error loading events. <u>Click this tile to see events on this date</u>";
+			madeDestination.innerHTML += "<div id='eventsList-"+d+"'></div>";
+			if(temp[5] != 'none'){
+				var eventList; if(temp[5].includes(',')){eventList = temp[5].split(',');}else if(temp[5] != 'none'){eventList = [temp[5]];}
+
+				for(pp=0; pp<eventList.length; pp++){
+					let srchInd = eventList[pp];
+					for(gg=0; gg<eventData.length; gg++){
+						if(eventData[gg].codeName == srchInd){
+							document.getElementById('eventsList-'+d).innerHTML += "<p class='lItem'>&#128197; "+eventData[gg].name+"</p>";
+							break;
+						}
+					}
+				}
+
+			}else{
+				document.getElementById('eventsList-'+d).innerHTML = 'No Events';
+			}
 		}
 
 		if(infoOptionsChosen.includes('Entertainment Schedule')){
 			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
-			madeDestination.innerHTML += "Error loading entertainment. <u>Click this tile to see entertainment on this date</u>";
+			madeDestination.innerHTML += "<div id='entertainmentsList-"+d+"'></div>";
+			if(temp[6] != 'none'){
+				var entList; if(temp[6].includes(',')){entList = temp[6].split(',');}else if(temp[6] != 'none'){entList = [temp[6]];}
+
+				for(pp=0; pp<entList.length; pp++){
+					let srchInd = entList[pp];
+					for(gg=0; gg<entertainmentList.length; gg++){
+						if(entertainmentList[gg].code == srchInd){
+							document.getElementById('entertainmentsList-'+d).innerHTML += "<p class='lItem'>&#127926; "+entertainmentList[gg].name+"</p>";
+							break;
+						}
+					}
+				}
+
+			}else{
+				document.getElementById('eventsList-'+d).innerHTML = 'No Events';
+			}
 		}
 
 	

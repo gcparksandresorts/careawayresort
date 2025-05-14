@@ -220,3 +220,16 @@ iter+=1; eventData[iter] = {
     pageIntro: "Come celebrate the birthday of our founder, Reuven Reyman! Join in on the fun featuring yummy snacks, live music, festive decorations, and more!",
     longDescription: "Our magnificent omnipotent Founder, Reuven Sexy Reyman, is the man - the myth - the legend responsible for bringing the world Globe-City Entertainment. His vision and ingenuity lead to the birth of some of Minecraftia's most popular attractions.",
 }
+
+iter+=1; eventData[iter] = {
+    name: "Grad Night", codeName: "grad", font: "titleFont",
+    clickLink: "grad-night", displayType: "none", //leave clickLink as-is for no link
+    info: "2 | 3 | 2 | 4",
+    tags: "graduation,school",
+    eventHours: "7:00 PM - 12:00 AM", bannerImg: "https://www.disneycampus.com/content/dam/dse-ic/blog/grad-nite-returns-to-disneyland-2025/Image3.png",
+    synopsis: "An annual celebration for all the graduating high school seniors of Puertas Nuevas and neighboring territories",
+    pageIntro: "<b>Celebrate Your Big Night with an Even Bigger Adventure!</b><p>Get ready, grads-Port of Adventure is throwing the ultimate graduation celebration just for you! As the sun sets, the park lights up for an exclusive after-hours event filled with thrills, music, and memories to last a lifetime.</p>",
+    longDescription: "<p>🗓️ Date: Check with your school admin!</p><p>🕘 Time: 7:00 PM - 12:00 AM</p><p>🎟️ Who's Invited: High school seniors + chaperones</p><p>📍 Location: Globe-City's Port of Adventure in Oceanfield, Puertas Nuevas!</p><h2>Your Night Includes</h2><ul>\
+    <li>🌟 Unlimited Access to Rides & Attractions - From heart-pounding rollercoasters to magical boat rides, the entire park is yours to explore.</li>\
+    <li>🎧 Live DJ Dance Zones – Party all night in multiple music zones across the park.</li>   <li>🍕 Late-Night Eats – Special Grad Nite menus and exclusive treats!</li>    <li>📸 Photo Ops & Giveaways – Snap memories with your crew and take home free Grad Nite swag.</li>    <li>🎆 Epic Funtastic Finale – End the night with a dazzling water show celebrating YOU.</li></ul>"
+}
