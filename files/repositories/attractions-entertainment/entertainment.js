@@ -154,6 +154,15 @@ var iter = -1;
 		otherImg: "img1 | img2" // leave default if none
 	}
 
+	iter+=1; entertainmentList[iter] = {
+		name: "Paradise Garden Singers", code: "pgs", pageLink: "paradise-garden-singers",
+		font:"font", description: "This barbershop quartet spins harmonies as they play the chimes, tap dance and regale audiences with vaudeville wit.",
+		info: "none | 4 | Paradise Gardens Stage,1 | 6 | 0 | 0", img: "https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/dlr/parks-and-tickets/entertainment/disneyland/dapper-dans/dapper-dans-00.jpg?1699624395102",
+		showTimes: "Hourly 11:00 AM - 4:00 PM", showDuration: "20 Minutes", showOnPage: "yes", // show on events page
+		tagsList: "quartet,singer,dapper,dans", pageIntro: "Gather ‘round when the finest barbershop quartet in a 2-block radius comes to town! Wearing colorful pinstripe suits and straw hats, this 4-man group sings a scintillating selection of a capella Minecraftiana and golden-era tunes. Add some tip-top tap dancing and “pun”-forgettable jokes, and you have an act the whole family will love!", 
+		longDescription: "Come visit the PGs's at the Paradise Gardens stage located at the intersection of Careaway Blvd and the Paradise Gardens lake.",
+		otherImg: "img1 | img2" // leave default if none
+	}
 
 
 // SPECIAL EVENT ENTERTAINMENT

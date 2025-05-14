@@ -73,9 +73,19 @@ const tDate = new Date();
 	var curYear = tDate.getFullYear();
 
 const calendarContainer = document.getElementById('calendarContainer'); calendarContainer.innerHTML = "";
-	//calendarContainer.innerHTML = "<h2>"+months[curMonth]+" "+curYear+"</h2><div class='calendarWindow' id='month-"+curMonth+"'></div>";
 
-for(d=0; d<mastSchedule.length; d++){
+// find the index of todays date 
+var startIndex = 0;
+let lookValue = monthShort[curMonth] + '-' + curDay;
+for(i=0; i<mastSchedule.length; i++){
+	let cheeseburger = mastSchedule[i].split(' | ');
+	if(lookValue == cheeseburger[0]){
+		startIndex = i;
+		break;
+	}
+}
+
+for(d=startIndex; d<mastSchedule.length; d++){
 
 	// See if there is a container for this month, if not -> make one
 	var tempDestination = document.getElementById('month-' + curMonth);
@@ -133,29 +143,29 @@ for(d=0; d<mastSchedule.length; d++){
 			if(infoOptionsChosen.length > 1){madeDestination.innerHTML += "<div class='spacer'></div>";} // add line divider
 			switch(temp[2]){
 				case '1':
-					madeDestination.innerHTML += "<p class='lItem'>&#9989;Resident Pass</p>\
-						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
-						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					madeDestination.innerHTML += "<p class='lItem'>&#9989; Resident Pass</p>\
+						<p class='lItem'>&#9989; Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989; Platinum/VIP Pass </p>";
 					break;
 				case '2':
-					madeDestination.innerHTML += "<p class='lItem'>&#9989;Resident Pass</p>\
-						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
-						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					madeDestination.innerHTML += "<p class='lItem'>&#9989; Resident Pass</p>\
+						<p class='lItem'>&#9989; Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989; Platinum/VIP Pass </p>";
 					break;
 				case '3':
-					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
-						<p class='lItem'>&#9989;Grand Adventure Pass </p>\
-						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					madeDestination.innerHTML += "<p class='lItem'>&#10060; Resident Pass</p>\
+						<p class='lItem'>&#9989; Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989; Platinum/VIP Pass </p>";
 					break;
 				case '4':
-					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
-						<p class='lItem'>&#10060;Grand Adventure Pass </p>\
-						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					madeDestination.innerHTML += "<p class='lItem'>&#10060; Resident Pass</p>\
+						<p class='lItem'>&#10060; Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989; Platinum/VIP Pass </p>";
 					break;
 				case '5':
-					madeDestination.innerHTML += "<p class='lItem'>&#10060;Resident Pass</p>\
-						<p class='lItem'>&#10060;Grand Adventure Pass </p>\
-						<p class='lItem'>&#9989;Platinum/VIP Pass </p>";
+					madeDestination.innerHTML += "<p class='lItem'>&#10060; Resident Pass</p>\
+						<p class='lItem'>&#10060; Grand Adventure Pass </p>\
+						<p class='lItem'>&#9989; Platinum/VIP Pass </p>";
 					break;
 			}
 		}

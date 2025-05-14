@@ -8,28 +8,16 @@
     </head>
 	
     <style>
-		.rowDiv {
-			display:flex;  flex-flow:row;
-			padding:20px 10px 20px 10px;
-			width:100%; max-width:900px; margin:auto;
-			transition:0.5s;  border-radius:15px;
-			position:relative;
+		.selectionContainer {
+			width:100%; max-width: 900px; margin:30px auto 50px auto; text-align: left; padding:10px; border-radius: 15px; transition:0.5s;
 		}
-				.rowDiv:hover {background:lightgray;}
-			.rowDiv > img {
-				width:40%; align-self:stretch; transition:0.5s; border-radius:15px;
-			}
-				.rowDiv:hover > img {scale:1.05;}
-			.rowDiv > div {
-				width:100%; padding-left:20px; text-align:left;
-			}
-	    		.rowDiv > a {opacity:0; position:absolute; top:0; left:0; right:0; bottom:0; cursor:pointer;}
-			
-			@media screen and (max-width:600px){
-				.rowDiv{flex-flow:column;}
-				.rowDiv > img {width:100%;}
-				.rowDiv > div {padding:20px 0px 0px 0px;}
-			}
+		.selectionContainer:hover {
+			background:silver; scale:1.05;
+		}
+		.selectionContainer > a {
+			position: absolute; top:0; bottom:0; right:0; left:0; opacity: 0;
+		}
+		.columnContainer > div > h3 {margin-top:0;}
     </style>
 
 <body onload='finishLoad()'> <div id='loader'></div><div id='header'></div>
@@ -39,112 +27,131 @@
 	<div class='banner' style='height:50vh;'><img src='https://i.imgur.com/W1ZZkbD.png'></div>
             
         <div class='titleBar'><h1>Hotels and Resorts</h1></div>
-        <div class='titleBar silver'><p><b>The Best Way to Experience Globe-City's Careaway Resort</b> - When you stay with us, you’re getting much more than an awesome hotel room in an amazingly themed resort. Your hotel is an extension of the action, where you’re always just minutes away from the theme parks. Wherever you are, the vacation keeps going.</p></div>
+        <div class='titleBar silver'><p><b>The Best Way to Experience Globe-City's Careaway Resort</b> - When you stay with us, you’re getting much more than an awesome hotel room in an amazingly themed resort. Your hotel is an extension of the action, where you’re always just minutes away from the fun. Wherever you are, the vacation keeps going.</p></div>
         
         <div class='container' style='max-width:900px; margin:auto;'>
 			<h2>Signature Collection</h2><p style='max-width:900px; margin:auto;'>The Signature Collection offers expansive, full-service amenities, exceptional dining, distinguished service, immersive theming, and an array of the most exclusive theme park benefits.</p>
-			<br><br>
-				<div class='rowDiv'>
-					<img src='https://i.imgur.com/QpYWoh4.png'>
+			<div class="selectionContainer">
+				<div class="columnContainer dImg">
+					<img src="https://i.imgur.com/QpYWoh4.png">
 					<div>
 						<h3>Globe-City's Sprucewood Lodge</h3>
 						Inspired by the wonder and grandeur of nature, the Sprucewood Lodge combines the sophistication and comfort of a world-class resort with the beauty and serenity of the outdoors. Enjoy deluxe suites designed to look and feel like a luxurious cabin nestled in a dense sprucewood forest.
 					</div>
-					<a href='sprucewood-lodge'></a>
 				</div>
-			<div class='spacer'></div>
-				<div class='rowDiv'>
-					<img src='https://corporate.universaldestinationsandexperiences.com/wp-content/uploads/2024/08/1920x1080-Hero-Exterior-1.jpg'>
+				<a href="sprucewood-lodge"></a>
+			</div>
+			<div class="selectionContainer">
+				<div class="columnContainer dImg">
+					<img src="https://corporate.universaldestinationsandexperiences.com/wp-content/uploads/2024/08/1920x1080-Hero-Exterior-1.jpg">
 					<div>
 						<h3>The RW Hotel</h3>
-						A sophisticated and luxurious hotel centered at the apex of Globe-City's Careaway Park.
+						A sophisticated and luxurious hotel centered at the apex of Globe-City's Careaway Park.	Inspired by the classic architecture of Moracco and complimented by Reyman Estates known service.				
 					</div>
-					<a href='the-rw'></a>
 				</div>
-			<div class='spacer'></div>
-				<div class='rowDiv'>
-					<img src='https://theparkprodigy.com/wp-content/uploads/2022/06/04_Hard-Rock-Hotel-Pool-scaled.jpeg'>
+				<a href="the-rw"></a>
+			</div>
+			<div class="selectionContainer">
+				<div class="columnContainer dImg">
+					<img src="https://www.ticati.com/img/hotel/14812950s.jpg">
 					<div>
 						<h3>MCR Port of Palms Resort</h3>
-						A luxurious multi-faceted resort with park-view rooms and a fun-tastic pool deck.
+						A luxurious multi-faceted resort with park-view rooms and a gorgeous pool deck.				
 					</div>
 				</div>
+				<a href="port-of-palms-resort"></a>
+			</div>
 		</div>
 		<div class='container' style='max-width:900px; margin:auto;'>	
-		<h2>Prime Value Hotels</h2><p >Ammenaties and Accomodations crafted for comfort and affordability. Guests at these hotels enjoy thoughtful, resort-style conveniences, an array of fast-casual dining options, and exclusive theme park benefits.</p>
-			<br><br>
-			<div class='rowDiv'>
-				<img src='https://i.imgur.com/XDzY1bg.jpeg'>
-				<div>
-					<h3>Globe-City World of Wonder</h3>
-					Inspired by the world of Studio Ghibili, classic fairytales, and other stories of magic and fantasy, Globe-City World of Wonder hotel brings together magic for all ages.
+			<h2>Prime Value Hotels</h2><p >Ammenaties and Accomodations crafted for comfort and affordability. Guests at these hotels enjoy thoughtful, resort-style conveniences, an array of fast-casual dining options, and exclusive theme park benefits.</p>
+			<div class="selectionContainer">
+				<div class="columnContainer dImg">
+					<img src="https://i.imgur.com/XDzY1bg.jpeg">
+					<div>
+						<h3>Globe-City's World of Wonder</h3>
+						Inspired by the world of Studio Ghibili, classic fairytales, and other stories of magic and fantasy, Globe-City World of Wonder hotel brings together magic for all ages.		
+					</div>
 				</div>
-				<a href='world-of-wonder'></a>
+				<a href="world-of-wonder"></a>
 			</div>
-		<div class='spacer'></div>
-			<div class='rowDiv'>
-				<img src='https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesLobby.jfif' style='height:200px;'>
-				<div style='width:60%;'>
-					<h3>MCR <em>WAVES</em> Resort</h3>
-					A sleek hotel of modern architecture infused with retro disco aesthetics. Whether you’re looking for a thrilling groove, relaxing coastal vibes, or a little bit of both, WAVES Resort is your ultimate retro-modern getaway.
+			<div class="selectionContainer">
+				<div class="columnContainer dImg">
+					<img style='aspect-ratio: 16/10; object-fit: cover;' src="https://gcparksandresorts.github.io/careawayresort/files/images/banners/wavesLobby.jfif">
+					<div>
+						<h3>MCR <em>WAVES</em> Resort</h3>
+						A sleek hotel of modern architecture infused with retro disco aesthetics. Whether you’re looking for a thrilling groove, relaxing coastal vibes, or a little bit of both, WAVES Resort is your ultimate retro-modern getaway.
+					</div>
 				</div>
-				<a href='waves-resort'></a>
-			</div>			
+				<a href="waves-resort"></a>
+			</div>
 		</div>
-            
-		<div class='container filled'>
-			<h2>Exclusive On-site Resort Benefits</h2>
-			<div class='tileContainer' style='text-align:left'>
-				<div>
-					<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'>
-					<h3>Enjoy one more hour of play</h3>
-					Breeze into one of our theme parks up to an hour early with Early Park Admission. (Valid theme park admission required. Select attractions.)
-				</div>
-				<div>
-					<img src='https://blog-cdn.touringplans.com/blog/wp-content/uploads/2020/12/DOCKSIDE_bus-1200x800.jpg'>
-					<h3>Complimentary Transportation</h3>
-					For those wanting a easy-breezy trip to the parks, complimentary bus transportation is offered throughout the resort including to and from afiliate hotels and the Puertas Nuevas International Airport.
-				</div>
-				<div>
-					<img src='https://www.universalorlando.com/webdata/k2/en/us/files/Images/gds/lsfr-universal-studios-store-sapphire-falls-couple-a.jpg'>
-					<h3>Be Carefree and Carry-Free</h3>
-					Guests shopping at select stores within the theme-parks and the resort shopping district can have their purchases delivered directly to their hotel room, no carrying required. Look for posted signage at participating locations.
+        
+		<div class='swoopContainer' style='background:white;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-silver.png'></div>
+		<div class='fullContainer'>
+			<div class="container">
+				<h2>Exclusive On-site Resort Benefits</h2>
+				<div class='tileContainer' style='text-align:left;'>
+					<div>
+						<img src='https://gcparksandresorts.github.io/gcresorthighland/webresources/images/fotd1.jpg'>
+						<h3>Enjoy one more hour of play</h3>
+						Breeze into one of our theme parks up to an hour early with Early Park Admission. (Valid theme park admission required. Select attractions.)
+					</div>
+					<div>
+						<img src='https://blog-cdn.touringplans.com/blog/wp-content/uploads/2020/12/DOCKSIDE_bus-1200x800.jpg'>
+						<h3>Complimentary Transportation</h3>
+						For those wanting a easy-breezy trip to the parks, complimentary bus transportation is offered throughout the resort including to and from afiliate hotels and the Puertas Nuevas International Airport.
+					</div>
+					<div>
+						<img src='https://www.universalorlando.com/webdata/k2/en/us/files/Images/gds/lsfr-universal-studios-store-sapphire-falls-couple-a.jpg'>
+						<h3>Be Carefree and Carry-Free</h3>
+						Guests shopping at select stores within the theme-parks and the resort shopping district can have their purchases delivered directly to their hotel room, no carrying required. Look for posted signage at participating locations.
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class='leftContainer'>
-			<div class='columnContainer'>
-				<img src='https://www.universalstudioshollywood.com/tridiondata/ush/en/us/files/images/universal-citywalk-shopping-802x535.jpg' style='align-self:stretch;'>
-				<div>
-					<h2>Be a part of the District</h2>
-					Staying in an on-site resort hotel means you're directly connected to the <a href='../destinations/shops-and-more-district'>Shops & More District</a>, a central spine of the Careaway Resort. Step out of the lobby and into a wonderous world of shopping, dining, and play. You'll never have to get in a car or shuttle bus and the adventure follows you wherever you go.
+		<div class='swoopContainer' style='background:silver;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-blue.png'></div>
+		<div class="fullContainer" style="background-color: midnightblue; color: white;">
+			<div class="leftContainer">
+				<div class="columnContainer cBanner">
+					<img src="https://www.universalstudioshollywood.com/tridiondata/ush/en/us/files/images/universal-citywalk-shopping-802x535.jpg">
+					<div>
+						<h2>Be a part of the District</h2>
+						Staying in an on-site resort hotel means you're directly connected to the Shops & More District, a central spine of the Careaway Resort. Step out of the lobby and into a wonderous world of shopping, dining, and play. You'll never have to get in a car or shuttle bus and the adventure follows you wherever you go.
+						<p><a class='btn white noLeft' href="../destinations/shops-and-more-district">Explore the shopping district</a></p>
+					</div>
 				</div>
 			</div>
-
-			<div class='spacer thick'></div>
-
-			<div class='columnContainer'>
-				<img src='https://i.imgur.com/z8dFKDp.png'>
-				<div>
-					<h2>Live the Adventure with a Resort Vacation Package</h2>
-					Resort Vacation Packages are an all-in-one inclusive way to maximize the fun and decrease the cost. Packages include lodging, themepark admission, and other perks and take the hastle out of planning your next grand advennture!
-					<p><a class='btn'>Explore Vacation Packages</a></p>
+			<div class="leftContainer">
+				<div class="columnContainer cBanner">
+					<div>
+						<h2>Live the adventure with a Resort Vacation Package</h2>
+						Resort Vacation Packages are an all-in-one inclusive way to maximize the fun and decrease the cost. Packages include lodging, themepark admission, and other perks and take the hastle out of planning your next grand advennture!
+						<p><a class='btn white noLeft' href="">View Vacation Packages</a></p>
+					</div>
+					<img src="https://i.imgur.com/z8dFKDp.png">
 				</div>
 			</div>
 		</div>
+		<div class='swoopContainer' style='background:midnightblue;'><img src='https://gcparksandresorts.github.io/careawayresort/files/images/stock/transition-element-white.png'></div>
+		
 
 
 		<div class='container'>
 			<h2>So, what are you waiting for.. get booking!</h2>
 			Embark on the adventure of a lifetime and begin planning your greatest vacation yet!
-			<p><a class='btn'>View Availability</a> <a href='btn'>Contact Agent</a></p>
+			<p><a class='btn'>View Bookings</a></p>
+		</div>
+
+		<div class='container'>
+			<h3>Still have questions?</h3>
+			View the resort <a href="../information/faq?category=3">Frequently Asked Questions</a>
 		</div>
 	
 		<!-- END OF BODY CONTENT -->
-	<div class='container' style='color:dimgray; font-size:12px'>
-		MCR Brand hotels are owned and operated by Minecraftian Resorts Unlimited LLC. under a direct partnership with Globe-City Parks and Resorts.
-	</div>
+		<div class='container' style='color:dimgray; font-size:12px'>
+			MCR Brand hotels are owned and operated by Minecraftian Resorts Unlimited LLC. under a direct partnership with Globe-City Parks and Resorts.
+		</div>
 	<div id='footer'></div>
 </body>
     <script src="https://gcparksandresorts.github.io/careawayresort/files/header/headerScript.js"></script>
