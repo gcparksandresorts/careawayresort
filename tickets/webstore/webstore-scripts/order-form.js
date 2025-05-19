@@ -197,7 +197,7 @@ function setupDateSelect(){ // Choose date of first visit and number of days
                         }else{
                             dateIsValid = true; // ticket is valid for this date
                         }
-                    }else if(tikArray[6] == 'yes' && splashportHours != '0'){
+                    }else if(tikArray[6] == 'yes' && splashportHours != '0' && tikArray[5] == 'none'){
                         dateIsValid = true; // ticket is valid for this date
                     }
                     else{
