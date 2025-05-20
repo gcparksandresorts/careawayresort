@@ -127,15 +127,16 @@ function setupDateSelect(){ // Choose date of first visit and number of days
         let tcri = calendarRowItem + 1;
         for(i=1; i < tcri; i++){ 
             document.getElementById("row-"+calendarRow).innerHTML += "<td class='noClick'></td>";
+            calendarItemIndex += 1;
         }
     }
     
     
     addCalendarDays();
 }
-    
+
     function addCalendarDays(){ // add more days to the calendar
-        for(i=0; i<=34; i++){
+        for(i=0; i<=31; i++){
             if(calendarItemIndex < maxIndex){
                 calendarRowItem += 1;
                 if(calendarRowItem > 7){ // move to new week
@@ -197,7 +198,7 @@ function setupDateSelect(){ // Choose date of first visit and number of days
                         }else{
                             dateIsValid = true; // ticket is valid for this date
                         }
-                    }else if(tikArray[6] == 'yes' && splashportHours != '0'){
+                    }else if(tikArray[6] == 'yes' && splashportHours != '0' && tikArray[5] == 'none'){
                         dateIsValid = true; // ticket is valid for this date
                     }
                     else{

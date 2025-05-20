@@ -28,13 +28,13 @@ weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
     msSplshHrs[3] = "10:00 AM - 9:00 PM + 6:00 PM - 11:00 PM"; // Stars and Splashes
     // if closed: closed
 
-// Lowest Ticket Prices
+// Lowest Ticket Prices ( resident | general | vip)
     msTikPrice = [];
-    msTikPrice[0]= "60 / 49 | 65 / 59 | 89 / 79";
-    msTikPrice[1]= "65 / 59 | 75 / 69 | 99 / 89";
-    msTikPrice[2]= "75 / 69 | 99 / 89 | 199 / 190";
-    msTikPrice[3]= "99 / 89 | 109 / 99 | 209 / 199";
-    msTikPrice[4]= "109 / 95 | 129 / 119 | 245 / 229";
+    msTikPrice[0]= "49/39 | 59/40 | 89/79"; 
+    msTikPrice[1]= "65/59 | 69/52 | 99/89"; 
+    msTikPrice[2]= "75/69 | 89/69 | 175/159"; 
+    msTikPrice[3]= "109/89 | 109/89 | 209/199"; 
+    msTikPrice[4]= "112/95 | 112/99 | 245/229"; 
 
 
 mastSchedule = []; //mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr3 | SplshPrtHr4 | Evnt5 | Entrtnmnt6";
