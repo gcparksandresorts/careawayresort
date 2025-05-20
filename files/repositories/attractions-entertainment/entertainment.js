@@ -128,7 +128,7 @@ var iter = -1;
 		name: "Dreams of Adventure Spectacular", code: "das", pageLink: "dreams-of-adventure",
 		font:"Playwrite+DK+Loopet", description: "An epic nighttime fireworks and light show about the magic of dreams and the places they take us",
 		info: "none | 4 | Port of Entry,2 | 2 | 2 | 1", img: "https://i.imgur.com/kUIvNws.png",
-		showTimes: "9:30 PM", showDuration: "20 Minutes", showOnPage: "yes", // show on events page
+		showTimes: "9:30 PM", showDuration: "18 Minutes", showOnPage: "yes", // show on events page
 		tagsList: "adventure,dream,show,water,watershow,fireworks", pageIntro: "As night falls over the Port of Adventure, the lake awakens with magic. Dreams of Adventure is an unforgettable nighttime spectacular that brings the power of imagination to life through dancing fountains, dazzling pyrotechnics, expansive projections, and an orchestral score", 
 		longDescription: "Journey through four fantastical realms—Atlantis, Kingdom of Darkness, Port of Entry, and Wonder Reel Studios—as dreams unfold in vibrant color and light. From epic discoveries beneath the sea to cinematic escapes among the stars, this dazzling celebration reminds us that adventure begins with a dream.",
 		otherImg: "https://i.imgur.com/EdE4wYz.png | https://i.imgur.com/R0qmsvV.png" // leave default if none
@@ -136,12 +136,14 @@ var iter = -1;
 
 	iter+=1; entertainmentList[iter] = {
 		name: "AquaMagic - River of Possibility", code: "aqm", pageLink: "aquamagic",
-		font:"font", description: "A lighted boat parade celebrating the colors of adventure and wonder",
-		info: "none | 4 | Paradise Gardens,1 | 2 | 2 | 1", img: "https://i.imgur.com/dyUVluy.jpeg",
-		showTimes: "8:30 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
-		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Paradise Gardens Lake and delight in this beautiful lighted boat parade and water show that will ignite the night with millions of dazzling colors", 
-		longDescription: "longDescription",
-		otherImg: "img1 | img2" // leave default if none
+		font:"Parisienne", description: "A spectacular nighttime pageant featuring dancing fountains and dozens of illuminated boats",
+		info: "none | 4 | Paradise Gardens,1 | 2 | 2 | 1", img: "https://i.imgur.com/b21GqJ2.png",
+		showTimes: "8:45 PM", showDuration: "22 Minutes", showOnPage: "yes", // show on events page
+		tagsList: "Musical,Nighttime,Pretty Lights,Dazzling,Magical,Parade", pageIntro: "Grab a spot along the Paradise Gardens lake and delight in this magic pageant featuring dancing fountains, larger than life projections, and dozens of colorful neon boats packed with energetic performers.", 
+		longDescription: "🏆 <em>2025 Best Lighted Boat Parade</em> - Puertas Nuevas Reporter \
+			<p>Witness a celebration of possibility in a mesmerizing display of light, music, and movement! <em>Aquamagic - River of Possibility</em> transforms water into a breathtaking stage full of color and magic with dozens of radiant neon boats gliding in and out of dancing water and dazzling effects. Each boat is a new surprise with lively performers and ornamental decorations. </p>\
+			<h4>Viewing Information</h4>Viewing for the performance is located along the navy colored railing surrounding Paradise Gardens lake. Prior to showtime, white ropes will be setup around the lake to designate viewing areas and walkways. Geusts are not permitted to watch the show from the designated walkways.<p>There will also be GCVIP and MDA Accessible sections available for applicable guests.</p><p>For prime viewing of the show, the North side of the lake features a lower tier closer to the water. However, <b>Guests standing here may get wet</b></p>",
+		otherImg: "https://i.imgur.com/FkcGMCQ.png | https://i.imgur.com/rCPTJkU.png" // leave default if none
 	}
 
 	iter+=1; entertainmentList[iter] = {
