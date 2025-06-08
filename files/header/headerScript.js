@@ -8,17 +8,17 @@ var imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/imag
 var headerBarStyle = '';
 
 // check date (for different types of logos)
-	let tDate = new Date();
-		if(tDate.getMonth() == 5){ // June
+	let htDate = new Date();
+		if(htDate.getMonth() == 5){ // June
 			imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/images/logos/careaway-rainbow-logo.png';
-			headerBarStyle = 'linear-gradient(90deg, red,orange,green,blue,indigo);'
-		}else if(tDate.getMonth() >= 10){ // Holidays
+			headerBarStyle = 'background:linear-gradient(90deg, red,orange,green,blue,indigo);'
+		}else if(htDate.getMonth() >= 10){ // Holidays
 			imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/images/logos/careaway-holiday-logo-blue.png';
 			headerBarStyle = 'background:linear-gradient(90deg,navy,midnightblue,blue,aqua);';
-		}else if(tDate.getMonth() == 9){ // Halloween
+		}else if(htDate.getMonth() == 9){ // Halloween
 			headerBarStyle = 'background:linear-gradient(90deg,indigo,DarkMagenta,indigo);';
 		}
-	console.log('Header date = ' + tDate.getMonth() + " - " + tDate.getDate());
+	//console.log('Header date = ' + htDate.getMonth() + " - " + htDate.getDate());
 
 const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
 
