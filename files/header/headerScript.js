@@ -4,11 +4,27 @@ const footer = document.getElementById("footer");
 const pgHead = document.getElementById("pgHead");
 const loader = document.getElementById("loader");
 
+var imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png';
+var headerBarStyle = '';
+
+// check date (for different types of logos)
+	let tDate = new Date();
+		if(tDate.getMonth() == 5){ // June
+			imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/images/logos/careaway-rainbow-logo.png';
+			headerBarStyle = 'linear-gradient(90deg, red,orange,green,blue,indigo);'
+		}else if(tDate.getMonth() >= 10){ // Holidays
+			imgLogoLink = 'https://gcparksandresorts.github.io/careawayresort/files/images/logos/careaway-holiday-logo-blue.png';
+			headerBarStyle = 'background:linear-gradient(90deg,navy,midnightblue,blue,aqua);';
+		}else if(tDate.getMonth() == 9){ // Halloween
+			headerBarStyle = 'background:linear-gradient(90deg,indigo,DarkMagenta,indigo);';
+		}
+	console.log('Header date = ' + tDate.getMonth() + " - " + tDate.getDate());
+
 const siteLink = "https://gcparksandresorts.github.io/careawayresort/"; //   "+siteLink+"   //
 
 setTimeout(function(){if(loader.style.display != 'none'){ console.error("Load timeout - page is not finished loading"); finishLoad();}else{console.log("Page fully loaded")}}, 8000); // Clear the loader prematurly if load is taking too long
 
-header.innerHTML = "<div id='headerBkg'></div><div id='headerBar'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='https://gcparksandresorts.github.io/careawayresort/files/images/logos/careawayresort-logo.png'> \
+header.innerHTML = "<div id='headerBkg'></div><div id='headerBar' style='"+headerBarStyle+"'><div id='hbContent'><img id='headerLogo' onclick='"+'window.open("https://gcparksandresorts.github.io/careawayresort/","_self")'+"'src='"+imgLogoLink+"'> \
 			 <div id='hbLinks'> <a class='bigMen' id='ttdOpen' onclick='toggleBarMenu(1)'>&#11206; Things to Do</a> <a class='bigMen' href='"+siteLink+"hotels/home'>Places to Stay</a> <a class='bigMen' id='moreInfoBtn' onclick='toggleBarMenu(2)'>&#11206; Information</a> <a class='bigMen' href='"+siteLink+"store/home'>Online Shop</a> <a class='btn filled bigMen' href=' "+siteLink+"tickets'>Tickets & Passes</a> \
 				<a class='miniMen' onclick='openSideMenu()'>&#9776;</a> <img id='searchIcon' src='"+siteLink+"files/images/icons/searchIcon.png' title='Search website' onclick='window.open(\""+siteLink+"search\",\"_self\")'> </div> </div></div> \
 			<div id='hbSideMenu' class=''><a class='btn' href='"+siteLink+"tickets'>Tickets and Passes</a> \

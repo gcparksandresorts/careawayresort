@@ -8,8 +8,8 @@ TikAddOnArray = [];
     // chlSPHr -> Check if Splashport Bay is open yes/none
 var iter = -1;
 // Tickets
-    iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | Puertas Nuevas Resident Admission Single-Park | 49/39,65/59,75/69,109/89,112/95 | select | none | none | For eligibile PN Residents Only. Admission to ONE theme park per day (excluding Splashport Bay) | https://i.imgur.com/9gS8Xri.jpeg";
-    iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | Puertas Nuevas Resident Admission Park-to-park | 69/59,79/69,109/99,159/149,199/189 | select | none | none | For eligibile PN Residents Only. Admission to BOTH theme parks per day (excluding Splashport Bay) | https://i.imgur.com/LjFg1mN.jpeg";
+    iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | Puertas Nuevas Resident Admission Single-Park | 49/39,58/49,75/69,109/89,112/95 | select | none | none | For eligibile PN Residents Only. Admission to ONE theme park per day (excluding Splashport Bay) | https://i.imgur.com/9gS8Xri.jpeg";
+    iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | Puertas Nuevas Resident Admission Park-to-park | 59/49,69/51,109/89,129/109,143/119 | select | none | none | For eligibile PN Residents Only. Admission to BOTH theme parks per day (excluding Splashport Bay) | https://i.imgur.com/LjFg1mN.jpeg";
     iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | General Admission Single-Park | 59/40,69/52,89/69,109/89,112/99 | select | none | none | Admission to ONE theme park per day (excluding Splashport Bay) | https://i.imgur.com/9gS8Xri.jpeg";
     iter+=1;TikTypeArray[iter] = "day-ticket | General Admission | General Admission Park-to-park | 89/79,99/89,129/109,169/159,199/189 | select | none | none | Admission to BOTH theme parks per day (excluding Splashport Bay) | https://i.imgur.com/LjFg1mN.jpeg";
 

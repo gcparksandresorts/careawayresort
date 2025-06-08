@@ -137,7 +137,7 @@ iter+=1; eventData[iter] = {
 
 iter+=1; eventData[iter] = {
     name: "Adventurous Nights of Pride", codeName: "nop", titleFont: "titleFont",
-    externalLink: eventSiteLink+"nights-of-pride", // or use blogLink for blog post
+    externalLink: eventSiteLink+"adventurous-nights-of-pride", // or use blogLink for blog post
     info: "3 | 3 | 2 | 4", displayType: "small",
     tags: "gay,rainbow,june,party",
     eventHours: "7:00 PM - 12:00 AM", bannerImg: "https://gcparksandresorts.github.io/gcresorthighland/webresources/images/logos/nop.jpg",
