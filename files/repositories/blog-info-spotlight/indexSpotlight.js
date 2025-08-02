@@ -91,6 +91,14 @@ ind+=1; indexSpotlight[ind] = {
     clickLink: webLink+"information/blog/operations-update?n=referb-calendar" 
 }
 
+ind+=1; indexSpotlight[ind] = {
+    title: "Back to school ❌&#128581; Back to the parks! ✔️&#128153;",
+    months: "August", // use full month name, use comma no-space to add extra months
+    textContent: "Forget school, come back to the parks! Fun and Adventure await (aka things you won't find in a lame classroom)!",
+    imgLink: "https://i.imgur.com/NCyozNl.jpeg",
+    clickLink: webLink+"tickets" 
+}
+
 
 /* 
 ind += 1; indexSpotlight[ind] = "months | heading | text_content | click_link | image_link";
