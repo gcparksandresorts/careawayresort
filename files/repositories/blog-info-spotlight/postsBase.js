@@ -126,7 +126,12 @@ iter += 1; blogData[iter] = {
 
 
 // AUGUST
-
+iter += 1; blogData[iter] = {
+title: "Temporary Suspension of Resort Shuttle Bus Service",
+info: "August 1 | 1 | Resort Operations",
+blogLink: "suspended-bus-service", tagsList: "emergency,fire",
+contents: "As you may have seen in recent news, one of our newer fully electric Resort Shuttle Buses caught fire while charging at the Resort Bus Depot. Thanks to the swift response of our on-site emergency team, the fire was quickly contained. Unfortunately, the incident resulted in the loss of one of our two charging units and caused significant damage to the second.<p>As a safety precaution, and in coordination with Blue Eagle and the Puertas Nuevas Fire Department, resort operations has temporarily suspended the use of all Blue Eagle electric and hybrid shuttle buses—currently the majority of our fleet—while a thorough investigation is underway to determine the cause and ensure no further risk to guests or staff.</p>In the meantime, we will be operating a limited shuttle schedule due to the reduced number of vehicles available. Guests should anticipate longer wait times and plan their transportation accordingly. Additional transportation options are currently being evaluated and will be announced as soon as possible.<p>We sincerely appreciate your understanding and patience as we work to safely restore full shuttle service.</p>"
+}
 
 
 // SEPTEMBER
