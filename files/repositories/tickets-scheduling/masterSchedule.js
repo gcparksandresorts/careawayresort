@@ -41,41 +41,29 @@ mastSchedule = []; //mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr
 
 // Insert Schedule Values Below
 
-mastSchedule[0] = 'SEP-7 | Sunday | 3 | 3 | 1 | sAdv | none';
-mastSchedule[1] = 'SEP-8 | Monday | 2 | 2 | 1 | sAdv | none';
-mastSchedule[2] = 'SEP-9 | Tuesday | 1 | 1 | 1 | sAdv | none';
-mastSchedule[3] = 'SEP-10 | Wednesday | 1 | 1 | 1 | sAdv | none';
-mastSchedule[4] = 'SEP-11 | Thursday | 1 | 1 | 1 | sAdv | none';
-mastSchedule[5] = 'SEP-12 | Friday | 2 | 2 | 1 | sAdv | none';
-mastSchedule[6] = 'SEP-13 | Saturday | 3 | 3 | 1 | sAdv | none';
-mastSchedule[7] = 'SEP-14 | Sunday | 2 | 3 | 1 | sAdv | none';
-mastSchedule[8] = 'SEP-15 | Monday | 1 | 1 | 1 | none | none';
-mastSchedule[9] = 'SEP-16 | Tuesday | 1 | 1 | 1 | none | none';
-mastSchedule[10] = 'SEP-17 | Wednesday | 1 | 1 | 1 | none | none';
-mastSchedule[11] = 'SEP-18 | Thursday | 1 | 1 | 1 | none | none';
-mastSchedule[12] = 'SEP-19 | Friday | 2 | 2 | 1 | none | cmng,gcmb';
-mastSchedule[13] = 'SEP-20 | Saturday | 3 | 2 | 1 | none | cmng,gcmb';
-mastSchedule[14] = 'SEP-21 | Sunday | 2 | 2 | 1 | none | cmng,gcmb';
-mastSchedule[15] = 'SEP-22 | Monday | 1 | 1 | 1 | hal | none';
-mastSchedule[16] = 'SEP-23 | Tuesday | 1 | 1 | 1 | hal | none';
-mastSchedule[17] = 'SEP-24 | Wednesday | 1 | 1 | 1 | hal | none';
-mastSchedule[18] = 'SEP-25 | Thursday | 2 | 5 | 1 | hal,scream | koda,haho';
-mastSchedule[19] = 'SEP-26 | Friday | 2 | 5 | 1 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[20] = 'SEP-27 | Saturday | 3 | 5 | 1 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[21] = 'SEP-28 | Sunday | 2 | 2 | 1 | hal | cmng,gcmb';
-mastSchedule[22] = 'SEP-29 | Monday | 1 | 1 | 0 | hal | none';
-mastSchedule[23] = 'SEP-30 | Tuesday | 1 | 1 | 0 | hal | none';
-mastSchedule[24] = 'OCT-1 | Wednesday | 1 | 1 | 0 | hal | none';
-mastSchedule[25] = 'OCT-2 | Thursday | 2 | 5 | 0 | hal,scream | koda,haho';
-mastSchedule[26] = 'OCT-3 | Friday | 2 | 5 | 0 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[27] = 'OCT-4 | Saturday | 3 | 5 | 0 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[28] = 'OCT-5 | Sunday | 2 | 2 | 0 | hal | cmng,gcmb';
-mastSchedule[29] = 'OCT-6 | Monday | 1 | 1 | 0 | hal | none';
-mastSchedule[30] = 'OCT-7 | Tuesday | 1 | 1 | 0 | hal | none';
-mastSchedule[31] = 'OCT-8 | Wednesday | 1 | 1 | 0 | hal | none';
-mastSchedule[32] = 'OCT-9 | Thursday | 2 | 5 | 0 | hal,scream | koda,haho';
-mastSchedule[33] = 'OCT-10 | Friday | 2 | 5 | 0 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[34] = 'OCT-11 | Saturday | 3 | 5 | 0 | hal,scream | cmng,gcmb,koda,haho';
-mastSchedule[35] = 'OCT-12 | Sunday | 2 | 2 | 0 | hal | cmng,gcmb';
+mastSchedule[0] = 'NOV-14 | Friday | 3 | 3 | 0 | cHol | pxp,fol';
+mastSchedule[1] = 'NOV-15 | Saturday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[2] = 'NOV-16 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[3] = 'NOV-17 | Monday | 3 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[4] = 'NOV-18 | Tuesday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[5] = 'NOV-19 | Wednesday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[6] = 'NOV-20 | Thursday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[7] = 'NOV-21 | Friday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[8] = 'NOV-22 | Saturday | 5 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[9] = 'NOV-23 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[10] = 'NOV-24 | Monday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[11] = 'NOV-25 | Tuesday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[12] = 'NOV-26 | Wednesday | 5 | 4 | 0 | cHol,thxGiv | pxp,fol,gsm';
+mastSchedule[13] = 'NOV-27 | Thursday | 4 | 3 | 0 | cHol,thxGiv | pxp,fol';
+mastSchedule[14] = 'NOV-28 | Friday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[15] = 'NOV-29 | Saturday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[16] = 'NOV-30 | Sunday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[17] = 'DEC-1 | Monday | 3 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[18] = 'DEC-2 | Tuesday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[19] = 'DEC-3 | Wednesday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[20] = 'DEC-4 | Thursday | 2 | 2 | 0 | cHol | pxp,fol';
+mastSchedule[21] = 'DEC-5 | Friday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[22] = 'DEC-6 | Saturday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[23] = 'DEC-7 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
 
 
