@@ -46,6 +46,14 @@ ind+=1; indexSpotlight[ind] = {
     clickLink: webLink+"information/blog/post?n=pride-month" 
 }
 
+ind+=1; indexSpotlight[ind] = {
+    title: "Give the Gift of Adventure",
+    months: "October,November,December", // use full month name, use comma no-space to add extra months
+    textContent: "Surprise your loved ones and good friends with the gift of grand adventures and wonderful memories. Choose from a flexible range of ticket options to match your budget.",
+    imgLink: "https://i.imgur.com/H8OMRMS.jpeg",
+    clickLink: webLink+"tickets/gift-ticket" 
+}
+
 
 
 // SLIGHTLY LESS IMPORTANT
