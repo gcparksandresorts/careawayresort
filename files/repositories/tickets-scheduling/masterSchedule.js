@@ -7,7 +7,7 @@ weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
 // Park Hours
     msPrkHours = [];  
     msPrkHours[0] = "closed | closed | closed";
-    msPrkHours[1] = "11:00 AM - 8:00 PM | 11:00 AM - 7:00 PM | 10:00 AM - 6:00 PM";
+    msPrkHours[1] = "11:00 AM - 9:00 PM | 11:00 AM - 7:00 PM | 10:00 AM - 7:00 PM";
     msPrkHours[2] = "11:00 AM - 9:00 PM | 10:00 AM - 8:00 PM | 10:00 AM - 7:00 PM";
     msPrkHours[3] = "11:00 AM - 11:00 PM | 10:00 AM - 10:00 PM | 10:00 AM - 9:00 PM";
     msPrkHours[4] = "11:00 AM - 12:00 AM | 9:00 AM - 11:00 PM | 10:00 AM - 11:00 PM";
@@ -40,30 +40,29 @@ weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturda
 mastSchedule = []; //mastSchedule[NUM] = "MMM-DD | DayOfWeek1 | TikTier2 | PrkHr3 | SplshPrtHr4 | Evnt5 | Entrtnmnt6";
 
 // Insert Schedule Values Below
-
-mastSchedule[0] = 'NOV-14 | Friday | 3 | 3 | 0 | cHol | pxp,fol';
-mastSchedule[1] = 'NOV-15 | Saturday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[2] = 'NOV-16 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[3] = 'NOV-17 | Monday | 3 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[4] = 'NOV-18 | Tuesday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[5] = 'NOV-19 | Wednesday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[6] = 'NOV-20 | Thursday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[7] = 'NOV-21 | Friday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[8] = 'NOV-22 | Saturday | 5 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[9] = 'NOV-23 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[10] = 'NOV-24 | Monday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[11] = 'NOV-25 | Tuesday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[12] = 'NOV-26 | Wednesday | 5 | 4 | 0 | cHol,thxGiv | pxp,fol,gsm';
-mastSchedule[13] = 'NOV-27 | Thursday | 4 | 3 | 0 | cHol,thxGiv | pxp,fol';
-mastSchedule[14] = 'NOV-28 | Friday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[15] = 'NOV-29 | Saturday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[16] = 'NOV-30 | Sunday | 5 | 4 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[17] = 'DEC-1 | Monday | 3 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[18] = 'DEC-2 | Tuesday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[19] = 'DEC-3 | Wednesday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[20] = 'DEC-4 | Thursday | 2 | 2 | 0 | cHol | pxp,fol';
-mastSchedule[21] = 'DEC-5 | Friday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[22] = 'DEC-6 | Saturday | 4 | 3 | 0 | cHol | pxp,fol,gsm';
-mastSchedule[23] = 'DEC-7 | Sunday | 3 | 3 | 0 | cHol | pxp,fol,gsm';
+mastSchedule[0] = 'JAN-9 | Friday | 2 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[1] = 'JAN-10 | Saturday | 3 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[2] = 'JAN-11 | Sunday | 3 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[3] = 'JAN-12 | Monday | 1 | 1 | 0 | none | cmng';
+mastSchedule[4] = 'JAN-13 | Tuesday | 1 | 1 | 0 | none | cmng';
+mastSchedule[5] = 'JAN-14 | Wednesday | 1 | 1 | 0 | none | cmng';
+mastSchedule[6] = 'JAN-15 | Thursday | 2 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[7] = 'JAN-16 | Friday | 3 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[8] = 'JAN-17 | Saturday | 4 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[9] = 'JAN-18 | Sunday | 5 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[10] = 'JAN-19 | Monday | 4 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[11] = 'JAN-20 | Tuesday | 2 | 2 | 0 | none | cmng';
+mastSchedule[12] = 'JAN-21 | Wednesday | 1 | 1 | 0 | none | cmng';
+mastSchedule[13] = 'JAN-22 | Thursday | 1 | 1 | 0 | none | cmng';
+mastSchedule[14] = 'JAN-23 | Friday | 2 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[15] = 'JAN-24 | Saturday | 3 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[16] = 'JAN-25 | Sunday | 3 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[17] = 'JAN-26 | Monday | 1 | 1 | 0 | none | cmng';
+mastSchedule[18] = 'JAN-27 | Tuesday | 1 | 1 | 0 | none | cmng';
+mastSchedule[19] = 'JAN-28 | Wednesday | 1 | 1 | 0 | none | cmng';
+mastSchedule[20] = 'JAN-29 | Thursday | 2 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[21] = 'JAN-30 | Friday | 2 | 2 | 0 | none | cmng,gcmb';
+mastSchedule[22] = 'JAN-31 | Saturday | 3 | 3 | 0 | none | cmng,gcmb';
+mastSchedule[23] = 'FEB-1 | Sunday | 3 | 3 | 0 | none | cmng,gcmb';
 
 
