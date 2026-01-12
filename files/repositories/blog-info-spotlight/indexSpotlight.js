@@ -58,6 +58,14 @@ ind+=1; indexSpotlight[ind] = {
 
 // SLIGHTLY LESS IMPORTANT
 ind+=1; indexSpotlight[ind] = {
+    title: "New Year - New Adventures",
+    months: "January", // use full month name, use comma no-space to add extra months
+    textContent: "Get a head start on crafting endless memories this year with a resort annual passport, for 12 months of fun!",
+    imgLink: "https://i.imgur.com/NCyozNl.jpeg",
+    clickLink: webLink+"tickets/annual-passports" 
+}
+
+ind+=1; indexSpotlight[ind] = {
     title: "☎️ Your wardrobe is calling - it wants an upgrade.",
     months: "May,July,August,September", // use full month name, use comma no-space to add extra months
     textContent: "Forget that summer bod, invest in that Summer Style. Click to explore our amazing catalogue of clothes and accessories!",
@@ -80,6 +88,7 @@ ind+=1; indexSpotlight[ind] = {
     imgLink: "https://cpfoodblog.com/wp-content/uploads/2019/06/2019-Knotts-Summer-Nights-Smores.jpg",
     clickLink: webLink+"events/summer-adventures" 
 }
+
 
 // LESS IMPORTANT (DOESEN'T HAVE TO BE ON FIRST PAGE)
 
